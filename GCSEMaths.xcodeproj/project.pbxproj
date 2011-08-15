@@ -13,6 +13,7 @@
 		7CB9D02713F94EE30077E0A3 /* QuestionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9D01F13F94EE30077E0A3 /* QuestionHeader.m */; };
 		7CB9D02813F94EE30077E0A3 /* QuestionItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9D02113F94EE30077E0A3 /* QuestionItems.m */; };
 		7CB9D02913F94EE30077E0A3 /* Topics.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9D02313F94EE30077E0A3 /* Topics.m */; };
+		7CB9D02C13F94F520077E0A3 /* Evaluator.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9D02B13F94F520077E0A3 /* Evaluator.xcdatamodel */; };
 		7CFC73B913F91EEE00805437 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73B813F91EEE00805437 /* UIKit.framework */; };
 		7CFC73BB13F91EEE00805437 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73BA13F91EEE00805437 /* Foundation.framework */; };
 		7CFC73BD13F91EEE00805437 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73BC13F91EEE00805437 /* CoreGraphics.framework */; };
@@ -98,6 +99,7 @@
 		7CB9D02113F94EE30077E0A3 /* QuestionItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionItems.m; sourceTree = "<group>"; };
 		7CB9D02213F94EE30077E0A3 /* Topics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Topics.h; sourceTree = "<group>"; };
 		7CB9D02313F94EE30077E0A3 /* Topics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Topics.m; sourceTree = "<group>"; };
+		7CB9D02B13F94F520077E0A3 /* Evaluator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evaluator.xcdatamodel; sourceTree = "<group>"; };
 		7CFC73B413F91EEE00805437 /* GCSEMaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCSEMaths.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFC73B813F91EEE00805437 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7CFC73BA13F91EEE00805437 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -377,6 +379,7 @@
 		7CFC748A13F94C5800805437 /* Model and Model Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7CB9D02B13F94F520077E0A3 /* Evaluator.xcdatamodel */,
 				7CB9D01813F94EE30077E0A3 /* Answers.h */,
 				7CB9D01913F94EE30077E0A3 /* Answers.m */,
 				7CB9D01A13F94EE30077E0A3 /* DBVersion.h */,
@@ -519,6 +522,7 @@
 				7CB9D02713F94EE30077E0A3 /* QuestionHeader.m in Sources */,
 				7CB9D02813F94EE30077E0A3 /* QuestionItems.m in Sources */,
 				7CB9D02913F94EE30077E0A3 /* Topics.m in Sources */,
+				7CB9D02C13F94F520077E0A3 /* Evaluator.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
