@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7CFC73B913F91EEE00805437 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73B813F91EEE00805437 /* UIKit.framework */; };
+		7CFC73BB13F91EEE00805437 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73BA13F91EEE00805437 /* Foundation.framework */; };
+		7CFC73BD13F91EEE00805437 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73BC13F91EEE00805437 /* CoreGraphics.framework */; };
+		7CFC73C313F91EEE00805437 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC73C113F91EEE00805437 /* InfoPlist.strings */; };
+		7CFC73C513F91EEE00805437 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC73C413F91EEE00805437 /* main.m */; };
+		7CFC73C913F91EEE00805437 /* GCSEMathsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC73C813F91EEE00805437 /* GCSEMathsAppDelegate.m */; };
+		7CFC73CC13F91EEE00805437 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC73CA13F91EEE00805437 /* MainWindow.xib */; };
+		7CFC73CF13F91EEE00805437 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC73CE13F91EEE00805437 /* FirstViewController.m */; };
+		7CFC73D213F91EEE00805437 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC73D113F91EEE00805437 /* SecondViewController.m */; };
+		7CFC73D513F91EEE00805437 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC73D313F91EEE00805437 /* FirstView.xib */; };
+		7CFC73D813F91EEE00805437 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC73D613F91EEE00805437 /* SecondView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7CFC73B413F91EEE00805437 /* GCSEMaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCSEMaths.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CFC73B813F91EEE00805437 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7CFC73BA13F91EEE00805437 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7CFC73BC13F91EEE00805437 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7CFC73C013F91EEE00805437 /* GCSEMaths-Info.plist */ = {isa = PBXFileReference; path = "GCSEMaths-Info.plist"; sourceTree = "<group>"; };
+		7CFC73C213F91EEE00805437 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7CFC73C413F91EEE00805437 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7CFC73C613F91EEE00805437 /* GCSEMaths-Prefix.pch */ = {isa = PBXFileReference; path = "GCSEMaths-Prefix.pch"; sourceTree = "<group>"; };
+		7CFC73C713F91EEE00805437 /* GCSEMathsAppDelegate.h */ = {isa = PBXFileReference; path = GCSEMathsAppDelegate.h; sourceTree = "<group>"; };
+		7CFC73C813F91EEE00805437 /* GCSEMathsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCSEMathsAppDelegate.m; sourceTree = "<group>"; };
+		7CFC73CB13F91EEE00805437 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		7CFC73CD13F91EEE00805437 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		7CFC73CE13F91EEE00805437 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		7CFC73D013F91EEE00805437 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		7CFC73D113F91EEE00805437 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		7CFC73D413F91EEE00805437 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
+		7CFC73D713F91EEE00805437 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7CFC73B113F91EEE00805437 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CFC73B913F91EEE00805437 /* UIKit.framework in Frameworks */,
+				7CFC73BB13F91EEE00805437 /* Foundation.framework in Frameworks */,
+				7CFC73BD13F91EEE00805437 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7CFC73A913F91EEE00805437 = {
+			isa = PBXGroup;
+			children = (
+				7CFC73BE13F91EEE00805437 /* GCSEMaths */,
+				7CFC73B713F91EEE00805437 /* Frameworks */,
+				7CFC73B513F91EEE00805437 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7CFC73B513F91EEE00805437 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CFC73B413F91EEE00805437 /* GCSEMaths.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CFC73B713F91EEE00805437 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CFC73B813F91EEE00805437 /* UIKit.framework */,
+				7CFC73BA13F91EEE00805437 /* Foundation.framework */,
+				7CFC73BC13F91EEE00805437 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7CFC73BE13F91EEE00805437 /* GCSEMaths */ = {
+			isa = PBXGroup;
+			children = (
+				7CFC73C713F91EEE00805437 /* GCSEMathsAppDelegate.h */,
+				7CFC73C813F91EEE00805437 /* GCSEMathsAppDelegate.m */,
+				7CFC73CA13F91EEE00805437 /* MainWindow.xib */,
+				7CFC73CD13F91EEE00805437 /* FirstViewController.h */,
+				7CFC73CE13F91EEE00805437 /* FirstViewController.m */,
+				7CFC73D013F91EEE00805437 /* SecondViewController.h */,
+				7CFC73D113F91EEE00805437 /* SecondViewController.m */,
+				7CFC73D313F91EEE00805437 /* FirstView.xib */,
+				7CFC73D613F91EEE00805437 /* SecondView.xib */,
+				7CFC73BF13F91EEE00805437 /* Supporting Files */,
+			);
+			path = GCSEMaths;
+			sourceTree = "<group>";
+		};
+		7CFC73BF13F91EEE00805437 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CFC73C013F91EEE00805437 /* GCSEMaths-Info.plist */,
+				7CFC73C113F91EEE00805437 /* InfoPlist.strings */,
+				7CFC73C413F91EEE00805437 /* main.m */,
+				7CFC73C613F91EEE00805437 /* GCSEMaths-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CFC73B313F91EEE00805437 /* GCSEMaths */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CFC73DB13F91EEE00805437 /* Build configuration list for PBXNativeTarget "GCSEMaths" */;
+			buildPhases = (
+				7CFC73B013F91EEE00805437 /* Sources */,
+				7CFC73B113F91EEE00805437 /* Frameworks */,
+				7CFC73B213F91EEE00805437 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GCSEMaths;
+			productName = GCSEMaths;
+			productReference = 7CFC73B413F91EEE00805437 /* GCSEMaths.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CFC73AB13F91EEE00805437 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = caxtonidowu;
+			};
+			buildConfigurationList = 7CFC73AE13F91EEE00805437 /* Build configuration list for PBXProject "GCSEMaths" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7CFC73A913F91EEE00805437;
+			productRefGroup = 7CFC73B513F91EEE00805437 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CFC73B313F91EEE00805437 /* GCSEMaths */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7CFC73B213F91EEE00805437 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CFC73C313F91EEE00805437 /* InfoPlist.strings in Resources */,
+				7CFC73CC13F91EEE00805437 /* MainWindow.xib in Resources */,
+				7CFC73D513F91EEE00805437 /* FirstView.xib in Resources */,
+				7CFC73D813F91EEE00805437 /* SecondView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7CFC73B013F91EEE00805437 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CFC73C513F91EEE00805437 /* main.m in Sources */,
+				7CFC73C913F91EEE00805437 /* GCSEMathsAppDelegate.m in Sources */,
+				7CFC73CF13F91EEE00805437 /* FirstViewController.m in Sources */,
+				7CFC73D213F91EEE00805437 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7CFC73C113F91EEE00805437 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CFC73C213F91EEE00805437 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7CFC73CA13F91EEE00805437 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CFC73CB13F91EEE00805437 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		7CFC73D313F91EEE00805437 /* FirstView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CFC73D413F91EEE00805437 /* en */,
+			);
+			name = FirstView.xib;
+			sourceTree = "<group>";
+		};
+		7CFC73D613F91EEE00805437 /* SecondView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CFC73D713F91EEE00805437 /* en */,
+			);
+			name = SecondView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7CFC73D913F91EEE00805437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7CFC73DA13F91EEE00805437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7CFC73DC13F91EEE00805437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GCSEMaths/GCSEMaths-Prefix.pch";
+				INFOPLIST_FILE = "GCSEMaths/GCSEMaths-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7CFC73DD13F91EEE00805437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GCSEMaths/GCSEMaths-Prefix.pch";
+				INFOPLIST_FILE = "GCSEMaths/GCSEMaths-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7CFC73AE13F91EEE00805437 /* Build configuration list for PBXProject "GCSEMaths" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CFC73D913F91EEE00805437 /* Debug */,
+				7CFC73DA13F91EEE00805437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CFC73DB13F91EEE00805437 /* Build configuration list for PBXNativeTarget "GCSEMaths" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CFC73DC13F91EEE00805437 /* Debug */,
+				7CFC73DD13F91EEE00805437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7CFC73AB13F91EEE00805437 /* Project object */;
+}
