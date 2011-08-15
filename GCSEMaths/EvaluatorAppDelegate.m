@@ -217,11 +217,11 @@
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
     NSString *documentsDir = [paths objectAtIndex:0];
-    DevicePath = [documentsDir stringByAppendingPathComponent:@"Evaluator.sqlite"];
+    DevicePath = [documentsDir stringByAppendingPathComponent:@"GCSEMaths.sqlite"];
 	ResultsXMLDestination = [documentsDir stringByAppendingPathComponent:@"Results.xml"];
 	DescriptiveAnswersXMLDestination = [documentsDir stringByAppendingPathComponent:@"DescriptiveAnswers.xml"];
 	
-    BundlePath = [[NSBundle mainBundle] pathForResource:@"Evaluator" ofType:@"sqlite"];
+    BundlePath = [[NSBundle mainBundle] pathForResource:@"GCSEMaths" ofType:@"sqlite"];
 	ResultsXML = [[NSBundle mainBundle] pathForResource:@"Results" ofType:@"xml"];
 	DescriptiveAnswersXML = [[NSBundle mainBundle] pathForResource:@"DescriptiveAnswers" ofType:@"xml"];
 	
@@ -346,7 +346,7 @@
     if (managedObjectModel != nil) {
         return managedObjectModel;
     }
-    NSString *modelPath = [[NSBundle mainBundle] pathForResource:@"Evaluator" ofType:@"momd"];
+    NSString *modelPath = [[NSBundle mainBundle] pathForResource:@"GCSEMaths" ofType:@"momd"];
     NSURL *modelURL = [NSURL fileURLWithPath:modelPath];
     managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];    
     return managedObjectModel;
@@ -363,7 +363,7 @@
         return persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"Evaluator.sqlite"]];
+    NSURL *storeURL = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"GCSEMaths.sqlite"]];
 	
 	/* Turn on automatic store migration
 	NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
