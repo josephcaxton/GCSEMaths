@@ -7,7 +7,7 @@
 //
 
 #import "SelectTopic.h"
-#import "GCSEEnglishAppDelegate.h"
+#import "EvaluatorAppDelegate.h"
 
 
 @implementation SelectTopic
@@ -129,7 +129,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 	
 	if (indexPath.row > [[fetchedResultsController fetchedObjects]count] -1) {
 		
@@ -181,7 +181,7 @@
 
 // Get the ManagedObjectContext from my App Delegate
 - (NSManagedObjectContext *)ManagedObjectContext {
-	GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 	return appDelegate.managedObjectContext;
 }
 
@@ -224,7 +224,7 @@
 	
 	
 	if (UserConfigure) {
-		GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+		EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 		if (indexPath.row > [[fetchedResultsController fetchedObjects]count] -1) {
 			appDelegate.Topic = @"All";
 			[self.navigationController popViewControllerAnimated:TRUE];

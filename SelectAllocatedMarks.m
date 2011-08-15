@@ -7,7 +7,7 @@
 //
 
 #import "SelectAllocatedMarks.h"
-#import "GCSEEnglishAppDelegate.h"
+#import "EvaluatorAppDelegate.h"
 
 
 @implementation SelectAllocatedMarks
@@ -23,7 +23,7 @@
 	
 	if (QItem_ForEdit != nil) {
 		
-		GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+		EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 		
 		appDelegate.AllocatedMarks =QItem_ForEdit.AllocatedMark;
 		
@@ -73,7 +73,7 @@
     }
     
 	
-    GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+    EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 	
 	if (indexPath.row == 0) {
 			
@@ -170,7 +170,7 @@
 		UITableViewCell *SelectedCell = [tableView cellForRowAtIndexPath:indexPath];
 		SelectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
 		
-		GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+		EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 		NSNumber *Num = [NSNumber numberWithInt:indexPath.row + 1];
 		appDelegate.AllocatedMarks = Num;
 	

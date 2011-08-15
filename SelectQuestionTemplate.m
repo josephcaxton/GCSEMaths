@@ -7,7 +7,7 @@
 //
 
 #import "SelectQuestionTemplate.h"
-#import "GCSEEnglishAppDelegate.h"
+#import "EvaluatorAppDelegate.h"
 #import "SelectTopic.h"
 
 @implementation SelectQuestionTemplate
@@ -118,7 +118,7 @@
     }
      
 	if (UserConfigure) {
-		GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+		EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 		
 		 if (indexPath.row > [[fetchedResultsController fetchedObjects]count] -1) {
 			 
@@ -178,7 +178,7 @@
 
 // Get the ManagedObjectContext from my App Delegate
 - (NSManagedObjectContext *)ManagedObjectContext {
-	GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 	return appDelegate.managedObjectContext;
 }
 
@@ -233,7 +233,7 @@
 	
 	if (UserConfigure) {
 		
-		GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+		EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 		
 		if (indexPath.row > [[fetchedResultsController fetchedObjects]count] -1) {
 			appDelegate.TypeOfQuestion = @"All";

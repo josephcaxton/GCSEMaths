@@ -25,7 +25,7 @@
     [viewControllers removeObjectAtIndex:5];
     [tabBarController setViewControllers:viewControllers];
    
-    [self CopyDataBase];
+    //[self CopyDataBase];
 	SecondThread = nil;
 	// Override point for customization after application launch.
 	NSManagedObjectContext *context =[self managedObjectContext];
@@ -346,7 +346,7 @@
     if (managedObjectModel != nil) {
         return managedObjectModel;
     }
-    NSString *modelPath = [[NSBundle mainBundle] pathForResource:@"GCSEMaths" ofType:@"momd"];
+    NSString *modelPath = [[NSBundle mainBundle] pathForResource:@"Evaluator" ofType:@"momd"];
     NSURL *modelURL = [NSURL fileURLWithPath:modelPath];
     managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];    
     return managedObjectModel;

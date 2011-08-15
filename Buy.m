@@ -281,7 +281,7 @@ int dontShowPriceList = 0;
 -(void) BuyQuestion: (id)sender{
 	
 	[(UIActivityIndicatorView *)[self navigationItem].rightBarButtonItem.customView startAnimating];
-	GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 	appDelegate.buyScreen = self;
 	NSString *AccessLevel = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"AccessLevel"];
 	

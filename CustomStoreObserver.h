@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
-#import "GCSEEnglishAppDelegate.h"
+#import "EvaluatorAppDelegate.h"
 
 @interface CustomStoreObserver : NSObject<SKPaymentTransactionObserver>{
 

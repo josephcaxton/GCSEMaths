@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GCSEEnglishAppDelegate.h"
+#import "EvaluatorAppDelegate.h"
 #import "QuestionItems.h"
 
 @interface CheckExistingFiles : NSObject <NSFetchedResultsControllerDelegate>{

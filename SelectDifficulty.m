@@ -7,7 +7,7 @@
 //
 
 #import "SelectDifficulty.h"
-#import "GCSEEnglishAppDelegate.h"
+#import "EvaluatorAppDelegate.h"
 
 @implementation SelectDifficulty
 @synthesize QItem_ForEdit,UserConfigure;
@@ -20,7 +20,7 @@
     [super viewDidLoad];
 	if (QItem_ForEdit != nil) {
 		
-	GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 	
 		switch ([QItem_ForEdit.Difficulty intValue]) {
 		case 1:
@@ -100,7 +100,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 	
 	switch (indexPath.row) {
 		case 0:
@@ -224,7 +224,7 @@
 	UITableViewCell *SelectedCell = [tableView cellForRowAtIndexPath:indexPath];
 	SelectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
 	
-	GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 	appDelegate.Difficulty = SelectedCell.textLabel.text;
 	
 	if (QItem_ForEdit != nil) {

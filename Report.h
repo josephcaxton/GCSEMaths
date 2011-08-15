@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GCSEEnglishAppDelegate.h"
+#import "EvaluatorAppDelegate.h"
 
 @interface Report : UIViewController  <UITableViewDataSource, UITableViewDelegate, NSXMLParserDelegate>{
 

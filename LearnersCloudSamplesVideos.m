@@ -84,7 +84,7 @@
 	//UIActivityIndicatorView *Activity =(UIActivityIndicatorView *)[self.tabBarController.view viewWithTag:1];
 //	[Activity removeFromSuperview];
 //	
-//	GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+//	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 //	[appDelegate.SecondThread cancel];
 //	[appDelegate.SecondThread release];
 //	appDelegate.SecondThread = nil;

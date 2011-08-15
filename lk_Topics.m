@@ -7,7 +7,7 @@
 //
 
 #import "lk_Topics.h"
-#import "GCSEEnglishAppDelegate.h"
+#import "EvaluatorAppDelegate.h"
 
 @implementation lk_Topics
 
@@ -306,7 +306,7 @@
 
 // Get the ManagedObjectContext from my App Delegate
 - (NSManagedObjectContext *)ManagedObjectContext {
-    GCSEEnglishAppDelegate *appDelegate = (GCSEEnglishAppDelegate *)[UIApplication sharedApplication].delegate;
+    EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
     return appDelegate.managedObjectContext;
 }
 

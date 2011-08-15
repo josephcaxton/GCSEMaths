@@ -331,26 +331,26 @@ if ([self.FirstView superview]) {
 		
 		if([AccessLevel intValue] == 1){
 			
-			title = @"GCSE Chemistry Free Version";
+			title = @"GCSE Mathematics Free Version";
 		}
 		else if ([AccessLevel intValue] == 2){
 			
-			title = @"GCSE Chemistry 250 Questions";
+			title = @"GCSE Mathematics 250 Questions";
 			
 		}
 		else if ([AccessLevel intValue] == 3){
 			
-			title = @"GCSE Chemistry 500 Questions";
+			title = @"GCSE Mathematics 500 Questions";
 			
 		}
 		else if ([AccessLevel intValue] == 4){
 			
-			title = @"GCSE Chemistry 750 Questions";
+			title = @"GCSE Mathematics 750 Questions";
 			
 		}
 		else if ([AccessLevel intValue] == 5){
 			
-			title = @"GCSE Chemistry 1000+ Questions";
+			title = @"GCSE Mathematics 1000+ Questions";
 			
 		}
 		
