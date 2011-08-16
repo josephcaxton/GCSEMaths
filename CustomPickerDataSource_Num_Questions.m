@@ -63,7 +63,31 @@
 		
 		else if ([AccessLevel intValue] == 5){
 			
-			for (int i = 1; i < 1040 + 1; i++) {
+			for (int i = 1; i < 1000 + 1; i++) {
+				
+				[customPickerArray  addObject: [NSString stringWithFormat:@"%i", i ]];
+			}
+			
+		}
+        else if ([AccessLevel intValue] == 6){
+			
+			for (int i = 1; i < 1250 + 1; i++) {
+				
+				[customPickerArray  addObject: [NSString stringWithFormat:@"%i", i ]];
+			}
+			
+		}
+        else if ([AccessLevel intValue] == 7){
+			
+			for (int i = 1; i < 1500 + 1; i++) {
+				
+				[customPickerArray  addObject: [NSString stringWithFormat:@"%i", i ]];
+			}
+			
+		}
+        else if ([AccessLevel intValue] == 8){
+			
+			for (int i = 1; i < 1626 + 1; i++) {
 				
 				[customPickerArray  addObject: [NSString stringWithFormat:@"%i", i ]];
 			}

@@ -101,11 +101,12 @@
 	
 	//User Access Level. 
 	// Note : 1 = 30 Questions (Free) , 2 = 250 Questions, 3 = 500 Questions, 4 = 750 Questions, 5 = 1000 Questions
+    // 6 = 1250 Questions,7 = 1500 Questions, 8 = 1600 Questions
 	
 	NSString *AccessLevel =@"AccessLevel";
 	NSString *MyAccessLevel = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:AccessLevel];
-	//[[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"AccessLevel"]; -- for Testing Only
-	//[[NSUserDefaults standardUserDefaults] synchronize];
+	[[NSUserDefaults standardUserDefaults] setObject:@"8" forKey:@"AccessLevel"]; //-- for Testing Only
+	[[NSUserDefaults standardUserDefaults] synchronize];
 	if (MyAccessLevel == nil) {
 		
 		NSDictionary *appDefaults  = [NSDictionary dictionaryWithObjectsAndKeys:@"1", AccessLevel, nil];

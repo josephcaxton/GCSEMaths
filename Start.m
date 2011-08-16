@@ -350,10 +350,27 @@ if ([self.FirstView superview]) {
 		}
 		else if ([AccessLevel intValue] == 5){
 			
-			title = @"GCSE Mathematics 1000+ Questions";
+			title = @"GCSE Mathematics 1000 Questions";
 			
 		}
-		
+		else if ([AccessLevel intValue] == 6){
+			
+			title = @"GCSE Mathematics 1250 Questions";
+			
+		}
+        else if ([AccessLevel intValue] == 7){
+			
+			title = @"GCSE Mathematics 1500 Questions";
+			
+		}
+        else if ([AccessLevel intValue] == 8){
+			
+			title = @"GCSE Mathematics 1600 Questions";
+			
+		}
+
+
+
 		
 		
 		

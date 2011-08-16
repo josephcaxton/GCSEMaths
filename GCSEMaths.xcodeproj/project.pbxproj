@@ -1661,6 +1661,7 @@
 		7CC55D3213FABFD700DB8D0E /* 1624.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC556D813FABFD600DB8D0E /* 1624.pdf */; };
 		7CC55D3313FABFD700DB8D0E /* 1625.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC556D913FABFD600DB8D0E /* 1625.pdf */; };
 		7CC55D3413FABFD700DB8D0E /* 1626.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC556DA13FABFD600DB8D0E /* 1626.pdf */; };
+		7CC55D5813FAC45300DB8D0E /* SelectDifficulty.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC55D5713FAC45300DB8D0E /* SelectDifficulty.m */; };
 		7CFC73B913F91EEE00805437 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73B813F91EEE00805437 /* UIKit.framework */; };
 		7CFC73BB13F91EEE00805437 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73BA13F91EEE00805437 /* Foundation.framework */; };
 		7CFC73BD13F91EEE00805437 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73BC13F91EEE00805437 /* CoreGraphics.framework */; };
@@ -1707,7 +1708,6 @@
 		7CFC743A13F92C5D00805437 /* SelectQuestionTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC743713F92C5D00805437 /* SelectQuestionTemplate.m */; };
 		7CFC743B13F92C5D00805437 /* SelectTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC743913F92C5D00805437 /* SelectTopic.m */; };
 		7CFC744013F92C7F00805437 /* SelectAllocatedMarks.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC743D13F92C7F00805437 /* SelectAllocatedMarks.m */; };
-		7CFC744113F92C7F00805437 /* SelectDifficulty.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC743F13F92C7F00805437 /* SelectDifficulty.m */; };
 		7CFC744413F92CA500805437 /* ViewQuestionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC744313F92CA500805437 /* ViewQuestionList.m */; };
 		7CFC744713F92CBC00805437 /* Report.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC744613F92CBC00805437 /* Report.m */; };
 		7CFC744E13F92CED00805437 /* CheckExistingFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC744913F92CED00805437 /* CheckExistingFiles.m */; };
@@ -3412,6 +3412,8 @@
 		7CC556D813FABFD600DB8D0E /* 1624.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1624.pdf; sourceTree = "<group>"; };
 		7CC556D913FABFD600DB8D0E /* 1625.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1625.pdf; sourceTree = "<group>"; };
 		7CC556DA13FABFD600DB8D0E /* 1626.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1626.pdf; sourceTree = "<group>"; };
+		7CC55D5613FAC45300DB8D0E /* SelectDifficulty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectDifficulty.h; sourceTree = "<group>"; };
+		7CC55D5713FAC45300DB8D0E /* SelectDifficulty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectDifficulty.m; sourceTree = "<group>"; };
 		7CFC73B413F91EEE00805437 /* GCSEMaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCSEMaths.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFC73B813F91EEE00805437 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7CFC73BA13F91EEE00805437 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -3467,8 +3469,6 @@
 		7CFC743913F92C5D00805437 /* SelectTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTopic.m; sourceTree = "<group>"; };
 		7CFC743C13F92C7F00805437 /* SelectAllocatedMarks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAllocatedMarks.h; sourceTree = "<group>"; };
 		7CFC743D13F92C7F00805437 /* SelectAllocatedMarks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectAllocatedMarks.m; sourceTree = "<group>"; };
-		7CFC743E13F92C7F00805437 /* SelectDifficulty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectDifficulty.h; sourceTree = "<group>"; };
-		7CFC743F13F92C7F00805437 /* SelectDifficulty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectDifficulty.m; sourceTree = "<group>"; };
 		7CFC744213F92CA500805437 /* ViewQuestionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewQuestionList.h; sourceTree = "<group>"; };
 		7CFC744313F92CA500805437 /* ViewQuestionList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewQuestionList.m; sourceTree = "<group>"; };
 		7CFC744513F92CBC00805437 /* Report.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Report.h; sourceTree = "<group>"; };
@@ -5357,8 +5357,8 @@
 				7CFC743913F92C5D00805437 /* SelectTopic.m */,
 				7CFC743C13F92C7F00805437 /* SelectAllocatedMarks.h */,
 				7CFC743D13F92C7F00805437 /* SelectAllocatedMarks.m */,
-				7CFC743E13F92C7F00805437 /* SelectDifficulty.h */,
-				7CFC743F13F92C7F00805437 /* SelectDifficulty.m */,
+				7CC55D5613FAC45300DB8D0E /* SelectDifficulty.h */,
+				7CC55D5713FAC45300DB8D0E /* SelectDifficulty.m */,
 				7CFC744213F92CA500805437 /* ViewQuestionList.h */,
 				7CFC744313F92CA500805437 /* ViewQuestionList.m */,
 				7CFC744513F92CBC00805437 /* Report.h */,
@@ -7156,7 +7156,6 @@
 				7CFC743A13F92C5D00805437 /* SelectQuestionTemplate.m in Sources */,
 				7CFC743B13F92C5D00805437 /* SelectTopic.m in Sources */,
 				7CFC744013F92C7F00805437 /* SelectAllocatedMarks.m in Sources */,
-				7CFC744113F92C7F00805437 /* SelectDifficulty.m in Sources */,
 				7CFC744413F92CA500805437 /* ViewQuestionList.m in Sources */,
 				7CFC744713F92CBC00805437 /* Report.m in Sources */,
 				7CFC744E13F92CED00805437 /* CheckExistingFiles.m in Sources */,
@@ -7194,6 +7193,7 @@
 				7CB9D06C13F958380077E0A3 /* FillTheBlanks.m in Sources */,
 				7CB9D06D13F958380077E0A3 /* FillTheBlanks1.m in Sources */,
 				7CB9D07113F958720077E0A3 /* Uploads.m in Sources */,
+				7CC55D5813FAC45300DB8D0E /* SelectDifficulty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
