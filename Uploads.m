@@ -150,7 +150,7 @@ int Version = 0;
 				
 			NSArray *Topicspaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 			NSString *TopicsdocumentsDirectory = [Topicspaths objectAtIndex:0];
-			NSString *Topicsresult = [TopicsdocumentsDirectory stringByAppendingString:@"/MathsTopics.xml"];
+			NSString *Topicsresult = [TopicsdocumentsDirectory stringByAppendingString:@"/MATHSTopics.xml"];
 				
 			[self loadDataFromXML:Topicsresult];
 			
@@ -162,7 +162,7 @@ int Version = 0;
 				
 				NSArray *Templatepaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 				NSString *TemplatedocumentsDirectory = [Templatepaths objectAtIndex:0];
-				NSString *Templateresult = [TemplatedocumentsDirectory stringByAppendingString:@"/MathsQuestionTemplates.xml"];
+				NSString *Templateresult = [TemplatedocumentsDirectory stringByAppendingString:@"/MATHSQuestionTemplates.xml"];
 				
 				[self loadDataFromXML:Templateresult];
 				
