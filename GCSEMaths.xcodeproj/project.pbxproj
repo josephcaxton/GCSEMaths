@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C64ABAE13FC1BC8005BDA9E /* Maths_Data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7C64ABAD13FC1BC8005BDA9E /* Maths_Data.xml */; };
 		7CB9D02413F94EE30077E0A3 /* Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9D01913F94EE30077E0A3 /* Answers.m */; };
 		7CB9D02513F94EE30077E0A3 /* DBVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9D01B13F94EE30077E0A3 /* DBVersion.m */; };
 		7CB9D02613F94EE30077E0A3 /* lk_QuestionTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9D01D13F94EE30077E0A3 /* lk_QuestionTemplate.m */; };
@@ -1662,7 +1663,6 @@
 		7CC55D3313FABFD700DB8D0E /* 1625.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC556D913FABFD600DB8D0E /* 1625.pdf */; };
 		7CC55D3413FABFD700DB8D0E /* 1626.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC556DA13FABFD600DB8D0E /* 1626.pdf */; };
 		7CC55D5813FAC45300DB8D0E /* SelectDifficulty.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC55D5713FAC45300DB8D0E /* SelectDifficulty.m */; };
-		7CC55D5A13FAC90100DB8D0E /* GCSEMaths.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7CC55D5913FAC90100DB8D0E /* GCSEMaths.sqlite */; };
 		7CFC73B913F91EEE00805437 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73B813F91EEE00805437 /* UIKit.framework */; };
 		7CFC73BB13F91EEE00805437 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73BA13F91EEE00805437 /* Foundation.framework */; };
 		7CFC73BD13F91EEE00805437 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73BC13F91EEE00805437 /* CoreGraphics.framework */; };
@@ -1735,6 +1735,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C64ABAD13FC1BC8005BDA9E /* Maths_Data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Maths_Data.xml; sourceTree = "<group>"; };
 		7CB9D01813F94EE30077E0A3 /* Answers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answers.h; sourceTree = "<group>"; };
 		7CB9D01913F94EE30077E0A3 /* Answers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answers.m; sourceTree = "<group>"; };
 		7CB9D01A13F94EE30077E0A3 /* DBVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBVersion.h; sourceTree = "<group>"; };
@@ -3415,7 +3416,6 @@
 		7CC556DA13FABFD600DB8D0E /* 1626.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1626.pdf; sourceTree = "<group>"; };
 		7CC55D5613FAC45300DB8D0E /* SelectDifficulty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectDifficulty.h; sourceTree = "<group>"; };
 		7CC55D5713FAC45300DB8D0E /* SelectDifficulty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectDifficulty.m; sourceTree = "<group>"; };
-		7CC55D5913FAC90100DB8D0E /* GCSEMaths.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GCSEMaths.sqlite; sourceTree = "<group>"; };
 		7CFC73B413F91EEE00805437 /* GCSEMaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCSEMaths.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFC73B813F91EEE00805437 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7CFC73BA13F91EEE00805437 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -5170,7 +5170,7 @@
 				7CC556D913FABFD600DB8D0E /* 1625.pdf */,
 				7CC556DA13FABFD600DB8D0E /* 1626.pdf */,
 				7CB9D03913F956990077E0A3 /* AttributionIphone.pdf */,
-				7CC55D5913FAC90100DB8D0E /* GCSEMaths.sqlite */,
+				7C64ABAD13FC1BC8005BDA9E /* Maths_Data.xml */,
 				7CB9D03B13F956B10077E0A3 /* Results.xml */,
 				7CB9D03D13F956BE0077E0A3 /* DescriptiveAnswers.xml */,
 			);
@@ -7142,7 +7142,7 @@
 				7CC55D3213FABFD700DB8D0E /* 1624.pdf in Resources */,
 				7CC55D3313FABFD700DB8D0E /* 1625.pdf in Resources */,
 				7CC55D3413FABFD700DB8D0E /* 1626.pdf in Resources */,
-				7CC55D5A13FAC90100DB8D0E /* GCSEMaths.sqlite in Resources */,
+				7C64ABAE13FC1BC8005BDA9E /* Maths_Data.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
