@@ -429,7 +429,7 @@ int ToReviewQuestions = 0;
 	
 	else if([appDelegate.Difficulty isEqualToString:@"Higher"]){
 		
-		return [NSNumber numberWithInt:3];
+		return [NSNumber numberWithInt:2];
 		
 	}
 	else{
@@ -536,14 +536,14 @@ int ToReviewQuestions = 0;
 		}
 		else {
 		
-			//QuestionItems *QI = (QuestionItems *)[PopBox objectAtIndex:indexPath.row];
+			QuestionItems *QI = (QuestionItems *)[PopBox objectAtIndex:indexPath.row];
 			//Show only the Filename without extension.
 			//NSString *FullFileName = [NSString stringWithFormat:@"%@",[QI Question]];
 			//NSArray *FileName = [FullFileName componentsSeparatedByString:@"."];
 			
 			//cell.textLabel.text = [NSString stringWithFormat:@"Question   %i",indexPath.row +1];    //[FileName objectAtIndex:0]];  //indexPath.row +1]; //[QI Question];
-			cell.textLabel.text = [NSString stringWithFormat:@"Question %i",[[NumberCounter objectAtIndex:indexPath.row]intValue]]; // Just numbering here
-			//cell.textLabel.text = [NSString stringWithFormat:@"Question   %@", [QI Question]];
+			//cell.textLabel.text = [NSString stringWithFormat:@"Question %i",[[NumberCounter objectAtIndex:indexPath.row]intValue]]; // Just numbering here
+			cell.textLabel.text = [NSString stringWithFormat:@"Question   %@", [QI Question]];
 			
 			// it was suggested we remove the marks as all marks at the moment is 1 for each question.
 			// But a problem was created. When you scroll down some of the cells come up with text from 

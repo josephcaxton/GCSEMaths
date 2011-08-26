@@ -105,8 +105,8 @@
 	
 	NSString *AccessLevel =@"AccessLevel";
 	NSString *MyAccessLevel = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:AccessLevel];
-	[[NSUserDefaults standardUserDefaults] setObject:@"8" forKey:@"AccessLevel"]; //-- for Testing Only
-	[[NSUserDefaults standardUserDefaults] synchronize];
+	//[[NSUserDefaults standardUserDefaults] setObject:@"8" forKey:@"AccessLevel"]; //-- for Testing Only
+	//[[NSUserDefaults standardUserDefaults] synchronize];
 	if (MyAccessLevel == nil) {
 		
 		NSDictionary *appDefaults  = [NSDictionary dictionaryWithObjectsAndKeys:@"1", AccessLevel, nil];

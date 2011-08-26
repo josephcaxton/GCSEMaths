@@ -47,7 +47,7 @@ static NSString *kViewKey = @"viewKey";
 			case 0:
 				appDelegate.Difficulty =@"Foundation & Higher";
 				break;
-			case 3:
+			case 2:
 				appDelegate.Difficulty =@"Higher";
 				break;
 		}
@@ -176,7 +176,7 @@ static NSString *kViewKey = @"viewKey";
 		}
 		else{
 			
-			QI.Difficulty = [NSNumber numberWithInt:3];
+			QI.Difficulty = [NSNumber numberWithInt:2];
 			
 		}
 		
@@ -320,7 +320,7 @@ static NSString *kViewKey = @"viewKey";
 		}
 		else{
 			
-			QItem_ForEdit.Difficulty = [NSNumber numberWithInt:3];
+			QItem_ForEdit.Difficulty = [NSNumber numberWithInt:2];
 			
 		}
 		

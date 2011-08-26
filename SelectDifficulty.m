@@ -29,7 +29,7 @@
 		case 0:
 			appDelegate.Difficulty =@"Foundation & Higher";
 			break;
-		case 3:
+		case 2:
 			appDelegate.Difficulty =@"Higher";
 			break;
 				
@@ -240,7 +240,7 @@
 		}
 		else{
 			
-			QItem_ForEdit.Difficulty = [NSNumber numberWithInt:3];
+			QItem_ForEdit.Difficulty = [NSNumber numberWithInt:2];
 			
 		}
 		
