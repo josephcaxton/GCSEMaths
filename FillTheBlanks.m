@@ -218,16 +218,16 @@ static UIWebView *QuestionHeaderBox = nil;
             [self AdjustScreenToSee: 0]; // To fix the screen 
             [FileListTable reloadData];
             
-			if (Specialflag) {
-                
+			 if (Specialflag) {
             
+                            
             NSIndexSet *DeletedSection = [NSIndexSet indexSetWithIndex:0];            
             [FileListTable beginUpdates];
             
             [FileListTable deleteSections:DeletedSection withRowAnimation:UITableViewRowAnimationFade];
             
             [FileListTable endUpdates];
-            }
+            } 
 
             Specialflag = TRUE;
             //[self AdjustScreenToSee: 0];
@@ -459,7 +459,8 @@ static UIWebView *QuestionHeaderBox = nil;
 		count = [AnswerObjects count] + 1 ; // Add one more roll for controls;
 		
 	}
-	else if (QItem_Edit){
+    	
+    else if (QItem_Edit){
 		
 		count = [fileList count];
 	}
@@ -486,7 +487,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		return cell;
 		
 	}
-	 else if (QItem_View !=nil && indexPath.row < [AnswerObjects count] ) {
+	 else if (QItem_View !=nil && indexPath.row < [AnswerObjects count]  ) {
          
          UITextField *TextField = [[self.AnswerControls objectAtIndex:indexPath.row] valueForKey:kViewKey]; 
          TextField.adjustsFontSizeToFitWidth = YES;
@@ -501,18 +502,18 @@ static UIWebView *QuestionHeaderBox = nil;
          //TextField.clearButtonMode = UITextFieldViewModeAlways;
          TextField.delegate = self;
          [cell.contentView addSubview:TextField];
+         
          tableView.allowsSelection = NO;
 		 
-         
+     
 
 		 
-			if (ShowAnswer && Specialflag == TRUE) {
+		 if (ShowAnswer && Specialflag == TRUE && indexPath.section == 1) {
 				
 				
                 //remove the textField
-                [TextField removeFromSuperview];
-                
-            
+               [TextField removeFromSuperview];
+                        
                 NSMutableString *AnswerText = [NSMutableString stringWithFormat:@"%@",[[AnswerObjects objectAtIndex:indexPath.row] valueForKey:@"AnswerText"]];
                 NSMutableString *Reason = [NSMutableString stringWithFormat:@"%@",[[AnswerObjects objectAtIndex:indexPath.row] valueForKey:@"Reason"]];
                 NSMutableString *FormatedString =[[NSMutableString alloc]initWithString:@"<p><font size =\"2\" face =\"times new roman \"> "];
@@ -530,6 +531,7 @@ static UIWebView *QuestionHeaderBox = nil;
                 }
                 
                 [FormatedString appendString:@"</font></p>"];
+            
                 [self configureCell:cell HTMLStr:FormatedString]; // I don't know why this is going to the next cell, to do later
                 
                 [FormatedString release];
@@ -542,10 +544,10 @@ static UIWebView *QuestionHeaderBox = nil;
 				//[Val release];
 				
 
-			}
+        }
             		 
 		return cell;
-	}
+}
 	
 	
 	 else if(QItem_View !=nil && indexPath.row == [AnswerObjects count] ){
@@ -600,7 +602,7 @@ static UIWebView *QuestionHeaderBox = nil;
     // increase the size of the answer cell, but ignore the the continue button cell 
     if (indexPath.row != [AnswerObjects count] && ShowAnswer ) {
         
-		return 100.0;
+		return 270.0;
 		
 	}
 	return 45;
@@ -727,8 +729,8 @@ static UIWebView *QuestionHeaderBox = nil;
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDuration:0.3];
         CGRect rect = self.FileListTable.frame;
-        rect.origin.y = -175;
-        rect.size.height = 690;
+        rect.origin.y = -345;
+        rect.size.height = 750;
         self.FileListTable.frame = rect;
         [UIView commitAnimations];
 	}

@@ -25,7 +25,9 @@ static UIWebView *WebBox = nil;
 		[WebBox setOpaque:NO];
 		WebBox.userInteractionEnabled = NO;  // This allow the cell to  
 		//WebBox.scalesPageToFit = YES;
+        
 		[self.contentView addSubview:WebBox];
+       
 		WebBox.delegate = nil;
 		[WebBox	 release];
 		
