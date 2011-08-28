@@ -2,7 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>750To1040</key>
-	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.750To1040</string>
+	<key>750To1000</key>
+	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.750To1000</string>
+	<key>750To1250</key>
+	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.750To1250</string>
+	<key>750To1500</key>
+	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.750To1500</string>
+	<key>750To1600</key>
+	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.750To1600</string>
 </dict>
 </plist>

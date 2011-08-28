@@ -4,7 +4,13 @@
 <dict>
 	<key>500To750</key>
 	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.500To750</string>
-	<key>500To1040</key>
-	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.500To1040</string>
+	<key>500To1000</key>
+	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.500To1000</string>
+	<key>500To1250</key>
+	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.500To1250</string>
+	<key>500To1500</key>
+	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.500To1500</string>
+	<key>500To1600</key>
+	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.500To1600</string>
 </dict>
 </plist>

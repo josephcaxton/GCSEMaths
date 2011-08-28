@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7C15B7051407B43100F787DF /* GCSEMaths.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7C15B7041407B43100F787DF /* GCSEMaths.sqlite */; };
+		7C9F3A6E140A4E900018D06C /* From1000.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C9F3A6D140A4E900018D06C /* From1000.plist */; };
+		7C9F3A71140A4EBB0018D06C /* From1250.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C9F3A70140A4EBB0018D06C /* From1250.plist */; };
+		7C9F3A73140A4ECF0018D06C /* From1500.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C9F3A72140A4ECF0018D06C /* From1500.plist */; };
 		7CB9D02413F94EE30077E0A3 /* Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9D01913F94EE30077E0A3 /* Answers.m */; };
 		7CB9D02513F94EE30077E0A3 /* DBVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9D01B13F94EE30077E0A3 /* DBVersion.m */; };
 		7CB9D02613F94EE30077E0A3 /* lk_QuestionTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9D01D13F94EE30077E0A3 /* lk_QuestionTemplate.m */; };
@@ -1736,6 +1739,9 @@
 
 /* Begin PBXFileReference section */
 		7C15B7041407B43100F787DF /* GCSEMaths.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEMaths.sqlite; sourceTree = "<group>"; };
+		7C9F3A6D140A4E900018D06C /* From1000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = From1000.plist; sourceTree = "<group>"; };
+		7C9F3A70140A4EBB0018D06C /* From1250.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = From1250.plist; sourceTree = "<group>"; };
+		7C9F3A72140A4ECF0018D06C /* From1500.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = From1500.plist; sourceTree = "<group>"; };
 		7CB9D01813F94EE30077E0A3 /* Answers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answers.h; sourceTree = "<group>"; };
 		7CB9D01913F94EE30077E0A3 /* Answers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answers.m; sourceTree = "<group>"; };
 		7CB9D01A13F94EE30077E0A3 /* DBVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBVersion.h; sourceTree = "<group>"; };
@@ -5331,6 +5337,9 @@
 				7CFC741013F9258200805437 /* From250.plist */,
 				7CFC741113F9258200805437 /* From500.plist */,
 				7CFC741213F9258200805437 /* From750.plist */,
+				7C9F3A6D140A4E900018D06C /* From1000.plist */,
+				7C9F3A70140A4EBB0018D06C /* From1250.plist */,
+				7C9F3A72140A4ECF0018D06C /* From1500.plist */,
 				7CFC741613F9259100805437 /* Graph_Iphone.png */,
 				7CFC741813F925A600805437 /* Maths.png */,
 				7CFC741A13F925B600805437 /* Physics.png */,
@@ -7143,6 +7152,9 @@
 				7CC55D3313FABFD700DB8D0E /* 1625.pdf in Resources */,
 				7CC55D3413FABFD700DB8D0E /* 1626.pdf in Resources */,
 				7C15B7051407B43100F787DF /* GCSEMaths.sqlite in Resources */,
+				7C9F3A6E140A4E900018D06C /* From1000.plist in Resources */,
+				7C9F3A71140A4EBB0018D06C /* From1250.plist in Resources */,
+				7C9F3A73140A4ECF0018D06C /* From1500.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

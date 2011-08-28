@@ -3,12 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>250Questions</key>
-	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.250</string>
+	<string>com.learnerscloud.iEvaluatorforIPhone.Maths.250</string>
 	<key>500Questions</key>
 	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.500</string>
 	<key>750Questions</key>
 	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.750</string>
 	<key>1000Questions</key>
-	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.1040</string>
+	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.1000</string>
+	<key>1250Questions</key>
+	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.1250</string>
+	<key>1500Questions</key>
+	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.1500</string>
+	<key>1600Questions</key>
+	<string>com.LearnersCloud.iEvaluatorForiPhone.Maths.1600</string>
 </dict>
 </plist>
