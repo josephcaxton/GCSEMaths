@@ -132,8 +132,23 @@ int dontShowPriceList = 0;
 			path = [[NSBundle mainBundle] pathForResource:@"From750" ofType:@"plist"];
 			
 		}
+        else if ([AccessLevel intValue] == 5){
+			
+			path = [[NSBundle mainBundle] pathForResource:@"From1000" ofType:@"plist"];
+			
+		}
+        else if ([AccessLevel intValue] == 6){
+			
+			path = [[NSBundle mainBundle] pathForResource:@"From1250" ofType:@"plist"];
+			
+		}
+        else if ([AccessLevel intValue] == 7){
+			
+			path = [[NSBundle mainBundle] pathForResource:@"From1500" ofType:@"plist"];
+			
+		}
 		
-		if ([AccessLevel intValue] == 5){
+		if ([AccessLevel intValue] == 8){
 			
 			UIAlertView *Alert = [[UIAlertView alloc] initWithTitle: @"You already have all our products" 
 															message: @"Press the Questions button to start" delegate: self 
@@ -295,25 +310,43 @@ int dontShowPriceList = 0;
 			switch (myTag) {
 				case 1:
 					;
-					SKPayment *payment1 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.English.250"];
+					SKPayment *payment1 = [SKPayment paymentWithProductIdentifier:@"com.learnerscloud.iEvaluatorforIPhone.Maths.250"];
 					[[SKPaymentQueue defaultQueue] addPayment:payment1];
 					break;
 					
 				case 2:
 					;
-					SKPayment *payment2 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.English.500"];
+					SKPayment *payment2 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.500"];
 					[[SKPaymentQueue defaultQueue] addPayment:payment2];
 					break;
 				case 3:
 					;
-					SKPayment *payment3 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.English.750"];
+					SKPayment *payment3 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.750"];
 					[[SKPaymentQueue defaultQueue] addPayment:payment3];
 					
 					break;
 				case 4:
 					;
-					SKPayment *payment4 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.English.1040"];
+					SKPayment *payment4 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.1000"];
 					[[SKPaymentQueue defaultQueue] addPayment:payment4];
+					break;
+                    
+                case 5:
+					;
+					SKPayment *payment5 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.1250"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment5];
+					break;
+                    
+                case 6:
+					;
+					SKPayment *payment6 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.1500"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment6];
+					break;
+                    
+                case 7:
+					;
+					SKPayment *payment7 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.1600"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment7];
 					break;
 					
 					
@@ -325,20 +358,38 @@ int dontShowPriceList = 0;
 			switch (myTag) {
 				case 1:
 					;
-					SKPayment *payment1 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.English.250To500"];
+					SKPayment *payment1 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.250To500"];
 					[[SKPaymentQueue defaultQueue] addPayment:payment1];
 					
 					break;
 				case 2:
 					;
-					SKPayment *payment2 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.English.250To750"];
+					SKPayment *payment2 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.250To750"];
 					[[SKPaymentQueue defaultQueue] addPayment:payment2];
 					
 					break;
 				case 3:
 					;
-					SKPayment *payment3 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.English.250To1040"];
+					SKPayment *payment3 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.250To1040"];
 					[[SKPaymentQueue defaultQueue] addPayment:payment3];
+					
+					break;	
+                case 4:
+					;
+					SKPayment *payment4 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.250To1250"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment4];
+					
+					break;	
+                case 5:
+					;
+					SKPayment *payment5 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.250To1500"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment5];
+					
+					break;	
+                case 6:
+					;
+					SKPayment *payment6 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.250To1600"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment6];
 					
 					break;	
 					
@@ -350,14 +401,32 @@ int dontShowPriceList = 0;
 			switch (myTag) {
 				case 1:
 					;
-					SKPayment *payment1 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.English.500To750"];
+					SKPayment *payment1 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.500To750"];
 					[[SKPaymentQueue defaultQueue] addPayment:payment1];
 					
 					break;
 				case 2:
 					;
-					SKPayment *payment2 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.English.500To1040"];
+					SKPayment *payment2 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.500To1000"];
 					[[SKPaymentQueue defaultQueue] addPayment:payment2];
+					
+					break;
+                case 3:
+					;
+					SKPayment *payment3 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.500To1250"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment3];
+					
+					break;
+                case 4:
+					;
+					SKPayment *payment4 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.500To1500"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment4];
+					
+					break;
+                case 5:
+					;
+					SKPayment *payment5 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.500To1600"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment5];
 					
 					break;
 			}
@@ -366,11 +435,79 @@ int dontShowPriceList = 0;
 			switch (myTag) {
 				case 1:
 					;
-					SKPayment *payment1 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.English.750To1040"];
+					SKPayment *payment1 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.750To1000"];
 					[[SKPaymentQueue defaultQueue] addPayment:payment1];
+					break;
+                case 2:
+					;
+					SKPayment *payment2 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.750To1250"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment2];
+					break;
+                case 3:
+					;
+					SKPayment *payment3 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.750To1500"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment3];
+					break;
+                case 4:
+					;
+					SKPayment *payment4 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.750To1600"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment4];
 					break;
 					
 			}
+            
+        case 5:
+			switch (myTag) {
+				case 1:
+					;
+					SKPayment *payment1 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.1000To1250"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment1];
+					break;
+                case 2:
+					;
+					SKPayment *payment2 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.1000To1500"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment2];
+					break;
+                case 3:
+					;
+					SKPayment *payment3 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.1000To1600"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment3];
+					break;
+                
+					
+			}
+            
+        case 6:
+			switch (myTag) {
+				case 1:
+					;
+					SKPayment *payment1 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.1250To1500"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment1];
+					break;
+                case 2:
+					;
+					SKPayment *payment2 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.1250To1600"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment2];
+					break;
+                
+                    
+					
+			}
+            
+        case 7:
+			switch (myTag) {
+				case 1:
+					;
+					SKPayment *payment1 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.1500To1600"];
+					[[SKPaymentQueue defaultQueue] addPayment:payment1];
+					break;
+                
+                    
+                    
+					
+			}
+
+ 
 			
 		
 			
