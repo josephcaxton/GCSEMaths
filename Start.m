@@ -416,7 +416,7 @@ if ([self.FirstView superview]) {
 			return 230;
 		}
 		else {
-			return 60;
+			return 40;
 		}
 	}
 	else {
