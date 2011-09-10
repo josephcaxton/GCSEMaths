@@ -543,7 +543,7 @@ int ToReviewQuestions = 0;
 			
 			//cell.textLabel.text = [NSString stringWithFormat:@"Question   %i",indexPath.row +1];    //[FileName objectAtIndex:0]];  //indexPath.row +1]; //[QI Question];
 			//cell.textLabel.text = [NSString stringWithFormat:@"Question %i",[[NumberCounter objectAtIndex:indexPath.row]intValue]]; // Just numbering here
-			cell.textLabel.text = [NSString stringWithFormat:@"Question   %@", [QI Question]];
+			cell.textLabel.text = [NSString stringWithFormat:@"Question   %@ removed in the release version", [QI Question]];
 			
 			// it was suggested we remove the marks as all marks at the moment is 1 for each question.
 			// But a problem was created. When you scroll down some of the cells come up with text from 
