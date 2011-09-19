@@ -639,7 +639,8 @@ static UIWebView *QuestionHeaderBox = nil;
 	/// Fix problem of Keyvboard blocking text fields
 	
 	switch (textField.tag) {
-			
+		
+ 
 		case 0:
 		{
 			[UIView beginAnimations:nil context:NULL];
