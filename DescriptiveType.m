@@ -252,6 +252,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		[FormatedString appendString:@"</font></p>"];
 		
 		WebControl = [[UIWebView alloc]initWithFrame:CGRectMake(0,0,300,150)];
+        WebControl.dataDetectorTypes = 0;
 		[WebControl setBackgroundColor:[UIColor clearColor]];
 		[WebControl loadHTMLString:FormatedString baseURL:nil];
 		[Answer1 addSubview:WebControl];
