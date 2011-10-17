@@ -122,6 +122,12 @@
 	
 	NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
 	[def setValue:@"" forKey:@"activeTab"];
+    
+    // Notification Service Registration
+    
+    NSLog(@"Registering for push notifications...");    
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
+	
 	
 	
 	return YES;
@@ -450,6 +456,33 @@
 	//NSLog(@"Memory warning from app delegate");
 	
 }
+
+// Notification service
+
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    NSString *str = [NSString 
+                     stringWithFormat:@"Device Token=%@",deviceToken];
+    NSLog(@"%@",str);
+    
+}
+
+- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err { 
+    
+    NSString *str = [NSString stringWithFormat: @"Error: %@", err];
+    NSLog(@"%@",str);    
+    
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    for (id key in userInfo) {
+        NSLog(@"key: %@, value: %@", key, [userInfo objectForKey:key]);
+    }    
+    
+}
+
+
 
 
 - (void)dealloc {
