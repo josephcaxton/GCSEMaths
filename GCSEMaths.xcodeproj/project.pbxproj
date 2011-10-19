@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C56AC10144F172700A471C9 /* English.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7C56AC0F144F172700A471C9 /* English.m4v */; };
 		7C795882141B53AC00C6629A /* 1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795228141B53A600C6629A /* 1.pdf */; };
 		7C795883141B53AC00C6629A /* 2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795229141B53A600C6629A /* 2.pdf */; };
 		7C795884141B53AC00C6629A /* 3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79522A141B53A600C6629A /* 3.pdf */; };
@@ -1687,7 +1688,6 @@
 		7CFC73FF13F9246000805437 /* ITest U Video.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC73FE13F9246000805437 /* ITest U Video.m4v */; };
 		7CFC740113F9248800805437 /* Physics.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC740013F9248800805437 /* Physics.m4v */; };
 		7CFC740313F924A600805437 /* Chemistry.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC740213F924A600805437 /* Chemistry.m4v */; };
-		7CFC740513F924BA00805437 /* English.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC740413F924B900805437 /* English.m4v */; };
 		7CFC740713F924D600805437 /* ArrowWoodImpact.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC740613F924D600805437 /* ArrowWoodImpact.aiff */; };
 		7CFC740913F924E700805437 /* Cough.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC740813F924E700805437 /* Cough.aiff */; };
 		7CFC740B13F924F700805437 /* Clapping.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC740A13F924F700805437 /* Clapping.aiff */; };
@@ -1738,6 +1738,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C56AC0F144F172700A471C9 /* English.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = English.m4v; sourceTree = "<group>"; };
 		7C795228141B53A600C6629A /* 1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1.pdf; sourceTree = "<group>"; };
 		7C795229141B53A600C6629A /* 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 2.pdf; sourceTree = "<group>"; };
 		7C79522A141B53A600C6629A /* 3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 3.pdf; sourceTree = "<group>"; };
@@ -3446,7 +3447,6 @@
 		7CFC73FE13F9246000805437 /* ITest U Video.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ITest U Video.m4v"; sourceTree = "<group>"; };
 		7CFC740013F9248800805437 /* Physics.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Physics.m4v; sourceTree = "<group>"; };
 		7CFC740213F924A600805437 /* Chemistry.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chemistry.m4v; sourceTree = "<group>"; };
-		7CFC740413F924B900805437 /* English.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = English.m4v; sourceTree = "<group>"; };
 		7CFC740613F924D600805437 /* ArrowWoodImpact.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ArrowWoodImpact.aiff; sourceTree = "<group>"; };
 		7CFC740813F924E700805437 /* Cough.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Cough.aiff; sourceTree = "<group>"; };
 		7CFC740A13F924F700805437 /* Clapping.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Clapping.aiff; sourceTree = "<group>"; };
@@ -5326,8 +5326,8 @@
 				7CFC73FC13F9244300805437 /* Maths.m4v */,
 				7CFC73FE13F9246000805437 /* ITest U Video.m4v */,
 				7CFC740013F9248800805437 /* Physics.m4v */,
+				7C56AC0F144F172700A471C9 /* English.m4v */,
 				7CFC740213F924A600805437 /* Chemistry.m4v */,
-				7CFC740413F924B900805437 /* English.m4v */,
 				7CFC740613F924D600805437 /* ArrowWoodImpact.aiff */,
 				7CFC740813F924E700805437 /* Cough.aiff */,
 				7CFC740A13F924F700805437 /* Clapping.aiff */,
@@ -5492,7 +5492,6 @@
 				7CFC73FF13F9246000805437 /* ITest U Video.m4v in Resources */,
 				7CFC740113F9248800805437 /* Physics.m4v in Resources */,
 				7CFC740313F924A600805437 /* Chemistry.m4v in Resources */,
-				7CFC740513F924BA00805437 /* English.m4v in Resources */,
 				7CFC740713F924D600805437 /* ArrowWoodImpact.aiff in Resources */,
 				7CFC740913F924E700805437 /* Cough.aiff in Resources */,
 				7CFC740B13F924F700805437 /* Clapping.aiff in Resources */,
@@ -7155,6 +7154,7 @@
 				7C85268A144DC186005A8956 /* 1615.pdf in Resources */,
 				7C85268C144DC40B005A8956 /* 175.pdf in Resources */,
 				7C8526AC144DD1F9005A8956 /* GCSEMaths.sqlite in Resources */,
+				7C56AC10144F172700A471C9 /* English.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
