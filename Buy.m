@@ -310,7 +310,7 @@ int dontShowPriceList = 0;
 			switch (myTag) {
 				case 1:
 					;
-					SKPayment *payment1 = [SKPayment paymentWithProductIdentifier:@"com.learnerscloud.iEvaluatorforIPhone.Maths.250"];
+					SKPayment *payment1 = [SKPayment paymentWithProductIdentifier:@"com.learnerscloud.iEvaluatorforIPhone.Maths.250"]; // note the I here is Caps
 					[[SKPaymentQueue defaultQueue] addPayment:payment1];
 					break;
 					

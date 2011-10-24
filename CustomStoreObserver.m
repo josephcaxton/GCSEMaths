@@ -104,7 +104,7 @@
 -(void) provideContent:(NSString *)productIdentifier{
 	
 	// From Free
-	if ([productIdentifier isEqualToString:@"com.learnerscloud.iEvaluatorforIPhone.Maths.250"]) {
+	if ([productIdentifier isEqualToString:@"com.learnerscloud.iEvaluatorforIPhone.Maths.250"]) { // note the I here is Caps
 		
 		[[NSUserDefaults standardUserDefaults] setObject:@"2" forKey:@"AccessLevel"];
 	
