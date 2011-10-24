@@ -1638,6 +1638,7 @@
 		7C9F3A6E140A4E900018D06C /* From1000.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C9F3A6D140A4E900018D06C /* From1000.plist */; };
 		7C9F3A71140A4EBB0018D06C /* From1250.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C9F3A70140A4EBB0018D06C /* From1250.plist */; };
 		7C9F3A73140A4ECF0018D06C /* From1500.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C9F3A72140A4ECF0018D06C /* From1500.plist */; };
+		7CA955E214559E9300C0DB2D /* Physics.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7CA955E114559E9300C0DB2D /* Physics.m4v */; };
 		7CB9D02413F94EE30077E0A3 /* Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9D01913F94EE30077E0A3 /* Answers.m */; };
 		7CB9D02513F94EE30077E0A3 /* DBVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9D01B13F94EE30077E0A3 /* DBVersion.m */; };
 		7CB9D02613F94EE30077E0A3 /* lk_QuestionTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9D01D13F94EE30077E0A3 /* lk_QuestionTemplate.m */; };
@@ -1686,7 +1687,6 @@
 		7CFC73FB13F9241500805437 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC73FA13F9241500805437 /* Icon-Small-50.png */; };
 		7CFC73FD13F9244300805437 /* Maths.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC73FC13F9244300805437 /* Maths.m4v */; };
 		7CFC73FF13F9246000805437 /* ITest U Video.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC73FE13F9246000805437 /* ITest U Video.m4v */; };
-		7CFC740113F9248800805437 /* Physics.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC740013F9248800805437 /* Physics.m4v */; };
 		7CFC740313F924A600805437 /* Chemistry.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC740213F924A600805437 /* Chemistry.m4v */; };
 		7CFC740713F924D600805437 /* ArrowWoodImpact.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC740613F924D600805437 /* ArrowWoodImpact.aiff */; };
 		7CFC740913F924E700805437 /* Cough.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC740813F924E700805437 /* Cough.aiff */; };
@@ -3369,6 +3369,7 @@
 		7C9F3A6D140A4E900018D06C /* From1000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = From1000.plist; sourceTree = "<group>"; };
 		7C9F3A70140A4EBB0018D06C /* From1250.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = From1250.plist; sourceTree = "<group>"; };
 		7C9F3A72140A4ECF0018D06C /* From1500.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = From1500.plist; sourceTree = "<group>"; };
+		7CA955E114559E9300C0DB2D /* Physics.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Physics.m4v; sourceTree = "<group>"; };
 		7CB9D01813F94EE30077E0A3 /* Answers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answers.h; sourceTree = "<group>"; };
 		7CB9D01913F94EE30077E0A3 /* Answers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answers.m; sourceTree = "<group>"; };
 		7CB9D01A13F94EE30077E0A3 /* DBVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBVersion.h; sourceTree = "<group>"; };
@@ -3445,7 +3446,6 @@
 		7CFC73FA13F9241500805437 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		7CFC73FC13F9244300805437 /* Maths.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maths.m4v; sourceTree = "<group>"; };
 		7CFC73FE13F9246000805437 /* ITest U Video.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ITest U Video.m4v"; sourceTree = "<group>"; };
-		7CFC740013F9248800805437 /* Physics.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Physics.m4v; sourceTree = "<group>"; };
 		7CFC740213F924A600805437 /* Chemistry.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chemistry.m4v; sourceTree = "<group>"; };
 		7CFC740613F924D600805437 /* ArrowWoodImpact.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ArrowWoodImpact.aiff; sourceTree = "<group>"; };
 		7CFC740813F924E700805437 /* Cough.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Cough.aiff; sourceTree = "<group>"; };
@@ -5324,8 +5324,8 @@
 				7CFC73F813F923DD00805437 /* Icon-72.png */,
 				7CFC73FA13F9241500805437 /* Icon-Small-50.png */,
 				7CFC73FC13F9244300805437 /* Maths.m4v */,
+				7CA955E114559E9300C0DB2D /* Physics.m4v */,
 				7CFC73FE13F9246000805437 /* ITest U Video.m4v */,
-				7CFC740013F9248800805437 /* Physics.m4v */,
 				7C56AC0F144F172700A471C9 /* English.m4v */,
 				7CFC740213F924A600805437 /* Chemistry.m4v */,
 				7CFC740613F924D600805437 /* ArrowWoodImpact.aiff */,
@@ -5490,7 +5490,6 @@
 				7CFC73FB13F9241500805437 /* Icon-Small-50.png in Resources */,
 				7CFC73FD13F9244300805437 /* Maths.m4v in Resources */,
 				7CFC73FF13F9246000805437 /* ITest U Video.m4v in Resources */,
-				7CFC740113F9248800805437 /* Physics.m4v in Resources */,
 				7CFC740313F924A600805437 /* Chemistry.m4v in Resources */,
 				7CFC740713F924D600805437 /* ArrowWoodImpact.aiff in Resources */,
 				7CFC740913F924E700805437 /* Cough.aiff in Resources */,
@@ -7155,6 +7154,7 @@
 				7C56AC10144F172700A471C9 /* English.m4v in Resources */,
 				7C36939214557446003870AD /* GCSEMaths.sqlite in Resources */,
 				7C36939914559A45003870AD /* 391.pdf in Resources */,
+				7CA955E214559E9300C0DB2D /* Physics.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
