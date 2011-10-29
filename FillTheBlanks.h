@@ -53,6 +53,7 @@
 	BOOL ShowAnswer;
     BOOL RemoveContinueButton;
     BOOL Specialflag;
+    BOOL FromClientAnswer;
 	UIButton *Continue;
 
 }
@@ -84,6 +85,7 @@
 @property (nonatomic, assign) BOOL RemoveContinueButton;
 
 @property (nonatomic, assign) BOOL Specialflag;
+@property (nonatomic, assign) BOOL FromClientAnswer;
 @property (nonatomic, retain) UIButton *Continue;
 
 //@property (nonatomic, retain) IBOutlet UIWebView *QuestionItemBox;

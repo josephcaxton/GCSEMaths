@@ -239,6 +239,7 @@
 		F_view.ShowAnswer = YES;
         F_view.RemoveContinueButton = YES;
 		 F_view.Specialflag= YES;
+        F_view.FromClientAnswer = YES;
 		// Remove this Object from the PopBox
 		
 		[PopBox removeObjectAtIndex:indexPath.row];

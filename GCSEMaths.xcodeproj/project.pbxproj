@@ -5458,6 +5458,7 @@
 		7CFC73AB13F91EEE00805437 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = caxtonidowu;
 			};
 			buildConfigurationList = 7CFC73AE13F91EEE00805437 /* Build configuration list for PBXProject "GCSEMaths" */;

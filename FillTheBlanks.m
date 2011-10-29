@@ -16,7 +16,7 @@ static NSString *kViewKey = @"viewKey";
 @synthesize QuestionTemplate, SelectedTopic; //QuestionHeaderBox; //Search;  //QuestionItemBox
 @synthesize  fileList, FileListTable, DirLocation,SFileName;
 @synthesize  SFileName_Edit,QItem_Edit,QItem_View;
-@synthesize AnswerObjects,Answer1,Answer2,Answer3,Answer4,Answer5,AnswerControls,ShowAnswer,RemoveContinueButton,Specialflag,Continue;
+@synthesize AnswerObjects,Answer1,Answer2,Answer3,Answer4,Answer5,AnswerControls,ShowAnswer,RemoveContinueButton,Specialflag,Continue,FromClientAnswer;
 
 static UIWebView *QuestionHeaderBox = nil;
 #pragma mark -
@@ -408,10 +408,14 @@ static UIWebView *QuestionHeaderBox = nil;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-	if (QItem_View && ShowAnswer && Specialflag == FALSE) {
+	if (QItem_View && ShowAnswer == YES && Specialflag == FALSE) {
 		
 		return 2;
 	}
+    else if (QItem_View && ShowAnswer == YES && Specialflag == YES && FromClientAnswer == YES) {
+        
+        return 1;
+    }
 	
 	else{
 		
@@ -510,7 +514,7 @@ static UIWebView *QuestionHeaderBox = nil;
      
 
 		 
-		 if (ShowAnswer && Specialflag == TRUE && indexPath.section == 1) {
+		 if ((ShowAnswer == YES && Specialflag == YES && indexPath.section == 1) || (ShowAnswer == YES && Specialflag == YES  && FromClientAnswer == YES)) {
 				
 				
                 //remove the textField
@@ -546,7 +550,9 @@ static UIWebView *QuestionHeaderBox = nil;
 				//[Val release];
 				
 
-        }
+         }
+         
+                
             		 
 		return cell;
 }
@@ -570,7 +576,7 @@ static UIWebView *QuestionHeaderBox = nil;
 			 
 			 Continue.frame = CGRectMake(350, 0, 80, 45);
 		 }
-		 if(ShowAnswer && RemoveContinueButton)
+		 if(ShowAnswer == YES && RemoveContinueButton == YES)
          {
              
              Continue.hidden = YES;
@@ -602,11 +608,16 @@ static UIWebView *QuestionHeaderBox = nil;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // increase the size of the answer cell, but ignore the the continue button cell 
-    if (indexPath.row != [AnswerObjects count] && ShowAnswer ) {
+    if (indexPath.row != [AnswerObjects count] && ShowAnswer == YES && FromClientAnswer == NO) {
         
 		return 270.0;
 		
 	}
+    else if (indexPath.row != [AnswerObjects count] && ShowAnswer == YES && FromClientAnswer == YES ){
+        
+        return 120;
+        
+    }
 	return 45;
 }
 
