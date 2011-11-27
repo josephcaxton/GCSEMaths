@@ -29,7 +29,7 @@
 		case 0:
 			appDelegate.Difficulty =@"Foundation & Higher";
 			break;
-		case 2:
+		case 3:
 			appDelegate.Difficulty =@"Higher";
 			break;
 				
@@ -119,21 +119,21 @@
 			}
 			
 			break;
-		case 2:
-			
-			cell.textLabel.text = @"Foundation & Higher";
-			if ([appDelegate.Difficulty  isEqualToString: @"Foundation & Higher" ]) {
-				
-				cell.accessoryType = UITableViewCellAccessoryCheckmark;
-			}
-			else {
-				
-				cell.accessoryType =UITableViewCellAccessoryNone;
-				
-			}
-			
-			
-			break;
+//		case 2:
+//			
+//			cell.textLabel.text = @"Foundation & Higher";
+//			if ([appDelegate.Difficulty  isEqualToString: @"Foundation & Higher" ]) {
+//				
+//				cell.accessoryType = UITableViewCellAccessoryCheckmark;
+//			}
+//			else {
+//				
+//				cell.accessoryType =UITableViewCellAccessoryNone;
+//				
+//			}
+//			
+//			
+//			break;
 		case 1:
 			
 			cell.textLabel.text = @"Higher";
@@ -234,13 +234,13 @@
 			QItem_ForEdit.Difficulty = [NSNumber numberWithInt:1];
 		}
 		else if ([appDelegate.Difficulty isEqualToString:@"Foundation & Higher"]){
-			
-			QItem_ForEdit.Difficulty = [NSNumber numberWithInt:0];
+            
+        QItem_ForEdit.Difficulty = [NSNumber numberWithInt:2];
 			
 		}
 		else{
 			
-			QItem_ForEdit.Difficulty = [NSNumber numberWithInt:2];
+			QItem_ForEdit.Difficulty = [NSNumber numberWithInt:3];
 			
 		}
 		
