@@ -7250,8 +7250,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "iTest U";
-				PROVISIONING_PROFILE = "89D76374-EA87-4283-837C-48CCC726B2CD";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "89D76374-EA87-4283-837C-48CCC726B2CD";
+				PROVISIONING_PROFILE = "14E42C8F-841D-4724-B955-2BB38E7A8CB4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "14E42C8F-841D-4724-B955-2BB38E7A8CB4";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -7261,8 +7261,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joseph caxton (99S98QLWW3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joseph caxton (99S98QLWW3)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Theta Computer Services Limited";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Theta Computer Services Limited";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -7272,8 +7272,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "iTest U";
-				PROVISIONING_PROFILE = "89D76374-EA87-4283-837C-48CCC726B2CD";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "89D76374-EA87-4283-837C-48CCC726B2CD";
+				PROVISIONING_PROFILE = "F07C5A06-1A98-4560-9A4B-7DDE5929BAB8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F07C5A06-1A98-4560-9A4B-7DDE5929BAB8";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -7283,14 +7283,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Joseph caxton (99S98QLWW3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joseph caxton (99S98QLWW3)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GCSEMaths/GCSEMaths-Prefix.pch";
 				INFOPLIST_FILE = "GCSEMaths/GCSEMaths-Info.plist";
 				PRODUCT_NAME = "iTest U";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "14E42C8F-841D-4724-B955-2BB38E7A8CB4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "14E42C8F-841D-4724-B955-2BB38E7A8CB4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -7299,14 +7299,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Theta Computer Services Limited";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Theta Computer Services Limited";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GCSEMaths/GCSEMaths-Prefix.pch";
 				INFOPLIST_FILE = "GCSEMaths/GCSEMaths-Info.plist";
 				PRODUCT_NAME = "iTest U";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "F07C5A06-1A98-4560-9A4B-7DDE5929BAB8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F07C5A06-1A98-4560-9A4B-7DDE5929BAB8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
