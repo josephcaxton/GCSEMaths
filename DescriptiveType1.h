@@ -82,6 +82,7 @@
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
+
 - (NSManagedObjectContext *)ManagedObjectContext;
 //-(int)CheckAnswers;
 

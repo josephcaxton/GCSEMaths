@@ -13,7 +13,7 @@
 
 @synthesize QuestionTemplate, SelectedTopic;  //, QuestionHeaderBox; //Search;  //QuestionItemBox
 @synthesize  fileList, FileListTable, DirLocation,SFileName;
-@synthesize  SFileName_Edit,QItem_Edit,QItem_View,AnswerObjects,Answer1,ShowCorrectAnswer,ShowAnswer,ShowAnswerHere,Continue,WebControl;
+@synthesize  SFileName_Edit,QItem_Edit,QItem_View,AnswerObjects,Answer1,ShowCorrectAnswer,ShowAnswer,ShowAnswerHere,Continue,WebControl,Instruction;
 
 int AnswerShown= 0;
 static UIWebView *QuestionHeaderBox = nil;
@@ -314,7 +314,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		MFMailComposeViewController *SendMailcontroller = [[MFMailComposeViewController alloc]init];
 		SendMailcontroller.mailComposeDelegate = self;
 		[SendMailcontroller setToRecipients:SendTo];
-		[SendMailcontroller setSubject:[NSString stringWithFormat:@"Ref %@ problem Mathematics question detected on IPhone/IPod",[[NSString stringWithFormat:@"%@",QItem_View.Question] stringByDeletingPathExtension]]];
+		[SendMailcontroller setSubject:[NSString stringWithFormat:@"Ref %@ problem mathematics question detected on IPhone/IPod",[[NSString stringWithFormat:@"%@",QItem_View.Question] stringByDeletingPathExtension]]];
 		
 		
 		[SendMailcontroller setMessageBody:[NSString stringWithFormat:@"Question Number %@ -- \n Additional Messages can be added to this email ", [[NSString stringWithFormat:@"%@",QItem_View.Question] stringByDeletingPathExtension]] isHTML:NO];
@@ -461,7 +461,17 @@ static UIWebView *QuestionHeaderBox = nil;
 		 
 		 if (indexPath.row == 0) {
 			 
-		 
+             Instruction = [[[UILabel alloc] initWithFrame:CGRectMake(10, 13, 600, 40)] autorelease];
+             Instruction.font = [UIFont boldSystemFontOfSize: 12.0];
+             Instruction.textColor = [UIColor purpleColor];
+             Instruction.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleHeight;
+             Instruction.backgroundColor = [UIColor clearColor];
+             Instruction.numberOfLines=0;
+             
+             
+             Instruction.text = @"You cannot type into this box. \n Work out your answer and press Show Answer ";
+
+             [Answer1 addSubview:Instruction];
 		 Answer1.editable = NO;
 		 //Answer1.delegate = self;
 //		 Answer1.textColor = [UIColor blackColor];

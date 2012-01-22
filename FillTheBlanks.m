@@ -327,7 +327,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		MFMailComposeViewController *SendMailcontroller = [[MFMailComposeViewController alloc]init];
 		SendMailcontroller.mailComposeDelegate = self;
 		[SendMailcontroller setToRecipients:SendTo];
-		[SendMailcontroller setSubject:[NSString stringWithFormat:@"Ref %@ problem Mathematics question detected on IPhone/IPod",[[NSString stringWithFormat:@"%@",QItem_View.Question] stringByDeletingPathExtension]]];
+		[SendMailcontroller setSubject:[NSString stringWithFormat:@"Ref %@ problem mathematics question detected on IPhone/IPod",[[NSString stringWithFormat:@"%@",QItem_View.Question] stringByDeletingPathExtension]]];
 		
 		
 		[SendMailcontroller setMessageBody:[NSString stringWithFormat:@"Question Number %@ -- \n Additional Messages can be added to this email ", [[NSString stringWithFormat:@"%@",QItem_View.Question] stringByDeletingPathExtension]] isHTML:NO];

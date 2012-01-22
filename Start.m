@@ -211,7 +211,7 @@ if ([self.FirstView superview]) {
 	
 	if([AccessLevel intValue] == 1){
 		
-		NSString *message = [[NSString alloc] initWithFormat:@"You are using the free version of the app. The app will only deliver a maximum of 30 questions depending on your search criteria"];
+		NSString *message = [[NSString alloc] initWithFormat:@"You are using the free version of the app. The app will only deliver a maximum of 30 questions depending on your search criteria and does not necessarily have all type of questions"];
 		
 		UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"Important Notice"
 													   message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
