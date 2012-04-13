@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C1CEF23153818D60006EC21 /* 70.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C1CEF22153818D60006EC21 /* 70.pdf */; };
 		7C36939914559A45003870AD /* 391.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C36939814559A45003870AD /* 391.pdf */; };
 		7C462C29146806C700E4F6AC /* 46.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C462C28146806C700E4F6AC /* 46.pdf */; };
 		7C462C2B146806E500E4F6AC /* 256.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C462C2A146806E500E4F6AC /* 256.pdf */; };
@@ -87,7 +88,6 @@
 		7C7958C4141B53AC00C6629A /* 67.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79526A141B53A600C6629A /* 67.pdf */; };
 		7C7958C5141B53AC00C6629A /* 68.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79526B141B53A600C6629A /* 68.pdf */; };
 		7C7958C6141B53AC00C6629A /* 69.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79526C141B53A600C6629A /* 69.pdf */; };
-		7C7958C7141B53AC00C6629A /* 70.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79526D141B53A600C6629A /* 70.pdf */; };
 		7C7958C8141B53AC00C6629A /* 71.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79526E141B53A600C6629A /* 71.pdf */; };
 		7C7958C9141B53AC00C6629A /* 72.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79526F141B53A600C6629A /* 72.pdf */; };
 		7C7958CA141B53AC00C6629A /* 73.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795270141B53A600C6629A /* 73.pdf */; };
@@ -1737,6 +1737,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C1CEF22153818D60006EC21 /* 70.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 70.pdf; sourceTree = "<group>"; };
 		7C36939814559A45003870AD /* 391.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 391.pdf; sourceTree = "<group>"; };
 		7C462C28146806C700E4F6AC /* 46.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 46.pdf; sourceTree = "<group>"; };
 		7C462C2A146806E500E4F6AC /* 256.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 256.pdf; sourceTree = "<group>"; };
@@ -1817,7 +1818,6 @@
 		7C79526A141B53A600C6629A /* 67.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 67.pdf; sourceTree = "<group>"; };
 		7C79526B141B53A600C6629A /* 68.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 68.pdf; sourceTree = "<group>"; };
 		7C79526C141B53A600C6629A /* 69.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 69.pdf; sourceTree = "<group>"; };
-		7C79526D141B53A600C6629A /* 70.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 70.pdf; sourceTree = "<group>"; };
 		7C79526E141B53A600C6629A /* 71.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 71.pdf; sourceTree = "<group>"; };
 		7C79526F141B53A600C6629A /* 72.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 72.pdf; sourceTree = "<group>"; };
 		7C795270141B53A600C6629A /* 73.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 73.pdf; sourceTree = "<group>"; };
@@ -3617,7 +3617,7 @@
 				7C79526A141B53A600C6629A /* 67.pdf */,
 				7C79526B141B53A600C6629A /* 68.pdf */,
 				7C79526C141B53A600C6629A /* 69.pdf */,
-				7C79526D141B53A600C6629A /* 70.pdf */,
+				7C1CEF22153818D60006EC21 /* 70.pdf */,
 				7C79526E141B53A600C6629A /* 71.pdf */,
 				7C79526F141B53A600C6629A /* 72.pdf */,
 				7C795270141B53A600C6629A /* 73.pdf */,
@@ -5587,7 +5587,6 @@
 				7C7958C4141B53AC00C6629A /* 67.pdf in Resources */,
 				7C7958C5141B53AC00C6629A /* 68.pdf in Resources */,
 				7C7958C6141B53AC00C6629A /* 69.pdf in Resources */,
-				7C7958C7141B53AC00C6629A /* 70.pdf in Resources */,
 				7C7958C8141B53AC00C6629A /* 71.pdf in Resources */,
 				7C7958C9141B53AC00C6629A /* 72.pdf in Resources */,
 				7C7958CA141B53AC00C6629A /* 73.pdf in Resources */,
@@ -7154,6 +7153,7 @@
 				7C6A5AB0150A640300DA9D9A /* Maths.png in Resources */,
 				7C6A5AB2150A651100DA9D9A /* Maths.m4v in Resources */,
 				7C579F4D150F47B70050DC9E /* 454.pdf in Resources */,
+				7C1CEF23153818D60006EC21 /* 70.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
