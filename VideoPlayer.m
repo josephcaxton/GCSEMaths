@@ -7,7 +7,7 @@
 //
 
 #import "VideoPlayer.h"
-
+#import "GANTracker.h"
 
 @implementation VideoPlayer
 
@@ -42,6 +42,13 @@
 
 -(void)viewWillAppear:(BOOL)animated{
 	
+    NSError *error;
+    // Report to  analytics
+    if (![[GANTracker sharedTracker] trackPageview:@"/VideoPlayer"
+                                         withError:&error]) {
+        NSLog(@"error in trackPageview");
+    }
+    
 	UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBackGround_Iphone.png"]];
     [self.view addSubview:backgroundImage];
     [self.view sendSubviewToBack:backgroundImage];
