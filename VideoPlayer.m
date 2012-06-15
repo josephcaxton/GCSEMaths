@@ -11,12 +11,13 @@
 
 @implementation VideoPlayer
 
-@synthesize VideoFileName;
+@synthesize VideoFileName,ServerLocation,credential,protectionSpace,moviePlayerViewController;
 
 #define SCREEN_WIDTH 320
 #define SCREEN_HEIGHT 370
 
-- (void)moviePlaybackComplete:(NSNotification *)notification  {  
+//Old code
+/*- (void)moviePlaybackComplete:(NSNotification *)notification  {  
 	
 	moviePlayerController = [notification object];  
 	[[NSNotificationCenter defaultCenter] removeObserver:self  
@@ -29,7 +30,34 @@
 	[self.navigationController popViewControllerAnimated:YES];
 	
 	
-}  
+} */ 
+
+- (void)movieFinishedCallback:(NSNotification*) notification  {  
+	
+    NSError *error;
+    // Report to  analytics
+    if (![[GANTracker sharedTracker] trackEvent:@"Finished playing video"
+                                         action:@"Playing Finished"
+                                          label:@"Playing Finished"
+                                          value:69
+                                      withError:&error]) {
+        NSLog(@"error in trackEvent");
+    }
+    
+    
+    MPMoviePlayerController *player = [notification object];  
+	[[NSNotificationCenter defaultCenter] removeObserver:self  
+													name:MPMoviePlayerPlaybackDidFinishNotification  
+												  object:player];  
+	[player stop];
+	[moviePlayerViewController.view removeFromSuperview];  
+	
+	
+	[self.navigationController popViewControllerAnimated:YES];
+	
+	
+}
+
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -48,6 +76,59 @@
                                          withError:&error]) {
         NSLog(@"error in trackPageview");
     }
+    
+    
+    if([VideoFileName isEqualToString:@"Maths"]){
+        
+        ServerLocation = @"http://learnerscloud.com/iosStream/maths/MB-COLL-018-01";
+    }
+    else if ([VideoFileName isEqualToString:@"English"]){
+        
+        ServerLocation = @"http://learnerscloud.com/iosStream/english/QA011-Bayonet-Charge";
+        
+    }
+    
+    //Authentication Details here
+    
+    NSURLCredential *credential1 = [[NSURLCredential alloc] 
+                                    initWithUser:@"Theta"
+                                    password:@"Ffk7acay@#"
+                                    persistence: NSURLCredentialPersistenceForSession];
+    self.credential = credential1;
+    
+    NSString *DomainLocation = @"learnerscloud.com";
+    
+    NSURLProtectionSpace *protectionSpace1 = [[NSURLProtectionSpace alloc]
+                                              initWithHost: DomainLocation 
+                                              port:80
+                                              protocol:@"http"
+                                              realm: DomainLocation   
+                                              authenticationMethod:NSURLAuthenticationMethodDefault];
+    self.protectionSpace = protectionSpace1;
+    
+    
+    [[NSURLCredentialStorage sharedCredentialStorage] setDefaultCredential:credential
+                                                        forProtectionSpace:protectionSpace]; 
+    
+    
+    NSString *Finalpath = [ServerLocation stringByAppendingString:@"/all.m3u8"];
+    
+    NSURL    *fileURL =   [NSURL URLWithString:Finalpath]; 
+    
+    moviePlayerViewController = [[MPMoviePlayerViewController alloc] initWithContentURL:fileURL];
+    moviePlayerViewController.moviePlayer.movieSourceType = MPMovieSourceTypeStreaming;
+    
+	[[NSNotificationCenter defaultCenter] addObserver:self  
+											 selector:@selector(movieFinishedCallback:)  
+												 name:MPMoviePlayerPlaybackDidFinishNotification  
+											   object:[moviePlayerViewController moviePlayer]];
+    
+    [self presentMoviePlayerViewControllerAnimated:moviePlayerViewController];
+    
+
+    
+    //Code When Video Files where added to bundle
+    /*
     
 	UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBackGround_Iphone.png"]];
     [self.view addSubview:backgroundImage];
@@ -78,7 +159,7 @@
 	//moviePlayerController.fullscreen = YES;
 	//moviePlayerController.scalingMode = MPMovieScalingModeAspectFill;
 	//[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
-	[moviePlayerController play];  
+	[moviePlayerController play];  */
 	
 	
 }
@@ -86,9 +167,11 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
 	
-	[moviePlayerController stop];
-	[self.navigationController setNavigationBarHidden:NO animated:YES];
+	//old code
+	/*[moviePlayerController stop];
+	[self.navigationController setNavigationBarHidden:NO animated:YES]; */
 	
+    [moviePlayerViewController.moviePlayer stop];
 }
 
 
@@ -105,16 +188,16 @@
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration{
 	
 	if (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-		
-		[moviePlayerController.view setFrame:CGRectMake(0, -10, SCREEN_WIDTH, SCREEN_HEIGHT + 120)];
-		
+		//old code
+		//[moviePlayerController.view setFrame:CGRectMake(0, -10, SCREEN_WIDTH, SCREEN_HEIGHT + 120)];
+		[[moviePlayerViewController view] setFrame:CGRectMake(0, -10, SCREEN_WIDTH, SCREEN_HEIGHT + 120)];
 	
 	}
 	
 	else {
-		
-		[moviePlayerController.view setFrame:CGRectMake(0, -30, SCREEN_HEIGHT + 110, SCREEN_WIDTH + 49 )];
-		
+		//old code
+		//[moviePlayerController.view setFrame:CGRectMake(0, -30, SCREEN_HEIGHT + 110, SCREEN_WIDTH + 49 )];
+		[[moviePlayerViewController view] setFrame:CGRectMake(0, -30, SCREEN_HEIGHT + 110, SCREEN_WIDTH + 49 )];
 		
 	}
 	
