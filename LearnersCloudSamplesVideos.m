@@ -130,7 +130,7 @@
 {
     
     if (indexPath.section == 1 && indexPath.row == 0  ) {		
-        return  140;
+        return  160;
     }
     //        else if (indexPath.section == 1 && indexPath.row == 2){
     //               return [indexPath row] + 120; 
@@ -185,7 +185,7 @@
 	
         if (!WebText) {
 			
-			WebText =[[UIWebView alloc] initWithFrame:CGRectMake(0,20,350,240)]; 
+			WebText =[[UIWebView alloc] initWithFrame:CGRectMake(0,0,350,240)]; 
 		}
 	
 		
@@ -194,7 +194,7 @@
         WebText.delegate = self;
 		NSString *Visit = @"Visit ";
 		NSString *Website =[Visit stringByAppendingString: @"<a target=/'_blank/'  href=http://www.learnerscloud.com/?utm_source=itunes&utm_medium=link&utm_content=Maths&utm_campaign=App > LearnersCloud</a>"];
-		NSString *videos = [Website stringByAppendingString:@" <br/>Watch hundreds of more HD videos <br/>Complete GCSE English & Maths available, Physics and Chemistry coming in september 2012<br/><b>Sign up for a FREE trial account now</b><br/> Also for schools and colleges."];
+		NSString *videos = [Website stringByAppendingString:@" <br/>Watch hundreds of more HD videos <br/>Complete GCSE English & Maths available, Physics and Chemistry coming in september<br/> 2012<br/><b>Sign up for a FREE trial account now</b><br/> Also for schools and colleges."];
 		
         [WebText loadHTMLString:videos baseURL:nil];
 		
