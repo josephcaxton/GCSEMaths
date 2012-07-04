@@ -70,6 +70,30 @@
     }
     
 	[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
+    
+    // Lets ask for review after user has viewed videos 5 times
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *ReviewID = [prefs stringForKey:@"Review"];
+    NSString *IhaveReviewed = [prefs stringForKey:@"IHaveLeftReview"];
+	NSString *MyAccessLevel = [prefs stringForKey:@"AccessLevel"];
+    NSInteger AccessLevel = [MyAccessLevel intValue];
+    // Note we only want those who have brought to review. Those looking for free talk non-sense.  AccessLevel > 1
+    if ([ReviewID isEqualToString:@"5"] && [IhaveReviewed isEqualToString:@"0"] &&  AccessLevel > 1 ) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Review this app" message:@"Do you like this app enough to leave us a review?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+        [alertView show];
+        
+	}
+    else {
+        
+        NSInteger Counter = [ReviewID integerValue];
+        NSInteger CounterPlus = Counter + 1;
+        NSString *ID = [NSString stringWithFormat:@"%d",CounterPlus];
+        [prefs setObject:ID  forKey:@"Review"];
+        [prefs synchronize];
+        
+    }
+
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration{
@@ -627,6 +651,42 @@ if ([self.FirstView superview]) {
 	
 	
 }
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1){
+        
+        [self reviewPressed];
+        
+    }
+    
+}
+
+- (void)reviewPressed {
+    
+    //Set user has reviewed.
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *ID = @"1";
+    [prefs setObject:ID forKey:@"IHaveLeftReview"];
+    
+    [prefs synchronize];
+    
+    // Report to  analytics
+    NSError *error;
+    if (![[GANTracker sharedTracker] trackEvent:@"User Sent to Review Maths Question iPhone at app store"
+                                         action:@"User Sent to Review Maths Question iPhone at app store"
+                                          label:@"User Sent to Review Maths Question iPhone at app store"
+                                          value:1
+                                      withError:&error]) {
+        NSLog(@"error in trackEvent");
+    }
+    
+    
+    NSString *str = @"https://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/addUserReview?id=457831288&type=Purple+Software"; 
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+}
+
+
 
 
 
