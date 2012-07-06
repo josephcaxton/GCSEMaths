@@ -24,6 +24,8 @@
 	
 	[super viewDidLoad];
 	
+    UINavigationController *nav =self.navigationController;
+    nav.navigationBar.tintColor = [UIColor blackColor];
 	//[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 		
 }

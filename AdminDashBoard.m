@@ -26,6 +26,9 @@
     self.navigationItem.title = @"Configure";
 	listofItems = [[NSMutableArray alloc] init];
 	
+    UINavigationController *nav =self.navigationController;
+    nav.navigationBar.tintColor = [UIColor blackColor];
+    
 	// Add items to the array this is hardcoded for now .. may need to be migrated to the database
 	[listofItems addObject:@"Question Template"];
 	[listofItems addObject:@"Topics"];

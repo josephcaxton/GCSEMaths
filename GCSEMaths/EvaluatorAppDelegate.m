@@ -16,17 +16,17 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
 
 @synthesize window;
 @synthesize	tabBarController;
-@synthesize AllocatedMarks,Difficulty,Topic,TypeOfQuestion,NumberOfQuestions,NumberOfQuestionsDisplayed,PossibleScores,ClientScores,buyScreen,SecondThread; 
+@synthesize AllocatedMarks,Difficulty,Topic,TypeOfQuestion,NumberOfQuestions,NumberOfQuestionsDisplayed,PossibleScores,ClientScores,buyScreen,SecondThread,m_facebook; 
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	
-    //Remove the my admin tabbarItem ..
+    /*Remove the my admin tabbarItem ..
     NSMutableArray *viewControllers = [NSMutableArray arrayWithArray:tabBarController.viewControllers];
     [viewControllers removeObjectAtIndex:5];
-    [tabBarController setViewControllers:viewControllers];
+    [tabBarController setViewControllers:viewControllers];*/
    
     [self CopyDataBase];
 	SecondThread = nil;
@@ -553,6 +553,16 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
     
 }
 
+// Pre iOS 4.2 support
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [m_facebook handleOpenURL:url]; 
+}
+
+// For iOS 4.2+ support
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [m_facebook handleOpenURL:url]; 
+}
 
 
 

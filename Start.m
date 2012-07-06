@@ -50,6 +50,9 @@
 	
 	//[self.view addSubview:SecondView];
 	//[self AddStartButton:2];
+    
+    UINavigationController *nav =self.navigationController;
+    nav.navigationBar.tintColor = [UIColor blackColor];
 	
 	
 }
