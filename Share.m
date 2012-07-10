@@ -245,9 +245,9 @@
         MFMailComposeViewController *SendMailcontroller = [[MFMailComposeViewController alloc]init];
         SendMailcontroller.mailComposeDelegate = self;
         //[SendMailcontroller setToRecipients:SendTo];
-        [SendMailcontroller setSubject:@"Get LearnersCloud app on your iPhone, iPod Touch, or iPad"];
+        [SendMailcontroller setSubject:@"Learn, revise and test yourself on the go - GCSE Maths App"];
         
-        [SendMailcontroller setMessageBody:[NSString stringWithFormat:@"Checkout the free LearnersCloud Maths Q & A app. Its loaded with quality revision questions and answers. For iPad version<a href=http://itunes.apple.com/us/app/gcse-maths-questions./id461348306?ls=1&mt=8> click here</a>. For iPhone version<a href=http://itunes.apple.com/us/app/gcse-maths-questions/id457831288?ls=1&mt=8>  click here</a>. Or search for LearnersCloud in the itunes app store to view a list of all LearnersCloud apps. Android apps available at Google play and Amazon.com. LearnersCloud is a top 20 winner of the BETT show award 2012. "] isHTML:YES];
+        [SendMailcontroller setMessageBody:[NSString stringWithFormat:@"Checkout the FREE LearnersCloud Maths App loaded with thousands of test questions and answers.To download this App for iPad<a href=http://itunes.apple.com/us/app/gcse-maths-questions./id461348306?ls=1&mt=8> click here</a>. For iPhone<a href=http://itunes.apple.com/us/app/gcse-maths-questions/id457831288?ls=1&mt=8>  click here</a>. Or search LearnersCloud in your device’s App store. Don’t forget to come and see us for loads more: www.Learnerscloud.com"] isHTML:YES];
         [self presentModalViewController:SendMailcontroller animated:YES];
         [SendMailcontroller release];
 		
@@ -326,7 +326,7 @@
     }
     
     NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                  @"Hey!!!. I'm practicing GCSE Maths questions on this great new app, it really helped me and i hope it helps you too. You should try it out. Download it now for your iPad, iPhone and iPod Touch",  @"message",
+                                  @"I’ve just started using a new GCSE Maths App! Thousands of test questions and answers, plus you can record how well you do and share it. You should check it out, just search LearnersCloud in your device’s App store.",  @"message",
                                    nil];
     
     [facebook dialog:@"apprequests"
@@ -434,7 +434,7 @@
         NSString *UrlString = @"http://itunes.apple.com/us/app/gcse-maths-questions/id457831288?ls=1&mt=8";
         
         TWTweetComposeViewController *tweetSheet = [[TWTweetComposeViewController alloc] init];
-        [tweetSheet setInitialText:@"Checkout #LearnersCloud maths app. Quality Maths questions and answers. :)"];
+        [tweetSheet setInitialText:@"Checkout @LearnersCloud GCSE #Maths App - Learn, revise and test yourself on the go"];
         [tweetSheet addImage:[UIImage imageNamed:@"Icon.png"]];
         [tweetSheet addURL:[NSURL URLWithString:UrlString]];
         
@@ -480,6 +480,7 @@
         [tweetSheet release];        
          [activityIndicator stopAnimating];
 	    [self presentModalViewController:tweetSheet animated:YES]; 
+        [tweetSheet release];
     }
     else
     {
