@@ -477,7 +477,7 @@
             [self dismissModalViewControllerAnimated:YES];
         };
         
-        [tweetSheet release];        
+              
          [activityIndicator stopAnimating];
 	    [self presentModalViewController:tweetSheet animated:YES]; 
         [tweetSheet release];
