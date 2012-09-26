@@ -16,6 +16,8 @@
 #import "FBConnect.h"
 
 
+
+
 @interface EvaluatorAppDelegate : NSObject <UIApplicationDelegate> {
     
     UIWindow *window;
@@ -58,7 +60,7 @@
 @property (nonatomic, retain) NSNumber *ClientScores;
 @property (nonatomic, retain) UITableViewController *buyScreen;
 @property (nonatomic, retain) NSThread *SecondThread;
-@property (nonatomic, retain)  Facebook *m_facebook;
+@property (nonatomic, retain) Facebook *m_facebook;
 
 - (NSString *)applicationDocumentsDirectory;
 - (void)PlaySound:(NSString *)FileName;

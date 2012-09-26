@@ -38,6 +38,8 @@
 			</array>
 		</dict>
 	</array>
+	<key>FacebookAppID</key>
+	<string>393094224086193</string>
 	<key>CFBundleVersion</key>
 	<string>1.5</string>
 	<key>LSApplicationCategoryType</key>

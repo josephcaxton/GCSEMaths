@@ -229,7 +229,7 @@
 		case 0:
 			;
 			VideoPlayer *VP1 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-			VP1.VideoFileName =[NSString stringWithString:@"Maths"];
+			VP1.VideoFileName =@"Maths";
 			VP1.hidesBottomBarWhenPushed = YES;
 			[self.navigationController pushViewController:VP1 animated:YES];
 			[VP1 release];
@@ -238,7 +238,7 @@
 		case 1:
 			;
 			VideoPlayer *VP2 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-			VP2.VideoFileName =[NSString stringWithString:@"English"];
+			VP2.VideoFileName =@"English";
 			VP2.hidesBottomBarWhenPushed = YES;
 			[self.navigationController pushViewController:VP2 animated:YES];
 			[VP2 release];
@@ -248,7 +248,7 @@
 			;
 			
 			VideoPlayer *VP3 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-			VP3.VideoFileName =[NSString stringWithString:@"Physics"];
+			VP3.VideoFileName =@"Physics";
 			VP3.hidesBottomBarWhenPushed = YES;
 			[self.navigationController pushViewController:VP3 animated:YES];
 			[VP3 release];
@@ -260,7 +260,7 @@
 		case 3:
 			;
 			VideoPlayer *VP4 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-			VP4.VideoFileName =[NSString stringWithString:@"Chemistry"];
+			VP4.VideoFileName =@"Chemistry";
 			VP4.hidesBottomBarWhenPushed = YES;
 			[self.navigationController pushViewController:VP4 animated:YES];
 			[VP4 release];

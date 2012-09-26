@@ -16,7 +16,7 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
 
 @synthesize window;
 @synthesize	tabBarController;
-@synthesize AllocatedMarks,Difficulty,Topic,TypeOfQuestion,NumberOfQuestions,NumberOfQuestionsDisplayed,PossibleScores,ClientScores,buyScreen,SecondThread,m_facebook; 
+@synthesize AllocatedMarks,Difficulty,Topic,TypeOfQuestion,NumberOfQuestions,NumberOfQuestionsDisplayed,PossibleScores,ClientScores,buyScreen,SecondThread,m_facebook;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -74,6 +74,12 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
 	//[tabBarController.view addGestureRecognizer:gr];
 	//[gr release];
 	//Add to Window.
+    
+    // BUG: For Face book
+    // Nib files require the type to have been loaded before they can do the
+    // wireup successfully.
+    //[FBProfilePictureView class];
+
 	
     [window addSubview: tabBarController.view];
 	[window makeKeyAndVisible];
@@ -266,6 +272,9 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
             
         } 
     }
+    
+    [FBSession.activeSession close];
+
 }
 #pragma mark -
 #pragma mark Maintaince routine
@@ -553,15 +562,15 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
     
 }
 
-// Pre iOS 4.2 support
+ //Pre iOS 4.2 support
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     return [m_facebook handleOpenURL:url]; 
-}
+} 
 
 // For iOS 4.2+ support
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [m_facebook handleOpenURL:url]; 
+    return [m_facebook handleOpenURL:url];  
 }
 
 

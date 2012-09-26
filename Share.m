@@ -149,10 +149,10 @@
             [logoutFacebook setBackgroundImage:logoutImage forState:UIControlStateNormal];
             //[logoutFacebook setTitle:@"Log Out" forState:UIControlStateNormal];
             [logoutFacebook addTarget:self action:@selector(logoutButtonClicked:)forControlEvents:UIControlEventTouchUpInside];
-            [cell addSubview:logoutFacebook];  
-            
-            
-        }
+            [cell addSubview:logoutFacebook];
+            } 
+                   
+       
         
     }
     
@@ -413,10 +413,7 @@
     
 }
 
-- (void) dialogDidNotComplete:(FBDialog *)dialog{
-    
-    
-}
+
 
 - (void)dialogCompleteWithUrl:(NSURL *)url{
     

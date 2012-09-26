@@ -113,7 +113,7 @@
 			
 			
 			
-			NSString *SiteAddress = [NSString stringWithString:@"http://chart.apis.google.com/chart?"];
+			NSString *SiteAddress = @"http://chart.apis.google.com/chart?";
 			NSString *PlusChartSize = [SiteAddress stringByAppendingString:@"chs=400x400&"];
 			NSString *PlusChartType = [PlusChartSize stringByAppendingString:@"cht=bvs&"];
 			NSString *PlusChartColor = [PlusChartType stringByAppendingString:@"chco=0000FF,FF0000&"];
