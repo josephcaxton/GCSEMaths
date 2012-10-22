@@ -16,8 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    UINavigationController *nav =self.navigationController;
-    nav.navigationBar.tintColor = [UIColor blackColor];
+    
     
     self.navigationItem.title = @"Help";
 	listofItems = [[NSMutableArray alloc] init];

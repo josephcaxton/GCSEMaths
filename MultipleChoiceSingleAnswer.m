@@ -23,7 +23,7 @@ static UIWebView *QuestionHeaderBox = nil;
 #pragma mark View lifecycle
 
 #define SCREEN_WIDTH 320
-#define SCREEN_HEIGHT 450
+#define SCREEN_HEIGHT 470
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,10 +36,17 @@ static UIWebView *QuestionHeaderBox = nil;
 	}
 	
 	QuestionHeaderBox.scalesPageToFit = YES;
-	self.FileListTable = [[UITableView alloc] initWithFrame:CGRectMake(2, 160, SCREEN_WIDTH, SCREEN_HEIGHT - 170) style:UITableViewStyleGrouped];
+	self.FileListTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 160, SCREEN_WIDTH, SCREEN_HEIGHT - 170) style:UITableViewStyleGrouped];
 	FileListTable.delegate = self;
 	FileListTable.dataSource = self;
 	FileListTable.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+    
+    [self.FileListTable setBackgroundView:nil];
+    NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"back320x450" ofType:@"png"];
+	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
+    self.FileListTable.backgroundColor = [UIColor colorWithPatternImage:BackImage];
+    
+    [BackImage release];
 	
 	// Now I have added 1000 pdfs to the bundle. App is now ver slow
 	// I don't need this to go live, it is just for admin only so i comment out CheckExistingFiles
@@ -312,7 +319,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	if (interfaceOrientation == UIInterfaceOrientationPortrait ) {
 		
 		QuestionHeaderBox.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 300);
-		self.FileListTable.frame = CGRectMake(2, 160, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
+		self.FileListTable.frame = CGRectMake(0, 160, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
 		Continue.frame = CGRectMake(230, 0, 80, 40);
 		
 	}
@@ -377,6 +384,29 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    if(QItem_View && Answerflag == 1 && section == 1){
+    
+    UIView* customView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 0.0, 300.0, 44.0)];
+	
+	// create the button object
+	UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+	headerLabel.backgroundColor = [UIColor clearColor];
+	headerLabel.opaque = NO;
+	headerLabel.textColor = [UIColor whiteColor];
+	headerLabel.font = [UIFont boldSystemFontOfSize:10];
+	headerLabel.frame = CGRectMake(10.0, 0.0, 300.0, 44.0);
+    
+    headerLabel.text = @"The correct answer is :";
+	[customView addSubview:headerLabel];
+   
+    
+	return customView;
+    }
+    return nil;
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
@@ -402,9 +432,9 @@ static UIWebView *QuestionHeaderBox = nil;
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = nil; //@"Cell" used nil here to stop table moving text to other cells
     
-    WebViewInCell *cell = (WebViewInCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    WebViewInCell *cell = (WebViewInCell *)[tableView dequeueReusableCellWithIdentifier:nil];
     if (cell == nil) {
         cell = [[[WebViewInCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier]autorelease];
 		
@@ -787,20 +817,32 @@ static UIWebView *QuestionHeaderBox = nil;
 - (void)AdjustScreenToSee:(int)value{
 	
 	if(value == 1){
-	
-	[UIView beginAnimations:nil context:NULL];
-	[UIView setAnimationDuration:0.3];
-	CGRect rect = self.FileListTable.frame;
-	rect.origin.y = -220;
-	rect.size.height = 690;
-	self.FileListTable.frame = rect;
-	[UIView commitAnimations];
-	}
-	
-	else {
-		
-	}
-
+        
+        EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+        if([appDelegate IsThisiPhone5] == YES){
+            
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationDuration:0.3];
+            CGRect rect = self.FileListTable.frame;
+            rect.origin.y = -220; // I have changes this to -180 because English has mostly 3 possible answers
+            rect.size.height = 690;
+            self.FileListTable.frame = rect;
+            [UIView commitAnimations];
+            
+        }
+        else{
+            
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationDuration:0.3];
+            CGRect rect = self.FileListTable.frame;
+            rect.origin.y = -220; // I have changes this to -180 because English has mostly 3 possible answers
+            rect.size.height = 590;
+            self.FileListTable.frame = rect;
+            [UIView commitAnimations];
+            
+        }
+        
+    }
 	
 	
 }

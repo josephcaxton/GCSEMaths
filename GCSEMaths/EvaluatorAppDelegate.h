@@ -14,6 +14,7 @@
 #import "GANTracker.h"
 #import <netinet/in.h>
 #import "FBConnect.h"
+#import "Reachability.h"
 
 
 
@@ -40,6 +41,8 @@
     // this is to handle return from facebook
     
     Facebook *m_facebook;
+    
+    NSNumber *DeviceScreenType; // if this is IPhone5 then it should be 1136
 
 	
 }
@@ -61,10 +64,13 @@
 @property (nonatomic, retain) UITableViewController *buyScreen;
 @property (nonatomic, retain) NSThread *SecondThread;
 @property (nonatomic, retain) Facebook *m_facebook;
+@property (nonatomic, retain) NSNumber *DeviceScreenType;
 
 - (NSString *)applicationDocumentsDirectory;
 - (void)PlaySound:(NSString *)FileName;
 -(BOOL)CopyDataBase;
+-(BOOL)IsThisiPhone5;
+-(BOOL)isDeviceConnectedToInternet;
 
 
 @end

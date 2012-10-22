@@ -11,21 +11,31 @@
 
 @implementation Start
 
-@synthesize FirstView, SecondView,FirstTable,SecondTable,QuestionPickerView,CustomDataSource,Sound,ShowAnswers,logoView,Copyright,WebText,StartPractice;
+@synthesize FirstView, SecondView,FirstTable,SecondTable,QuestionPickerView,CustomDataSource,Sound,ShowAnswers,logoView,Copyright,WebText,StartPractice,iPhone5;
 
 
 #define SCREEN_WIDTH 320
-#define SCREEN_HEIGHT 450
+#define SCREEN_HEIGHT 460
 #define _TransitionDuration	0.45
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+    EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+    if([appDelegate IsThisiPhone5] == YES){
+        
+        iPhone5 = YES;
+    }
+    else
+    {
+        iPhone5 = NO;
+    }
+
+       
 	
 	// First View and Children
 	CGRect FirstViewframe = CGRectMake(0 ,0, SCREEN_WIDTH, SCREEN_HEIGHT);
 	self.FirstView = [[UIView alloc] initWithFrame:FirstViewframe];
-	//[self.FirstView setBackgroundColor:[UIColor redColor]];
 	[self.view addSubview:FirstView];
 	[self PageButton:1];
 	
@@ -33,26 +43,46 @@
 	FirstTable.delegate = self;
 	FirstTable.dataSource = self;
 	FirstTable.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
-	FirstTable.backgroundColor = [UIColor clearColor];
+    FirstTable.backgroundColor = [UIColor clearColor];
+    FirstTable.opaque = NO;
+    FirstTable.backgroundView = nil;
+    NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"back320x450" ofType:@"png"];
+	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
+    FirstTable.backgroundColor = [UIColor colorWithPatternImage:BackImage];
 	FirstTable.tag = 1;
 	[self.FirstView addSubview:FirstTable];
-	
-	
+		
 	
 	// Second View and Children --- don't add to subview yet
 	CGRect SecondFrame = CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT);
 	self.SecondView = [[UIView alloc] initWithFrame:SecondFrame];
-	[self.SecondView setBackgroundColor:[UIColor blueColor]];
+    self.SecondView.backgroundColor = [UIColor colorWithPatternImage:BackImage];
     QuestionPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH,162)]; //90
 	CustomDataSource = [[CustomPickerDataSource_Num_Questions alloc] init];
-    CGRect SecondTableframe = CGRectMake(0 ,150, SCREEN_WIDTH, 260);
-	self.SecondTable = [[UITableView alloc] initWithFrame:SecondTableframe style:UITableViewStyleGrouped]; 
-	
-	//[self.view addSubview:SecondView];
-	//[self AddStartButton:2];
+    CGRect SecondTableframe;
+    if(iPhone5){
+        
+        SecondTableframe = CGRectMake(10 ,200, SCREEN_WIDTH - 20, 230);
+    }
+    else{
+        SecondTableframe = CGRectMake(10 ,155, SCREEN_WIDTH - 20, 210);
+    }
+   
+    self.SecondTable = [[UITableView alloc] initWithFrame:SecondTableframe style:UITableViewStyleGrouped];
     
-    UINavigationController *nav =self.navigationController;
-    nav.navigationBar.tintColor = [UIColor blackColor];
+
+	
+    [BackImage release];
+
+	//Navigation Bar
+    
+    //UINavigationController *nav =self.navigationController;
+    //nav.navigationBar.tintColor = [UIColor blackColor];
+    NSString *HeaderLocation = [[NSBundle mainBundle] pathForResource:@"header_bar" ofType:@"png"];
+    UIImage *HeaderBackImage = [[UIImage alloc] initWithContentsOfFile:HeaderLocation];
+   [self.navigationController.navigationBar setBackgroundImage:HeaderBackImage forBarMetrics:UIBarMetricsDefault];
+    //self.navigationItem.title = @"LearnersCloud";
+    [HeaderBackImage release];
 	
 	
 }
@@ -67,12 +97,22 @@
         CustomDataSource = [[CustomPickerDataSource_Num_Questions alloc] init];
         QuestionPickerView.delegate = CustomDataSource;
         QuestionPickerView.dataSource = CustomDataSource;
-        [QuestionPickerView selectRow:9 inComponent:1 animated:YES];  // sets the default on the PickerView to 10
         EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
-        appDelegate.NumberOfQuestions =[NSNumber numberWithInt:10];
+        if (appDelegate.NumberOfQuestions == [NSNumber numberWithInt:1]) {
+            appDelegate.NumberOfQuestions =[NSNumber numberWithInt:1];
+            [QuestionPickerView selectRow:0 inComponent:1 animated:YES];  // sets the default on the PickerView to 10
+        }
+        else
+        {
+            int NumberofQ = appDelegate.NumberOfQuestions.intValue - 1;
+            [QuestionPickerView selectRow:NumberofQ inComponent:1 animated:YES];
+        
+        }
+        
+        
     }
     
-	[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
+	//[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
     
     // Lets ask for review after user has viewed videos 5 times
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -85,6 +125,7 @@
         
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Review this app" message:@"Do you like this app enough to leave us a review?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
         [alertView show];
+        [alertView release];
         
 	}
     else {
@@ -109,11 +150,22 @@ if ([self.FirstView superview]) {
 		
 		FirstView.frame = CGRectMake(0, 0,SCREEN_WIDTH, SCREEN_HEIGHT);
 		FirstTable.frame = CGRectMake(0, 0,SCREEN_WIDTH, SCREEN_HEIGHT);
-		logoView.frame = CGRectMake(10.0,0.0,300,200);
+		
 		
 		//Copyright.frame = CGRectMake(55,20,240,40);
-		WebText.frame = CGRectMake(80,10,200,20);
-		StartPractice.frame = CGRectMake(40, 190, 250, 34);
+        if(iPhone5){
+            logoView.frame = CGRectMake(45.0,105.0,230,153);
+            WebText.frame = CGRectMake(80,380,200,40);
+            StartPractice.frame = CGRectMake(35, 300, 250, 47);
+        }
+        else
+        {
+          logoView.frame = CGRectMake(45.0,85.0,230,153);
+           WebText.frame = CGRectMake(80,300,200,40);
+           StartPractice.frame = CGRectMake(35, 250, 250, 47);
+        }
+		
+		
 		
 	}
 	
@@ -135,10 +187,16 @@ if ([self.FirstView superview]) {
 		if (interfaceOrientation == UIInterfaceOrientationPortrait) {
 			
 			self.SecondView.frame = CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT);
-			self.SecondTable.frame = CGRectMake(0 ,150, SCREEN_WIDTH, 260);  
+            if(iPhone5){
+                self.SecondTable.frame = CGRectMake(10 ,200, SCREEN_WIDTH - 20, 230);
+            }
+            else{
+                self.SecondTable.frame = CGRectMake(10 ,155, SCREEN_WIDTH - 20, 210);
+            }
+			
 			QuestionPickerView.frame = CGRectMake(0,0,SCREEN_WIDTH,162);//90
-			self.Sound.frame =  CGRectMake(200.0, 10.0, 40.0, 45.0);
-			ShowAnswers.frame = CGRectMake(200.0, 10.0, 40.0, 45.0);
+			self.Sound.frame =  CGRectMake(200.0, 0.5, 40.0, 45.0);
+			ShowAnswers.frame = CGRectMake(200.0, 0.5, 40.0, 45.0);
 		}
 		
 		else {
@@ -201,7 +259,12 @@ if ([self.FirstView superview]) {
 		
 		
 		//QuestionPickerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-		
+		if(CustomDataSource != nil){
+            
+            [CustomDataSource release];
+            CustomDataSource = [[CustomPickerDataSource_Num_Questions alloc] init];
+            QuestionPickerView.dataSource = CustomDataSource;
+        }
 		
 		QuestionPickerView.delegate = CustomDataSource;
 		QuestionPickerView.showsSelectionIndicator = YES;
@@ -215,7 +278,7 @@ if ([self.FirstView superview]) {
 		
 		SecondTable.delegate = self;
 		SecondTable.dataSource = self;
-		SecondTable.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+		
 		SecondTable.tag = 2;
 		[self.SecondView addSubview:SecondTable];
 		
@@ -225,7 +288,7 @@ if ([self.FirstView superview]) {
 	}
 	
 	[UIView commitAnimations];
-	[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
+	//[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
 	
 	
 	
@@ -236,9 +299,9 @@ if ([self.FirstView superview]) {
 	
 	NSString *AccessLevel = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"AccessLevel"];
 	
-	if([AccessLevel intValue] == 1){
+	if([AccessLevel intValue] == 2){
 		
-		NSString *message = [[NSString alloc] initWithFormat:@"You are using the free version of the app. The app will only deliver a maximum of 30 questions depending on your search criteria and does not necessarily have all types of questions. Share to get a free upgrade to 250 questions"];
+		NSString *message = [[NSString alloc] initWithFormat:@"You are using the free version of the app. The app will only deliver a maximum of 250 questions depending on your search criteria and does not necessarily have all types of questions."];
 		
 		UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"Important Notice"
 													   message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -319,15 +382,17 @@ if ([self.FirstView superview]) {
 	
 	
 }
+// For ios 6
+-(NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
 
+    
+}
 
-
+// for ios 5
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     
-    //return NO;
-	return  (interfaceOrientation == UIInterfaceOrientationPortrait);
-	
-	
+    return  (interfaceOrientation == UIInterfaceOrientationPortrait);
 	
 }
 
@@ -340,7 +405,7 @@ if ([self.FirstView superview]) {
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	if(tableView.tag == 1){
 		
-	return 2;
+	return 1;
 	}
 	else {
 		return 1;
@@ -348,7 +413,9 @@ if ([self.FirstView superview]) {
 
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+
+
+/*- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 	
 	NSString *title=@""; 
 	
@@ -415,7 +482,7 @@ if ([self.FirstView superview]) {
 	
 	
 	
-}
+} */
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
@@ -423,7 +490,7 @@ if ([self.FirstView superview]) {
 	
 	if (tableView.tag == 1){
 	
-	
+        
 	
 	}
 	
@@ -439,8 +506,8 @@ if ([self.FirstView superview]) {
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView.tag == 1) {
-		if (indexPath.section ==0) {
-			return 230;
+		if (indexPath.section == 0) {
+			return 340;
 		}
 		else {
 			return 40;
@@ -462,6 +529,8 @@ if ([self.FirstView superview]) {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    
+    
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -469,37 +538,81 @@ if ([self.FirstView superview]) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
 	 
+    
 	
 	if (tableView.tag == 1) {
-		
+            
 			tableView.allowsSelection = NO;
-    
-			if (indexPath.section == 0) {
+            tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+            tableView.separatorColor = [UIColor clearColor];
+            [cell setBackgroundColor:[UIColor clearColor]];
+			//if (indexPath.section == 0) {
+        
+            UIView *headerView = [[UIView alloc] init];
+        
+            NSString *HeaderImagePath = [[NSBundle mainBundle] pathForResource:@"EQ_maths_160x78" ofType:@"png"];
+            UIImage *HeaderImage = [[UIImage alloc] initWithContentsOfFile:HeaderImagePath];
+            UIImageView *HeaderImageView = [[UIImageView alloc] initWithImage:HeaderImage];
+            HeaderImageView.frame = CGRectMake(80, 0.0, 160, 78);
+            HeaderImageView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+            [headerView addSubview:HeaderImageView];
+            [cell addSubview:headerView];
+            [headerView release];
+            [HeaderImage release];
+            [HeaderImageView release];
+
 				
 				if (logoView == nil) {
 		
-					NSString *LogoPath = [[NSBundle mainBundle] pathForResource:@"LearnersCloudLogo" ofType:@"png"];
+					NSString *LogoPath = [[NSBundle mainBundle] pathForResource:@"hero_230x153" ofType:@"png"];
 	
 					UIImage *LogoImage = [[UIImage alloc] initWithContentsOfFile:LogoPath];
 					logoView = [[UIImageView alloc] initWithImage:LogoImage];
-					logoView.frame = CGRectMake(10.0,0.0,300,200);
+                    if (iPhone5){
+                        
+                        logoView.frame = CGRectMake(45.0,105.0,230,153);
+                        
+                    }
+                    else{
+                        
+                        logoView.frame = CGRectMake(45.0,85.0,230,153);
+                    }
+
+					
+                    
+                   
 					
 					[cell addSubview:logoView];
 					[LogoImage release];
 					[logoView release];
-					
-				StartPractice = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-				[StartPractice setTitle:@"Start Practice Questions Here!" forState:UIControlStateNormal];
 				
-				StartPractice.frame = CGRectMake(40, 190, 250, 34);
+                    NSString *StartImageLocation = [[NSBundle mainBundle] pathForResource:@"start_practice" ofType:@"png"];
+                    
+					UIImage *StartImage = [[UIImage alloc] initWithContentsOfFile:StartImageLocation];
+                    
+                
+				StartPractice = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+				[StartPractice setImage:StartImage forState:UIControlStateNormal];
+				
+                    if (iPhone5){
+                        
+                        StartPractice.frame = CGRectMake(35, 300, 250, 47);
+                        
+                    }
+                    else{
+                        
+                        StartPractice.frame = CGRectMake(35, 250, 250, 47);
+                    }
+
+				
 				[StartPractice addTarget:self action:@selector(Practice:) forControlEvents:UIControlEventTouchUpInside];
 				cell.selectionStyle = UITableViewCellSelectionStyleNone;
 				[cell addSubview:StartPractice];
 				}
 		
-			}
-				else if (indexPath.section == 1) {
-					
+			//}
+			//	else if (indexPath.section == 1) {
+			
 					//if (Copyright == nil) {
 //		
 //					Copyright = [[UILabel alloc] initWithFrame:CGRectMake(55,20,240,40)];
@@ -513,25 +626,34 @@ if ([self.FirstView superview]) {
 					
 					if (WebText == nil) {
 						
-					WebText = [[UITextView alloc] initWithFrame:CGRectMake(80,10,200,20)];
-					WebText.editable = NO;
-					WebText.dataDetectorTypes = UIDataDetectorTypeLink;
-					NSString *Website = @"http://www.LearnersCloud.com";
-					
-					WebText.text =Website;
+                        if (iPhone5){
+                            
+                            WebText = [[UITextView alloc] initWithFrame:CGRectMake(80,380.0,200,40)];
+                        
+                        }
+                        else{
+                            
+                            WebText = [[UITextView alloc] initWithFrame:CGRectMake(80,300.0,200,40)];
+                        }
+                    WebText.textColor = [UIColor whiteColor];
+                    WebText.backgroundColor =[UIColor clearColor];
+                    WebText.editable = NO;
+					NSString *Website = @"www.LearnersCloud.com";
+					WebText.text = Website;
 					[cell addSubview:WebText];
-					
 					[WebText release];
 					//[self CheckOrientation];
 					}
 
-				}
+				//}
 			cell.selectionStyle = UITableViewCellSelectionStyleNone;
 			
 		
 	}
 	else {
-			
+            //tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+            [tableView setBackgroundView:nil];
+          [cell setBackgroundColor:[UIColor whiteColor]];
 			EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;	
 		switch (indexPath.row) {
 				case 0:
@@ -554,7 +676,7 @@ if ([self.FirstView superview]) {
 				case 3:
 						if (Sound == nil) {
 							
-							Sound =[[UISwitch alloc] initWithFrame:CGRectMake(200.0, 10.0, 40.0, 45.0)];
+							Sound =[[UISwitch alloc] initWithFrame:CGRectMake(200.0, 0.5, 40.0, 30.0)];
 							
 						}
 										
@@ -581,7 +703,7 @@ if ([self.FirstView superview]) {
 					
 					if (ShowAnswers == nil) {
 						
-						ShowAnswers =[[UISwitch alloc] initWithFrame:CGRectMake(200.0, 10.0, 40.0, 45.0)];
+						ShowAnswers =[[UISwitch alloc] initWithFrame:CGRectMake(200.0, 0.5, 40.0, 30.0)];
 					}				
 				
 				cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -611,7 +733,7 @@ if ([self.FirstView superview]) {
 	}
 
 	
-	[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
+	//[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
 	
 	return cell;
 	

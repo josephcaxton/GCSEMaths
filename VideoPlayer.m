@@ -8,6 +8,7 @@
 
 #import "VideoPlayer.h"
 #import "GANTracker.h"
+#import "EvaluatorAppDelegate.h"
 
 @implementation VideoPlayer
 
@@ -69,6 +70,10 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    
+   EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+
+     if(appDelegate.isDeviceConnectedToInternet){
 	
     NSError *error;
     // Report to  analytics
@@ -80,13 +85,24 @@
     
     if([VideoFileName isEqualToString:@"Maths"]){
         
-        ServerLocation = @"http://learnerscloud.com/iosStream/maths/MB-COLL-018-01";
+        ServerLocation = @"http://learnerscloud.com/iosStream/maths/MathsTtrailerv6";
     }
     else if ([VideoFileName isEqualToString:@"English"]){
         
-        ServerLocation = @"http://learnerscloud.com/iosStream/english/QA011-Bayonet-Charge";
+        ServerLocation = @"http://learnerscloud.com/iosStream/english/EnglishTrailerv5";
         
     }
+    else if ([VideoFileName isEqualToString:@"Physics"]){
+        
+        ServerLocation = @"http://learnerscloud.com/iosStream/Physics/PhysicsTrailerV5";
+        
+    }
+    else if ([VideoFileName isEqualToString:@"Chemistry"]){
+        
+        ServerLocation = @"http://learnerscloud.com/iosStream/Chemistry/ChemistryPromoFINAL";
+        
+    }
+
     
     //Authentication Details here
     
@@ -124,44 +140,23 @@
 											   object:[moviePlayerViewController moviePlayer]];
     
     [self presentMoviePlayerViewControllerAnimated:moviePlayerViewController];
+	
+     }
     
-
-    
-    //Code When Video Files where added to bundle
-    /*
-    
-	UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBackGround_Iphone.png"]];
-    [self.view addSubview:backgroundImage];
-    [self.view sendSubviewToBack:backgroundImage];
-    [backgroundImage release];
-
-    
-	NSString *filepath   =   [[NSBundle mainBundle] pathForResource:VideoFileName ofType:@"m4v"];
-	
-	NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath]; 
-	
-	moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:fileURL];
-	
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self  
-											 selector:@selector(moviePlaybackComplete:)  
-												 name:MPMoviePlayerPlaybackDidFinishNotification  
-											   object:moviePlayerController];
-	
-	
-	moviePlayerController.controlStyle = MPMovieControlStyleFullscreen;
-	[moviePlayerController.backgroundView setBackgroundColor:[UIColor blackColor]];
-	[self.navigationController setNavigationBarHidden:YES animated:YES];
-	
-	[self.view addSubview:moviePlayerController.view];
-	
-	[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
-	//moviePlayerController.fullscreen = YES;
-	//moviePlayerController.scalingMode = MPMovieScalingModeAspectFill;
-	//[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
-	[moviePlayerController play];  */
-	
-	
+     else{
+         
+         NSString *message = [[NSString alloc] initWithFormat:@"Your device is not connected to the internet. You need access to the internet to stream our videos "];
+         
+         UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"Important Notice"
+                                                        message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+         
+         [alert show];
+         [message release];
+         [alert release];
+         
+         [self.navigationController popViewControllerAnimated:YES];
+         
+     }
 }
 
 
@@ -176,12 +171,17 @@
 
 
 
+// For ios 6
+-(NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+    
+    
+}
+
+// for ios 5
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     
-     return YES;
-	
-	//return  (interfaceOrientation != UIInterfaceOrientationPortrait );
-	
+    return  (interfaceOrientation == UIInterfaceOrientationPortrait);
 	
 }
 

@@ -21,7 +21,7 @@ static UIWebView *QuestionHeaderBox = nil;
 #pragma mark View lifecycle
 
 #define SCREEN_WIDTH 320
-#define SCREEN_HEIGHT 450
+#define SCREEN_HEIGHT 470
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,11 +35,17 @@ static UIWebView *QuestionHeaderBox = nil;
 	}
 	QuestionHeaderBox.scalesPageToFit = YES;
 	
-	self.FileListTable = [[UITableView alloc] initWithFrame:CGRectMake(2, 160, SCREEN_WIDTH, SCREEN_HEIGHT - 170) style:UITableViewStyleGrouped];
+	self.FileListTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 160, SCREEN_WIDTH, SCREEN_HEIGHT - 170) style:UITableViewStyleGrouped];
 	FileListTable.delegate = self;
 	FileListTable.dataSource = self;
 	FileListTable.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
 	
+    
+    [self.FileListTable setBackgroundView:nil];
+    NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"back320x450" ofType:@"png"];
+	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
+    self.FileListTable.backgroundColor = [UIColor colorWithPatternImage:BackImage];
+    [BackImage release];
 	
 	// Now I have added 1000 pdfs to the bundle. App is now ver slow
 	// I don't need this to go live, it is just for admin only so i comment out CheckExistingFiles
@@ -372,7 +378,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	if (interfaceOrientation == UIInterfaceOrientationPortrait ) {
 		
 		QuestionHeaderBox.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 300);
-		self.FileListTable.frame = CGRectMake(2, 160, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
+		self.FileListTable.frame = CGRectMake(0, 160, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
 		//newLine.frame = CGRectMake(340, 0, 80, 30);
 		ShowAnswerHere.frame = CGRectMake(120,0,110,40);
 		Continue.frame = CGRectMake(230,0,80,40);

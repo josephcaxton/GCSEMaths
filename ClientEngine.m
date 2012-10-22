@@ -31,7 +31,13 @@ int ToReviewQuestions = 0;
 	
 	ToReviewQuestions = 0;
 	self.navigationItem.title = @"Questions";
-	
+    
+    [self.tableView setBackgroundView:nil];
+    NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"back320x450" ofType:@"png"];
+	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:BackImage];
+    [BackImage release];
+
 	
 	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 	
@@ -377,7 +383,7 @@ int ToReviewQuestions = 0;
 		
 		
 		UIAlertView *Finished = [[UIAlertView alloc] initWithTitle: @"Test Completed" 
-														  message: [NSString stringWithFormat:@"Your Result is = %@ / %@. Questions with descriptive answers do not get a mark",appDelegate.ClientScores ,appDelegate.PossibleScores] delegate: self 
+														  message: [NSString stringWithFormat:@"Your result is = %@ / %@. Questions with descriptive answers do not get a mark",appDelegate.ClientScores ,appDelegate.PossibleScores] delegate: self 
 												  cancelButtonTitle: @"OK" otherButtonTitles: nil];
 		
 		
@@ -442,10 +448,20 @@ int ToReviewQuestions = 0;
 	
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return  (interfaceOrientation == UIInterfaceOrientationPortrait);
+// For ios 6
+-(NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+    
+    
 }
+
+// for ios 5
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    
+    return  (interfaceOrientation == UIInterfaceOrientationPortrait);
+	
+}
+
 
 
 #pragma mark -
@@ -678,7 +694,7 @@ int ToReviewQuestions = 0;
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
 	
-	ClientAnswers *C_view = [[ClientAnswers alloc] initWithNibName:nil bundle:nil];
+	ClientAnswers *C_view = [[ClientAnswers alloc] initWithStyle:UITableViewStyleGrouped];
 	
 	C_view.FullDataArray = UnchangedArray;
 	ToReviewQuestions = 1;

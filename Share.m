@@ -31,6 +31,11 @@
     [super viewDidLoad];
     self.navigationItem.title = @"Share this app";
     
+    NSString *HeaderLocation = [[NSBundle mainBundle] pathForResource:@"header_bar" ofType:@"png"];
+    UIImage *HeaderBackImage = [[UIImage alloc] initWithContentsOfFile:HeaderLocation];
+    [self.navigationController.navigationBar setBackgroundImage:HeaderBackImage forBarMetrics:UIBarMetricsDefault];
+    [HeaderBackImage release];
+    
     NSError *error;
     // Report to  analytics
     if (![[GANTracker sharedTracker] trackPageview:@"/SocialMediaPage"
@@ -47,10 +52,20 @@
     
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+// For ios 6
+-(NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+    
+    
 }
+
+// for ios 5
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    
+    return  (interfaceOrientation == UIInterfaceOrientationPortrait);
+	
+}
+
 
 #pragma mark - Table view data source
 
@@ -69,7 +84,7 @@
     {
         
         
-        return 3;
+        return 4;
         
     }
     else if (section == 2){
@@ -84,11 +99,14 @@
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath: (NSIndexPath *) indexPath {
     
-    if((indexPath.row == 0 && indexPath.section == 0) || (indexPath.row == 0 && indexPath.section == 2)){
+    if((indexPath.row == 0 && indexPath.section == 0)){
         
-        return 60;
+        return 70;
     }
-    else
+    else if((indexPath.row == 0 && indexPath.section == 1) || (indexPath.row == 0 && indexPath.section == 2)){
+        
+        return 25;
+    }
         
     {
         return 50;
@@ -110,91 +128,116 @@
         // UIImage* mailImage = [UIImage imageNamed:@"mail.png"];
         //cell.imageView.image = mailImage;
         
-        cell.textLabel.text = @"Like what you see here? Share this app with a friend and get an upgrade to 250 questions free";
-        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-        cell.textLabel.numberOfLines = 0;
-        cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:17.0];
+        UIView *headerView = [[UIView alloc] init];
         
-        
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.contentView.backgroundColor = [ UIColor blackColor ];
-        cell.textLabel.backgroundColor = [UIColor blackColor];
-        cell.textLabel.textColor = [UIColor whiteColor];
-        cell.textLabel.textAlignment = UITextAlignmentCenter;
+        NSString *HeaderImagePath = [[NSBundle mainBundle] pathForResource:@"share_intro" ofType:@"png"];
+        UIImage *HeaderImage = [[UIImage alloc] initWithContentsOfFile:HeaderImagePath];
+        UIImageView *HeaderImageView = [[UIImageView alloc] initWithImage:HeaderImage];
+        HeaderImageView.frame = CGRectMake(0.0, 0.0, 320, 70);
+        HeaderImageView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+        [headerView addSubview:HeaderImageView];
+        [cell addSubview:headerView];
+        [headerView release];
+        [HeaderImage release];
+        [HeaderImageView release];
+
         
         
     }
-    else  if (indexPath.section == 1 && indexPath.row == 0){
+    
+    else if(indexPath.section == 1 && indexPath.row == 0){
         
-        UIImage* mailImage = [UIImage imageNamed:@"mail.png"];
+         UIView *shareView = [[UIView alloc] init];
+        
+         NSString *sharedividerImagePath = [[NSBundle mainBundle] pathForResource:@"divider_share" ofType:@"png"];
+        UIImage *sharedividerImage = [[UIImage alloc] initWithContentsOfFile:sharedividerImagePath];
+        UIImageView *sharedividerView = [[UIImageView alloc] initWithImage:sharedividerImage ];
+        sharedividerView.frame = CGRectMake(0.0, 0.0, 320, 30);
+        sharedividerView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+        [shareView addSubview: sharedividerView];
+        [cell addSubview:shareView];
+        [shareView release];
+        [sharedividerImage release];
+        [sharedividerView release];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        
+    }
+    else  if (indexPath.section == 1 && indexPath.row == 1){
+        
+        UIImage* mailImage = [UIImage imageNamed:@"icon_email_to_friend.png"];
         cell.imageView.image = mailImage;
         cell.textLabel.text = @"Email to a friend";
-        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
     }
-    else if (indexPath.section == 1 && indexPath.row == 1)
+    else if (indexPath.section == 1 && indexPath.row == 2)
     {
-        UIImage* mailImage = [UIImage imageNamed:@"facebook.png"];
+        UIImage* mailImage = [UIImage imageNamed:@"icon_share_on_facebook"];
         cell.imageView.image = mailImage;
-        cell.textLabel.text = @"Facebook";
+        cell.textLabel.text = @"Share on Facebook";
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         // Show logout facebook
         
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+       /* NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         if ([defaults objectForKey:@"FBAccessTokenKey"] && [defaults objectForKey:@"FBExpirationDateKey"]) {
             
-            UIImage* logoutImage = [UIImage imageNamed:@"logoutfacebook.png"];
+            UIImage* logoutImage = [UIImage imageNamed:@"logout.png"];
             logoutFacebook = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-            logoutFacebook.frame = CGRectMake(320, 10, 72, 22);
+            logoutFacebook.frame = CGRectMake(250, 10, 54, 30);
             [logoutFacebook setBackgroundImage:logoutImage forState:UIControlStateNormal];
-            //[logoutFacebook setTitle:@"Log Out" forState:UIControlStateNormal];
             [logoutFacebook addTarget:self action:@selector(logoutButtonClicked:)forControlEvents:UIControlEventTouchUpInside];
             [cell addSubview:logoutFacebook];
-            } 
-                   
+            }*/
+                          
        
         
     }
     
-    else if (indexPath.section == 1 && indexPath.row == 2) {
+    else if (indexPath.section == 1 && indexPath.row == 3) {
         
-        UIImage* TwitterImage = [UIImage imageNamed:@"twitter.png"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        UIImage* TwitterImage = [UIImage imageNamed:@"icon_share_on_twitter.png"];
         cell.imageView.image = TwitterImage;
-        cell.textLabel.text = @"Twitter";
+        cell.textLabel.text = @"Share on Twitter";
         
     }
     else if (indexPath.section == 2 && indexPath.row == 0){
-        
-        cell.textLabel.text = @"*** Very important – We operate an alerts service through Twitter, follow us to get the latest service notifications ***";
-        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-        cell.textLabel.numberOfLines = 0;
-        cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:14.0];
-        
+    
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        CGFloat nRed=236.0/255.0; 
-        CGFloat nBlue=207/255.0;
-        CGFloat nGreen=141.0/255.0;
-        UIColor *mycolor=[[UIColor alloc]initWithRed:nRed green:nBlue blue:nGreen alpha:1];
-        cell.contentView.backgroundColor = mycolor;
-        cell.textLabel.backgroundColor =  mycolor;
-        cell.textLabel.textColor = [UIColor blackColor];
-        cell.textLabel.textAlignment = UITextAlignmentCenter;
-        [mycolor release];
         
+        UIView *NotView = [[UIView alloc] init];
+        
+        NSString *NotdividerImagePath = [[NSBundle mainBundle] pathForResource:@"divider_notifications" ofType:@"png"];
+        UIImage *NotdividerImage = [[UIImage alloc] initWithContentsOfFile:NotdividerImagePath];
+        UIImageView *NotdividerView = [[UIImageView alloc] initWithImage:NotdividerImage ];
+        NotdividerView.frame = CGRectMake(0.0, 0.0, 320, 30);
+        NotdividerView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+        [NotView addSubview: NotdividerView];
+        [cell addSubview:NotView];
+        [NotView release];
+        [NotdividerImage release];
+        [NotdividerView release];
+        
+
+                
     }
     else if (indexPath.section == 2 && indexPath.row == 1){
         
-        UIImage* FollowUsOnTwitterImage = [UIImage imageNamed:@"FollowUsOnTwitter.png"];
+        UIImage* FollowUsOnTwitterImage = [UIImage imageNamed:@"icon_follow_on_twitter.png"];
         cell.imageView.image = FollowUsOnTwitterImage;
         cell.textLabel.text = @"Follow us on Twitter";
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 
     else if(indexPath.section == 2 && indexPath.row == 2){
         
-        UIImage* LikeUsImage = [UIImage imageNamed:@"LikeUsOnFaceBook.png"];
+        UIImage* LikeUsImage = [UIImage imageNamed:@"icon_like_on_facebook.png"];
         cell.imageView.image = LikeUsImage;
         cell.textLabel.text = @"Like us on Facebook";
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
     }
 
@@ -205,25 +248,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.section == 1 && indexPath.row ==0){
+    if(indexPath.section == 1 && indexPath.row ==1){
         
         [self ShareThisAppViaMail:self];
         
         
         
     }
-    else if (indexPath.section == 1 && indexPath.row == 1){
+    else if (indexPath.section == 1 && indexPath.row == 2){
         
         [self ConnectToFaceBook];
         
     }
     
-    else if (indexPath.section == 1 && indexPath.row == 2){
+    else if (indexPath.section == 1 && indexPath.row == 3){
         
         [self Twit];
     }
     
-    else if (indexPath.section == 2 && indexPath.row < 2){
+    else if (indexPath.section == 2 && indexPath.row == 1){
         
         [self FollowUsOnTwitter];
     }
@@ -369,7 +412,7 @@
         [defaults synchronize];
     }
     
-    
+    [self.tableView reloadData];
     
 }
 
@@ -476,6 +519,7 @@
         
               
          [activityIndicator stopAnimating];
+       
 	    [self presentModalViewController:tweetSheet animated:YES]; 
         [tweetSheet release];
     }
@@ -502,7 +546,7 @@
         activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         [activityIndicator stopAnimating];
         [activityIndicator hidesWhenStopped];
-        activityIndicator.center = CGPointMake(250, 185);
+        activityIndicator.center = CGPointMake(250, 215);
         
         [self.view addSubview:activityIndicator];
         [activityIndicator startAnimating];

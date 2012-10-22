@@ -16,17 +16,30 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
 
 @synthesize window;
 @synthesize	tabBarController;
-@synthesize AllocatedMarks,Difficulty,Topic,TypeOfQuestion,NumberOfQuestions,NumberOfQuestionsDisplayed,PossibleScores,ClientScores,buyScreen,SecondThread,m_facebook;
+@synthesize AllocatedMarks,Difficulty,Topic,TypeOfQuestion,NumberOfQuestions,NumberOfQuestionsDisplayed,PossibleScores,ClientScores,buyScreen,SecondThread,m_facebook,DeviceScreenType;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	
-    /*Remove the my admin tabbarItem ..
+    //Remove the my help tabbarItem ..
     NSMutableArray *viewControllers = [NSMutableArray arrayWithArray:tabBarController.viewControllers];
     [viewControllers removeObjectAtIndex:5];
-    [tabBarController setViewControllers:viewControllers];*/
+    [tabBarController setViewControllers:viewControllers];
+    
+    //Check phone Screen Size
+    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
+        if([UIScreen mainScreen].bounds.size.height == 568.0){
+            //This is iphone5 Screen size
+            DeviceScreenType =[[NSNumber alloc] initWithInt:1136];
+        }
+        else{
+           // This is NOT iPhone5 Screen Size
+            DeviceScreenType = [[NSNumber alloc] initWithInt:0];
+        }
+    }
+
    
     [self CopyDataBase];
 	SecondThread = nil;
@@ -81,7 +94,8 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
     //[FBProfilePictureView class];
 
 	
-    [window addSubview: tabBarController.view];
+    //[window addSubview: tabBarController.view];
+    self.window.rootViewController = tabBarController;
 	[window makeKeyAndVisible];
 	
 	//Setup User Defaults
@@ -118,7 +132,7 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
 	//[[NSUserDefaults standardUserDefaults] synchronize];
 	if (MyAccessLevel == nil) {
 		
-		NSDictionary *appDefaults  = [NSDictionary dictionaryWithObjectsAndKeys:@"1", AccessLevel, nil];
+		NSDictionary *appDefaults  = [NSDictionary dictionaryWithObjectsAndKeys:@"2", AccessLevel, nil];
 		[[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 		[[NSUserDefaults standardUserDefaults] synchronize];
 	}
@@ -380,6 +394,45 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
 	return YES;
 }
 
+-(BOOL)isDeviceConnectedToInternet{
+    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    
+    BOOL internetActive = NO;
+    switch (networkStatus)
+    {
+        case NotReachable:
+        {
+            NSLog(@"The internet is down.");
+            
+            internetActive = NO;
+            
+            break;
+        }
+        case ReachableViaWiFi:
+        {
+            NSLog(@"The internet is working via WIFI.");
+            
+            internetActive = YES;
+            
+            break;
+        }
+            
+        case ReachableViaWWAN:
+        {
+            NSLog(@"The internet is working via WWAN.");
+            
+            internetActive = YES;
+            
+            break;
+        }
+    }
+    return internetActive;
+    
+    
+}
+
 
 #pragma mark -
 #pragma mark Core Data stack
@@ -573,7 +626,19 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
     return [m_facebook handleOpenURL:url];  
 }
 
-
+-(BOOL)IsThisiPhone5{
+    
+    if(DeviceScreenType.intValue == 1136 ){
+        
+        return YES;
+    }
+    else
+    {
+        //NSLog(@"Result %i", DeviceScreenType.intValue);
+        return NO;
+    }
+    
+}
 
 - (void)dealloc {
     
@@ -594,6 +659,7 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
 	[NumberOfQuestionsDisplayed release];
 	[PossibleScores release];
 	[ClientScores release];
+    [DeviceScreenType release];
 	
     [super dealloc];
 }

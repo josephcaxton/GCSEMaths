@@ -11,7 +11,7 @@
 
 @implementation LearnersCloudSamplesVideos
 
-@synthesize listofItems,WebText,ImageNames;
+@synthesize listofItems,ImageNames,LCButton;
 
 //static MPMoviePlayerController *moviePlayerController = nil; 
 
@@ -24,23 +24,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
+    
     self.navigationItem.title = @"GCSE Sample Videos";
     
-    UINavigationController *nav =self.navigationController;
-    nav.navigationBar.tintColor = [UIColor blackColor];
+    NSString *HeaderLocation = [[NSBundle mainBundle] pathForResource:@"header_bar" ofType:@"png"];
+    UIImage *HeaderBackImage = [[UIImage alloc] initWithContentsOfFile:HeaderLocation];
+    [self.navigationController.navigationBar setBackgroundImage:HeaderBackImage forBarMetrics:UIBarMetricsDefault];
+    [HeaderBackImage release];
     
+    self.tableView.backgroundView = nil;
+    NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"back320x450" ofType:@"png"];
+	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:BackImage];
+    [BackImage release];
+
+	
+        
 	listofItems = [[NSMutableArray alloc] init];
 	ImageNames = [[NSMutableArray alloc] init];
 	// Add items to the array this is hardcoded for now .. may need to be migrated to the database
-	[listofItems addObject:@"Maths - Collecting and recording data"];
+	[listofItems addObject:@"   Maths - Trailer"];
 	[ImageNames addObject:@"Maths.png"];
-	[listofItems addObject:@"Conflict peom - Bayonet Charge"];
+	[listofItems addObject:@"   English - Trailer"];
 	[ImageNames addObject:@"English.png"];
-	//[listofItems addObject:@" Physics"];
-	//[ImageNames addObject:@"Physics.png"];
-	//[listofItems addObject:@" Chemistry"];
-	//[ImageNames addObject:@"Chemistry.png"];
+	[listofItems addObject:@"   Physics - Trailer"];
+	[ImageNames addObject:@"Physics.png"];
+	[listofItems addObject:@"   Chemistry - Trailer"];
+	[ImageNames addObject:@"Chemistry.png"];
 //	[listofItems addObject:@"French"];
 //	[ImageNames addObject:@"French.png"];
 //	[listofItems addObject:@"Batteries"];
@@ -104,17 +114,6 @@
 }
 
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	
-	NSString *title=@""; 
-	
-	
-		return title; 
-	
-	
-	
-}
-
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -124,6 +123,7 @@
 		return [listofItems count];
 	}
 	else {
+        
 		return 1;
 	}
 
@@ -134,12 +134,9 @@
 {
     
     if (indexPath.section == 1 && indexPath.row == 0  ) {		
-        return  160;
+        return  295;
     }
-    //        else if (indexPath.section == 1 && indexPath.row == 2){
-    //               return [indexPath row] + 120; 
-    //            }
-	
+   	
     else
         return 50;
 }
@@ -163,23 +160,17 @@
     
     NSString *cellValue = [[NSString alloc] initWithFormat:@"%@",[listofItems objectAtIndex:indexPath.row]];
 	NSString *PicLocation = [[NSString alloc] initWithFormat:@"%@",[ImageNames objectAtIndex:indexPath.row]];
-	cell.textLabel.text = cellValue;
+    
+        UILabel *Title = [[UILabel alloc] initWithFrame:CGRectMake(80.0,0.0,240,50)];
+        Title.text = cellValue;
+        [cell.contentView addSubview:Title];
+        [Title release];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-		
-	// Just want to show the thumbnail image biut too slow
-	//NSString *filepath   =   [[NSBundle mainBundle] pathForResource:cellValue ofType:@"m4v"];
-//	NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath]; 
-//	moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:fileURL];
-		
-	//UIImage* theImage = [moviePlayerController thumbnailImageAtTime:8 timeOption:MPMovieTimeOptionNearestKeyFrame];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;  		
+	
 	UIImage* theImage = [UIImage imageNamed:PicLocation];
 	cell.imageView.image = theImage;
-		
-	//[moviePlayerController pause];
-//	 moviePlayerController.initialPlaybackTime = -1.0;
-//	[moviePlayerController stop];
-//	[moviePlayerController release];
-//	moviePlayerController = nil;
+
 		[PicLocation release];	
 		[cellValue release];
 		
@@ -187,24 +178,39 @@
 	
 	else if (indexPath.section == 1) {
 	
-        if (!WebText) {
-			
-			WebText =[[UIWebView alloc] initWithFrame:CGRectMake(0,0,350,240)]; 
-		}
-	
-		
-		WebText.backgroundColor = [UIColor clearColor];
-		WebText.dataDetectorTypes = UIDataDetectorTypeLink;
-        WebText.delegate = self;
-		NSString *Visit = @"Visit ";
-		NSString *Website =[Visit stringByAppendingString: @"<a target=/'_blank/'  href=http://www.learnerscloud.com/?utm_source=itunes&utm_medium=link&utm_content=Maths&utm_campaign=App > LearnersCloud</a>"];
-		NSString *videos = [Website stringByAppendingString:@" <br/>Watch hundreds of more HD videos <br/>Complete GCSE English & Maths available, Physics and Chemistry coming in september<br/> 2012<br/><b>Sign up for a FREE trial account now</b><br/> Also for schools and colleges."];
-		
-        [WebText loadHTMLString:videos baseURL:nil];
-		
-		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		cell.imageView.image = nil;
-		[cell addSubview:WebText];
+         
+         UIView *PromoView = [[UIView alloc] init];
+         NSString *PromoImagePath = [[NSBundle mainBundle] pathForResource:@"website_promo" ofType:@"png"];
+         UIImage *PromoImage = [[UIImage alloc] initWithContentsOfFile:PromoImagePath];
+         UIImageView *PromoImageView = [[UIImageView alloc] initWithImage:PromoImage];
+         PromoImageView.frame = CGRectMake(10, 10.0, 300, 250);
+         [PromoView addSubview:PromoImageView];
+        [cell addSubview:PromoView];
+        
+         
+         [PromoView release];
+         [PromoImage release];
+         [PromoImageView release];
+         
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        
+        ///// LC image
+        
+        NSString *LCImageLocation = [[NSBundle mainBundle] pathForResource:@"web_promo_btn" ofType:@"png"];
+        
+        UIImage *LCImage = [[UIImage alloc] initWithContentsOfFile:LCImageLocation];
+        
+        
+        LCButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [LCButton setImage:LCImage forState:UIControlStateNormal];
+        LCButton.frame = CGRectMake(35, 200, 250, 50);
+        [LCButton addTarget:self action:@selector(WebsitebuttonPressed) forControlEvents:UIControlEventTouchUpInside];
+        [cell addSubview:LCButton];
+
+        ////
+        
 		
 		
 	}
@@ -228,10 +234,10 @@
 			
 		case 0:
 			;
-			VideoPlayer *VP1 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
+			VideoPlayer *VP1 = [[VideoPlayer alloc] initWithNibName:nil bundle:nil];
 			VP1.VideoFileName =@"Maths";
 			VP1.hidesBottomBarWhenPushed = YES;
-			[self.navigationController pushViewController:VP1 animated:YES];
+			[self.navigationController pushViewController:VP1 animated:NO];
 			[VP1 release];
 			break;
 			
@@ -269,115 +275,16 @@
 			
 			break;
 			
-//		case 4:
-//			;
-//			VideoPlayer *VP5 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP5.VideoFileName =[NSString stringWithString:@"French"];
-//			VP5.hidesBottomBarWhenPushed = YES;
-//			[self.navigationController pushViewController:VP5 animated:YES];
-//			[VP5 release];
-//			
-//			
-//			
-//			break;
-//			
-//			
-//		case 5:
-//			;
-//			VideoPlayer *VP6 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP6.VideoFileName =[NSString stringWithString:@"Batteries"];
-//			VP6.hidesBottomBarWhenPushed = YES;
-//			[self.navigationController pushViewController:VP6 animated:YES];
-//			[VP6 release];
-//			
-//			
-//			
-//			break;
-//			
-//		case 6:
-//			;
-//			VideoPlayer *VP7 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP7.VideoFileName =[NSString stringWithString:@"Ruined_maid"];
-//			VP7.hidesBottomBarWhenPushed = YES;
-//			[self.navigationController pushViewController:VP7 animated:YES];
-//			[VP7 release];
-//			
-//			
-//			
-//			break;
-//			
-//		case 7:
-//			;
-//			VideoPlayer *VP8 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP8.VideoFileName =[NSString stringWithString:@"LesGrandSeignors"];
-//			VP8.hidesBottomBarWhenPushed = YES;
-//			[self.navigationController pushViewController:VP8 animated:YES];
-//			[VP8 release];
-//			
-//			
-//			
-//			break;
-//			
-//		case 8:
-//			;
-//			VideoPlayer *VP9 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP9.VideoFileName =[NSString stringWithString:@"HorseWhisperer"];
-//			VP9.hidesBottomBarWhenPushed = YES;
-//			[self.navigationController pushViewController:VP9 animated:YES];
-//			[VP9 release];
-//			
-//			
-//			
-//			break;
-//			
-//		case 9:
-//			;
-//			VideoPlayer *VP10 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP10.VideoFileName =[NSString stringWithString:@"Hunchback"];
-//			VP10.hidesBottomBarWhenPushed = YES;
-//			[self.navigationController pushViewController:VP10 animated:YES];
-//			[VP10 release];
-//			
-//			
-//			
-//			break;
-//		case 10:
-//			;
-//			VideoPlayer *VP11 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP11.VideoFileName =[NSString stringWithString:@"ClownPunk"];
-//			VP11.hidesBottomBarWhenPushed = YES;
-//			[self.navigationController pushViewController:VP11 animated:YES];
-//			[VP11 release];
-//			
-//			
-//			
-//			break;
-//		case 11:
-//			;
-//			VideoPlayer *VP12 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP12.VideoFileName =[NSString stringWithString:@"Convexrap"];
-//			VP12.hidesBottomBarWhenPushed = YES;
-//			[self.navigationController pushViewController:VP12 animated:YES];
-//			[VP12 release];
-//			
-//			
-//			
-//			break;
-	}
+        }
 			
-		}
-}
-
-// This stops the link in UIWebView open in the application. It should open in safari
--(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
-    if ( inType == UIWebViewNavigationTypeLinkClicked ) {
-        [[UIApplication sharedApplication] openURL:[inRequest URL]];
-        return NO;
     }
-    
-    return YES;
 }
 
+- (void)WebsitebuttonPressed {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.learnerscloud.com"]];
+    
+}
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -429,7 +336,6 @@
 - (void)dealloc {
 	[listofItems release];
 	[ImageNames release];
-    [WebText release];
     [super dealloc];
 }
 

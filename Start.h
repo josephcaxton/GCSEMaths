@@ -12,6 +12,8 @@
 #import "SelectTopic.h"
 #import "SelectQuestionTemplate.h"
 #import "ClientEngine.h"
+#import "EvaluatorAppDelegate.h"
+
 
 @interface Start : UIViewController  <UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate>{  //UIPickerViewDelegate, UIPickerViewDataSource
 	
@@ -30,6 +32,7 @@
 	UILabel *Copyright;
 	UITextView *WebText;
 	UIButton *StartPractice;
+    BOOL iPhone5;
 	
 	
 }
@@ -47,6 +50,7 @@
 @property (nonatomic, retain) UILabel *Copyright;
 @property (nonatomic, retain) UITextView *WebText;
 @property (nonatomic, assign) UIButton *StartPractice;
+@property (nonatomic, assign) BOOL iPhone5;
 
 -(IBAction)Practice:(id)sender;
 -(IBAction)StartTest:(id)sender;
