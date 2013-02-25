@@ -389,7 +389,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		QuestionHeaderBox.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 300);
 		self.FileListTable.frame = CGRectMake(0, 160, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
-		Continue.frame = CGRectMake(230, 0, 80, 45);
+		Continue.frame = CGRectMake(220, 2, 80, 35);
 		
 	}
 	
@@ -397,7 +397,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		QuestionHeaderBox.frame = CGRectMake(80, 0, SCREEN_HEIGHT - 122, 160);
 		self.FileListTable.frame = CGRectMake(0, 160, SCREEN_HEIGHT + 30, SCREEN_HEIGHT - 160);
-		Continue.frame = CGRectMake(350, 0, 80, 45);
+		Continue.frame = CGRectMake(350, 2, 80, 35);
 	}
 	
 	
@@ -589,9 +589,12 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	 else if(QItem_View !=nil && indexPath.row == [AnswerObjects count] ){
 		 
+         NSString *ContinueImageLocation = [[NSBundle mainBundle] pathForResource:@"btn_continue" ofType:@"png"];
+         UIImage *ContinueImage = [[UIImage alloc] initWithContentsOfFile:ContinueImageLocation];
 		 
          Continue = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		 [Continue setTitle:@"Continue" forState:UIControlStateNormal];
+        [Continue setImage:ContinueImage forState:UIControlStateNormal];
+		 //[Continue setTitle:@"Continue" forState:UIControlStateNormal];
 		 
 		 [Continue addTarget:self action:@selector(NextQuestion:) forControlEvents:UIControlEventTouchUpInside];
 		 [cell addSubview:Continue];
@@ -599,11 +602,11 @@ static UIWebView *QuestionHeaderBox = nil;
 		 
 		 if (self.interfaceOrientation == UIInterfaceOrientationPortrait || self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
 			 
-			 Continue.frame = CGRectMake(230, 0, 80, 45);
+			 Continue.frame = CGRectMake(220, 2, 80, 35);
 		 }
 		 else {
 			 
-			 Continue.frame = CGRectMake(350, 0, 80, 45);
+			 Continue.frame = CGRectMake(350, 2, 80, 35);
 		 }
 		 if(ShowAnswer == YES && RemoveContinueButton == YES)
          {
