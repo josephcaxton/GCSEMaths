@@ -12,7 +12,7 @@
 
 @implementation Buy
 
-@synthesize ProductFromIstore,ProductsToIstore,ProductsToIStoreInArray,SortedDisplayProducts,observer;
+@synthesize ProductFromIstore,ProductsToIstore,ProductsToIStoreInArray,SortedDisplayProducts,observer,Restore;
 
 int dontShowPriceList = 0;
 #pragma mark -
@@ -241,7 +241,7 @@ int dontShowPriceList = 0;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
    
-    return [SortedDisplayProducts count];
+    return [SortedDisplayProducts count] + 1;
 	
 }
 
@@ -267,6 +267,24 @@ int dontShowPriceList = 0;
 		cell.textLabel.text = @"";
 	}
 	else{
+        if (indexPath.row ==  [SortedDisplayProducts count]){
+            if(!Restore){
+                Restore = [UIButton buttonWithType:UIButtonTypeCustom];
+            }
+            Restore.frame = CGRectMake(158, 0, 100, 39);
+            Restore.tag = indexPath.row + 1;
+            UIImage *RestoreImage = [UIImage imageNamed:@"restore.png"];
+            [Restore setBackgroundImage:RestoreImage forState:UIControlStateNormal];
+            [Restore addTarget:self action:@selector(BuyQuestion:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.contentView addSubview:Restore];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.textLabel.text = @"Restore";
+            cell.detailTextLabel.text = @"0.00";
+            
+        }
+        else{
+            
+            if ([SortedDisplayProducts count] > 0){
 		  
 	SKProduct *product = [SortedDisplayProducts objectAtIndex:indexPath.row];
 	
@@ -293,6 +311,8 @@ int dontShowPriceList = 0;
 	
 	[numberFormatter release];
 	}
+        }
+    }
     
     return cell;
 }
@@ -354,7 +374,11 @@ int dontShowPriceList = 0;
 					[[SKPaymentQueue defaultQueue] addPayment:payment7];
 					break;
 					
-					
+                case 8:
+					;
+					[[SKPaymentQueue defaultQueue] addTransactionObserver:observer];
+                    [[SKPaymentQueue defaultQueue]restoreCompletedTransactions];
+					break;
 			}
 			
 		case 2: 
@@ -397,7 +421,11 @@ int dontShowPriceList = 0;
 					[[SKPaymentQueue defaultQueue] addPayment:payment6];
 					
 					break;	
-					
+                case 7:
+					;
+					[[SKPaymentQueue defaultQueue] addTransactionObserver:observer];
+                    [[SKPaymentQueue defaultQueue]restoreCompletedTransactions];
+					break;
 					
 			}
 			
@@ -434,6 +462,13 @@ int dontShowPriceList = 0;
 					[[SKPaymentQueue defaultQueue] addPayment:payment5];
 					
 					break;
+                case 6:
+					;
+					[[SKPaymentQueue defaultQueue] addTransactionObserver:observer];
+                    [[SKPaymentQueue defaultQueue]restoreCompletedTransactions];
+					
+					break;
+
 			}
 			
 		case 4:
@@ -458,6 +493,13 @@ int dontShowPriceList = 0;
 					SKPayment *payment4 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.750To1600"];
 					[[SKPaymentQueue defaultQueue] addPayment:payment4];
 					break;
+                case 5:
+					;
+					[[SKPaymentQueue defaultQueue] addTransactionObserver:observer];
+                    [[SKPaymentQueue defaultQueue]restoreCompletedTransactions];
+                    
+					break;
+
 					
 			}
             
@@ -479,7 +521,11 @@ int dontShowPriceList = 0;
 					[[SKPaymentQueue defaultQueue] addPayment:payment3];
 					break;
                 
-					
+                case 4:
+					;
+					[[SKPaymentQueue defaultQueue] addTransactionObserver:observer];
+                    [[SKPaymentQueue defaultQueue]restoreCompletedTransactions];
+					break;
 			}
             
         case 6:
@@ -495,7 +541,11 @@ int dontShowPriceList = 0;
 					[[SKPaymentQueue defaultQueue] addPayment:payment2];
 					break;
                 
-                    
+                case 3:
+					;
+					[[SKPaymentQueue defaultQueue] addTransactionObserver:observer];
+                    [[SKPaymentQueue defaultQueue]restoreCompletedTransactions];
+					break;
 					
 			}
             
@@ -507,7 +557,11 @@ int dontShowPriceList = 0;
 					[[SKPaymentQueue defaultQueue] addPayment:payment1];
 					break;
                 
-                    
+                case 2:
+					;
+					[[SKPaymentQueue defaultQueue] addTransactionObserver:observer];
+                    [[SKPaymentQueue defaultQueue]restoreCompletedTransactions];
+					break;
                     
 					
 			}
