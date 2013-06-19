@@ -725,7 +725,7 @@ static UIWebView *QuestionHeaderBox = nil;
 					for (int i = 0; i < [HighlightedAnswers count]; i++) {
 					
 					UITableViewCell* theCell = [tableView cellForRowAtIndexPath:[HighlightedAnswers objectAtIndex:i]];
-					theCell.contentView.backgroundColor=[UIColor redColor];
+					theCell.contentView.backgroundColor=[UIColor blueColor];
 
 					}
 				}
@@ -758,6 +758,10 @@ static UIWebView *QuestionHeaderBox = nil;
 			else if ([AnswerCounter count] == [MultichoiceAnswers count]) {
 					
 					EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+                
+                UITableViewCell* theCell = [tableView cellForRowAtIndexPath:indexPath];
+                theCell.contentView.backgroundColor=[UIColor blueColor];
+
 					
 				BOOL PlaySound = [[NSUserDefaults standardUserDefaults] boolForKey:@"PlaySound"];
 				if (PlaySound == YES) {
@@ -790,6 +794,10 @@ static UIWebView *QuestionHeaderBox = nil;
 			else {
 				
 				EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+                
+                UITableViewCell* theCell = [tableView cellForRowAtIndexPath:indexPath];
+                theCell.contentView.backgroundColor=[UIColor blueColor];
+
 				
 				BOOL PlaySound = [[NSUserDefaults standardUserDefaults] boolForKey:@"PlaySound"];
 				if (PlaySound == YES) {

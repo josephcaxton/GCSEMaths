@@ -44,11 +44,9 @@
 		7C579F4D150F47B70050DC9E /* 454.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C579F4C150F47B70050DC9E /* 454.pdf */; };
 		7C594FEC161897C6007186C7 /* share_intro.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C594FEA161897C6007186C7 /* share_intro.png */; };
 		7C594FED161897C6007186C7 /* share_intro@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C594FEB161897C6007186C7 /* share_intro@2x.png */; };
-		7C64BC921716E1AB00DC9A4C /* GCSEMaths.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7C64BC911716E19100DC9A4C /* GCSEMaths.sqlite */; };
 		7C68D7FE1652A6BF00B94D8B /* 148.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C68D7FD1652A6BF00B94D8B /* 148.pdf */; };
 		7C68D8001652A6DC00B94D8B /* 194.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C68D7FF1652A6DB00B94D8B /* 194.pdf */; };
 		7C68D8021652A6F400B94D8B /* 228.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C68D8011652A6F400B94D8B /* 228.pdf */; };
-		7C68D8041652A71000B94D8B /* 235.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C68D8031652A71000B94D8B /* 235.pdf */; };
 		7C68D8061652A72400B94D8B /* 246.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C68D8051652A72400B94D8B /* 246.pdf */; };
 		7C68D8081652A74000B94D8B /* 285.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C68D8071652A74000B94D8B /* 285.pdf */; };
 		7C68D80A1652A76000B94D8B /* 606.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C68D8091652A76000B94D8B /* 606.pdf */; };
@@ -221,7 +219,6 @@
 		7C795925141B53AC00C6629A /* 164.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7952CB141B53A600C6629A /* 164.pdf */; };
 		7C795926141B53AC00C6629A /* 165.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7952CC141B53A600C6629A /* 165.pdf */; };
 		7C795927141B53AC00C6629A /* 166.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7952CD141B53A600C6629A /* 166.pdf */; };
-		7C795929141B53AC00C6629A /* 168.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7952CF141B53A600C6629A /* 168.pdf */; };
 		7C79592A141B53AC00C6629A /* 169.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7952D0141B53A600C6629A /* 169.pdf */; };
 		7C79592B141B53AC00C6629A /* 170.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7952D1141B53A600C6629A /* 170.pdf */; };
 		7C79592C141B53AC00C6629A /* 171.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7952D2141B53A600C6629A /* 171.pdf */; };
@@ -282,7 +279,6 @@
 		7C795967141B53AC00C6629A /* 230.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79530D141B53A700C6629A /* 230.pdf */; };
 		7C795968141B53AC00C6629A /* 231.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79530E141B53A700C6629A /* 231.pdf */; };
 		7C795969141B53AC00C6629A /* 232.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79530F141B53A700C6629A /* 232.pdf */; };
-		7C79596B141B53AC00C6629A /* 234.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795311141B53A700C6629A /* 234.pdf */; };
 		7C79596D141B53AC00C6629A /* 236.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795313141B53A700C6629A /* 236.pdf */; };
 		7C79596F141B53AC00C6629A /* 238.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795315141B53A700C6629A /* 238.pdf */; };
 		7C795970141B53AC00C6629A /* 239.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795316141B53A700C6629A /* 239.pdf */; };
@@ -297,10 +293,8 @@
 		7C79597A141B53AC00C6629A /* 249.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795320141B53A700C6629A /* 249.pdf */; };
 		7C79597B141B53AC00C6629A /* 250.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795321141B53A700C6629A /* 250.pdf */; };
 		7C79597C141B53AC00C6629A /* 251.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795322141B53A700C6629A /* 251.pdf */; };
-		7C79597D141B53AC00C6629A /* 252.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795323141B53A700C6629A /* 252.pdf */; };
 		7C79597E141B53AC00C6629A /* 253.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795324141B53A700C6629A /* 253.pdf */; };
 		7C79597F141B53AC00C6629A /* 254.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795325141B53A700C6629A /* 254.pdf */; };
-		7C795980141B53AC00C6629A /* 255.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795326141B53A700C6629A /* 255.pdf */; };
 		7C795982141B53AC00C6629A /* 257.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795328141B53A700C6629A /* 257.pdf */; };
 		7C795983141B53AC00C6629A /* 258.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795329141B53A700C6629A /* 258.pdf */; };
 		7C795985141B53AC00C6629A /* 260.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79532B141B53A700C6629A /* 260.pdf */; };
@@ -392,7 +386,6 @@
 		7C7959E0141B53AC00C6629A /* 351.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795386141B53A700C6629A /* 351.pdf */; };
 		7C7959E2141B53AC00C6629A /* 353.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795388141B53A700C6629A /* 353.pdf */; };
 		7C7959E3141B53AC00C6629A /* 354.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795389141B53A700C6629A /* 354.pdf */; };
-		7C7959E4141B53AC00C6629A /* 355.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79538A141B53A700C6629A /* 355.pdf */; };
 		7C7959E6141B53AC00C6629A /* 357.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79538C141B53A700C6629A /* 357.pdf */; };
 		7C7959E7141B53AC00C6629A /* 358.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79538D141B53A700C6629A /* 358.pdf */; };
 		7C7959E8141B53AC00C6629A /* 359.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79538E141B53A700C6629A /* 359.pdf */; };
@@ -432,7 +425,6 @@
 		7C795A0E141B53AC00C6629A /* 397.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953B4141B53A700C6629A /* 397.pdf */; };
 		7C795A0F141B53AC00C6629A /* 398.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953B5141B53A700C6629A /* 398.pdf */; };
 		7C795A10141B53AC00C6629A /* 399.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953B6141B53A700C6629A /* 399.pdf */; };
-		7C795A11141B53AC00C6629A /* 400.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953B7141B53A700C6629A /* 400.pdf */; };
 		7C795A14141B53AC00C6629A /* 403.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953BA141B53A700C6629A /* 403.pdf */; };
 		7C795A15141B53AC00C6629A /* 404.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953BB141B53A700C6629A /* 404.pdf */; };
 		7C795A16141B53AC00C6629A /* 405.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953BC141B53A700C6629A /* 405.pdf */; };
@@ -452,27 +444,16 @@
 		7C795A25141B53AC00C6629A /* 420.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953CB141B53A700C6629A /* 420.pdf */; };
 		7C795A27141B53AC00C6629A /* 422.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953CD141B53A700C6629A /* 422.pdf */; };
 		7C795A28141B53AC00C6629A /* 423.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953CE141B53A700C6629A /* 423.pdf */; };
-		7C795A2A141B53AC00C6629A /* 425.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953D0141B53A700C6629A /* 425.pdf */; };
 		7C795A2B141B53AC00C6629A /* 426.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953D1141B53A700C6629A /* 426.pdf */; };
 		7C795A2C141B53AC00C6629A /* 427.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953D2141B53A700C6629A /* 427.pdf */; };
 		7C795A2D141B53AC00C6629A /* 428.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953D3141B53A700C6629A /* 428.pdf */; };
-		7C795A2E141B53AC00C6629A /* 429.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953D4141B53A700C6629A /* 429.pdf */; };
 		7C795A2F141B53AC00C6629A /* 430.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953D5141B53A700C6629A /* 430.pdf */; };
 		7C795A30141B53AC00C6629A /* 431.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953D6141B53A700C6629A /* 431.pdf */; };
 		7C795A31141B53AC00C6629A /* 432.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953D7141B53A700C6629A /* 432.pdf */; };
-		7C795A32141B53AC00C6629A /* 433.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953D8141B53A700C6629A /* 433.pdf */; };
 		7C795A33141B53AC00C6629A /* 434.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953D9141B53A700C6629A /* 434.pdf */; };
 		7C795A34141B53AC00C6629A /* 435.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953DA141B53A700C6629A /* 435.pdf */; };
 		7C795A35141B53AC00C6629A /* 436.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953DB141B53A700C6629A /* 436.pdf */; };
-		7C795A36141B53AC00C6629A /* 437.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953DC141B53A700C6629A /* 437.pdf */; };
-		7C795A37141B53AC00C6629A /* 438.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953DD141B53A700C6629A /* 438.pdf */; };
-		7C795A38141B53AC00C6629A /* 439.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953DE141B53A700C6629A /* 439.pdf */; };
-		7C795A39141B53AC00C6629A /* 440.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953DF141B53A700C6629A /* 440.pdf */; };
-		7C795A3A141B53AC00C6629A /* 441.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953E0141B53A700C6629A /* 441.pdf */; };
-		7C795A3B141B53AC00C6629A /* 442.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953E1141B53A700C6629A /* 442.pdf */; };
 		7C795A3C141B53AC00C6629A /* 443.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953E2141B53A700C6629A /* 443.pdf */; };
-		7C795A3D141B53AC00C6629A /* 444.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953E3141B53A700C6629A /* 444.pdf */; };
-		7C795A3E141B53AC00C6629A /* 445.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953E4141B53A700C6629A /* 445.pdf */; };
 		7C795A3F141B53AC00C6629A /* 446.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953E5141B53A700C6629A /* 446.pdf */; };
 		7C795A40141B53AC00C6629A /* 447.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953E6141B53A700C6629A /* 447.pdf */; };
 		7C795A41141B53AC00C6629A /* 448.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953E7141B53A700C6629A /* 448.pdf */; };
@@ -485,19 +466,10 @@
 		7C795A49141B53AC00C6629A /* 456.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953EF141B53A700C6629A /* 456.pdf */; };
 		7C795A4A141B53AC00C6629A /* 457.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953F0141B53A700C6629A /* 457.pdf */; };
 		7C795A4B141B53AC00C6629A /* 458.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953F1141B53A700C6629A /* 458.pdf */; };
-		7C795A4C141B53AC00C6629A /* 459.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953F2141B53A700C6629A /* 459.pdf */; };
 		7C795A4D141B53AC00C6629A /* 460.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953F3141B53A700C6629A /* 460.pdf */; };
 		7C795A4E141B53AC00C6629A /* 461.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953F4141B53A700C6629A /* 461.pdf */; };
 		7C795A4F141B53AC00C6629A /* 462.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953F5141B53A700C6629A /* 462.pdf */; };
-		7C795A50141B53AC00C6629A /* 463.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953F6141B53A700C6629A /* 463.pdf */; };
-		7C795A51141B53AC00C6629A /* 464.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953F7141B53A700C6629A /* 464.pdf */; };
-		7C795A52141B53AC00C6629A /* 465.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953F8141B53A700C6629A /* 465.pdf */; };
-		7C795A53141B53AC00C6629A /* 466.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953F9141B53A700C6629A /* 466.pdf */; };
-		7C795A54141B53AC00C6629A /* 467.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953FA141B53A700C6629A /* 467.pdf */; };
-		7C795A55141B53AC00C6629A /* 468.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953FB141B53A700C6629A /* 468.pdf */; };
 		7C795A56141B53AC00C6629A /* 469.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953FC141B53A700C6629A /* 469.pdf */; };
-		7C795A57141B53AC00C6629A /* 470.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953FD141B53A700C6629A /* 470.pdf */; };
-		7C795A58141B53AC00C6629A /* 471.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953FE141B53A700C6629A /* 471.pdf */; };
 		7C795A59141B53AC00C6629A /* 472.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953FF141B53A700C6629A /* 472.pdf */; };
 		7C795A5A141B53AC00C6629A /* 473.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795400141B53A700C6629A /* 473.pdf */; };
 		7C795A5B141B53AC00C6629A /* 474.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795401141B53A700C6629A /* 474.pdf */; };
@@ -948,7 +920,6 @@
 		7C795C65141B53AC00C6629A /* 996.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79560B141B53A800C6629A /* 996.pdf */; };
 		7C795C66141B53AC00C6629A /* 997.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79560C141B53A800C6629A /* 997.pdf */; };
 		7C795C67141B53AC00C6629A /* 998.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79560D141B53A800C6629A /* 998.pdf */; };
-		7C795C68141B53AC00C6629A /* 999.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79560E141B53A800C6629A /* 999.pdf */; };
 		7C795C69141B53AC00C6629A /* 1000.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79560F141B53A900C6629A /* 1000.pdf */; };
 		7C795C6A141B53AC00C6629A /* 1001.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795610141B53A900C6629A /* 1001.pdf */; };
 		7C795C6B141B53AC00C6629A /* 1002.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795611141B53A900C6629A /* 1002.pdf */; };
@@ -1107,7 +1078,6 @@
 		7C795D14141B53AC00C6629A /* 1171.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7956BA141B53A900C6629A /* 1171.pdf */; };
 		7C795D15141B53AC00C6629A /* 1172.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7956BB141B53A900C6629A /* 1172.pdf */; };
 		7C795D16141B53AC00C6629A /* 1173.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7956BC141B53A900C6629A /* 1173.pdf */; };
-		7C795D17141B53AC00C6629A /* 1174.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7956BD141B53A900C6629A /* 1174.pdf */; };
 		7C795D18141B53AC00C6629A /* 1175.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7956BE141B53A900C6629A /* 1175.pdf */; };
 		7C795D19141B53AC00C6629A /* 1176.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7956BF141B53A900C6629A /* 1176.pdf */; };
 		7C795D1A141B53AC00C6629A /* 1177.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7956C0141B53A900C6629A /* 1177.pdf */; };
@@ -1126,7 +1096,6 @@
 		7C795D27141B53AC00C6629A /* 1190.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7956CD141B53A900C6629A /* 1190.pdf */; };
 		7C795D28141B53AC00C6629A /* 1191.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7956CE141B53A900C6629A /* 1191.pdf */; };
 		7C795D29141B53AC00C6629A /* 1192.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7956CF141B53A900C6629A /* 1192.pdf */; };
-		7C795D2A141B53AC00C6629A /* 1193.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7956D0141B53A900C6629A /* 1193.pdf */; };
 		7C795D2B141B53AC00C6629A /* 1194.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7956D1141B53A900C6629A /* 1194.pdf */; };
 		7C795D2C141B53AC00C6629A /* 1195.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7956D2141B53A900C6629A /* 1195.pdf */; };
 		7C795D2D141B53AC00C6629A /* 1196.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7956D3141B53A900C6629A /* 1196.pdf */; };
@@ -1445,7 +1414,6 @@
 		7C795EB0141B53AC00C6629A /* 1583.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795856141B53AB00C6629A /* 1583.pdf */; };
 		7C795EB3141B53AC00C6629A /* 1586.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795859141B53AB00C6629A /* 1586.pdf */; };
 		7C795EB4141B53AC00C6629A /* 1587.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79585A141B53AB00C6629A /* 1587.pdf */; };
-		7C795EB5141B53AC00C6629A /* 1588.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79585B141B53AB00C6629A /* 1588.pdf */; };
 		7C795EB6141B53AC00C6629A /* 1589.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79585C141B53AB00C6629A /* 1589.pdf */; };
 		7C795EB7141B53AC00C6629A /* 1590.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79585D141B53AB00C6629A /* 1590.pdf */; };
 		7C795EBA141B53AC00C6629A /* 1593.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795860141B53AB00C6629A /* 1593.pdf */; };
@@ -1457,7 +1425,6 @@
 		7C795EC2141B53AC00C6629A /* 1601.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795868141B53AB00C6629A /* 1601.pdf */; };
 		7C795EC4141B53AC00C6629A /* 1603.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79586A141B53AB00C6629A /* 1603.pdf */; };
 		7C795EC5141B53AC00C6629A /* 1604.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79586B141B53AB00C6629A /* 1604.pdf */; };
-		7C795EC7141B53AC00C6629A /* 1606.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79586D141B53AB00C6629A /* 1606.pdf */; };
 		7C795EC8141B53AC00C6629A /* 1607.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79586E141B53AB00C6629A /* 1607.pdf */; };
 		7C795ECD141B53AC00C6629A /* 1612.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795873141B53AB00C6629A /* 1612.pdf */; };
 		7C795ECE141B53AC00C6629A /* 1613.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795874141B53AB00C6629A /* 1613.pdf */; };
@@ -1476,7 +1443,6 @@
 		7C8523C2144D9030005A8956 /* 137.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8523C1144D9030005A8956 /* 137.pdf */; };
 		7C8523C4144D904D005A8956 /* 167.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8523C3144D904D005A8956 /* 167.pdf */; };
 		7C8523C6144D9068005A8956 /* 205.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8523C5144D9067005A8956 /* 205.pdf */; };
-		7C8523C8144D9080005A8956 /* 233.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8523C7144D9080005A8956 /* 233.pdf */; };
 		7C8523CA144D9096005A8956 /* 237.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8523C9144D9096005A8956 /* 237.pdf */; };
 		7C8523CC144D90AB005A8956 /* 259.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8523CB144D90AB005A8956 /* 259.pdf */; };
 		7C8523CE144D90C4005A8956 /* 337.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8523CD144D90C4005A8956 /* 337.pdf */; };
@@ -1523,8 +1489,6 @@
 		7C852426144D931F005A8956 /* 776.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C852425144D931F005A8956 /* 776.pdf */; };
 		7C85242B144D935F005A8956 /* 814.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C852428144D935E005A8956 /* 814.pdf */; };
 		7C85242C144D935F005A8956 /* 829.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C852429144D935E005A8956 /* 829.pdf */; };
-		7C852432144D947F005A8956 /* 870.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C85242D144D947E005A8956 /* 870.pdf */; };
-		7C852434144D947F005A8956 /* 872.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C85242F144D947F005A8956 /* 872.pdf */; };
 		7C852435144D947F005A8956 /* 896.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C852430144D947F005A8956 /* 896.pdf */; };
 		7C852436144D947F005A8956 /* 899.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C852431144D947F005A8956 /* 899.pdf */; };
 		7C852439144D94CF005A8956 /* 943.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C852437144D94CF005A8956 /* 943.pdf */; };
@@ -1589,14 +1553,11 @@
 		7C8524BC144D9A6B005A8956 /* 1599.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8524AE144D9A6A005A8956 /* 1599.pdf */; };
 		7C8524C6144D9B20005A8956 /* 1605.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8524BD144D9B13005A8956 /* 1605.pdf */; };
 		7C8524C7144D9B20005A8956 /* 1608.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8524BE144D9B14005A8956 /* 1608.pdf */; };
-		7C8524C8144D9B20005A8956 /* 1609.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8524BF144D9B16005A8956 /* 1609.pdf */; };
 		7C8524C9144D9B20005A8956 /* 1610.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8524C0144D9B17005A8956 /* 1610.pdf */; };
 		7C8524CA144D9B20005A8956 /* 1611.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8524C1144D9B19005A8956 /* 1611.pdf */; };
 		7C8524CC144D9B20005A8956 /* 1621.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8524C3144D9B1C005A8956 /* 1621.pdf */; };
 		7C8524CD144D9B20005A8956 /* 1623.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8524C4144D9B1D005A8956 /* 1623.pdf */; };
 		7C8524CE144D9B20005A8956 /* 1624.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8524C5144D9B1F005A8956 /* 1624.pdf */; };
-		7C852651144DC033005A8956 /* 352.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C85263F144DC032005A8956 /* 352.pdf */; };
-		7C852652144DC033005A8956 /* 382.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C852640144DC032005A8956 /* 382.pdf */; };
 		7C852653144DC033005A8956 /* 402.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C852641144DC032005A8956 /* 402.pdf */; };
 		7C852654144DC033005A8956 /* 476.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C852642144DC032005A8956 /* 476.pdf */; };
 		7C852655144DC033005A8956 /* 588.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C852643144DC032005A8956 /* 588.pdf */; };
@@ -1618,7 +1579,6 @@
 		7C85267C144DC186005A8956 /* 1422.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C852668144DC178005A8956 /* 1422.pdf */; };
 		7C85267D144DC186005A8956 /* 1462.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C852669144DC179005A8956 /* 1462.pdf */; };
 		7C85267E144DC186005A8956 /* 1464.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C85266A144DC17A005A8956 /* 1464.pdf */; };
-		7C85267F144DC186005A8956 /* 1465.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C85266B144DC17C005A8956 /* 1465.pdf */; };
 		7C852680144DC186005A8956 /* 1470.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C85266C144DC17D005A8956 /* 1470.pdf */; };
 		7C852681144DC186005A8956 /* 1536.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C85266D144DC17E005A8956 /* 1536.pdf */; };
 		7C852683144DC186005A8956 /* 1540.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C85266F144DC17F005A8956 /* 1540.pdf */; };
@@ -1636,7 +1596,6 @@
 		7C9F3A6E140A4E900018D06C /* From1000.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C9F3A6D140A4E900018D06C /* From1000.plist */; };
 		7C9F3A71140A4EBB0018D06C /* From1250.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C9F3A70140A4EBB0018D06C /* From1250.plist */; };
 		7C9F3A73140A4ECF0018D06C /* From1500.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C9F3A72140A4ECF0018D06C /* From1500.plist */; };
-		7C9F4F551712D36A0007DCD7 /* 789.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C9F4F541712D36A0007DCD7 /* 789.pdf */; };
 		7CA594E0161D98DD008C8F07 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA594DE161D987A008C8F07 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CADD3D715A70E9000DD4558 /* Share.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CADD3D515A70E7000DD4558 /* Share.m */; };
 		7CADD3D915A70EA300DD4558 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CADD3D815A70EA300DD4558 /* Twitter.framework */; };
@@ -1697,6 +1656,45 @@
 		7CC980D21483EE2D00A358BB /* 291.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC980D11483EDF700A358BB /* 291.pdf */; };
 		7CC980D41483EF6B00A358BB /* 1549.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC980D31483EF4300A358BB /* 1549.pdf */; };
 		7CC980D61483F05300A358BB /* 1551.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC980D51483F02A00A358BB /* 1551.pdf */; };
+		7CC997FE17705E0100A19B86 /* 168.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC997FD17705E0100A19B86 /* 168.pdf */; };
+		7CC9980217705E5F00A19B86 /* 233.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC997FF17705E5F00A19B86 /* 233.pdf */; };
+		7CC9980317705E5F00A19B86 /* 234.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9980017705E5F00A19B86 /* 234.pdf */; };
+		7CC9980417705E5F00A19B86 /* 235.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9980117705E5F00A19B86 /* 235.pdf */; };
+		7CC9980617705E9C00A19B86 /* 252.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9980517705E9C00A19B86 /* 252.pdf */; };
+		7CC9980817705EA600A19B86 /* 255.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9980717705EA600A19B86 /* 255.pdf */; };
+		7CC9980A17705EC200A19B86 /* 352.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9980917705EC200A19B86 /* 352.pdf */; };
+		7CC9980C17705ECB00A19B86 /* 355.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9980B17705ECB00A19B86 /* 355.pdf */; };
+		7CC9980E17705EE200A19B86 /* 382.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9980D17705EE200A19B86 /* 382.pdf */; };
+		7CC9981017705F0600A19B86 /* 400.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9980F17705F0600A19B86 /* 400.pdf */; };
+		7CC9981217705F2200A19B86 /* 425.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9981117705F2200A19B86 /* 425.pdf */; };
+		7CC9981417705F3300A19B86 /* 429.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9981317705F3300A19B86 /* 429.pdf */; };
+		7CC9981617705F4A00A19B86 /* 433.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9981517705F4A00A19B86 /* 433.pdf */; };
+		7CC9981D17705F7B00A19B86 /* 437.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9981717705F7A00A19B86 /* 437.pdf */; };
+		7CC9981E17705F7B00A19B86 /* 438.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9981817705F7A00A19B86 /* 438.pdf */; };
+		7CC9981F17705F7B00A19B86 /* 439.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9981917705F7A00A19B86 /* 439.pdf */; };
+		7CC9982017705F7B00A19B86 /* 440.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9981A17705F7A00A19B86 /* 440.pdf */; };
+		7CC9982117705F7B00A19B86 /* 441.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9981B17705F7A00A19B86 /* 441.pdf */; };
+		7CC9982217705F7B00A19B86 /* 442.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9981C17705F7A00A19B86 /* 442.pdf */; };
+		7CC9982517705F9B00A19B86 /* 444.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9982317705F9B00A19B86 /* 444.pdf */; };
+		7CC9982617705F9B00A19B86 /* 445.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9982417705F9B00A19B86 /* 445.pdf */; };
+		7CC9982817705FB400A19B86 /* 459.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9982717705FB300A19B86 /* 459.pdf */; };
+		7CC9982F17705FDF00A19B86 /* 463.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9982917705FDE00A19B86 /* 463.pdf */; };
+		7CC9983017705FDF00A19B86 /* 464.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9982A17705FDF00A19B86 /* 464.pdf */; };
+		7CC9983117705FDF00A19B86 /* 465.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9982B17705FDF00A19B86 /* 465.pdf */; };
+		7CC9983217705FDF00A19B86 /* 466.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9982C17705FDF00A19B86 /* 466.pdf */; };
+		7CC9983317705FDF00A19B86 /* 467.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9982D17705FDF00A19B86 /* 467.pdf */; };
+		7CC9983417705FDF00A19B86 /* 468.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9982E17705FDF00A19B86 /* 468.pdf */; };
+		7CC9983717705FFF00A19B86 /* 470.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9983517705FFF00A19B86 /* 470.pdf */; };
+		7CC9983817705FFF00A19B86 /* 471.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9983617705FFF00A19B86 /* 471.pdf */; };
+		7CC9983A1770602A00A19B86 /* 789.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC998391770602A00A19B86 /* 789.pdf */; };
+		7CC9983E1770609100A19B86 /* 870.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9983B1770608E00A19B86 /* 870.pdf */; };
+		7CC9983F1770609100A19B86 /* 871.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9983C1770608E00A19B86 /* 871.pdf */; };
+		7CC998401770609100A19B86 /* 872.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9983D1770608F00A19B86 /* 872.pdf */; };
+		7CC99842177060CA00A19B86 /* 999.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC99841177060CA00A19B86 /* 999.pdf */; };
+		7CC998441770610900A19B86 /* 1588.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC998431770610800A19B86 /* 1588.pdf */; };
+		7CC998461770612C00A19B86 /* 1606.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC998451770612B00A19B86 /* 1606.pdf */; };
+		7CC998481770613D00A19B86 /* 1609.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC998471770613D00A19B86 /* 1609.pdf */; };
+		7CC99850177069C100A19B86 /* 1465.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9984F177069C100A19B86 /* 1465.pdf */; };
 		7CD22E6A145ED1AB00B07E57 /* 35.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD22E69145ED1AB00B07E57 /* 35.pdf */; };
 		7CD22E6C145ED1CC00B07E57 /* 795.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD22E6B145ED1CC00B07E57 /* 795.pdf */; };
 		7CD22E84145ED45200B07E57 /* 1297.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD22E83145ED45200B07E57 /* 1297.pdf */; };
@@ -1720,9 +1718,11 @@
 		7CF6EAFF1473F3E300CCBD6E /* 1060.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CF6EAFE1473F3E200CCBD6E /* 1060.pdf */; };
 		7CF6EB011473F40000CCBD6E /* 1360.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CF6EB001473F40000CCBD6E /* 1360.pdf */; };
 		7CF6EB031473F41C00CCBD6E /* 1353.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CF6EB021473F41C00CCBD6E /* 1353.pdf */; };
-		7CF6EB051473F43900CCBD6E /* 871.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CF6EB041473F43900CCBD6E /* 871.pdf */; };
 		7CF6EB2114740F7100CCBD6E /* 1322.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CF6EB2014740F7100CCBD6E /* 1322.pdf */; };
 		7CF72752161201C700D79498 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF727501612016E00D79498 /* libGoogleAnalytics.a */; };
+		7CFBCD5317709A1B00A8B975 /* 1174.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CFBCD5217709A1B00A8B975 /* 1174.pdf */; };
+		7CFBCD5517709A2E00A8B975 /* 1193.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CFBCD5417709A2E00A8B975 /* 1193.pdf */; };
+		7CFBCD5717709A8200A8B975 /* GCSEMaths.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7CFBCD5617709A4700A8B975 /* GCSEMaths.sqlite */; };
 		7CFC73B913F91EEE00805437 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73B813F91EEE00805437 /* UIKit.framework */; };
 		7CFC73BB13F91EEE00805437 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73BA13F91EEE00805437 /* Foundation.framework */; };
 		7CFC73BD13F91EEE00805437 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC73BC13F91EEE00805437 /* CoreGraphics.framework */; };
@@ -1812,11 +1812,9 @@
 		7C579F4C150F47B70050DC9E /* 454.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 454.pdf; sourceTree = "<group>"; };
 		7C594FEA161897C6007186C7 /* share_intro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_intro.png; sourceTree = "<group>"; };
 		7C594FEB161897C6007186C7 /* share_intro@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share_intro@2x.png"; sourceTree = "<group>"; };
-		7C64BC911716E19100DC9A4C /* GCSEMaths.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEMaths.sqlite; sourceTree = "<group>"; };
 		7C68D7FD1652A6BF00B94D8B /* 148.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 148.pdf; sourceTree = "<group>"; };
 		7C68D7FF1652A6DB00B94D8B /* 194.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 194.pdf; sourceTree = "<group>"; };
 		7C68D8011652A6F400B94D8B /* 228.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 228.pdf; sourceTree = "<group>"; };
-		7C68D8031652A71000B94D8B /* 235.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 235.pdf; sourceTree = "<group>"; };
 		7C68D8051652A72400B94D8B /* 246.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 246.pdf; sourceTree = "<group>"; };
 		7C68D8071652A74000B94D8B /* 285.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 285.pdf; sourceTree = "<group>"; };
 		7C68D8091652A76000B94D8B /* 606.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 606.pdf; sourceTree = "<group>"; };
@@ -1989,7 +1987,6 @@
 		7C7952CB141B53A600C6629A /* 164.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 164.pdf; sourceTree = "<group>"; };
 		7C7952CC141B53A600C6629A /* 165.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 165.pdf; sourceTree = "<group>"; };
 		7C7952CD141B53A600C6629A /* 166.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 166.pdf; sourceTree = "<group>"; };
-		7C7952CF141B53A600C6629A /* 168.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 168.pdf; sourceTree = "<group>"; };
 		7C7952D0141B53A600C6629A /* 169.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 169.pdf; sourceTree = "<group>"; };
 		7C7952D1141B53A600C6629A /* 170.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 170.pdf; sourceTree = "<group>"; };
 		7C7952D2141B53A600C6629A /* 171.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 171.pdf; sourceTree = "<group>"; };
@@ -2050,7 +2047,6 @@
 		7C79530D141B53A700C6629A /* 230.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 230.pdf; sourceTree = "<group>"; };
 		7C79530E141B53A700C6629A /* 231.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 231.pdf; sourceTree = "<group>"; };
 		7C79530F141B53A700C6629A /* 232.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 232.pdf; sourceTree = "<group>"; };
-		7C795311141B53A700C6629A /* 234.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 234.pdf; sourceTree = "<group>"; };
 		7C795313141B53A700C6629A /* 236.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 236.pdf; sourceTree = "<group>"; };
 		7C795315141B53A700C6629A /* 238.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 238.pdf; sourceTree = "<group>"; };
 		7C795316141B53A700C6629A /* 239.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 239.pdf; sourceTree = "<group>"; };
@@ -2065,10 +2061,8 @@
 		7C795320141B53A700C6629A /* 249.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 249.pdf; sourceTree = "<group>"; };
 		7C795321141B53A700C6629A /* 250.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 250.pdf; sourceTree = "<group>"; };
 		7C795322141B53A700C6629A /* 251.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 251.pdf; sourceTree = "<group>"; };
-		7C795323141B53A700C6629A /* 252.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 252.pdf; sourceTree = "<group>"; };
 		7C795324141B53A700C6629A /* 253.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 253.pdf; sourceTree = "<group>"; };
 		7C795325141B53A700C6629A /* 254.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 254.pdf; sourceTree = "<group>"; };
-		7C795326141B53A700C6629A /* 255.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 255.pdf; sourceTree = "<group>"; };
 		7C795328141B53A700C6629A /* 257.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 257.pdf; sourceTree = "<group>"; };
 		7C795329141B53A700C6629A /* 258.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 258.pdf; sourceTree = "<group>"; };
 		7C79532B141B53A700C6629A /* 260.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 260.pdf; sourceTree = "<group>"; };
@@ -2160,7 +2154,6 @@
 		7C795386141B53A700C6629A /* 351.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 351.pdf; sourceTree = "<group>"; };
 		7C795388141B53A700C6629A /* 353.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 353.pdf; sourceTree = "<group>"; };
 		7C795389141B53A700C6629A /* 354.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 354.pdf; sourceTree = "<group>"; };
-		7C79538A141B53A700C6629A /* 355.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 355.pdf; sourceTree = "<group>"; };
 		7C79538C141B53A700C6629A /* 357.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 357.pdf; sourceTree = "<group>"; };
 		7C79538D141B53A700C6629A /* 358.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 358.pdf; sourceTree = "<group>"; };
 		7C79538E141B53A700C6629A /* 359.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 359.pdf; sourceTree = "<group>"; };
@@ -2200,7 +2193,6 @@
 		7C7953B4141B53A700C6629A /* 397.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 397.pdf; sourceTree = "<group>"; };
 		7C7953B5141B53A700C6629A /* 398.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 398.pdf; sourceTree = "<group>"; };
 		7C7953B6141B53A700C6629A /* 399.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 399.pdf; sourceTree = "<group>"; };
-		7C7953B7141B53A700C6629A /* 400.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 400.pdf; sourceTree = "<group>"; };
 		7C7953BA141B53A700C6629A /* 403.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 403.pdf; sourceTree = "<group>"; };
 		7C7953BB141B53A700C6629A /* 404.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 404.pdf; sourceTree = "<group>"; };
 		7C7953BC141B53A700C6629A /* 405.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 405.pdf; sourceTree = "<group>"; };
@@ -2220,27 +2212,16 @@
 		7C7953CB141B53A700C6629A /* 420.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 420.pdf; sourceTree = "<group>"; };
 		7C7953CD141B53A700C6629A /* 422.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 422.pdf; sourceTree = "<group>"; };
 		7C7953CE141B53A700C6629A /* 423.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 423.pdf; sourceTree = "<group>"; };
-		7C7953D0141B53A700C6629A /* 425.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 425.pdf; sourceTree = "<group>"; };
 		7C7953D1141B53A700C6629A /* 426.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 426.pdf; sourceTree = "<group>"; };
 		7C7953D2141B53A700C6629A /* 427.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 427.pdf; sourceTree = "<group>"; };
 		7C7953D3141B53A700C6629A /* 428.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 428.pdf; sourceTree = "<group>"; };
-		7C7953D4141B53A700C6629A /* 429.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 429.pdf; sourceTree = "<group>"; };
 		7C7953D5141B53A700C6629A /* 430.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 430.pdf; sourceTree = "<group>"; };
 		7C7953D6141B53A700C6629A /* 431.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 431.pdf; sourceTree = "<group>"; };
 		7C7953D7141B53A700C6629A /* 432.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 432.pdf; sourceTree = "<group>"; };
-		7C7953D8141B53A700C6629A /* 433.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 433.pdf; sourceTree = "<group>"; };
 		7C7953D9141B53A700C6629A /* 434.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 434.pdf; sourceTree = "<group>"; };
 		7C7953DA141B53A700C6629A /* 435.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 435.pdf; sourceTree = "<group>"; };
 		7C7953DB141B53A700C6629A /* 436.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 436.pdf; sourceTree = "<group>"; };
-		7C7953DC141B53A700C6629A /* 437.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 437.pdf; sourceTree = "<group>"; };
-		7C7953DD141B53A700C6629A /* 438.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 438.pdf; sourceTree = "<group>"; };
-		7C7953DE141B53A700C6629A /* 439.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 439.pdf; sourceTree = "<group>"; };
-		7C7953DF141B53A700C6629A /* 440.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 440.pdf; sourceTree = "<group>"; };
-		7C7953E0141B53A700C6629A /* 441.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 441.pdf; sourceTree = "<group>"; };
-		7C7953E1141B53A700C6629A /* 442.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 442.pdf; sourceTree = "<group>"; };
 		7C7953E2141B53A700C6629A /* 443.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 443.pdf; sourceTree = "<group>"; };
-		7C7953E3141B53A700C6629A /* 444.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 444.pdf; sourceTree = "<group>"; };
-		7C7953E4141B53A700C6629A /* 445.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 445.pdf; sourceTree = "<group>"; };
 		7C7953E5141B53A700C6629A /* 446.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 446.pdf; sourceTree = "<group>"; };
 		7C7953E6141B53A700C6629A /* 447.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 447.pdf; sourceTree = "<group>"; };
 		7C7953E7141B53A700C6629A /* 448.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 448.pdf; sourceTree = "<group>"; };
@@ -2253,19 +2234,10 @@
 		7C7953EF141B53A700C6629A /* 456.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 456.pdf; sourceTree = "<group>"; };
 		7C7953F0141B53A700C6629A /* 457.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 457.pdf; sourceTree = "<group>"; };
 		7C7953F1141B53A700C6629A /* 458.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 458.pdf; sourceTree = "<group>"; };
-		7C7953F2141B53A700C6629A /* 459.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 459.pdf; sourceTree = "<group>"; };
 		7C7953F3141B53A700C6629A /* 460.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 460.pdf; sourceTree = "<group>"; };
 		7C7953F4141B53A700C6629A /* 461.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 461.pdf; sourceTree = "<group>"; };
 		7C7953F5141B53A700C6629A /* 462.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 462.pdf; sourceTree = "<group>"; };
-		7C7953F6141B53A700C6629A /* 463.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 463.pdf; sourceTree = "<group>"; };
-		7C7953F7141B53A700C6629A /* 464.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 464.pdf; sourceTree = "<group>"; };
-		7C7953F8141B53A700C6629A /* 465.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 465.pdf; sourceTree = "<group>"; };
-		7C7953F9141B53A700C6629A /* 466.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 466.pdf; sourceTree = "<group>"; };
-		7C7953FA141B53A700C6629A /* 467.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 467.pdf; sourceTree = "<group>"; };
-		7C7953FB141B53A700C6629A /* 468.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 468.pdf; sourceTree = "<group>"; };
 		7C7953FC141B53A700C6629A /* 469.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 469.pdf; sourceTree = "<group>"; };
-		7C7953FD141B53A700C6629A /* 470.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 470.pdf; sourceTree = "<group>"; };
-		7C7953FE141B53A700C6629A /* 471.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 471.pdf; sourceTree = "<group>"; };
 		7C7953FF141B53A700C6629A /* 472.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 472.pdf; sourceTree = "<group>"; };
 		7C795400141B53A700C6629A /* 473.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 473.pdf; sourceTree = "<group>"; };
 		7C795401141B53A700C6629A /* 474.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 474.pdf; sourceTree = "<group>"; };
@@ -2716,7 +2688,6 @@
 		7C79560B141B53A800C6629A /* 996.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 996.pdf; sourceTree = "<group>"; };
 		7C79560C141B53A800C6629A /* 997.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 997.pdf; sourceTree = "<group>"; };
 		7C79560D141B53A800C6629A /* 998.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 998.pdf; sourceTree = "<group>"; };
-		7C79560E141B53A800C6629A /* 999.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 999.pdf; sourceTree = "<group>"; };
 		7C79560F141B53A900C6629A /* 1000.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1000.pdf; sourceTree = "<group>"; };
 		7C795610141B53A900C6629A /* 1001.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1001.pdf; sourceTree = "<group>"; };
 		7C795611141B53A900C6629A /* 1002.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1002.pdf; sourceTree = "<group>"; };
@@ -2875,7 +2846,6 @@
 		7C7956BA141B53A900C6629A /* 1171.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1171.pdf; sourceTree = "<group>"; };
 		7C7956BB141B53A900C6629A /* 1172.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1172.pdf; sourceTree = "<group>"; };
 		7C7956BC141B53A900C6629A /* 1173.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1173.pdf; sourceTree = "<group>"; };
-		7C7956BD141B53A900C6629A /* 1174.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1174.pdf; sourceTree = "<group>"; };
 		7C7956BE141B53A900C6629A /* 1175.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1175.pdf; sourceTree = "<group>"; };
 		7C7956BF141B53A900C6629A /* 1176.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1176.pdf; sourceTree = "<group>"; };
 		7C7956C0141B53A900C6629A /* 1177.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1177.pdf; sourceTree = "<group>"; };
@@ -2894,7 +2864,6 @@
 		7C7956CD141B53A900C6629A /* 1190.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1190.pdf; sourceTree = "<group>"; };
 		7C7956CE141B53A900C6629A /* 1191.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1191.pdf; sourceTree = "<group>"; };
 		7C7956CF141B53A900C6629A /* 1192.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1192.pdf; sourceTree = "<group>"; };
-		7C7956D0141B53A900C6629A /* 1193.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1193.pdf; sourceTree = "<group>"; };
 		7C7956D1141B53A900C6629A /* 1194.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1194.pdf; sourceTree = "<group>"; };
 		7C7956D2141B53A900C6629A /* 1195.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1195.pdf; sourceTree = "<group>"; };
 		7C7956D3141B53A900C6629A /* 1196.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1196.pdf; sourceTree = "<group>"; };
@@ -3213,7 +3182,6 @@
 		7C795856141B53AB00C6629A /* 1583.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1583.pdf; sourceTree = "<group>"; };
 		7C795859141B53AB00C6629A /* 1586.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1586.pdf; sourceTree = "<group>"; };
 		7C79585A141B53AB00C6629A /* 1587.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1587.pdf; sourceTree = "<group>"; };
-		7C79585B141B53AB00C6629A /* 1588.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1588.pdf; sourceTree = "<group>"; };
 		7C79585C141B53AB00C6629A /* 1589.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1589.pdf; sourceTree = "<group>"; };
 		7C79585D141B53AB00C6629A /* 1590.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1590.pdf; sourceTree = "<group>"; };
 		7C795860141B53AB00C6629A /* 1593.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1593.pdf; sourceTree = "<group>"; };
@@ -3225,7 +3193,6 @@
 		7C795868141B53AB00C6629A /* 1601.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1601.pdf; sourceTree = "<group>"; };
 		7C79586A141B53AB00C6629A /* 1603.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1603.pdf; sourceTree = "<group>"; };
 		7C79586B141B53AB00C6629A /* 1604.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1604.pdf; sourceTree = "<group>"; };
-		7C79586D141B53AB00C6629A /* 1606.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1606.pdf; sourceTree = "<group>"; };
 		7C79586E141B53AB00C6629A /* 1607.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1607.pdf; sourceTree = "<group>"; };
 		7C795873141B53AB00C6629A /* 1612.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1612.pdf; sourceTree = "<group>"; };
 		7C795874141B53AB00C6629A /* 1613.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1613.pdf; sourceTree = "<group>"; };
@@ -3244,7 +3211,6 @@
 		7C8523C1144D9030005A8956 /* 137.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 137.pdf; sourceTree = "<group>"; };
 		7C8523C3144D904D005A8956 /* 167.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 167.pdf; sourceTree = "<group>"; };
 		7C8523C5144D9067005A8956 /* 205.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 205.pdf; sourceTree = "<group>"; };
-		7C8523C7144D9080005A8956 /* 233.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 233.pdf; sourceTree = "<group>"; };
 		7C8523C9144D9096005A8956 /* 237.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 237.pdf; sourceTree = "<group>"; };
 		7C8523CB144D90AB005A8956 /* 259.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 259.pdf; sourceTree = "<group>"; };
 		7C8523CD144D90C4005A8956 /* 337.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 337.pdf; sourceTree = "<group>"; };
@@ -3291,8 +3257,6 @@
 		7C852425144D931F005A8956 /* 776.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 776.pdf; sourceTree = "<group>"; };
 		7C852428144D935E005A8956 /* 814.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 814.pdf; sourceTree = "<group>"; };
 		7C852429144D935E005A8956 /* 829.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 829.pdf; sourceTree = "<group>"; };
-		7C85242D144D947E005A8956 /* 870.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 870.pdf; sourceTree = "<group>"; };
-		7C85242F144D947F005A8956 /* 872.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 872.pdf; sourceTree = "<group>"; };
 		7C852430144D947F005A8956 /* 896.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 896.pdf; sourceTree = "<group>"; };
 		7C852431144D947F005A8956 /* 899.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 899.pdf; sourceTree = "<group>"; };
 		7C852437144D94CF005A8956 /* 943.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 943.pdf; sourceTree = "<group>"; };
@@ -3357,14 +3321,11 @@
 		7C8524AE144D9A6A005A8956 /* 1599.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1599.pdf; sourceTree = "<group>"; };
 		7C8524BD144D9B13005A8956 /* 1605.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1605.pdf; sourceTree = "<group>"; };
 		7C8524BE144D9B14005A8956 /* 1608.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1608.pdf; sourceTree = "<group>"; };
-		7C8524BF144D9B16005A8956 /* 1609.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1609.pdf; sourceTree = "<group>"; };
 		7C8524C0144D9B17005A8956 /* 1610.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1610.pdf; sourceTree = "<group>"; };
 		7C8524C1144D9B19005A8956 /* 1611.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1611.pdf; sourceTree = "<group>"; };
 		7C8524C3144D9B1C005A8956 /* 1621.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1621.pdf; sourceTree = "<group>"; };
 		7C8524C4144D9B1D005A8956 /* 1623.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1623.pdf; sourceTree = "<group>"; };
 		7C8524C5144D9B1F005A8956 /* 1624.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1624.pdf; sourceTree = "<group>"; };
-		7C85263F144DC032005A8956 /* 352.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 352.pdf; sourceTree = "<group>"; };
-		7C852640144DC032005A8956 /* 382.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 382.pdf; sourceTree = "<group>"; };
 		7C852641144DC032005A8956 /* 402.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 402.pdf; sourceTree = "<group>"; };
 		7C852642144DC032005A8956 /* 476.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 476.pdf; sourceTree = "<group>"; };
 		7C852643144DC032005A8956 /* 588.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 588.pdf; sourceTree = "<group>"; };
@@ -3386,7 +3347,6 @@
 		7C852668144DC178005A8956 /* 1422.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1422.pdf; sourceTree = "<group>"; };
 		7C852669144DC179005A8956 /* 1462.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1462.pdf; sourceTree = "<group>"; };
 		7C85266A144DC17A005A8956 /* 1464.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1464.pdf; sourceTree = "<group>"; };
-		7C85266B144DC17C005A8956 /* 1465.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1465.pdf; sourceTree = "<group>"; };
 		7C85266C144DC17D005A8956 /* 1470.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1470.pdf; sourceTree = "<group>"; };
 		7C85266D144DC17E005A8956 /* 1536.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1536.pdf; sourceTree = "<group>"; };
 		7C85266F144DC17F005A8956 /* 1540.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1540.pdf; sourceTree = "<group>"; };
@@ -3404,7 +3364,6 @@
 		7C9F3A6D140A4E900018D06C /* From1000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = From1000.plist; sourceTree = "<group>"; };
 		7C9F3A70140A4EBB0018D06C /* From1250.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = From1250.plist; sourceTree = "<group>"; };
 		7C9F3A72140A4ECF0018D06C /* From1500.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = From1500.plist; sourceTree = "<group>"; };
-		7C9F4F541712D36A0007DCD7 /* 789.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 789.pdf; sourceTree = "<group>"; };
 		7CA594DD161D987A008C8F07 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7CA594DE161D987A008C8F07 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7CADD3D515A70E7000DD4558 /* Share.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Share.m; sourceTree = "<group>"; };
@@ -3492,6 +3451,45 @@
 		7CC980D11483EDF700A358BB /* 291.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 291.pdf; sourceTree = "<group>"; };
 		7CC980D31483EF4300A358BB /* 1549.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1549.pdf; sourceTree = "<group>"; };
 		7CC980D51483F02A00A358BB /* 1551.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1551.pdf; sourceTree = "<group>"; };
+		7CC997FD17705E0100A19B86 /* 168.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 168.pdf; sourceTree = "<group>"; };
+		7CC997FF17705E5F00A19B86 /* 233.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 233.pdf; sourceTree = "<group>"; };
+		7CC9980017705E5F00A19B86 /* 234.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 234.pdf; sourceTree = "<group>"; };
+		7CC9980117705E5F00A19B86 /* 235.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 235.pdf; sourceTree = "<group>"; };
+		7CC9980517705E9C00A19B86 /* 252.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 252.pdf; sourceTree = "<group>"; };
+		7CC9980717705EA600A19B86 /* 255.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 255.pdf; sourceTree = "<group>"; };
+		7CC9980917705EC200A19B86 /* 352.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 352.pdf; sourceTree = "<group>"; };
+		7CC9980B17705ECB00A19B86 /* 355.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 355.pdf; sourceTree = "<group>"; };
+		7CC9980D17705EE200A19B86 /* 382.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 382.pdf; sourceTree = "<group>"; };
+		7CC9980F17705F0600A19B86 /* 400.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 400.pdf; sourceTree = "<group>"; };
+		7CC9981117705F2200A19B86 /* 425.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 425.pdf; sourceTree = "<group>"; };
+		7CC9981317705F3300A19B86 /* 429.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 429.pdf; sourceTree = "<group>"; };
+		7CC9981517705F4A00A19B86 /* 433.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 433.pdf; sourceTree = "<group>"; };
+		7CC9981717705F7A00A19B86 /* 437.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 437.pdf; sourceTree = "<group>"; };
+		7CC9981817705F7A00A19B86 /* 438.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 438.pdf; sourceTree = "<group>"; };
+		7CC9981917705F7A00A19B86 /* 439.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 439.pdf; sourceTree = "<group>"; };
+		7CC9981A17705F7A00A19B86 /* 440.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 440.pdf; sourceTree = "<group>"; };
+		7CC9981B17705F7A00A19B86 /* 441.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 441.pdf; sourceTree = "<group>"; };
+		7CC9981C17705F7A00A19B86 /* 442.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 442.pdf; sourceTree = "<group>"; };
+		7CC9982317705F9B00A19B86 /* 444.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 444.pdf; sourceTree = "<group>"; };
+		7CC9982417705F9B00A19B86 /* 445.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 445.pdf; sourceTree = "<group>"; };
+		7CC9982717705FB300A19B86 /* 459.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 459.pdf; sourceTree = "<group>"; };
+		7CC9982917705FDE00A19B86 /* 463.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 463.pdf; sourceTree = "<group>"; };
+		7CC9982A17705FDF00A19B86 /* 464.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 464.pdf; sourceTree = "<group>"; };
+		7CC9982B17705FDF00A19B86 /* 465.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 465.pdf; sourceTree = "<group>"; };
+		7CC9982C17705FDF00A19B86 /* 466.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 466.pdf; sourceTree = "<group>"; };
+		7CC9982D17705FDF00A19B86 /* 467.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 467.pdf; sourceTree = "<group>"; };
+		7CC9982E17705FDF00A19B86 /* 468.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 468.pdf; sourceTree = "<group>"; };
+		7CC9983517705FFF00A19B86 /* 470.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 470.pdf; sourceTree = "<group>"; };
+		7CC9983617705FFF00A19B86 /* 471.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 471.pdf; sourceTree = "<group>"; };
+		7CC998391770602A00A19B86 /* 789.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 789.pdf; sourceTree = "<group>"; };
+		7CC9983B1770608E00A19B86 /* 870.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 870.pdf; sourceTree = "<group>"; };
+		7CC9983C1770608E00A19B86 /* 871.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 871.pdf; sourceTree = "<group>"; };
+		7CC9983D1770608F00A19B86 /* 872.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 872.pdf; sourceTree = "<group>"; };
+		7CC99841177060CA00A19B86 /* 999.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 999.pdf; sourceTree = "<group>"; };
+		7CC998431770610800A19B86 /* 1588.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1588.pdf; sourceTree = "<group>"; };
+		7CC998451770612B00A19B86 /* 1606.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1606.pdf; sourceTree = "<group>"; };
+		7CC998471770613D00A19B86 /* 1609.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1609.pdf; sourceTree = "<group>"; };
+		7CC9984F177069C100A19B86 /* 1465.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1465.pdf; sourceTree = "<group>"; };
 		7CD22E69145ED1AB00B07E57 /* 35.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 35.pdf; sourceTree = "<group>"; };
 		7CD22E6B145ED1CC00B07E57 /* 795.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 795.pdf; sourceTree = "<group>"; };
 		7CD22E83145ED45200B07E57 /* 1297.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1297.pdf; sourceTree = "<group>"; };
@@ -3551,10 +3549,12 @@
 		7CF6EAFE1473F3E200CCBD6E /* 1060.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1060.pdf; sourceTree = "<group>"; };
 		7CF6EB001473F40000CCBD6E /* 1360.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1360.pdf; sourceTree = "<group>"; };
 		7CF6EB021473F41C00CCBD6E /* 1353.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1353.pdf; sourceTree = "<group>"; };
-		7CF6EB041473F43900CCBD6E /* 871.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 871.pdf; sourceTree = "<group>"; };
 		7CF6EB2014740F7100CCBD6E /* 1322.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1322.pdf; sourceTree = "<group>"; };
 		7CF727501612016E00D79498 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
 		7CF727511612016E00D79498 /* GANTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
+		7CFBCD5217709A1B00A8B975 /* 1174.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1174.pdf; sourceTree = "<group>"; };
+		7CFBCD5417709A2E00A8B975 /* 1193.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1193.pdf; sourceTree = "<group>"; };
+		7CFBCD5617709A4700A8B975 /* GCSEMaths.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEMaths.sqlite; sourceTree = "<group>"; };
 		7CFC73B413F91EEE00805437 /* GCSE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCSE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFC73B813F91EEE00805437 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7CFC73BA13F91EEE00805437 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -3843,7 +3843,7 @@
 				7C7952CC141B53A600C6629A /* 165.pdf */,
 				7C7952CD141B53A600C6629A /* 166.pdf */,
 				7C8523C3144D904D005A8956 /* 167.pdf */,
-				7C7952CF141B53A600C6629A /* 168.pdf */,
+				7CC997FD17705E0100A19B86 /* 168.pdf */,
 				7C7952D0141B53A600C6629A /* 169.pdf */,
 				7C7952D1141B53A600C6629A /* 170.pdf */,
 				7C7952D2141B53A600C6629A /* 171.pdf */,
@@ -3908,9 +3908,9 @@
 				7C79530D141B53A700C6629A /* 230.pdf */,
 				7C79530E141B53A700C6629A /* 231.pdf */,
 				7C79530F141B53A700C6629A /* 232.pdf */,
-				7C8523C7144D9080005A8956 /* 233.pdf */,
-				7C795311141B53A700C6629A /* 234.pdf */,
-				7C68D8031652A71000B94D8B /* 235.pdf */,
+				7CC997FF17705E5F00A19B86 /* 233.pdf */,
+				7CC9980017705E5F00A19B86 /* 234.pdf */,
+				7CC9980117705E5F00A19B86 /* 235.pdf */,
 				7C795313141B53A700C6629A /* 236.pdf */,
 				7C8523C9144D9096005A8956 /* 237.pdf */,
 				7C795315141B53A700C6629A /* 238.pdf */,
@@ -3927,10 +3927,10 @@
 				7C795320141B53A700C6629A /* 249.pdf */,
 				7C795321141B53A700C6629A /* 250.pdf */,
 				7C795322141B53A700C6629A /* 251.pdf */,
-				7C795323141B53A700C6629A /* 252.pdf */,
+				7CC9980517705E9C00A19B86 /* 252.pdf */,
 				7C795324141B53A700C6629A /* 253.pdf */,
 				7C795325141B53A700C6629A /* 254.pdf */,
-				7C795326141B53A700C6629A /* 255.pdf */,
+				7CC9980717705EA600A19B86 /* 255.pdf */,
 				7C462C2A146806E500E4F6AC /* 256.pdf */,
 				7C795328141B53A700C6629A /* 257.pdf */,
 				7C795329141B53A700C6629A /* 258.pdf */,
@@ -4027,10 +4027,10 @@
 				7C795384141B53A700C6629A /* 349.pdf */,
 				7C795385141B53A700C6629A /* 350.pdf */,
 				7C795386141B53A700C6629A /* 351.pdf */,
-				7C85263F144DC032005A8956 /* 352.pdf */,
+				7CC9980917705EC200A19B86 /* 352.pdf */,
 				7C795388141B53A700C6629A /* 353.pdf */,
 				7C795389141B53A700C6629A /* 354.pdf */,
-				7C79538A141B53A700C6629A /* 355.pdf */,
+				7CC9980B17705ECB00A19B86 /* 355.pdf */,
 				7C8523CF144D90DA005A8956 /* 356.pdf */,
 				7C79538C141B53A700C6629A /* 357.pdf */,
 				7C79538D141B53A700C6629A /* 358.pdf */,
@@ -4057,7 +4057,7 @@
 				7C7953A2141B53A700C6629A /* 379.pdf */,
 				7C7953A3141B53A700C6629A /* 380.pdf */,
 				7C7953A4141B53A700C6629A /* 381.pdf */,
-				7C852640144DC032005A8956 /* 382.pdf */,
+				7CC9980D17705EE200A19B86 /* 382.pdf */,
 				7C7953A6141B53A700C6629A /* 383.pdf */,
 				7C7953A7141B53A700C6629A /* 384.pdf */,
 				7C7953A8141B53A700C6629A /* 385.pdf */,
@@ -4075,7 +4075,7 @@
 				7C7953B4141B53A700C6629A /* 397.pdf */,
 				7C7953B5141B53A700C6629A /* 398.pdf */,
 				7C7953B6141B53A700C6629A /* 399.pdf */,
-				7C7953B7141B53A700C6629A /* 400.pdf */,
+				7CC9980F17705F0600A19B86 /* 400.pdf */,
 				7C8523D5144D9144005A8956 /* 401.pdf */,
 				7C852641144DC032005A8956 /* 402.pdf */,
 				7C7953BA141B53A700C6629A /* 403.pdf */,
@@ -4100,27 +4100,27 @@
 				7C7953CD141B53A700C6629A /* 422.pdf */,
 				7C7953CE141B53A700C6629A /* 423.pdf */,
 				7C462C2E1468071100E4F6AC /* 424.pdf */,
-				7C7953D0141B53A700C6629A /* 425.pdf */,
+				7CC9981117705F2200A19B86 /* 425.pdf */,
 				7C7953D1141B53A700C6629A /* 426.pdf */,
 				7C7953D2141B53A700C6629A /* 427.pdf */,
 				7C7953D3141B53A700C6629A /* 428.pdf */,
-				7C7953D4141B53A700C6629A /* 429.pdf */,
+				7CC9981317705F3300A19B86 /* 429.pdf */,
 				7C7953D5141B53A700C6629A /* 430.pdf */,
 				7C7953D6141B53A700C6629A /* 431.pdf */,
 				7C7953D7141B53A700C6629A /* 432.pdf */,
-				7C7953D8141B53A700C6629A /* 433.pdf */,
+				7CC9981517705F4A00A19B86 /* 433.pdf */,
 				7C7953D9141B53A700C6629A /* 434.pdf */,
 				7C7953DA141B53A700C6629A /* 435.pdf */,
 				7C7953DB141B53A700C6629A /* 436.pdf */,
-				7C7953DC141B53A700C6629A /* 437.pdf */,
-				7C7953DD141B53A700C6629A /* 438.pdf */,
-				7C7953DE141B53A700C6629A /* 439.pdf */,
-				7C7953DF141B53A700C6629A /* 440.pdf */,
-				7C7953E0141B53A700C6629A /* 441.pdf */,
-				7C7953E1141B53A700C6629A /* 442.pdf */,
+				7CC9981717705F7A00A19B86 /* 437.pdf */,
+				7CC9981817705F7A00A19B86 /* 438.pdf */,
+				7CC9981917705F7A00A19B86 /* 439.pdf */,
+				7CC9981A17705F7A00A19B86 /* 440.pdf */,
+				7CC9981B17705F7A00A19B86 /* 441.pdf */,
+				7CC9981C17705F7A00A19B86 /* 442.pdf */,
 				7C7953E2141B53A700C6629A /* 443.pdf */,
-				7C7953E3141B53A700C6629A /* 444.pdf */,
-				7C7953E4141B53A700C6629A /* 445.pdf */,
+				7CC9982317705F9B00A19B86 /* 444.pdf */,
+				7CC9982417705F9B00A19B86 /* 445.pdf */,
 				7C7953E5141B53A700C6629A /* 446.pdf */,
 				7C7953E6141B53A700C6629A /* 447.pdf */,
 				7C7953E7141B53A700C6629A /* 448.pdf */,
@@ -4134,19 +4134,19 @@
 				7C7953EF141B53A700C6629A /* 456.pdf */,
 				7C7953F0141B53A700C6629A /* 457.pdf */,
 				7C7953F1141B53A700C6629A /* 458.pdf */,
-				7C7953F2141B53A700C6629A /* 459.pdf */,
+				7CC9982717705FB300A19B86 /* 459.pdf */,
 				7C7953F3141B53A700C6629A /* 460.pdf */,
 				7C7953F4141B53A700C6629A /* 461.pdf */,
 				7C7953F5141B53A700C6629A /* 462.pdf */,
-				7C7953F6141B53A700C6629A /* 463.pdf */,
-				7C7953F7141B53A700C6629A /* 464.pdf */,
-				7C7953F8141B53A700C6629A /* 465.pdf */,
-				7C7953F9141B53A700C6629A /* 466.pdf */,
-				7C7953FA141B53A700C6629A /* 467.pdf */,
-				7C7953FB141B53A700C6629A /* 468.pdf */,
+				7CC9982917705FDE00A19B86 /* 463.pdf */,
+				7CC9982A17705FDF00A19B86 /* 464.pdf */,
+				7CC9982B17705FDF00A19B86 /* 465.pdf */,
+				7CC9982C17705FDF00A19B86 /* 466.pdf */,
+				7CC9982D17705FDF00A19B86 /* 467.pdf */,
+				7CC9982E17705FDF00A19B86 /* 468.pdf */,
 				7C7953FC141B53A700C6629A /* 469.pdf */,
-				7C7953FD141B53A700C6629A /* 470.pdf */,
-				7C7953FE141B53A700C6629A /* 471.pdf */,
+				7CC9983517705FFF00A19B86 /* 470.pdf */,
+				7CC9983617705FFF00A19B86 /* 471.pdf */,
 				7C7953FF141B53A700C6629A /* 472.pdf */,
 				7C795400141B53A700C6629A /* 473.pdf */,
 				7C795401141B53A700C6629A /* 474.pdf */,
@@ -4464,7 +4464,7 @@
 				7C85264E144DC032005A8956 /* 786.pdf */,
 				7C79553A141B53A800C6629A /* 787.pdf */,
 				7C79553B141B53A800C6629A /* 788.pdf */,
-				7C9F4F541712D36A0007DCD7 /* 789.pdf */,
+				7CC998391770602A00A19B86 /* 789.pdf */,
 				7C85264F144DC033005A8956 /* 790.pdf */,
 				7C852650144DC033005A8956 /* 791.pdf */,
 				7C79553F141B53A800C6629A /* 792.pdf */,
@@ -4545,9 +4545,9 @@
 				7C79558A141B53A800C6629A /* 867.pdf */,
 				7C79558B141B53A800C6629A /* 868.pdf */,
 				7C79558C141B53A800C6629A /* 869.pdf */,
-				7C85242D144D947E005A8956 /* 870.pdf */,
-				7CF6EB041473F43900CCBD6E /* 871.pdf */,
-				7C85242F144D947F005A8956 /* 872.pdf */,
+				7CC9983B1770608E00A19B86 /* 870.pdf */,
+				7CC9983C1770608E00A19B86 /* 871.pdf */,
+				7CC9983D1770608F00A19B86 /* 872.pdf */,
 				7C795590141B53A800C6629A /* 873.pdf */,
 				7C795591141B53A800C6629A /* 874.pdf */,
 				7C795592141B53A800C6629A /* 875.pdf */,
@@ -4674,7 +4674,7 @@
 				7C79560B141B53A800C6629A /* 996.pdf */,
 				7C79560C141B53A800C6629A /* 997.pdf */,
 				7C79560D141B53A800C6629A /* 998.pdf */,
-				7C79560E141B53A800C6629A /* 999.pdf */,
+				7CC99841177060CA00A19B86 /* 999.pdf */,
 				7C79560F141B53A900C6629A /* 1000.pdf */,
 				7C795610141B53A900C6629A /* 1001.pdf */,
 				7C795611141B53A900C6629A /* 1002.pdf */,
@@ -4849,7 +4849,7 @@
 				7C7956BA141B53A900C6629A /* 1171.pdf */,
 				7C7956BB141B53A900C6629A /* 1172.pdf */,
 				7C7956BC141B53A900C6629A /* 1173.pdf */,
-				7C7956BD141B53A900C6629A /* 1174.pdf */,
+				7CFBCD5217709A1B00A8B975 /* 1174.pdf */,
 				7C7956BE141B53A900C6629A /* 1175.pdf */,
 				7C7956BF141B53A900C6629A /* 1176.pdf */,
 				7C7956C0141B53A900C6629A /* 1177.pdf */,
@@ -4868,7 +4868,7 @@
 				7C7956CD141B53A900C6629A /* 1190.pdf */,
 				7C7956CE141B53A900C6629A /* 1191.pdf */,
 				7C7956CF141B53A900C6629A /* 1192.pdf */,
-				7C7956D0141B53A900C6629A /* 1193.pdf */,
+				7CFBCD5417709A2E00A8B975 /* 1193.pdf */,
 				7C7956D1141B53A900C6629A /* 1194.pdf */,
 				7C7956D2141B53A900C6629A /* 1195.pdf */,
 				7C7956D3141B53A900C6629A /* 1196.pdf */,
@@ -5140,7 +5140,7 @@
 				7C852669144DC179005A8956 /* 1462.pdf */,
 				7C7957DE141B53AB00C6629A /* 1463.pdf */,
 				7C85266A144DC17A005A8956 /* 1464.pdf */,
-				7C85266B144DC17C005A8956 /* 1465.pdf */,
+				7CC9984F177069C100A19B86 /* 1465.pdf */,
 				7C7957E1141B53AB00C6629A /* 1466.pdf */,
 				7C7957E2141B53AB00C6629A /* 1467.pdf */,
 				7C7957E3141B53AB00C6629A /* 1468.pdf */,
@@ -5263,7 +5263,7 @@
 				7C8524AA144D9A67005A8956 /* 1585.pdf */,
 				7C795859141B53AB00C6629A /* 1586.pdf */,
 				7C79585A141B53AB00C6629A /* 1587.pdf */,
-				7C79585B141B53AB00C6629A /* 1588.pdf */,
+				7CC998431770610800A19B86 /* 1588.pdf */,
 				7C79585C141B53AB00C6629A /* 1589.pdf */,
 				7C79585D141B53AB00C6629A /* 1590.pdf */,
 				7C8524AB144D9A67005A8956 /* 1591.pdf */,
@@ -5281,10 +5281,10 @@
 				7C79586A141B53AB00C6629A /* 1603.pdf */,
 				7C79586B141B53AB00C6629A /* 1604.pdf */,
 				7C8524BD144D9B13005A8956 /* 1605.pdf */,
-				7C79586D141B53AB00C6629A /* 1606.pdf */,
+				7CC998451770612B00A19B86 /* 1606.pdf */,
 				7C79586E141B53AB00C6629A /* 1607.pdf */,
 				7C8524BE144D9B14005A8956 /* 1608.pdf */,
-				7C8524BF144D9B16005A8956 /* 1609.pdf */,
+				7CC998471770613D00A19B86 /* 1609.pdf */,
 				7C8524C0144D9B17005A8956 /* 1610.pdf */,
 				7C8524C1144D9B19005A8956 /* 1611.pdf */,
 				7C795873141B53AB00C6629A /* 1612.pdf */,
@@ -5302,7 +5302,7 @@
 				7C8524C5144D9B1F005A8956 /* 1624.pdf */,
 				7C795880141B53AB00C6629A /* 1625.pdf */,
 				7C795881141B53AB00C6629A /* 1626.pdf */,
-				7C64BC911716E19100DC9A4C /* GCSEMaths.sqlite */,
+				7CFBCD5617709A4700A8B975 /* GCSEMaths.sqlite */,
 				7CB9D03913F956990077E0A3 /* AttributionIphone.pdf */,
 				7CB9D03B13F956B10077E0A3 /* Results.xml */,
 				7CB9D03D13F956BE0077E0A3 /* DescriptiveAnswers.xml */,
@@ -5694,7 +5694,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C64BC921716E1AB00DC9A4C /* GCSEMaths.sqlite in Resources */,
+				7CFBCD5717709A8200A8B975 /* GCSEMaths.sqlite in Resources */,
 				7CFC73C313F91EEE00805437 /* InfoPlist.strings in Resources */,
 				7CFC740713F924D600805437 /* ArrowWoodImpact.aiff in Resources */,
 				7CFC740913F924E700805437 /* Cough.aiff in Resources */,
@@ -5879,7 +5879,6 @@
 				7C795925141B53AC00C6629A /* 164.pdf in Resources */,
 				7C795926141B53AC00C6629A /* 165.pdf in Resources */,
 				7C795927141B53AC00C6629A /* 166.pdf in Resources */,
-				7C795929141B53AC00C6629A /* 168.pdf in Resources */,
 				7C79592A141B53AC00C6629A /* 169.pdf in Resources */,
 				7C79592B141B53AC00C6629A /* 170.pdf in Resources */,
 				7C79592C141B53AC00C6629A /* 171.pdf in Resources */,
@@ -5940,7 +5939,6 @@
 				7C795967141B53AC00C6629A /* 230.pdf in Resources */,
 				7C795968141B53AC00C6629A /* 231.pdf in Resources */,
 				7C795969141B53AC00C6629A /* 232.pdf in Resources */,
-				7C79596B141B53AC00C6629A /* 234.pdf in Resources */,
 				7C79596D141B53AC00C6629A /* 236.pdf in Resources */,
 				7C79596F141B53AC00C6629A /* 238.pdf in Resources */,
 				7C795970141B53AC00C6629A /* 239.pdf in Resources */,
@@ -5955,10 +5953,8 @@
 				7C79597A141B53AC00C6629A /* 249.pdf in Resources */,
 				7C79597B141B53AC00C6629A /* 250.pdf in Resources */,
 				7C79597C141B53AC00C6629A /* 251.pdf in Resources */,
-				7C79597D141B53AC00C6629A /* 252.pdf in Resources */,
 				7C79597E141B53AC00C6629A /* 253.pdf in Resources */,
 				7C79597F141B53AC00C6629A /* 254.pdf in Resources */,
-				7C795980141B53AC00C6629A /* 255.pdf in Resources */,
 				7C795982141B53AC00C6629A /* 257.pdf in Resources */,
 				7C795983141B53AC00C6629A /* 258.pdf in Resources */,
 				7C795985141B53AC00C6629A /* 260.pdf in Resources */,
@@ -6050,7 +6046,6 @@
 				7C7959E0141B53AC00C6629A /* 351.pdf in Resources */,
 				7C7959E2141B53AC00C6629A /* 353.pdf in Resources */,
 				7C7959E3141B53AC00C6629A /* 354.pdf in Resources */,
-				7C7959E4141B53AC00C6629A /* 355.pdf in Resources */,
 				7C7959E6141B53AC00C6629A /* 357.pdf in Resources */,
 				7C7959E7141B53AC00C6629A /* 358.pdf in Resources */,
 				7C7959E8141B53AC00C6629A /* 359.pdf in Resources */,
@@ -6090,7 +6085,6 @@
 				7C795A0E141B53AC00C6629A /* 397.pdf in Resources */,
 				7C795A0F141B53AC00C6629A /* 398.pdf in Resources */,
 				7C795A10141B53AC00C6629A /* 399.pdf in Resources */,
-				7C795A11141B53AC00C6629A /* 400.pdf in Resources */,
 				7C795A14141B53AC00C6629A /* 403.pdf in Resources */,
 				7C795A15141B53AC00C6629A /* 404.pdf in Resources */,
 				7C795A16141B53AC00C6629A /* 405.pdf in Resources */,
@@ -6110,27 +6104,16 @@
 				7C795A25141B53AC00C6629A /* 420.pdf in Resources */,
 				7C795A27141B53AC00C6629A /* 422.pdf in Resources */,
 				7C795A28141B53AC00C6629A /* 423.pdf in Resources */,
-				7C795A2A141B53AC00C6629A /* 425.pdf in Resources */,
 				7C795A2B141B53AC00C6629A /* 426.pdf in Resources */,
 				7C795A2C141B53AC00C6629A /* 427.pdf in Resources */,
 				7C795A2D141B53AC00C6629A /* 428.pdf in Resources */,
-				7C795A2E141B53AC00C6629A /* 429.pdf in Resources */,
 				7C795A2F141B53AC00C6629A /* 430.pdf in Resources */,
 				7C795A30141B53AC00C6629A /* 431.pdf in Resources */,
 				7C795A31141B53AC00C6629A /* 432.pdf in Resources */,
-				7C795A32141B53AC00C6629A /* 433.pdf in Resources */,
 				7C795A33141B53AC00C6629A /* 434.pdf in Resources */,
 				7C795A34141B53AC00C6629A /* 435.pdf in Resources */,
 				7C795A35141B53AC00C6629A /* 436.pdf in Resources */,
-				7C795A36141B53AC00C6629A /* 437.pdf in Resources */,
-				7C795A37141B53AC00C6629A /* 438.pdf in Resources */,
-				7C795A38141B53AC00C6629A /* 439.pdf in Resources */,
-				7C795A39141B53AC00C6629A /* 440.pdf in Resources */,
-				7C795A3A141B53AC00C6629A /* 441.pdf in Resources */,
-				7C795A3B141B53AC00C6629A /* 442.pdf in Resources */,
 				7C795A3C141B53AC00C6629A /* 443.pdf in Resources */,
-				7C795A3D141B53AC00C6629A /* 444.pdf in Resources */,
-				7C795A3E141B53AC00C6629A /* 445.pdf in Resources */,
 				7C795A3F141B53AC00C6629A /* 446.pdf in Resources */,
 				7C795A40141B53AC00C6629A /* 447.pdf in Resources */,
 				7C795A41141B53AC00C6629A /* 448.pdf in Resources */,
@@ -6143,19 +6126,10 @@
 				7C795A49141B53AC00C6629A /* 456.pdf in Resources */,
 				7C795A4A141B53AC00C6629A /* 457.pdf in Resources */,
 				7C795A4B141B53AC00C6629A /* 458.pdf in Resources */,
-				7C795A4C141B53AC00C6629A /* 459.pdf in Resources */,
 				7C795A4D141B53AC00C6629A /* 460.pdf in Resources */,
 				7C795A4E141B53AC00C6629A /* 461.pdf in Resources */,
 				7C795A4F141B53AC00C6629A /* 462.pdf in Resources */,
-				7C795A50141B53AC00C6629A /* 463.pdf in Resources */,
-				7C795A51141B53AC00C6629A /* 464.pdf in Resources */,
-				7C795A52141B53AC00C6629A /* 465.pdf in Resources */,
-				7C795A53141B53AC00C6629A /* 466.pdf in Resources */,
-				7C795A54141B53AC00C6629A /* 467.pdf in Resources */,
-				7C795A55141B53AC00C6629A /* 468.pdf in Resources */,
 				7C795A56141B53AC00C6629A /* 469.pdf in Resources */,
-				7C795A57141B53AC00C6629A /* 470.pdf in Resources */,
-				7C795A58141B53AC00C6629A /* 471.pdf in Resources */,
 				7C795A59141B53AC00C6629A /* 472.pdf in Resources */,
 				7C795A5A141B53AC00C6629A /* 473.pdf in Resources */,
 				7C795A5B141B53AC00C6629A /* 474.pdf in Resources */,
@@ -6606,7 +6580,6 @@
 				7C795C65141B53AC00C6629A /* 996.pdf in Resources */,
 				7C795C66141B53AC00C6629A /* 997.pdf in Resources */,
 				7C795C67141B53AC00C6629A /* 998.pdf in Resources */,
-				7C795C68141B53AC00C6629A /* 999.pdf in Resources */,
 				7C795C69141B53AC00C6629A /* 1000.pdf in Resources */,
 				7C795C6A141B53AC00C6629A /* 1001.pdf in Resources */,
 				7C795C6B141B53AC00C6629A /* 1002.pdf in Resources */,
@@ -6765,7 +6738,6 @@
 				7C795D14141B53AC00C6629A /* 1171.pdf in Resources */,
 				7C795D15141B53AC00C6629A /* 1172.pdf in Resources */,
 				7C795D16141B53AC00C6629A /* 1173.pdf in Resources */,
-				7C795D17141B53AC00C6629A /* 1174.pdf in Resources */,
 				7C795D18141B53AC00C6629A /* 1175.pdf in Resources */,
 				7C795D19141B53AC00C6629A /* 1176.pdf in Resources */,
 				7C795D1A141B53AC00C6629A /* 1177.pdf in Resources */,
@@ -6784,7 +6756,6 @@
 				7C795D27141B53AC00C6629A /* 1190.pdf in Resources */,
 				7C795D28141B53AC00C6629A /* 1191.pdf in Resources */,
 				7C795D29141B53AC00C6629A /* 1192.pdf in Resources */,
-				7C795D2A141B53AC00C6629A /* 1193.pdf in Resources */,
 				7C795D2B141B53AC00C6629A /* 1194.pdf in Resources */,
 				7C795D2C141B53AC00C6629A /* 1195.pdf in Resources */,
 				7C795D2D141B53AC00C6629A /* 1196.pdf in Resources */,
@@ -7103,7 +7074,6 @@
 				7C795EB0141B53AC00C6629A /* 1583.pdf in Resources */,
 				7C795EB3141B53AC00C6629A /* 1586.pdf in Resources */,
 				7C795EB4141B53AC00C6629A /* 1587.pdf in Resources */,
-				7C795EB5141B53AC00C6629A /* 1588.pdf in Resources */,
 				7C795EB6141B53AC00C6629A /* 1589.pdf in Resources */,
 				7C795EB7141B53AC00C6629A /* 1590.pdf in Resources */,
 				7C795EBA141B53AC00C6629A /* 1593.pdf in Resources */,
@@ -7115,7 +7085,6 @@
 				7C795EC2141B53AC00C6629A /* 1601.pdf in Resources */,
 				7C795EC4141B53AC00C6629A /* 1603.pdf in Resources */,
 				7C795EC5141B53AC00C6629A /* 1604.pdf in Resources */,
-				7C795EC7141B53AC00C6629A /* 1606.pdf in Resources */,
 				7C795EC8141B53AC00C6629A /* 1607.pdf in Resources */,
 				7C795ECD141B53AC00C6629A /* 1612.pdf in Resources */,
 				7C795ECE141B53AC00C6629A /* 1613.pdf in Resources */,
@@ -7135,7 +7104,6 @@
 				7C8523C2144D9030005A8956 /* 137.pdf in Resources */,
 				7C8523C4144D904D005A8956 /* 167.pdf in Resources */,
 				7C8523C6144D9068005A8956 /* 205.pdf in Resources */,
-				7C8523C8144D9080005A8956 /* 233.pdf in Resources */,
 				7C8523CA144D9096005A8956 /* 237.pdf in Resources */,
 				7C8523CC144D90AB005A8956 /* 259.pdf in Resources */,
 				7C8523CE144D90C4005A8956 /* 337.pdf in Resources */,
@@ -7182,8 +7150,6 @@
 				7C852426144D931F005A8956 /* 776.pdf in Resources */,
 				7C85242B144D935F005A8956 /* 814.pdf in Resources */,
 				7C85242C144D935F005A8956 /* 829.pdf in Resources */,
-				7C852432144D947F005A8956 /* 870.pdf in Resources */,
-				7C852434144D947F005A8956 /* 872.pdf in Resources */,
 				7C852435144D947F005A8956 /* 896.pdf in Resources */,
 				7C852436144D947F005A8956 /* 899.pdf in Resources */,
 				7C852439144D94CF005A8956 /* 943.pdf in Resources */,
@@ -7248,14 +7214,11 @@
 				7C8524BC144D9A6B005A8956 /* 1599.pdf in Resources */,
 				7C8524C6144D9B20005A8956 /* 1605.pdf in Resources */,
 				7C8524C7144D9B20005A8956 /* 1608.pdf in Resources */,
-				7C8524C8144D9B20005A8956 /* 1609.pdf in Resources */,
 				7C8524C9144D9B20005A8956 /* 1610.pdf in Resources */,
 				7C8524CA144D9B20005A8956 /* 1611.pdf in Resources */,
 				7C8524CC144D9B20005A8956 /* 1621.pdf in Resources */,
 				7C8524CD144D9B20005A8956 /* 1623.pdf in Resources */,
 				7C8524CE144D9B20005A8956 /* 1624.pdf in Resources */,
-				7C852651144DC033005A8956 /* 352.pdf in Resources */,
-				7C852652144DC033005A8956 /* 382.pdf in Resources */,
 				7C852653144DC033005A8956 /* 402.pdf in Resources */,
 				7C852654144DC033005A8956 /* 476.pdf in Resources */,
 				7C852655144DC033005A8956 /* 588.pdf in Resources */,
@@ -7277,7 +7240,6 @@
 				7C85267C144DC186005A8956 /* 1422.pdf in Resources */,
 				7C85267D144DC186005A8956 /* 1462.pdf in Resources */,
 				7C85267E144DC186005A8956 /* 1464.pdf in Resources */,
-				7C85267F144DC186005A8956 /* 1465.pdf in Resources */,
 				7C852680144DC186005A8956 /* 1470.pdf in Resources */,
 				7C852681144DC186005A8956 /* 1536.pdf in Resources */,
 				7C852683144DC186005A8956 /* 1540.pdf in Resources */,
@@ -7311,7 +7273,6 @@
 				7CF6EAFF1473F3E300CCBD6E /* 1060.pdf in Resources */,
 				7CF6EB011473F40000CCBD6E /* 1360.pdf in Resources */,
 				7CF6EB031473F41C00CCBD6E /* 1353.pdf in Resources */,
-				7CF6EB051473F43900CCBD6E /* 871.pdf in Resources */,
 				7CF6EB2114740F7100CCBD6E /* 1322.pdf in Resources */,
 				7CC980D21483EE2D00A358BB /* 291.pdf in Resources */,
 				7CC980D41483EF6B00A358BB /* 1549.pdf in Resources */,
@@ -7366,7 +7327,6 @@
 				7C68D7FE1652A6BF00B94D8B /* 148.pdf in Resources */,
 				7C68D8001652A6DC00B94D8B /* 194.pdf in Resources */,
 				7C68D8021652A6F400B94D8B /* 228.pdf in Resources */,
-				7C68D8041652A71000B94D8B /* 235.pdf in Resources */,
 				7C68D8061652A72400B94D8B /* 246.pdf in Resources */,
 				7C68D8081652A74000B94D8B /* 285.pdf in Resources */,
 				7C68D80A1652A76000B94D8B /* 606.pdf in Resources */,
@@ -7395,8 +7355,48 @@
 				7CC263D316F9D7EE00868246 /* website_promo.png in Resources */,
 				7CC263D416F9D7EE00868246 /* website_promo@2x.png in Resources */,
 				7CB552681712CA3F006AA4D8 /* 810.pdf in Resources */,
-				7C9F4F551712D36A0007DCD7 /* 789.pdf in Resources */,
 				7C9EE90F1769E2630015D857 /* 141.pdf in Resources */,
+				7CC997FE17705E0100A19B86 /* 168.pdf in Resources */,
+				7CC9980217705E5F00A19B86 /* 233.pdf in Resources */,
+				7CC9980317705E5F00A19B86 /* 234.pdf in Resources */,
+				7CC9980417705E5F00A19B86 /* 235.pdf in Resources */,
+				7CC9980617705E9C00A19B86 /* 252.pdf in Resources */,
+				7CC9980817705EA600A19B86 /* 255.pdf in Resources */,
+				7CC9980A17705EC200A19B86 /* 352.pdf in Resources */,
+				7CC9980C17705ECB00A19B86 /* 355.pdf in Resources */,
+				7CC9980E17705EE200A19B86 /* 382.pdf in Resources */,
+				7CC9981017705F0600A19B86 /* 400.pdf in Resources */,
+				7CC9981217705F2200A19B86 /* 425.pdf in Resources */,
+				7CC9981417705F3300A19B86 /* 429.pdf in Resources */,
+				7CC9981617705F4A00A19B86 /* 433.pdf in Resources */,
+				7CC9981D17705F7B00A19B86 /* 437.pdf in Resources */,
+				7CC9981E17705F7B00A19B86 /* 438.pdf in Resources */,
+				7CC9981F17705F7B00A19B86 /* 439.pdf in Resources */,
+				7CC9982017705F7B00A19B86 /* 440.pdf in Resources */,
+				7CC9982117705F7B00A19B86 /* 441.pdf in Resources */,
+				7CC9982217705F7B00A19B86 /* 442.pdf in Resources */,
+				7CC9982517705F9B00A19B86 /* 444.pdf in Resources */,
+				7CC9982617705F9B00A19B86 /* 445.pdf in Resources */,
+				7CC9982817705FB400A19B86 /* 459.pdf in Resources */,
+				7CC9982F17705FDF00A19B86 /* 463.pdf in Resources */,
+				7CC9983017705FDF00A19B86 /* 464.pdf in Resources */,
+				7CC9983117705FDF00A19B86 /* 465.pdf in Resources */,
+				7CC9983217705FDF00A19B86 /* 466.pdf in Resources */,
+				7CC9983317705FDF00A19B86 /* 467.pdf in Resources */,
+				7CC9983417705FDF00A19B86 /* 468.pdf in Resources */,
+				7CC9983717705FFF00A19B86 /* 470.pdf in Resources */,
+				7CC9983817705FFF00A19B86 /* 471.pdf in Resources */,
+				7CC9983A1770602A00A19B86 /* 789.pdf in Resources */,
+				7CC9983E1770609100A19B86 /* 870.pdf in Resources */,
+				7CC9983F1770609100A19B86 /* 871.pdf in Resources */,
+				7CC998401770609100A19B86 /* 872.pdf in Resources */,
+				7CC99842177060CA00A19B86 /* 999.pdf in Resources */,
+				7CC998441770610900A19B86 /* 1588.pdf in Resources */,
+				7CC998461770612C00A19B86 /* 1606.pdf in Resources */,
+				7CC998481770613D00A19B86 /* 1609.pdf in Resources */,
+				7CC99850177069C100A19B86 /* 1465.pdf in Resources */,
+				7CFBCD5317709A1B00A8B975 /* 1174.pdf in Resources */,
+				7CFBCD5517709A2E00A8B975 /* 1193.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

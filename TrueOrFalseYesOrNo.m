@@ -265,6 +265,23 @@ static UIWebView *QuestionHeaderBox = nil;
 	return 1;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // increase the size of the answer cell
+    if(indexPath.row == 3){
+        
+        return 65.0;
+    }
+    
+    else{
+        
+        
+        return 44;
+    }
+
+}
+
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 	
 	NSString *title;
@@ -323,7 +340,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	}
 	else if (QItem_View && ShowAnswer){
 		
-		count = [AnswerControls count] + 1 ;// I am adding one more row here to add Continue button
+		count = [AnswerControls count] + 2;// adding rows here for Continue button and reason
 	}
 	
 	else {
@@ -448,7 +465,7 @@ static UIWebView *QuestionHeaderBox = nil;
             { 
                  //ThereIsAnswerReason = 1;
                 
-                NSMutableString *FormatedString = [[NSMutableString alloc]initWithString:@"<p><font size =\"1\" color =\"#FFFFFF\" face =\"times new roman \"> "];
+                NSMutableString *FormatedString = [[NSMutableString alloc]initWithString:@"<p><font size =\"1\" face =\"times new roman \"> "];
                 [FormatedString appendFormat:@"<br/>"];
                 [FormatedString appendFormat:@"<br/>"];
                 [FormatedString appendFormat:@"<br/>"];
@@ -529,12 +546,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // increase the size of the answer cell, but ignore the the continue button cell 
-    
-	return 45;
-}
 
 
 
