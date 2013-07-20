@@ -16,7 +16,7 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
 
 @synthesize window;
 @synthesize	tabBarController;
-@synthesize AllocatedMarks,Difficulty,Topic,TypeOfQuestion,NumberOfQuestions,NumberOfQuestionsDisplayed,PossibleScores,ClientScores,buyScreen,SecondThread,m_facebook,DeviceScreenType;
+@synthesize AllocatedMarks,Difficulty,Topic,TypeOfQuestion,NumberOfQuestions,NumberOfQuestionsDisplayed,PossibleScores,ClientScores,buyScreen,SecondThread,m_facebook,DeviceScreenType,FinishTestNow;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -58,28 +58,26 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
 		
 		[ContextError show];
 	
-		[ContextError release];
 		
 		return NO;
 	}
 	
 	
 	AllocatedMarks = [NSNumber numberWithInt:1];
-	NSString *difficulty =(NSString *)@"Foundation";
+	NSString *difficulty =(NSString *)@"Foundation & Higher";
 	[self setDifficulty:difficulty];
 	
 	NSString *Top = [[NSString alloc] initWithFormat:@"All"];
 	self.Topic = Top;
-	[Top release];
 	
 	NSString *TOQ = [[NSString alloc] initWithFormat:@"All"];
 	self.TypeOfQuestion = TOQ;
-	[TOQ release];
 	
-	NumberOfQuestions = [NSNumber numberWithInt:1];
+	NumberOfQuestions = [NSNumber numberWithInt:10];
 	NumberOfQuestionsDisplayed = [NSNumber numberWithInt: 0];
 	PossibleScores =[NSNumber numberWithInt: 0];
 	ClientScores = [NSNumber numberWithInt: 0];
+    FinishTestNow = NO;
 	
 	//Track tourches on TabBar
 	//UILongPressGestureRecognizer *gr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(touched)];
@@ -132,13 +130,19 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
 	NSString *MyAccessLevel = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:AccessLevel];
 	//[[NSUserDefaults standardUserDefaults] setObject:@"8" forKey:@"AccessLevel"]; //-- for Testing Only
 	//[[NSUserDefaults standardUserDefaults] synchronize];
-	if (MyAccessLevel == nil) {
+	if (MyAccessLevel == nil || [MyAccessLevel intValue] == 2) {
 		
-		NSDictionary *appDefaults  = [NSDictionary dictionaryWithObjectsAndKeys:@"2", AccessLevel, nil];
-		[[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+		[[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"AccessLevel"];
 		[[NSUserDefaults standardUserDefaults] synchronize];
 	}
-	
+    
+	// We are changing pricing all those who have brought will have full access
+    if ([MyAccessLevel intValue] > 2) { 
+		
+		[[NSUserDefaults standardUserDefaults] setObject:@"8" forKey:@"AccessLevel"];
+		[[NSUserDefaults standardUserDefaults] synchronize];
+	}
+
 	// apple store transaction observer
 	//CustomStoreObserver *observer = [[CustomStoreObserver alloc] init];
 	//[[SKPaymentQueue defaultQueue] addTransactionObserver:observer];
@@ -212,7 +216,7 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
 	NSString *audioPath = [[NSBundle mainBundle] pathForResource:FileName ofType:@"aiff"];
 	NSURL *audioURL = [NSURL fileURLWithPath:audioPath];
 	SystemSoundID soundId;
-	AudioServicesCreateSystemSoundID((CFURLRef)audioURL, &soundId);
+	AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(audioURL), &soundId);
 	AudioServicesPlaySystemSound(soundId);
 
 }
@@ -283,7 +287,6 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
 			
 			[ContextError show];
 			
-			[ContextError release];
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             
         } 
@@ -310,7 +313,7 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
 	DescriptiveAnswersXML = [[NSBundle mainBundle] pathForResource:@"DescriptiveAnswers" ofType:@"xml"];
 	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
-	NSError *error=[[[NSError alloc]init] autorelease]; 
+	NSError *error=[[NSError alloc]init]; 
 	
 	BOOL success=[fileManager fileExistsAtPath:DevicePath];
 	// if the database does not exist on the phone copy database,DescriptiveAnswer.xml and Results.xml to phone
@@ -514,7 +517,6 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
 		
 		[CoordinatorError show];
 		
-		[CoordinatorError release];
 		
 		
 		
@@ -648,24 +650,9 @@ static NSString* const kAnalyticsAccountId = @"UA-31975303-1";
     
     [[GANTracker sharedTracker] stopTracker];
     
-    [managedObjectContext release];
-    [managedObjectModel release];
-    [persistentStoreCoordinator release];
     
-    [tabBarController release];
-	[window release];
 	
-	[AllocatedMarks release];
-	[Difficulty release];
-	[Topic release];
-	[TypeOfQuestion release];
-	[NumberOfQuestions release];
-	[NumberOfQuestionsDisplayed release];
-	[PossibleScores release];
-	[ClientScores release];
-    [DeviceScreenType release];
 	
-    [super dealloc];
 }
 
 

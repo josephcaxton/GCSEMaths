@@ -14,29 +14,22 @@
 
 - (void)tabBar:(UITabBar *)theTabBar didSelectItem:(UITabBarItem *)item  {
 	
-	NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
-	NSString *activetab = [def objectForKey:@"activeTab"];
-	
-	
-	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
-	
-	
-	
-	if([item.title isEqualToString:@"Results"]  &&  ![activetab isEqualToString:@"Results"]  ){  //||[item.title isEqualToString:@"Videos"]
-		
-		
-		
-		appDelegate.SecondThread = [[NSThread alloc]initWithTarget:self selector:@selector(ShowActivity) object:nil];
-		[appDelegate.SecondThread start];
-		
-		  
-		
-		
-		
-	}
-		
-	//Problem now this that this thread cannot be cancel if the same tab is clicked twice so i am using 
-	// work around below. Store the last selected tab into NSuserDefault.And then check later.
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+	/*NSString *activetab = [def objectForKey:@"activeTab"];
+     
+     EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+     
+     
+     
+     if([item.title isEqualToString:@"Results"]){ //||[item.title isEqualToString:@"Videos"]
+     
+     //appDelegate.SecondThread = [[NSThread alloc]initWithTarget:self selector:@selector(ShowActivity) object:nil];
+     //[appDelegate.SecondThread start];
+     
+     
+     
+     
+     } */
 	
 	[def setValue:item.title forKey:@"activeTab"];
 	[def synchronize];
@@ -49,13 +42,12 @@
 
 - (void)ShowActivity {
 	
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	@autoreleasepool {
 	
-	ActivityIndicator *indicator = [[ActivityIndicator alloc]initWithFrame:CGRectMake(0,0,320,420)];
-	indicator.tag = 1;
-	[self.view addSubview:indicator];
-	[indicator release];
-	[pool release];
+		ActivityIndicator *indicator = [[ActivityIndicator alloc]initWithFrame:CGRectMake(0,0,320,420)];
+		indicator.tag = 1;
+		[self.view addSubview:indicator];
+	}
 }
 
 -(NSUInteger)supportedInterfaceOrientations{
@@ -101,9 +93,6 @@
 }
 
 
-- (void)dealloc {
-    [super dealloc];
-}
 
 
 @end

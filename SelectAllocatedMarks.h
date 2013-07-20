@@ -13,6 +13,6 @@
 
 	QuestionItems	*QItem_ForEdit;
 }
-@property (nonatomic, retain) QuestionItems	*QItem_ForEdit;
+@property (nonatomic, strong) QuestionItems	*QItem_ForEdit;
 
 @end

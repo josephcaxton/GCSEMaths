@@ -21,13 +21,13 @@
 {
 }
 
-@property (nonatomic, retain) NSDate * LoggedDate;
-@property (nonatomic, retain) NSDate * DateAutorized;
-@property (nonatomic, retain) NSNumber * Autorize;
-@property (nonatomic, retain) NSManagedObject * QuestionInfo;
-@property (nonatomic, retain) NSManagedObject * QuestionTemplate;
-@property (nonatomic, retain) NSManagedObject * QuestionHeader_Topic;
-@property (nonatomic, retain) NSSet* QuestionItems;
+@property (nonatomic, strong) NSDate * LoggedDate;
+@property (nonatomic, strong) NSDate * DateAutorized;
+@property (nonatomic, strong) NSNumber * Autorize;
+@property (nonatomic, strong) NSManagedObject * QuestionInfo;
+@property (nonatomic, strong) NSManagedObject * QuestionTemplate;
+@property (nonatomic, strong) NSManagedObject * QuestionHeader_Topic;
+@property (nonatomic, strong) NSSet* QuestionItems;
 
 @end
 

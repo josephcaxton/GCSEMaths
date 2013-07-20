@@ -47,29 +47,29 @@
 	
 }
 
-@property (nonatomic, retain) lk_QuestionTemplate *QuestionTemplate;
-@property (nonatomic, retain) Topics  *SelectedTopic;
-@property (nonatomic, retain) QuestionItems	*QItem_ForEdit;
+@property (nonatomic, strong) lk_QuestionTemplate *QuestionTemplate;
+@property (nonatomic, strong) Topics  *SelectedTopic;
+@property (nonatomic, strong) QuestionItems	*QItem_ForEdit;
 
-@property (nonatomic, retain) NSString *SFileNameValue;
-@property (nonatomic, retain)  UITableView *DisplayTable;
-@property (nonatomic, retain) NSIndexPath *DisplayedIndexPath;
-@property (nonatomic, retain) UISwitch *RequireActivityMarker;
-@property (nonatomic, retain) UISwitch *Authorize;
+@property (nonatomic, strong) NSString *SFileNameValue;
+@property (nonatomic, strong)  UITableView *DisplayTable;
+@property (nonatomic, strong) NSIndexPath *DisplayedIndexPath;
+@property (nonatomic, strong) UISwitch *RequireActivityMarker;
+@property (nonatomic, strong) UISwitch *Authorize;
 
 
-@property (nonatomic, retain) UILabel		*True;
-@property (nonatomic, retain) UILabel		*False;
+@property (nonatomic, strong) UILabel		*True;
+@property (nonatomic, strong) UILabel		*False;
 
 
 @property (nonatomic) BOOL Truetick;
 
 
-@property (nonatomic, retain) NSArray *AnswerControls;
-@property (nonatomic, retain) NSMutableArray *AnswerObjects;
+@property (nonatomic, strong) NSArray *AnswerControls;
+@property (nonatomic, strong) NSMutableArray *AnswerObjects;
 
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 - (NSManagedObjectContext *)ManagedObjectContext;
 

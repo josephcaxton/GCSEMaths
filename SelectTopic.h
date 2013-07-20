@@ -25,10 +25,10 @@
 	NSManagedObjectContext *managedObjectContext;
 
 }
-@property (nonatomic, retain) Topics  *SelectedTopic;
-@property (nonatomic, retain) lk_QuestionTemplate *SelectedTemplate;
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) Topics  *SelectedTopic;
+@property (nonatomic, strong) lk_QuestionTemplate *SelectedTemplate;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic) BOOL UserConfigure;
 -(IBAction)Back:(id)sender;
 

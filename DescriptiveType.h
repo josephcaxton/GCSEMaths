@@ -45,36 +45,37 @@
     UILabel *Instruction;
 }
 
-@property (nonatomic, retain) lk_QuestionTemplate *QuestionTemplate;
-@property (nonatomic, retain) Topics  *SelectedTopic;
+@property (nonatomic, strong) lk_QuestionTemplate *QuestionTemplate;
+@property (nonatomic, strong) Topics  *SelectedTopic;
 
 //@property (nonatomic, retain) UIWebView *QuestionHeaderBox;
-@property (nonatomic, retain) NSArray *fileList;
-@property (nonatomic, retain)  UITableView *FileListTable;
+@property (nonatomic, strong) NSArray *fileList;
+@property (nonatomic, strong)  UITableView *FileListTable;
 
-@property (nonatomic, retain) NSString *DirLocation;
-@property (nonatomic, retain) NSString *SFileName;
+@property (nonatomic, strong) NSString *DirLocation;
+@property (nonatomic, strong) NSString *SFileName;
 
 
 //@property (nonatomic, retain) NSString *DirLocation_Edit;
-@property (nonatomic, retain) NSString *SFileName_Edit;
-@property (nonatomic, retain) QuestionItems	*QItem_Edit;
-@property (nonatomic, retain) QuestionItems	*QItem_View;
-@property (nonatomic, retain) NSMutableArray *AnswerObjects;
-@property (nonatomic, retain) UITextView *Answer1;
-@property (nonatomic, retain) UIButton  *ShowCorrectAnswer;
+@property (nonatomic, strong) NSString *SFileName_Edit;
+@property (nonatomic, strong) QuestionItems	*QItem_Edit;
+@property (nonatomic, strong) QuestionItems	*QItem_View;
+@property (nonatomic, strong) NSMutableArray *AnswerObjects;
+@property (nonatomic, strong) UITextView *Answer1;
+@property (nonatomic, strong) UIButton  *ShowCorrectAnswer;
 //@property (nonatomic, retain) UIButton *newLine;
 @property (nonatomic, assign) BOOL ShowAnswer;
-@property (nonatomic, retain) UIButton *ShowAnswerHere;
-@property (nonatomic, retain) UIButton *Continue;
-@property (nonatomic, retain) UIWebView *WebControl;
-@property (nonatomic, assign) UILabel *Instruction;
+@property (nonatomic, strong) UIButton *ShowAnswerHere;
+@property (nonatomic, strong) UIButton *Continue;
+@property (nonatomic, strong) UIWebView *WebControl;
+@property (nonatomic, strong) UILabel *Instruction;
 
 //-(void)CheckAppDirectory:(NSString *)Location;
 //- (NSString *) getApplicationDirectory;
 -(void)loadDocument:(NSString*)documentName inView:(UIWebView*)webView;
 -(IBAction)ShowCorrectAnswer:(id)sender;
 //-(IBAction)AddNewLine:(id)sender;
+-(IBAction)StopTest:(id)sender;
 
 
 @end

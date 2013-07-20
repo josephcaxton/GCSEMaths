@@ -14,8 +14,10 @@
 #import "lk_QuestionTemplate.h"
 #import "QuestionItems.h"
 #import "QuestionHeader.h"
+#import "MBProgressHUD.h"
 
-@interface ClientEngine : UITableViewController <NSFetchedResultsControllerDelegate> {
+
+@interface ClientEngine : UITableViewController <NSFetchedResultsControllerDelegate,MBProgressHUDDelegate> {
 	
 	
 	
@@ -60,43 +62,45 @@
 	NSMutableArray *NumberCounter;  // Just for numbering
 	NSArray *CollectedObjects;
 	NSMutableArray *SelectedArrays;
-	
+	MBProgressHUD *HUD;
+
 	
 
 }
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController_Topics;
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController_QT;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController_Topics;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController_QT;
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
-@property (nonatomic, retain) Topics  *SelectedTopic;
-@property (nonatomic, retain) lk_QuestionTemplate *QuestionTemplate;
-@property (nonatomic, retain) NSArray *ListofQuestions;
+@property (nonatomic, strong) Topics  *SelectedTopic;
+@property (nonatomic, strong) lk_QuestionTemplate *QuestionTemplate;
+@property (nonatomic, strong) NSArray *ListofQuestions;
 
-@property (nonatomic, retain) NSExpression *DifficultyColumn;
-@property (nonatomic, retain) NSExpression *DifficultyValue;
-@property (nonatomic, retain) NSPredicate *DifficultyPredicate;
+@property (nonatomic, strong) NSExpression *DifficultyColumn;
+@property (nonatomic, strong) NSExpression *DifficultyValue;
+@property (nonatomic, strong) NSPredicate *DifficultyPredicate;
 
-@property (nonatomic, retain) NSExpression *SelectedTopicColumn;
-@property (nonatomic, retain) NSExpression *SelectedTopicValue;
-@property (nonatomic, retain) NSPredicate *SelectedTopicPredicate;
+@property (nonatomic, strong) NSExpression *SelectedTopicColumn;
+@property (nonatomic, strong) NSExpression *SelectedTopicValue;
+@property (nonatomic, strong) NSPredicate *SelectedTopicPredicate;
 
-@property (nonatomic, retain) NSExpression *QuestionTemplateColumn;
-@property (nonatomic, retain) NSExpression *QuestionTemplateValue;
-@property (nonatomic, retain) NSPredicate *QuestionTemplatePredicate;
+@property (nonatomic, strong) NSExpression *QuestionTemplateColumn;
+@property (nonatomic, strong) NSExpression *QuestionTemplateValue;
+@property (nonatomic, strong) NSPredicate *QuestionTemplatePredicate;
 
-@property (nonatomic, retain) NSExpression *AccessLevelColumn;
-@property (nonatomic, retain) NSExpression *AccessLevelValue;
-@property (nonatomic, retain) NSPredicate *AccessLevelPredicate;
+@property (nonatomic, strong) NSExpression *AccessLevelColumn;
+@property (nonatomic, strong) NSExpression *AccessLevelValue;
+@property (nonatomic, strong) NSPredicate *AccessLevelPredicate;
 
-@property (nonatomic, retain) NSMutableArray *PopBox;
-@property (nonatomic, retain) NSArray *UnchangedArray; 
-@property (nonatomic, retain) NSTimer *timer;
+@property (nonatomic, strong) NSMutableArray *PopBox;
+@property (nonatomic, strong) NSArray *UnchangedArray; 
+@property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, assign) BOOL ExitFlag;  // this flag is to fix a bug to clear the timer object hold on this controller
-@property (nonatomic, retain) NSMutableArray *NumberCounter;
-@property (nonatomic, retain) NSArray *CollectedObjects ;
-@property (nonatomic, retain) NSMutableArray *SelectedArrays;
+@property (nonatomic, strong) NSMutableArray *NumberCounter;
+@property (nonatomic, strong) NSArray *CollectedObjects ;
+@property (nonatomic, strong) NSMutableArray *SelectedArrays;
+@property (nonatomic, strong)  MBProgressHUD *HUD;
 
 - (NSManagedObjectContext *)ManagedObjectContext;
 

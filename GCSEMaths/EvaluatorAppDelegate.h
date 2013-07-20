@@ -37,7 +37,7 @@
 	NSNumber *ClientScores;
 	UITableViewController *buyScreen;
 	NSThread *SecondThread;
-	
+	 BOOL FinishTestNow;
     // this is to handle return from facebook
     
     Facebook *m_facebook;
@@ -47,24 +47,25 @@
 	
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
-@property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
-@property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (nonatomic, retain) NSNumber *AllocatedMarks;
-@property (nonatomic, retain) NSString *Difficulty;
-@property (nonatomic, retain) NSString *Topic;
-@property (nonatomic, retain) NSString *TypeOfQuestion;
-@property (nonatomic, retain) NSNumber *NumberOfQuestions;
-@property (nonatomic, retain) NSNumber *NumberOfQuestionsDisplayed;
+@property (nonatomic, strong) IBOutlet UIWindow *window;
+@property (nonatomic, strong) IBOutlet UITabBarController *tabBarController;
+@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong, readonly) NSManagedObjectModel *managedObjectModel;
+@property (nonatomic, strong, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (nonatomic, strong) NSNumber *AllocatedMarks;
+@property (nonatomic, strong) NSString *Difficulty;
+@property (nonatomic, strong) NSString *Topic;
+@property (nonatomic, strong) NSString *TypeOfQuestion;
+@property (nonatomic, strong) NSNumber *NumberOfQuestions;
+@property (nonatomic, strong) NSNumber *NumberOfQuestionsDisplayed;
 
-@property (nonatomic, retain) NSNumber *PossibleScores;
-@property (nonatomic, retain) NSNumber *ClientScores;
-@property (nonatomic, retain) UITableViewController *buyScreen;
-@property (nonatomic, retain) NSThread *SecondThread;
-@property (nonatomic, retain) Facebook *m_facebook;
-@property (nonatomic, retain) NSNumber *DeviceScreenType;
+@property (nonatomic, strong) NSNumber *PossibleScores;
+@property (nonatomic, strong) NSNumber *ClientScores;
+@property (nonatomic, strong) UITableViewController *buyScreen;
+@property (nonatomic, strong) NSThread *SecondThread;
+@property (nonatomic, strong) Facebook *m_facebook;
+@property (nonatomic, strong) NSNumber *DeviceScreenType;
+@property (nonatomic, assign)  BOOL FinishTestNow;
 
 - (NSString *)applicationDocumentsDirectory;
 - (void)PlaySound:(NSString *)FileName;

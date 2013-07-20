@@ -14,8 +14,8 @@
 {
 }
 
-@property (nonatomic, retain) NSString * TopicName;
-@property (nonatomic, retain) NSSet* Topic_QuestionHeader;
+@property (nonatomic, strong) NSString * TopicName;
+@property (nonatomic, strong) NSSet* Topic_QuestionHeader;
 
 @end
 

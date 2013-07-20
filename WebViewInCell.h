@@ -15,6 +15,6 @@
 	//UIWebView *WebBox;
 }
 
-@property (nonatomic, retain) NSString *HTMLText;
+@property (nonatomic, strong) NSString *HTMLText;
 //@property (nonatomic, retain) UIWebView *WebBox;
 @end

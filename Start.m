@@ -11,7 +11,7 @@
 
 @implementation Start
 
-@synthesize FirstView, SecondView,FirstTable,SecondTable,QuestionPickerView,CustomDataSource,Sound,ShowAnswers,logoView,Copyright,WebText,StartPractice,iPhone5;
+@synthesize FirstView, SecondView,FirstTable,SecondTable,QuestionPickerView,CustomDataSource,Sound,ShowAnswers,logoView,Copyright,WebText,StartPractice,iPhone5,DifficultybtnLock,TopicbtnLock,TypeofquestionbtnLock,btnStartTest;
 
 
 #define SCREEN_WIDTH 320
@@ -57,22 +57,14 @@
 	CGRect SecondFrame = CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT);
 	self.SecondView = [[UIView alloc] initWithFrame:SecondFrame];
     self.SecondView.backgroundColor = [UIColor colorWithPatternImage:BackImage];
-    QuestionPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH,162)]; //90
-	CustomDataSource = [[CustomPickerDataSource_Num_Questions alloc] init];
-    CGRect SecondTableframe;
-    if(iPhone5){
-        
-        SecondTableframe = CGRectMake(10 ,200, SCREEN_WIDTH - 20, 230);
-    }
-    else{
-        SecondTableframe = CGRectMake(10 ,155, SCREEN_WIDTH - 20, 210);
-    }
-   
+    //QuestionPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH,162)]; //90
+	//CustomDataSource = [[CustomPickerDataSource_Num_Questions alloc] init];
+    CGRect SecondTableframe = CGRectMake(0 ,0, SCREEN_WIDTH, SCREEN_HEIGHT);
+      
     self.SecondTable = [[UITableView alloc] initWithFrame:SecondTableframe style:UITableViewStyleGrouped];
     
 
 	
-    [BackImage release];
 
 	//Navigation Bar
     
@@ -82,7 +74,6 @@
     UIImage *HeaderBackImage = [[UIImage alloc] initWithContentsOfFile:HeaderLocation];
    [self.navigationController.navigationBar setBackgroundImage:HeaderBackImage forBarMetrics:UIBarMetricsDefault];
     //self.navigationItem.title = @"LearnersCloud";
-    [HeaderBackImage release];
 	
 	
 }
@@ -91,26 +82,26 @@
 	[super viewWillAppear:animated];
 	[FirstTable reloadData];
 	[SecondTable reloadData];
-    if(CustomDataSource != nil){ // this is the refresh the QuestionPicker after user purchase
+   /* if(CustomDataSource != nil){ // this is the refresh the QuestionPicker after user purchase
         
         [CustomDataSource release];
         CustomDataSource = [[CustomPickerDataSource_Num_Questions alloc] init];
         QuestionPickerView.delegate = CustomDataSource;
-        QuestionPickerView.dataSource = CustomDataSource;
+       QuestionPickerView.dataSource = CustomDataSource;
         EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
         if (appDelegate.NumberOfQuestions == [NSNumber numberWithInt:1]) {
             appDelegate.NumberOfQuestions =[NSNumber numberWithInt:1];
-            [QuestionPickerView selectRow:0 inComponent:1 animated:YES];  // sets the default on the PickerView to 10
+           // [QuestionPickerView selectRow:0 inComponent:1 animated:YES];  // sets the default on the PickerView to 10
         }
         else
         {
             int NumberofQ = appDelegate.NumberOfQuestions.intValue - 1;
-            [QuestionPickerView selectRow:NumberofQ inComponent:1 animated:YES];
+            //[QuestionPickerView selectRow:NumberofQ inComponent:1 animated:YES];
         
         }
         
         
-    }
+    }*/
     
 	//[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
     
@@ -125,7 +116,6 @@
         
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Review this app" message:@"Do you like this app enough to leave us a review?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
         [alertView show];
-        [alertView release];
         
 	}
     else {
@@ -188,13 +178,13 @@ if ([self.FirstView superview]) {
 			
 			self.SecondView.frame = CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT);
             if(iPhone5){
-                self.SecondTable.frame = CGRectMake(10 ,200, SCREEN_WIDTH - 20, 230);
+                self.SecondTable.frame = CGRectMake(10 ,0, SCREEN_WIDTH - 20, 230);
             }
             else{
-                self.SecondTable.frame = CGRectMake(10 ,155, SCREEN_WIDTH - 20, 210);
+                self.SecondTable.frame = CGRectMake(10 ,0, SCREEN_WIDTH - 20, 210);
             }
 			
-			QuestionPickerView.frame = CGRectMake(0,0,SCREEN_WIDTH,162);//90
+			//QuestionPickerView.frame = CGRectMake(0,0,SCREEN_WIDTH,162);//90
 			self.Sound.frame =  CGRectMake(200.0, 0.5, 40.0, 45.0);
 			ShowAnswers.frame = CGRectMake(200.0, 0.5, 40.0, 45.0);
 		}
@@ -202,8 +192,8 @@ if ([self.FirstView superview]) {
 		else {
 			
 			self.SecondView.frame = CGRectMake(0,0, 480, SCREEN_HEIGHT);
-			self.SecondTable.frame = CGRectMake(0 ,160, 480, SCREEN_WIDTH);
-			QuestionPickerView.frame = CGRectMake(0,0,480,160);
+			self.SecondTable.frame = CGRectMake(0 ,0, 480, SCREEN_WIDTH);
+			//QuestionPickerView.frame = CGRectMake(0,0,480,160);
 			self.Sound.frame = CGRectMake(350.0, 10.0, 40.0, 45.0);
 			ShowAnswers.frame = CGRectMake(350.0, 10.0, 40.0, 45.0);
 		}
@@ -252,14 +242,26 @@ if ([self.FirstView superview]) {
 	else
 	{
 		
+        NSString *AccessLevel = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"AccessLevel"];
+        
+        if([AccessLevel intValue] == 1){
+            
+            NSString *message = [[NSString alloc] initWithFormat:@"You are using the free version of this app. To unlock all question filters and get unlimited access to over 1000 exam-standard questions, buy in-app today."];
+            
+            UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"Welcome to LearnersCloud"
+                                                           message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            
+            [alert show];
+            
+        }
+
 		
 		[self.FirstView removeFromSuperview];
 		[self.view addSubview:SecondView];
 		
 		
 		
-		//QuestionPickerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-		if(CustomDataSource != nil){
+		/*if(CustomDataSource != nil){
             
             [CustomDataSource release];
             CustomDataSource = [[CustomPickerDataSource_Num_Questions alloc] init];
@@ -269,7 +271,7 @@ if ([self.FirstView superview]) {
 		QuestionPickerView.delegate = CustomDataSource;
 		QuestionPickerView.showsSelectionIndicator = YES;
         
-		[SecondView  addSubview:QuestionPickerView];
+		[SecondView  addSubview:QuestionPickerView]; */
          
 		
 		
@@ -278,7 +280,7 @@ if ([self.FirstView superview]) {
 		
 		SecondTable.delegate = self;
 		SecondTable.dataSource = self;
-		
+        SecondTable.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
 		SecondTable.tag = 2;
 		[self.SecondView addSubview:SecondTable];
 		
@@ -297,27 +299,10 @@ if ([self.FirstView superview]) {
 
 -(IBAction)StartTest:(id)sender{
 	
-	NSString *AccessLevel = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"AccessLevel"];
-	
-	if([AccessLevel intValue] == 2){
-		
-		NSString *message = [[NSString alloc] initWithFormat:@"You are using the free version of the app. The app will only deliver a maximum of 250 questions depending on your search criteria and does not necessarily have all types of questions."];
-		
-		UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"Important Notice"
-													   message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-		
-		[alert show];
-		[message release];
-		[alert release];
-	}
-	
-	
-	
 	
 	ClientEngine *ce_view = [[ClientEngine alloc] initWithStyle:UITableViewStyleGrouped];
 
 	[self.navigationController pushViewController:ce_view animated:YES];
-	[ce_view release];
 	
 	
 }
@@ -343,9 +328,10 @@ if ([self.FirstView superview]) {
 	
 	if (sender==1) {
 		
-		UIBarButtonItem *Practice = [[UIBarButtonItem alloc] initWithTitle:@"Practice Questions" style:UIBarButtonItemStylePlain target:self action:@selector(Practice:)];
+		/*UIBarButtonItem *Practice = [[UIBarButtonItem alloc] initWithTitle:@"Practice Questions" style:UIBarButtonItemStylePlain target:self action:@selector(Practice:)];
 		self.navigationItem.rightBarButtonItem = Practice;
-		[Practice release];
+		[Practice release]; */
+        self.navigationItem.rightBarButtonItem = nil;
 		self.navigationItem.leftBarButtonItem = nil;
 		
 		EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
@@ -361,12 +347,10 @@ if ([self.FirstView superview]) {
 		
 		UIBarButtonItem *Back = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(Practice:)];
 		self.navigationItem.leftBarButtonItem = Back;
-		[Back release];
 		
 		
 		UIBarButtonItem *StartTest = [[UIBarButtonItem alloc] initWithTitle:@"Start Test" style:UIBarButtonItemStylePlain target:self action:@selector(StartTest:)];
 		self.navigationItem.rightBarButtonItem = StartTest;
-		[StartTest release];
 		
 		EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 		BOOL PlaySound = [[NSUserDefaults standardUserDefaults] boolForKey:@"PlaySound"];
@@ -495,7 +479,7 @@ if ([self.FirstView superview]) {
 	}
 	
 	else {
-		count = 5;
+		count = 7;
 	}
 
 	 
@@ -507,13 +491,20 @@ if ([self.FirstView superview]) {
 {
     if (tableView.tag == 1) {
 		if (indexPath.section == 0) {
-			return 340;
+			return 440;
 		}
 		else {
 			return 40;
 		}
 	}
-	else {
+	else if (tableView.tag == 2){
+        if(indexPath.row == 6){
+            return 70;
+        }
+        return 40;
+    }
+    else{
+
 		
 		return 40;
 	}
@@ -535,7 +526,7 @@ if ([self.FirstView superview]) {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
 	 
     
@@ -557,9 +548,6 @@ if ([self.FirstView superview]) {
             HeaderImageView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
             [headerView addSubview:HeaderImageView];
             [cell addSubview:headerView];
-            [headerView release];
-            [HeaderImage release];
-            [HeaderImageView release];
 
 				
 				if (logoView == nil) {
@@ -583,8 +571,6 @@ if ([self.FirstView superview]) {
                    
 					
 					[cell addSubview:logoView];
-					[LogoImage release];
-					[logoView release];
 				
                     NSString *StartImageLocation = [[NSBundle mainBundle] pathForResource:@"start_practice" ofType:@"png"];
                     
@@ -641,7 +627,6 @@ if ([self.FirstView superview]) {
 					NSString *Website = @"www.LearnersCloud.com";
 					WebText.text = Website;
 					[cell addSubview:WebText];
-					[WebText release];
 					//[self CheckOrientation];
 					}
 
@@ -654,56 +639,126 @@ if ([self.FirstView superview]) {
             //tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
             [tableView setBackgroundView:nil];
           [cell setBackgroundColor:[UIColor whiteColor]];
-			EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;	
+			EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+          NSString *MyAccessLevel = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"AccessLevel"];
 		switch (indexPath.row) {
-				case 0:
-					//cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+            case 0:
+            {
+                
+                cell.textLabel.text = @"Number of questions";
+                cell.detailTextLabel.text = [appDelegate.NumberOfQuestions stringValue];
+                break;
+            }
+            case 1:
+            {
+                if ([MyAccessLevel intValue] <= 2){
+                    
+                    cell.userInteractionEnabled = NO;
+                    cell.textLabel.enabled = NO;
+                    cell.textLabel.text = @"Difficulty";
+                    
+                    
+                    UIImage *imgLock = [UIImage imageNamed:@"Padlock.png"];
+                    DifficultybtnLock = [UIButton buttonWithType:UIButtonTypeCustom];
+                    DifficultybtnLock.frame = CGRectMake(270, 0.5, 36, 35);
+                    
+                                        
+                    [DifficultybtnLock setBackgroundImage:imgLock forState:UIControlStateNormal];
+                    [cell addSubview:DifficultybtnLock ];
+                    
+                }
+                else{
+                    
 					cell.textLabel.text = @"Difficulty";
 					cell.detailTextLabel.text = appDelegate.Difficulty;
-					break;
-				case 1:
-					//cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-					cell.textLabel.text = @"Topic";
-					cell.detailTextLabel.text = appDelegate.Topic;
-					break;
+                }
+                break;
+            }
 					
-				case 2:
-					//cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+            case 2:
+            {
+                if ([MyAccessLevel intValue] <= 2){
+                    cell.userInteractionEnabled = NO;
+                    cell.textLabel.enabled = NO;
+                    cell.textLabel.text = @"Topic";
+                    
+                    UIImage *imgLock = [UIImage imageNamed:@"Padlock.png"];
+                    TopicbtnLock = [UIButton buttonWithType:UIButtonTypeCustom];
+                    TopicbtnLock.frame = CGRectMake(270,0.5, 36, 35);
+                                       
+                    [TopicbtnLock setBackgroundImage:imgLock forState:UIControlStateNormal];
+                    [cell addSubview:TopicbtnLock ];
+                    
+                }
+                
+                else{
+                    cell.textLabel.text = @"Topic";
+					cell.detailTextLabel.text = appDelegate.Topic;
+                }
+                
+                
+                break;
+            }
+
+            case 3:
+            {
+                if ([MyAccessLevel intValue] <= 2){
+                    cell.userInteractionEnabled = NO;
+                    cell.textLabel.enabled = NO;
+                    cell.textLabel.text = @"Type of question";
+                    
+                    UIImage *imgLock = [UIImage imageNamed:@"Padlock.png"];
+                    TypeofquestionbtnLock = [UIButton buttonWithType:UIButtonTypeCustom];
+                    TypeofquestionbtnLock.frame = CGRectMake(270,0.5, 36, 35);
+                                       
+                    [TypeofquestionbtnLock setBackgroundImage:imgLock forState:UIControlStateNormal];
+                    [cell addSubview:TypeofquestionbtnLock ];
+                    
+                    
+                }
+                else {
+                    
 					cell.textLabel.text = @"Type of question";
 					cell.detailTextLabel.text = appDelegate.TypeOfQuestion;
-					break;
-				
-				case 3:
-						if (Sound == nil) {
-							
-							Sound =[[UISwitch alloc] initWithFrame:CGRectMake(200.0, 0.5, 40.0, 30.0)];
-							
-						}
-										
-					cell.selectionStyle = UITableViewCellSelectionStyleNone;
-				    cell.textLabel.text = @"Sound";
-				  
-				   BOOL PlaySound = [[NSUserDefaults standardUserDefaults] boolForKey:@"PlaySound"];
+                }
+                break;
+            }
+                
+            case 4:
+            {
+                if (Sound == nil) {
+                    
+                    Sound =[[UISwitch alloc] initWithFrame:CGRectMake(220.0, 10.0, 40.0, 30.0)];
+                    
+                }
+                
+                
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                cell.textLabel.text = @"Sound";
+                
+                BOOL PlaySound = [[NSUserDefaults standardUserDefaults] boolForKey:@"PlaySound"];
+                
+                if (PlaySound ==YES) {
 					
-					if (PlaySound ==YES) {
+                    Sound.on = YES;
+                }
+                else {
+                    Sound.on = NO;
+                }
+                Sound.tag = 1;
+                [Sound addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
+                [cell.contentView addSubview:Sound];
+                break;
+            }
+
 					
-						Sound.on = YES;
-					}
-					else {
-						Sound.on = NO;
-					}
-				Sound.tag = 1;
-					[Sound addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
-					[cell.contentView addSubview:Sound];
-					break;
-					
-			case 4:
+			case 5:
 				
-				
+            {
 					
 					if (ShowAnswers == nil) {
 						
-						ShowAnswers =[[UISwitch alloc] initWithFrame:CGRectMake(200.0, 0.5, 40.0, 30.0)];
+						ShowAnswers =[[UISwitch alloc] initWithFrame:CGRectMake(220.0, 10.0, 40.0, 30.0)];
 					}				
 				
 				cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -723,14 +778,32 @@ if ([self.FirstView superview]) {
 				[cell.contentView addSubview:ShowAnswers];
 				
 				break;
+        }
+            case 6:
+            {
+                
+                if (btnStartTest == nil) {
+                    
+                    UIImage *StartImage = [UIImage imageNamed:@"btn_start_test.png"];
+                    btnStartTest = [UIButton buttonWithType:UIButtonTypeCustom];
+                    
+                    [btnStartTest setBackgroundImage:StartImage forState:UIControlStateNormal];
+                    btnStartTest.frame = CGRectMake(85, 20, 139, 40);
+                }
+                
+				cell.selectionStyle = UITableViewCellSelectionStyleNone;
+				[btnStartTest addTarget:self action:@selector(StartTest:) forControlEvents:UIControlEventTouchUpInside];
+				[cell.contentView addSubview:btnStartTest];
 				
-				
-				
-			}
+				break;
+            
+
+            }
 		
 		
-		
-	}
+        }
+    }
+	
 
 	
 	//[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
@@ -741,29 +814,36 @@ if ([self.FirstView superview]) {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-	if (indexPath.row == 0) {
+    
+    if (indexPath.row == 0) {
+        
+        SelectNumberofQuestionsViewController *noofquestions =[[SelectNumberofQuestionsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        [self.navigationController pushViewController:noofquestions animated:YES];
+		
+    }
+
+    
+    
+    if (indexPath.row == 1) {
 		SelectDifficulty *Difficulty_view = [[SelectDifficulty alloc]initWithNibName:nil bundle:nil];
 		Difficulty_view.UserConfigure =  YES;
 		[self.navigationController pushViewController:Difficulty_view animated:YES];
-		[Difficulty_view release];
 		
 		
 	}
-	else if(indexPath.row == 1) {
+	else if(indexPath.row == 2) {
 		
 		SelectTopic *Topic_view  =[[SelectTopic alloc] initWithNibName:nil bundle:nil];
 		Topic_view.UserConfigure = YES;
 		[self.navigationController pushViewController:Topic_view animated:YES];
-		[Topic_view release];
 		
 	}
 	
-	else if(indexPath.row == 2){
+	else if(indexPath.row == 3){
 		
 		SelectQuestionTemplate *QT_view = [[SelectQuestionTemplate alloc] initWithNibName:nil bundle:nil];
 		QT_view.UserConfigure = YES;
 		[self.navigationController pushViewController:QT_view animated:YES];
-		[QT_view release];
 		
 	}
 	
@@ -849,18 +929,6 @@ if ([self.FirstView superview]) {
 }
 
 
-- (void)dealloc {
-    [FirstView release];
-	[FirstTable release];
-	[SecondView release];
-	[SecondTable release];
-	[QuestionPickerView release];
-	[CustomDataSource release];
-	[Sound release];
-	[ShowAnswers release];
-	//[logoView release];
-    [super dealloc];
-}
 
 
 @end

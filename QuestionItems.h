@@ -19,17 +19,17 @@
 {
 }
 
-@property (nonatomic, retain) NSString * Question;
-@property (nonatomic, retain) NSNumber * RequireActivityMarker;
-@property (nonatomic, retain) NSNumber * NegativeMarking;
-@property (nonatomic, retain) NSNumber * AllocatedMark;
-@property (nonatomic, retain) NSNumber * AccessLevel;
-@property (nonatomic, retain) NSString * AttachmentFile;
-@property (nonatomic, retain) NSNumber * Difficulty;
-@property (nonatomic, retain) NSString * VideoLink;
-@property (nonatomic, retain) NSString * AudioLink;
-@property (nonatomic, retain) QuestionHeader * QuestionHeader1;
-@property (nonatomic, retain) NSSet* Answers1;
+@property (nonatomic, strong) NSString * Question;
+@property (nonatomic, strong) NSNumber * RequireActivityMarker;
+@property (nonatomic, strong) NSNumber * NegativeMarking;
+@property (nonatomic, strong) NSNumber * AllocatedMark;
+@property (nonatomic, strong) NSNumber * AccessLevel;
+@property (nonatomic, strong) NSString * AttachmentFile;
+@property (nonatomic, strong) NSNumber * Difficulty;
+@property (nonatomic, strong) NSString * VideoLink;
+@property (nonatomic, strong) NSString * AudioLink;
+@property (nonatomic, strong) QuestionHeader * QuestionHeader1;
+@property (nonatomic, strong) NSSet* Answers1;
 
 @end
 

@@ -37,21 +37,21 @@
 	
 }
 //@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController_QT;
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController_Topics;
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController_Version;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController_QT;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController_Topics;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController_Version;
 
-@property (nonatomic, retain) NSString *FileName;
-@property (nonatomic, retain) UIButton  *Topicbutton;
-@property (nonatomic, retain) UIButton *QuestionTemplatebutton;
-@property (nonatomic, retain) UIButton *Databutton;
-@property (nonatomic, retain) NSArray *QTArray;
-@property (nonatomic, retain) NSArray *TopArray;
-@property (nonatomic, retain) UIButton *VersionButton;
+@property (nonatomic, strong) NSString *FileName;
+@property (nonatomic, strong) UIButton  *Topicbutton;
+@property (nonatomic, strong) UIButton *QuestionTemplatebutton;
+@property (nonatomic, strong) UIButton *Databutton;
+@property (nonatomic, strong) NSArray *QTArray;
+@property (nonatomic, strong) NSArray *TopArray;
+@property (nonatomic, strong) UIButton *VersionButton;
 
-@property (nonatomic, retain) DBVersion *VerNumber;
+@property (nonatomic, strong) DBVersion *VerNumber;
 
 - (NSManagedObjectContext *)ManagedObjectContext;
 -(IBAction)StartUpload:(id)sender;

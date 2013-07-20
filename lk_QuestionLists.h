@@ -24,11 +24,11 @@
 
 }
 
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
-@property (nonatomic, retain) IBOutlet UIView *tableHeaderView;
-@property (nonatomic, retain) IBOutlet UITextField *DescriptionTextField;
+@property (nonatomic, strong) IBOutlet UIView *tableHeaderView;
+@property (nonatomic, strong) IBOutlet UITextField *DescriptionTextField;
 
 
 - (void)configureCell:(lk_QuestionListsCell *)mycell atIndexPath:(NSIndexPath *)indexPath;

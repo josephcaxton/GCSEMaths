@@ -7,6 +7,7 @@
 //
 
 #import "MultipleChoiceSingleAnswer.h"
+#import "TransparentToolBar.h"
 
 
 @implementation MultipleChoiceSingleAnswer
@@ -46,7 +47,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
     self.FileListTable.backgroundColor = [UIColor colorWithPatternImage:BackImage];
     
-    [BackImage release];
 	
 	// Now I have added 1000 pdfs to the bundle. App is now ver slow
 	// I don't need this to go live, it is just for admin only so i comment out CheckExistingFiles
@@ -77,15 +77,56 @@ static UIWebView *QuestionHeaderBox = nil;
 			
 			UIBarButtonItem *NextButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style: UIBarButtonItemStyleBordered target:self action:@selector(Edit:)];
 			self.navigationItem.rightBarButtonItem = NextButton;
-			[NextButton release];
 		}
 		else
 		{
-			// This is QItem_View  : View Mode
+            
+            if(!ShowAnswer){
+            // create a toolbar where we can place some buttons
+            TransparentToolBar* toolbar = [[TransparentToolBar alloc]
+                                           initWithFrame:CGRectMake(250, 0, 200, 45)];
+            
+            
+            
+            // create an array for the buttons
+            NSMutableArray* buttons = [[NSMutableArray alloc] initWithCapacity:3];
+            
+            UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithTitle:@"Report Problem" style: UIBarButtonItemStyleBordered target:self action:@selector(ReportProblem:)];
+                       
+            [buttons addObject:SendSupportMail];
+            
+            
+            // create a spacer between the buttons
+            UIBarButtonItem *spacer = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                       target:nil
+                                       action:nil];
+            [buttons addObject:spacer];
+            
+            
+            
+                
+                
+                UIBarButtonItem *EndTestnow = [[UIBarButtonItem alloc] initWithTitle:@"Stop Test" style: UIBarButtonItemStyleBordered target:self action:@selector(StopTest:)];
+                
+                
+                [buttons addObject:EndTestnow];
+           
+            
+            
+            [toolbar setItems:buttons animated:NO];
+            
+            // place the toolbar into the navigation bar
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+                                                     initWithCustomView:toolbar];
 			
-			UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithTitle:@"Report Problem" style: UIBarButtonItemStyleBordered target:self action:@selector(ReportProblem:)];
-			self.navigationItem.rightBarButtonItem = SendSupportMail;
-			[SendSupportMail release];
+            
+			 }
+            
+            
+			
+			
+
 
 			
 			NSString *result = [NSString stringWithFormat:@"%@",[QItem_View Question]];
@@ -127,7 +168,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	UIBarButtonItem *NextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style: UIBarButtonItemStyleBordered target:self action:@selector(Next:)];
 	
 	self.navigationItem.rightBarButtonItem = NextButton;
-	[NextButton release];
 	 
 	[self loadDocument:[SFileName stringByDeletingPathExtension] inView:QuestionHeaderBox];
 	}
@@ -135,7 +175,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	[self.view addSubview:QuestionHeaderBox];
 	
 	[self.view addSubview:FileListTable];
-	[FileListTable release];
 	
 	
 }
@@ -159,7 +198,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	[self.navigationController pushViewController:M_view1 animated:YES];
 	
-	[M_view1 release];
 	
 	
 }
@@ -176,7 +214,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	[self.navigationController pushViewController:M_view1 animated:YES];
 	
-	[M_view1 release];
 	
 	
 }
@@ -194,7 +231,6 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		[SendMailcontroller setMessageBody:[NSString stringWithFormat:@"Question Number %@ -- \n Additional Messages can be added to this email ", [[NSString stringWithFormat:@"%@",QItem_View.Question] stringByDeletingPathExtension]] isHTML:NO];
 		[self presentModalViewController:SendMailcontroller animated:YES];
-		[SendMailcontroller release];
 		
 	}
 	
@@ -207,7 +243,6 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		[Alert show];
 		
-		[Alert release];
 	}
 	
 	
@@ -320,7 +355,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		QuestionHeaderBox.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 300);
 		self.FileListTable.frame = CGRectMake(0, 160, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
-		Continue.frame = CGRectMake(220, 2, 80, 35);
+		Continue.frame = CGRectMake(165, 0, 138, 38);
 		
 	}
 	
@@ -328,7 +363,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		QuestionHeaderBox.frame = CGRectMake(80, 0, SCREEN_HEIGHT - 122, 160);
 		self.FileListTable.frame = CGRectMake(0, 160, SCREEN_HEIGHT + 30, SCREEN_HEIGHT - 160);
-		Continue.frame = CGRectMake(350, 2, 80, 35);
+		Continue.frame = CGRectMake(165, 0, 138, 38);
 	}
 	
 	
@@ -436,7 +471,7 @@ static UIWebView *QuestionHeaderBox = nil;
     
     WebViewInCell *cell = (WebViewInCell *)[tableView dequeueReusableCellWithIdentifier:nil];
     if (cell == nil) {
-        cell = [[[WebViewInCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier]autorelease];
+        cell = [[WebViewInCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
 		
 	}
     
@@ -491,7 +526,6 @@ static UIWebView *QuestionHeaderBox = nil;
                     
 					[FormatedString appendString:@"</font></p>"];
 					[self configureCell:cell HTMLStr:FormatedString];
-					[FormatedString release];
 					cell.accessoryType = UITableViewCellAccessoryCheckmark;
 					cell.selectionStyle = UITableViewCellSelectionStyleNone;
 				}
@@ -510,11 +544,11 @@ static UIWebView *QuestionHeaderBox = nil;
 					cell.selectionStyle = UITableViewCellSelectionStyleNone;
 					if (self.interfaceOrientation == UIInterfaceOrientationPortrait || self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
 						
-						Continue.frame = CGRectMake(220, 2, 80, 35);
+						Continue.frame = CGRectMake(165, 0, 138, 38);
 					}
 					else {
 						
-						Continue.frame = CGRectMake(350, 2, 80, 35);
+						Continue.frame = CGRectMake(165, 0, 138, 38);
 					}
 					
 				}
@@ -531,7 +565,6 @@ static UIWebView *QuestionHeaderBox = nil;
 				[FormatedString appendString:value];
 				[FormatedString appendString:@"</font></p>"];	
 				[self configureCell:cell HTMLStr:FormatedString];
-				[FormatedString release];
 			}
 			
 			if (ShowAnswer && [[[AnswerObjects objectAtIndex:indexPath.row] valueForKey:@"Correct"]intValue] == 1) {
@@ -659,6 +692,7 @@ static UIWebView *QuestionHeaderBox = nil;
 			BOOL PlaySound = [[NSUserDefaults standardUserDefaults] boolForKey:@"PlaySound"];
 			if (PlaySound == YES) {
 			[appDelegate PlaySound:@"Cough"];
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 				
 			}
 			
@@ -760,14 +794,14 @@ static UIWebView *QuestionHeaderBox = nil;
 					EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
                 
                 UITableViewCell* theCell = [tableView cellForRowAtIndexPath:indexPath];
-                theCell.contentView.backgroundColor=[UIColor blueColor];
+                theCell.contentView.backgroundColor=[UIColor redColor];
 
 					
 				BOOL PlaySound = [[NSUserDefaults standardUserDefaults] boolForKey:@"PlaySound"];
 				if (PlaySound == YES) {
 					
 					[appDelegate PlaySound:@"Cough"];
-					
+					AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 				}
 				// if user want answer to be shown then show answer
 				
@@ -796,14 +830,14 @@ static UIWebView *QuestionHeaderBox = nil;
 				EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
                 
                 UITableViewCell* theCell = [tableView cellForRowAtIndexPath:indexPath];
-                theCell.contentView.backgroundColor=[UIColor blueColor];
+                theCell.contentView.backgroundColor=[UIColor redColor];
 
 				
 				BOOL PlaySound = [[NSUserDefaults standardUserDefaults] boolForKey:@"PlaySound"];
 				if (PlaySound == YES) {
 					
 					[appDelegate PlaySound:@"Cough"];
-					
+					AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 				}
 				// if user want answer to be shown then show answer
 				
@@ -858,8 +892,15 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 }
 
+-(IBAction)StopTest:(id)sender {
+    
+    EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+    appDelegate.FinishTestNow = YES;
+    [self ContinueToNextQuestion:nil];
+}
 
- 
+
+
 
 #pragma mark -
 #pragma mark Memory management
@@ -880,42 +921,6 @@ static UIWebView *QuestionHeaderBox = nil;
 }
 
 
-- (void)dealloc {
-	
-	[QuestionTemplate release];
-	QuestionTemplate = nil;
-	[SelectedTopic release];
-	SelectedTopic = nil;
-	[fileList release];
-	[FileListTable release];
-	[SFileName release];
-	[DirLocation release];
-	//[SFileName_Edit release];
-	//[DirLocation_Edit release];
-	[QItem_Edit release];
-	QItem_Edit = nil;
-	[QItem_View release];
-	QItem_View = nil;
-	
-	
-
-	[AnswerObjects release];
-	[CorrectAnswers release];
-	[MultichoiceAnswers release];
-	
-	[SelectedAnswers release];
-	
-	[AnswerCounter release];
-	
-
-	//[Continue release];
-	[HighlightedAnswers release];
-	
-	    
-	[super dealloc];
-		
-	
-}
 
 
 @end

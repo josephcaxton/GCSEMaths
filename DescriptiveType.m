@@ -8,6 +8,7 @@
 
 #import "DescriptiveType.h"
 #import "DescriptiveType1.h"
+#import "TransparentToolBar.h"
 
 @implementation DescriptiveType
 
@@ -45,7 +46,6 @@ static UIWebView *QuestionHeaderBox = nil;
     NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"back320x450" ofType:@"png"];
 	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
     self.FileListTable.backgroundColor = [UIColor colorWithPatternImage:BackImage];
-    [BackImage release];
 	
 	// Now I have added 1000 pdfs to the bundle. App is now ver slow
 	// I don't need this to go live, it is just for admin only so i comment out CheckExistingFiles
@@ -73,7 +73,6 @@ static UIWebView *QuestionHeaderBox = nil;
 			
 		UIBarButtonItem *NextButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style: UIBarButtonItemStyleBordered target:self action:@selector(Edit:)];
 		self.navigationItem.rightBarButtonItem = NextButton;
-		[NextButton release];
 		
 		}
 		else
@@ -87,9 +86,46 @@ static UIWebView *QuestionHeaderBox = nil;
 			CGRect frame = CGRectMake(5, 5, 290, 140);
 			self.Answer1 =[[UITextView alloc] initWithFrame:frame];
 			
-			UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithTitle:@"Report Problem" style: UIBarButtonItemStyleBordered target:self action:@selector(ReportProblem:)];
-			self.navigationItem.rightBarButtonItem = SendSupportMail;
-			[SendSupportMail release];
+             if(!ShowAnswer){
+            // create a toolbar where we can place some buttons
+            TransparentToolBar* toolbar = [[TransparentToolBar alloc]
+                                           initWithFrame:CGRectMake(250, 0, 200, 45)];
+            
+            
+            
+            // create an array for the buttons
+            NSMutableArray* buttons = [[NSMutableArray alloc] initWithCapacity:3];
+            
+            UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithTitle:@"Report Problem" style: UIBarButtonItemStyleBordered target:self action:@selector(ReportProblem:)];
+            
+            [buttons addObject:SendSupportMail];
+            
+            
+            // create a spacer between the buttons
+            UIBarButtonItem *spacer = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                       target:nil
+                                       action:nil];
+            [buttons addObject:spacer];
+            
+            
+           
+                
+                
+                UIBarButtonItem *EndTestnow = [[UIBarButtonItem alloc] initWithTitle:@"Stop Test" style: UIBarButtonItemStyleBordered target:self action:@selector(StopTest:)];
+                
+                
+                [buttons addObject:EndTestnow];
+           
+            
+            
+            [toolbar setItems:buttons animated:NO];
+            
+            // place the toolbar into the navigation bar
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+                                                      initWithCustomView:toolbar];
+			 }
+
 			
 			
 		}
@@ -105,7 +141,6 @@ static UIWebView *QuestionHeaderBox = nil;
 		UIBarButtonItem *NextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style: UIBarButtonItemStyleBordered target:self action:@selector(Next:)];
 		
 		self.navigationItem.rightBarButtonItem = NextButton;
-		[NextButton release];
 		
 		[self loadDocument:[SFileName stringByDeletingPathExtension] inView:QuestionHeaderBox];
 	}
@@ -113,7 +148,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	[self.view addSubview:QuestionHeaderBox];
 	
 	[self.view addSubview:FileListTable];
-	[FileListTable release];
 	
 }
 
@@ -136,7 +170,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	[formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
 	[formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
 	NSString *now = [formatter stringFromDate:[NSDate date]];
-    [formatter release];
 	NSString *TextStart = @"\n\t<Result Date = ";
 	NSString *Date = [NSString stringWithFormat:@"\"%@\"" ,now];
 	NSString *DateEnd =@">";
@@ -184,7 +217,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	[self.navigationController pushViewController:D_view1 animated:YES];
 	
-	[D_view1 release];
 	
 	
 }
@@ -199,7 +231,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	[self.navigationController pushViewController:D_view1 animated:YES];
 	
-	[D_view1 release];
 	
 	
 }
@@ -262,8 +293,6 @@ static UIWebView *QuestionHeaderBox = nil;
 		[WebControl setBackgroundColor:[UIColor clearColor]];
 		[WebControl loadHTMLString:FormatedString baseURL:nil];
 		[Answer1 addSubview:WebControl];
-		[FormatedString release];
-		[WebControl release];
 		
 	//[ExistingText release];
 	[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
@@ -325,7 +354,6 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		[SendMailcontroller setMessageBody:[NSString stringWithFormat:@"Question Number %@ -- \n Additional Messages can be added to this email ", [[NSString stringWithFormat:@"%@",QItem_View.Question] stringByDeletingPathExtension]] isHTML:NO];
 		[self presentModalViewController:SendMailcontroller animated:YES];
-		[SendMailcontroller release];
 		
 	}
 	
@@ -338,7 +366,6 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		[Alert show];
 		
-		[Alert release];
 	}
 	
 	
@@ -380,8 +407,8 @@ static UIWebView *QuestionHeaderBox = nil;
 		QuestionHeaderBox.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 300);
 		self.FileListTable.frame = CGRectMake(0, 160, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
 		//newLine.frame = CGRectMake(340, 0, 80, 30);
-		ShowAnswerHere.frame = CGRectMake(70,2,146,35);
-		Continue.frame = CGRectMake(220,2,80,35);
+		ShowAnswerHere.frame = CGRectMake(15,0,138,38);
+		Continue.frame = CGRectMake(165,0,138,38);
 		
 	}
 	
@@ -390,8 +417,8 @@ static UIWebView *QuestionHeaderBox = nil;
 		QuestionHeaderBox.frame = CGRectMake(80, 0, SCREEN_HEIGHT - 122, 160);
 		self.FileListTable.frame = CGRectMake(0, 160, SCREEN_HEIGHT + 30, SCREEN_HEIGHT - 160);
 		//newLine.frame = CGRectMake(340, 0, 80, 30);
-		ShowAnswerHere.frame = CGRectMake(70,2,146,35);
-		Continue.frame = CGRectMake(220,2,80,35);
+		ShowAnswerHere.frame = CGRectMake(15,0,138,38);
+		Continue.frame = CGRectMake(165,0,138,38);
 	}
 	
 	
@@ -450,7 +477,7 @@ static UIWebView *QuestionHeaderBox = nil;
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
 	tableView.allowsSelection = NO;
     
@@ -467,7 +494,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		 
 		 if (indexPath.row == 0) {
 			 
-             Instruction = [[[UILabel alloc] initWithFrame:CGRectMake(10, 13, 600, 40)] autorelease];
+             Instruction = [[UILabel alloc] initWithFrame:CGRectMake(10, 13, 600, 40)];
              Instruction.font = [UIFont boldSystemFontOfSize: 12.0];
              Instruction.textColor = [UIColor purpleColor];
              Instruction.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleHeight;
@@ -512,13 +539,13 @@ static UIWebView *QuestionHeaderBox = nil;
 			 if (self.interfaceOrientation == UIInterfaceOrientationPortrait || self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown ){
 				 
 				 //newLine.frame = CGRectMake(340, 0, 80, 30); // no space so this is not showing
-				 ShowAnswerHere.frame = CGRectMake(70,2,146,35);
-				 Continue.frame = CGRectMake(220,2,80,35);
+				 ShowAnswerHere.frame = CGRectMake(15,0,138,38);
+				 Continue.frame = CGRectMake(165,0,138,38);
 			 }
 			 else {
 				 //newLine.frame = CGRectMake(340, 0, 80, 30);
-				 ShowAnswerHere.frame = CGRectMake(70,2,1460,35);
-				 Continue.frame = CGRectMake(220,2,80,35);
+				 ShowAnswerHere.frame = CGRectMake(15,0,138,38);
+				 Continue.frame = CGRectMake(165,0,138,38);
 			 }
 			 
 			 
@@ -649,6 +676,12 @@ static UIWebView *QuestionHeaderBox = nil;
 	return 50;
 }
 
+-(IBAction)StopTest:(id)sender {
+    
+    EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+    appDelegate.FinishTestNow = YES;
+    [self NextQuestion:nil];
+}
 
 
 
@@ -671,31 +704,6 @@ static UIWebView *QuestionHeaderBox = nil;
 }
 
 
-- (void)dealloc {
-	
-	[QuestionTemplate release];
-    QuestionTemplate = nil;
-	[SelectedTopic release];
-    SelectedTopic = nil;
-	//[QuestionHeaderBox release];
-	
-	[fileList release];
-	[FileListTable release];
-	[SFileName release];
-	[DirLocation release];
-	//[SFileName_Edit release];
-	//[DirLocation_Edit release];
-	[QItem_Edit release];
-	[QItem_View release];
-	[AnswerObjects release];
-	[Answer1 release];
-	[ShowCorrectAnswer release];
-	//[newLine release];
-	//[ShowAnswerHere release];
-	//[Continue release];
-	[WebControl release];
-    [super dealloc];
-}
 
 
 @end

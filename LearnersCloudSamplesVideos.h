@@ -17,9 +17,9 @@
 	
 }
 
-@property (nonatomic, retain) NSMutableArray *listofItems;
-@property (nonatomic, retain) NSMutableArray *ImageNames;
-@property (nonatomic, retain) UIButton *LCButton;
+@property (nonatomic, strong) NSMutableArray *listofItems;
+@property (nonatomic, strong) NSMutableArray *ImageNames;
+@property (nonatomic, strong) UIButton *LCButton;
 
 - (void)WebsitebuttonPressed;
 

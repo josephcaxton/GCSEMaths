@@ -16,7 +16,7 @@
 	
 }
 
-@property (nonatomic, retain) NSMutableArray *customPickerArray;
+@property (nonatomic, strong) NSMutableArray *customPickerArray;
 
 
 @end

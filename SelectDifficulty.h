@@ -15,7 +15,7 @@
 	BOOL UserConfigure;
 	
 }
-@property (nonatomic, retain) QuestionItems	*QItem_ForEdit;
+@property (nonatomic, strong) QuestionItems	*QItem_ForEdit;
 @property (nonatomic) BOOL UserConfigure;
 
 -(IBAction)Back:(id)sender;

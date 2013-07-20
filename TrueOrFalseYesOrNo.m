@@ -13,6 +13,7 @@
 #import "QuestionItems.h"
 #import "Answers.h"
 #import "TrueOrFalseYesOrNo1.h"
+#import "TransparentToolBar.h"
 
 static NSString *kViewKey = @"viewKey";
 
@@ -48,7 +49,6 @@ static UIWebView *QuestionHeaderBox = nil;
     NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"back320x450" ofType:@"png"];
 	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
     self.FileListTable.backgroundColor = [UIColor colorWithPatternImage:BackImage];
-    [BackImage release];
 	
 	// Now I have added 1000 pdfs to the bundle. App is now ver slow
 	// I don't need this to go live, it is just for admin only so i comment out CheckExistingFiles
@@ -75,7 +75,6 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		UIBarButtonItem *NextButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style: UIBarButtonItemStyleBordered target:self action:@selector(Edit:)];
 		self.navigationItem.rightBarButtonItem = NextButton;
-		[NextButton release];
 		
 		}
 		else
@@ -100,9 +99,46 @@ static UIWebView *QuestionHeaderBox = nil;
 			
 			AnswerObjects=  [[NSMutableArray alloc] initWithArray:[[QItem_View Answers1] allObjects]];
 			
-			UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithTitle:@"Report Problem" style: UIBarButtonItemStyleBordered target:self action:@selector(ReportProblem:)];
-			self.navigationItem.rightBarButtonItem = SendSupportMail;
-			[SendSupportMail release];
+            if(!ShowAnswer){
+            // create a toolbar where we can place some buttons
+            TransparentToolBar* toolbar = [[TransparentToolBar alloc]
+                                           initWithFrame:CGRectMake(250, 0, 200, 45)];
+            
+            
+            
+            // create an array for the buttons
+            NSMutableArray* buttons = [[NSMutableArray alloc] initWithCapacity:3];
+            
+            UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithTitle:@"Report Problem" style: UIBarButtonItemStyleBordered target:self action:@selector(ReportProblem:)];
+            
+            [buttons addObject:SendSupportMail];
+            
+            
+            // create a spacer between the buttons
+            UIBarButtonItem *spacer = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                       target:nil
+                                       action:nil];
+            [buttons addObject:spacer];
+            
+            
+            
+                
+                
+                UIBarButtonItem *EndTestnow = [[UIBarButtonItem alloc] initWithTitle:@"Stop Test" style: UIBarButtonItemStyleBordered target:self action:@selector(StopTest:)];
+                
+                
+                [buttons addObject:EndTestnow];
+           
+            
+            
+            [toolbar setItems:buttons animated:NO];
+            
+            // place the toolbar into the navigation bar
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+                                                      initWithCustomView:toolbar];
+			
+                 }
 		}
 		
 		
@@ -115,15 +151,12 @@ static UIWebView *QuestionHeaderBox = nil;
 		UIBarButtonItem *NextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style: UIBarButtonItemStyleBordered target:self action:@selector(Next:)];
 		
 		self.navigationItem.rightBarButtonItem = NextButton;
-		[NextButton release];
 		
 		[self loadDocument:[SFileName stringByDeletingPathExtension] inView:QuestionHeaderBox];
 	}
 	
 	[self.view addSubview:QuestionHeaderBox];
-	[QuestionHeaderBox release];
 	[self.view addSubview:FileListTable];
-	[FileListTable release];
 	
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -143,7 +176,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	[self.navigationController pushViewController:T_view1 animated:YES];
 	
-	[T_view1 release];
 	
 	
 }
@@ -158,7 +190,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	[self.navigationController pushViewController:T_view1 animated:YES];
 	
-	[T_view1 release];
 	
 	
 }
@@ -190,7 +221,6 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		[SendMailcontroller setMessageBody:[NSString stringWithFormat:@"Question Number %@ -- \n Additional Messages can be added to this email ", [[NSString stringWithFormat:@"%@",QItem_View.Question] stringByDeletingPathExtension]] isHTML:NO];
 		[self presentModalViewController:SendMailcontroller animated:YES];
-		[SendMailcontroller release];
 		
 	}
 	
@@ -203,7 +233,6 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		[Alert show];
 		
-		[Alert release];
 	}
 	
 	
@@ -244,7 +273,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		QuestionHeaderBox.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 300);
 		self.FileListTable.frame = CGRectMake(0, 160, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
-		Continue.frame = CGRectMake(230, 2, 80, 35);
+		Continue.frame = CGRectMake(165, 0, 138, 38);
 		
 	}
 	
@@ -252,7 +281,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		QuestionHeaderBox.frame = CGRectMake(80, 0, SCREEN_HEIGHT - 122, 160);
 		self.FileListTable.frame = CGRectMake(0, 160, SCREEN_HEIGHT + 30, SCREEN_HEIGHT - 160);
-		Continue.frame = CGRectMake(350, 2, 80, 35);
+		Continue.frame = CGRectMake(165, 0, 138, 38);
 	}
 	
 	
@@ -339,8 +368,15 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 	}
 	else if (QItem_View && ShowAnswer){
+             NSMutableString *Reason = [NSMutableString stringWithFormat:@"%@",[[AnswerObjects objectAtIndex:0] valueForKey:@"Reason"]];
+             if([Reason isEqualToString:@"(null)"] || !Reason) {
+                 
+                 count = [AnswerControls count] + 1; // If there is no reason then don't show row for reason
+             }
+             else {
 		
-		count = [AnswerControls count] + 2;// adding rows here for Continue button and reason
+                 count = [AnswerControls count] + 2;// adding rows here for Continue button and reason
+             }
 	}
 	
 	else {
@@ -360,7 +396,7 @@ static UIWebView *QuestionHeaderBox = nil;
     
     WebViewInCell *cell = (WebViewInCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[WebViewInCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[WebViewInCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
 	if (QItem_Edit != nil) {
@@ -472,18 +508,17 @@ static UIWebView *QuestionHeaderBox = nil;
                 [FormatedString appendString:Reason]; 
                 [FormatedString appendString:@"</font></p>"];
                 [self configureCell:cell HTMLStr:FormatedString];
-                [FormatedString release];
                 
             }
 
 			
 			if (self.interfaceOrientation == UIInterfaceOrientationPortrait || self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
 				
-				Continue.frame = CGRectMake(220, 2, 80, 35);
+				Continue.frame = CGRectMake(165, 0, 138, 38);
 			}
 			else {
 				
-				Continue.frame = CGRectMake(350, 2, 80, 35);
+				Continue.frame = CGRectMake(165, 0, 138, 38);
 			}
 			
 			
@@ -639,7 +674,7 @@ static UIWebView *QuestionHeaderBox = nil;
 			if (PlaySound == YES) {
 				
 			[appDelegate PlaySound:@"Cough"];
-			
+			 AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 			}
 			
 			// if user want answer to be shown then show answer
@@ -667,6 +702,12 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 }
 
+-(IBAction)StopTest:(id)sender {
+    
+    EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+    appDelegate.FinishTestNow = YES;
+    [self ContinueToNextQuestion:nil];
+}
 
 #pragma mark -
 #pragma mark Memory management
@@ -686,27 +727,6 @@ static UIWebView *QuestionHeaderBox = nil;
 }
 
 
-- (void)dealloc {
-	[QuestionTemplate release];
-	[SelectedTopic release];
-	//[QuestionHeaderBox release];
-	
-	[fileList release];
-	[FileListTable release];
-	[SFileName release];
-	[DirLocation release];
-	//[SFileName_Edit release];
-	
-	[QItem_Edit release];
-	
-	[QItem_View release];
-	[AnswerObjects release];
-	[AnswerControls release];
-	[True release];
-	[False release];
-	//[Continue release];
-    [super dealloc];
-}
 
 
 @end

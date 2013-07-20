@@ -24,7 +24,6 @@
     NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"back320x450" ofType:@"png"];
 	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:BackImage];
-    [BackImage release];
 	
 	PopBox = [FullDataArray mutableCopy];
 	NumberCounter = [[NSMutableArray alloc]init];
@@ -99,7 +98,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     
     QuestionItems *QI = (QuestionItems *)[PopBox objectAtIndex:indexPath.row];
@@ -108,8 +107,10 @@
 	//NSArray *FileName = [FullFileName componentsSeparatedByString:@"."];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	//cell.textLabel.text = [NSString stringWithFormat:@"Answer   %@",[FileName objectAtIndex:0]];
-	cell.textLabel.text = [NSString stringWithFormat:@"Question %i Answer",[[NumberCounter objectAtIndex:indexPath.row]intValue]]; // Just numbering here
-	cell.detailTextLabel.text = [NSString stringWithFormat:@"Mark(s): %@", QI.AllocatedMark];
+	cell.textLabel.text = [NSString stringWithFormat:@"Question %i ",[[NumberCounter objectAtIndex:indexPath.row]intValue]]; // Just numbering here
+	//cell.detailTextLabel.text = [NSString stringWithFormat:@"Mark(s): %@", QI.AllocatedMark];
+    NSString *TopicName = [QI.QuestionHeader1.QuestionHeader_Topic valueForKey:@"TopicName"];
+    cell.detailTextLabel.text = TopicName;
     
     return cell;
 }
@@ -173,10 +174,9 @@
 		
 		// Remove this Object from the PopBox
 		
-		[PopBox removeObjectAtIndex:indexPath.row];
-		[NumberCounter removeObjectAtIndex:indexPath.row];
+		//[PopBox removeObjectAtIndex:indexPath.row];
+		//[NumberCounter removeObjectAtIndex:indexPath.row];
 		[self.navigationController pushViewController:M_view animated:YES];
-		[M_view release];
 	}
 	else if([TemplateType isEqualToString:@"Multiple Choice Multiple Answer"]){
 		
@@ -187,10 +187,9 @@
 		M_view.ShowAnswer = YES;
 		// Remove this Object from the PopBox
 		
-		[PopBox removeObjectAtIndex:indexPath.row];
-		[NumberCounter removeObjectAtIndex:indexPath.row];
+		//[PopBox removeObjectAtIndex:indexPath.row];
+		//[NumberCounter removeObjectAtIndex:indexPath.row];
 		[self.navigationController pushViewController:M_view animated:YES];
-		[M_view release];
 		
 	}
 	else if([TemplateType isEqualToString:@"Descriptive Type"]){
@@ -202,10 +201,9 @@
 		D_view.QItem_View = SelectedItem;
 		D_view.ShowAnswer = YES;
 		
-		[PopBox removeObjectAtIndex:indexPath.row];
-		[NumberCounter removeObjectAtIndex:indexPath.row];
+		//[PopBox removeObjectAtIndex:indexPath.row];
+		//[NumberCounter removeObjectAtIndex:indexPath.row];
 		[self.navigationController pushViewController:D_view animated:YES];
-		[D_view release];
 		
 		
 	}
@@ -220,10 +218,9 @@
         T_view.RemoveContinueButton = YES;
 		// Remove this Object from the PopBox
 		
-		[PopBox removeObjectAtIndex:indexPath.row];
-		[NumberCounter removeObjectAtIndex:indexPath.row];
+		//[PopBox removeObjectAtIndex:indexPath.row];
+		//[NumberCounter removeObjectAtIndex:indexPath.row];
 		[self.navigationController pushViewController:T_view animated:YES];
-		[T_view release];
 		
 		
 	}
@@ -238,10 +235,9 @@
         T_view.RemoveContinueButton = YES;
 		// Remove this Object from the PopBox
 		
-		[PopBox removeObjectAtIndex:indexPath.row];
-		[NumberCounter removeObjectAtIndex:indexPath.row];
+		//[PopBox removeObjectAtIndex:indexPath.row];
+		//[NumberCounter removeObjectAtIndex:indexPath.row];
 		[self.navigationController pushViewController:T_view animated:YES];
-		[T_view release];
 		
 	}
 	else if ([TemplateType isEqualToString:@"Fill the Blanks"]){
@@ -257,10 +253,9 @@
         F_view.FromClientAnswer = YES;
 		// Remove this Object from the PopBox
 		
-		[PopBox removeObjectAtIndex:indexPath.row];
-		[NumberCounter removeObjectAtIndex:indexPath.row];
+		//[PopBox removeObjectAtIndex:indexPath.row];
+		//[NumberCounter removeObjectAtIndex:indexPath.row];
 		[self.navigationController pushViewController:F_view animated:YES];
-		[F_view release];
 		
 		
 	}
@@ -287,12 +282,6 @@
 }
 
 
-- (void)dealloc {
-	[FullDataArray release];
-	[PopBox release];
-	[NumberCounter release];
-    [super dealloc];
-}
 
 
 @end

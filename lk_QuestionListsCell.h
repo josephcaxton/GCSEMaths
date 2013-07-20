@@ -18,10 +18,10 @@
 	
 }
 
-@property (nonatomic, retain) lk_QuestionTemplate *QuestionTemplate;
+@property (nonatomic, strong) lk_QuestionTemplate *QuestionTemplate;
 
-@property (nonatomic, retain) UILabel *lblDescription;
-@property (nonatomic, retain) UILabel *lblLoggedDate;
+@property (nonatomic, strong) UILabel *lblDescription;
+@property (nonatomic, strong) UILabel *lblLoggedDate;
 
 
 @end

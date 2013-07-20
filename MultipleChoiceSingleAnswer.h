@@ -59,36 +59,36 @@
 
 }
 
-@property (nonatomic, retain) lk_QuestionTemplate *QuestionTemplate;
-@property (nonatomic, retain) Topics  *SelectedTopic;
+@property (nonatomic, strong) lk_QuestionTemplate *QuestionTemplate;
+@property (nonatomic, strong) Topics  *SelectedTopic;
 
 //@property (nonatomic, retain) UIWebView *QuestionHeaderBox;
 
 //@property (nonatomic, retain) UILabel *AuthorizeText;
-@property (nonatomic, retain) NSArray *fileList;
-@property (nonatomic, retain)  UITableView *FileListTable;
+@property (nonatomic, strong) NSArray *fileList;
+@property (nonatomic, strong)  UITableView *FileListTable;
 
 
-@property (nonatomic, retain) NSString *DirLocation;
-@property (nonatomic, retain) NSString *SFileName;
+@property (nonatomic, strong) NSString *DirLocation;
+@property (nonatomic, strong) NSString *SFileName;
 
 
 //@property (nonatomic, retain) NSString *DirLocation_Edit;
-@property (nonatomic, retain) NSString *SFileName_Edit;
-@property (nonatomic, retain) QuestionItems	*QItem_Edit;
-@property (nonatomic, retain) QuestionItems	*QItem_View;
+@property (nonatomic, strong) NSString *SFileName_Edit;
+@property (nonatomic, strong) QuestionItems	*QItem_Edit;
+@property (nonatomic, strong) QuestionItems	*QItem_View;
 
 
 
 
-@property (nonatomic, retain) NSMutableArray *AnswerObjects;
-@property (nonatomic, retain) NSMutableArray *CorrectAnswers;
-@property (nonatomic, retain) NSMutableArray *MultichoiceAnswers;
-@property (nonatomic, retain) NSMutableArray *SelectedAnswers;
-@property (nonatomic, retain) NSMutableArray *AnswerCounter;
+@property (nonatomic, strong) NSMutableArray *AnswerObjects;
+@property (nonatomic, strong) NSMutableArray *CorrectAnswers;
+@property (nonatomic, strong) NSMutableArray *MultichoiceAnswers;
+@property (nonatomic, strong) NSMutableArray *SelectedAnswers;
+@property (nonatomic, strong) NSMutableArray *AnswerCounter;
 @property (nonatomic, assign) BOOL ShowAnswer;
 @property (nonatomic, retain) UIButton *Continue;
-@property (nonatomic, retain) NSMutableArray *HighlightedAnswers;
+@property (nonatomic, strong) NSMutableArray *HighlightedAnswers;
 
 
 //@property (nonatomic, retain) IBOutlet UIWebView *QuestionItemBox;
@@ -100,7 +100,7 @@
 -(IBAction)ContinueToNextQuestion:(id)sender;
 - (void)AdjustScreenToSee:(int)value;
 - (void)configureCell:(WebViewInCell *)mycell HTMLStr:(NSString *)value;
-
+-(IBAction)StopTest:(id)sender;
 
 @end
 

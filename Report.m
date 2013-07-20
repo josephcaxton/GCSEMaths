@@ -30,13 +30,11 @@
     NSString *HeaderLocation = [[NSBundle mainBundle] pathForResource:@"header_bar" ofType:@"png"];
     UIImage *HeaderBackImage = [[UIImage alloc] initWithContentsOfFile:HeaderLocation];
     [self.navigationController.navigationBar setBackgroundImage:HeaderBackImage forBarMetrics:UIBarMetricsDefault];
-    [HeaderBackImage release];
 
 	//[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     UIBarButtonItem *ClearLogs = [[UIBarButtonItem alloc] initWithTitle:@"Clear logs" style:UIBarButtonItemStylePlain target:self action:@selector(ClearAllLogs:)];
     self.navigationItem.rightBarButtonItem = ClearLogs;
-    [ClearLogs release];
     
     		
 }
@@ -70,7 +68,6 @@
 	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
     self.ThisTable.backgroundColor = [UIColor colorWithPatternImage:BackImage];
     
-    [BackImage release];
 
 	
 	[self.view addSubview:ThisTable];
@@ -128,7 +125,6 @@
 			
 			//Check for the maximum Correct + Wrong to determine the max for the y axis.
 			int MaxValue = [[Totals valueForKeyPath:@"@max.intValue"]intValue];
-			[Totals release];
 			
 			
 			
@@ -148,7 +144,6 @@
 			NSString *PlusScaling = [PlusWrong stringByAppendingString:[NSString stringWithFormat:@"&chds=0,%i",MaxValue]];
 			
 			FinalString = PlusScaling;
-			[FinalString retain];
 			
 			
 		}
@@ -160,8 +155,6 @@
 														   message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 			
 			[alert show];
-			[message release];
-			[alert release];
 			[self.ThisTable reloadData];
 		}
 		
@@ -174,8 +167,6 @@
 													   message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 		
 		[alert show];
-		[message release];
-		[alert release];
 	}
 	
 	
@@ -207,7 +198,6 @@
 	//NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
 	//[WebBox loadRequest:request];
 	
-	[url release];
 	//[request release];
 	return image;
 	
@@ -245,7 +235,7 @@
 	NSString *ResultsXML = [[NSBundle mainBundle] pathForResource:@"Results" ofType:@"xml"];
 	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
-	NSError *error=[[[NSError alloc]init] autorelease]; 
+	NSError *error=[[NSError alloc]init]; 
 	
 	BOOL success=[fileManager fileExistsAtPath:ResultsXMLDestination];
 	
@@ -312,7 +302,6 @@
 	[parser setDelegate:self];
 	
 	[parser parse];
-	[parser release];
 	
 	
 	
@@ -339,7 +328,7 @@
 		NSString* Wrong = [NSString stringWithFormat:@"%i",[Total intValue] - [Correct intValue]];
 		
 		
-		NSArray *A = [[[NSArray alloc] initWithObjects:Correct,Wrong,nil]autorelease];
+		NSArray *A = [[NSArray alloc] initWithObjects:Correct,Wrong,nil];
 		[CollectionofArrays addObject:A];
 		 
 		//[A release];
@@ -443,7 +432,7 @@
 	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     
 	tableView.allowsSelection = NO;
@@ -452,7 +441,6 @@
 		if ([CollectionofArrays count] > 0){
 			
 			imageView = [[UIImageView alloc] initWithImage:[self loadLink:FinalString]];
-			[FinalString release];
 			
 			
 		}
@@ -462,7 +450,6 @@
 			UIImage *image =  [[UIImage alloc]initWithContentsOfFile:FilePath];
 			imageView = [[UIImageView alloc] initWithImage:image];
 			
-			[image release];
 			
 		}
 
@@ -506,18 +493,6 @@
 }
 
 
-- (void)dealloc {
-	
-	//WebBox = nil;
-	//[WebBox release];
-	[imageView release];
-	[CollectionofArrays release];
-	[ThisTable release];
-	[FinalString release];
-	[super dealloc];
-	
-    
-}
 
 
 @end

@@ -30,13 +30,11 @@
     NSString *HeaderLocation = [[NSBundle mainBundle] pathForResource:@"header_bar" ofType:@"png"];
     UIImage *HeaderBackImage = [[UIImage alloc] initWithContentsOfFile:HeaderLocation];
     [self.navigationController.navigationBar setBackgroundImage:HeaderBackImage forBarMetrics:UIBarMetricsDefault];
-    [HeaderBackImage release];
     
     self.tableView.backgroundView = nil;
     NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"back320x450" ofType:@"png"];
 	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:BackImage];
-    [BackImage release];
 
 	
         
@@ -150,7 +148,7 @@
 	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     
     if (indexPath.section == 0) {
@@ -164,15 +162,12 @@
         UILabel *Title = [[UILabel alloc] initWithFrame:CGRectMake(80.0,0.0,240,50)];
         Title.text = cellValue;
         [cell.contentView addSubview:Title];
-        [Title release];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;  		
 	
 	UIImage* theImage = [UIImage imageNamed:PicLocation];
 	cell.imageView.image = theImage;
 
-		[PicLocation release];	
-		[cellValue release];
 		
 	}
 	
@@ -188,9 +183,6 @@
         [cell addSubview:PromoView];
         
          
-         [PromoView release];
-         [PromoImage release];
-         [PromoImageView release];
          
         cell.accessoryType = UITableViewCellAccessoryNone;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -233,57 +225,54 @@
 	switch (index) {
 			
 		case 0:
-			;
+        {
 			VideoPlayer *VP1 = [[VideoPlayer alloc] initWithNibName:nil bundle:nil];
 			VP1.VideoFileName =@"Maths";
 			VP1.hidesBottomBarWhenPushed = YES;
 			[self.navigationController pushViewController:VP1 animated:NO];
-			[VP1 release];
+        }
 			break;
 			
 		case 1:
-			;
+        {
 			VideoPlayer *VP2 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
 			VP2.VideoFileName =@"English";
 			VP2.hidesBottomBarWhenPushed = YES;
 			[self.navigationController pushViewController:VP2 animated:YES];
-			[VP2 release];
+        }
 			break;
 			
 		case 2:
-			;
+        {
 			
 			VideoPlayer *VP3 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
 			VP3.VideoFileName =@"Physics";
 			VP3.hidesBottomBarWhenPushed = YES;
 			[self.navigationController pushViewController:VP3 animated:YES];
-			[VP3 release];
-			
+        }
 			
 			
 			break; 
 			
 		case 3:
-			;
+        {
 			VideoPlayer *VP4 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
 			VP4.VideoFileName =@"Chemistry";
 			VP4.hidesBottomBarWhenPushed = YES;
 			[self.navigationController pushViewController:VP4 animated:YES];
-			[VP4 release];
 			
-			
+        }
 			
 			break;
             
         case 4:
-			;
+        {
 			VideoPlayer *VP5 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
 			VP5.VideoFileName =@"Biology";
 			VP5.hidesBottomBarWhenPushed = YES;
 			[self.navigationController pushViewController:VP5 animated:YES];
-			[VP5 release];
 			
-			
+        }
 			
 			break;
 			
@@ -345,11 +334,6 @@
 }
 
 
-- (void)dealloc {
-	[listofItems release];
-	[ImageNames release];
-    [super dealloc];
-}
 
 
 @end

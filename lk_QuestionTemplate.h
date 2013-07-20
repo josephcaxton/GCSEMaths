@@ -13,9 +13,9 @@
 {
 }
 
-@property (nonatomic, retain) NSDate * LoggedDate;
-@property (nonatomic, retain) NSString * Description;
-@property (nonatomic, retain) NSSet* QuestionHeaders;
+@property (nonatomic, strong) NSDate * LoggedDate;
+@property (nonatomic, strong) NSString * Description;
+@property (nonatomic, strong) NSSet* QuestionHeaders;
 
 @end
 

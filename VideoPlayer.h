@@ -21,11 +21,11 @@
 
 	
 }
-@property (nonatomic, retain) NSString *VideoFileName;
-@property (nonatomic, retain) NSString *ServerLocation;
-@property (nonatomic, retain) NSURLCredential *credential;
-@property (nonatomic, retain) NSURLProtectionSpace *protectionSpace;
-@property (nonatomic, retain) MPMoviePlayerViewController *moviePlayerViewController;
+@property (nonatomic, strong) NSString *VideoFileName;
+@property (nonatomic, strong) NSString *ServerLocation;
+@property (nonatomic, strong) NSURLCredential *credential;
+@property (nonatomic, strong) NSURLProtectionSpace *protectionSpace;
+@property (nonatomic, strong) MPMoviePlayerViewController *moviePlayerViewController;
 
 
 @end

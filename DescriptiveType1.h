@@ -53,18 +53,18 @@
 	
 }
 
-@property (nonatomic, retain) lk_QuestionTemplate *QuestionTemplate;
-@property (nonatomic, retain) Topics  *SelectedTopic;
-@property (nonatomic, retain) QuestionItems	*QItem_ForEdit;
+@property (nonatomic, strong) lk_QuestionTemplate *QuestionTemplate;
+@property (nonatomic, strong) Topics  *SelectedTopic;
+@property (nonatomic, strong) QuestionItems	*QItem_ForEdit;
 
-@property (nonatomic, retain) NSString *SFileNameValue;
-@property (nonatomic, retain)  UITableView *DisplayTable;
-@property (nonatomic, retain) NSIndexPath *DisplayedIndexPath;
-@property (nonatomic, retain) UISwitch *RequireActivityMarker;
-@property (nonatomic, retain) UISwitch *Authorize;
+@property (nonatomic, strong) NSString *SFileNameValue;
+@property (nonatomic, strong)  UITableView *DisplayTable;
+@property (nonatomic, strong) NSIndexPath *DisplayedIndexPath;
+@property (nonatomic, strong) UISwitch *RequireActivityMarker;
+@property (nonatomic, strong) UISwitch *Authorize;
 
 
-@property (nonatomic, retain) UITextView *Answer1;
+@property (nonatomic, strong) UITextView *Answer1;
 /*@property (nonatomic, retain) UITextField	*Answer2;
 @property (nonatomic, retain) UITextField	*Answer3;
 @property (nonatomic, retain) UITextField	*Answer4;
@@ -77,10 +77,10 @@
 @property (nonatomic) BOOL Answer5tick;
 
 @property (nonatomic, retain) NSArray *AnswerControls; */
-@property (nonatomic, retain) NSMutableArray *AnswerObjects; 
+@property (nonatomic, strong) NSMutableArray *AnswerObjects; 
 
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 
 - (NSManagedObjectContext *)ManagedObjectContext;

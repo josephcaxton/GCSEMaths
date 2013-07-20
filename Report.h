@@ -22,11 +22,11 @@
 }
 
 //@property (nonatomic, retain) UIWebView *WebBox;
-@property (nonatomic, retain) NSMutableArray *CollectionofArrays;
-@property (nonatomic, retain) UIImageView *imageView;
-@property (nonatomic, retain) NSString *FinalString;
-@property (nonatomic, retain) UITableView *ThisTable;
-@property (nonatomic, retain) UIButton *Refresh;
+@property (nonatomic, strong) NSMutableArray *CollectionofArrays;
+@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) NSString *FinalString;
+@property (nonatomic, strong) UITableView *ThisTable;
+@property (nonatomic, strong) UIButton *Refresh;
 
 -(UIImage*)loadLink:(NSString*)linkAddress;
 -(void)loadDataFromXML:(NSString *)FileLocation;

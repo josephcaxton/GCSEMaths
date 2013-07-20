@@ -18,9 +18,9 @@
 	NSManagedObjectContext *managedObjectContext;
 	
 }
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain) NSArray *ListofPdfsNotInDataBase;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSArray *ListofPdfsNotInDataBase;
 
 -(id)init;
 - (NSManagedObjectContext *)ManagedObjectContext;

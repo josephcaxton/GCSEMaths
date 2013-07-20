@@ -48,7 +48,6 @@ static NSString *kViewKey = @"viewKey";
 		
 		UIBarButtonItem *UpdateButton = [[UIBarButtonItem alloc] initWithTitle:@"Update" style: UIBarButtonItemStyleBordered target:self action:@selector(Update:)];
 		self.navigationItem.rightBarButtonItem = UpdateButton;
-		[UpdateButton release];
 		
 		
 		AnswerObjects=  [[NSMutableArray alloc] initWithArray:[[QItem_ForEdit Answers1] allObjects]];
@@ -78,7 +77,6 @@ static NSString *kViewKey = @"viewKey";
 	
 	UIBarButtonItem *CommitButton = [[UIBarButtonItem alloc] initWithTitle:@"Commit" style: UIBarButtonItemStyleBordered target:self action:@selector(Commit:)];
 	self.navigationItem.rightBarButtonItem = CommitButton;
-	[CommitButton release];
 		
 	}
 	
@@ -164,8 +162,6 @@ static NSString *kViewKey = @"viewKey";
 														message:Lmessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 		 
 		 [alert show];
-		 [Lmessage release];
-		 [alert release];
 	}
 	else {
 		
@@ -293,8 +289,6 @@ static NSString *kViewKey = @"viewKey";
 													   message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 		
 		[alert show];
-		[message release];
-		[alert release];
 		
 		[self.navigationController popToRootViewControllerAnimated:YES];
 		
@@ -318,8 +312,6 @@ static NSString *kViewKey = @"viewKey";
 													   message:Lmessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 		
 		[alert show];
-		[Lmessage release];
-		[alert release];
 	}
 	else {
 		
@@ -435,8 +427,6 @@ static NSString *kViewKey = @"viewKey";
 													   message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 		
 		[alert show];
-		[message release];
-		[alert release];
 		
 		[self.navigationController popToRootViewControllerAnimated:YES];
 		
@@ -552,7 +542,7 @@ static NSString *kViewKey = @"viewKey";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
 		
     }
     
@@ -563,7 +553,7 @@ static NSString *kViewKey = @"viewKey";
 		
 	    switch (indexPath.row) {
 			case 0:
-				
+            {
 				cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 				EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 				cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
@@ -581,8 +571,10 @@ static NSString *kViewKey = @"viewKey";
 				
 				
 				}
+            }
 				break;
 			case 1:
+            {
 				cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 				cell.textLabel.text = @"Difficulty";
 				EvaluatorAppDelegate *appDelegate1 = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
@@ -602,6 +594,7 @@ static NSString *kViewKey = @"viewKey";
 					}
 					cell.detailTextLabel.text = appDelegate1.Difficulty;
 				}
+            }
 
 				break;
 							
@@ -617,11 +610,12 @@ static NSString *kViewKey = @"viewKey";
 		switch (indexPath.row) {
 				
 			case 0:
+            {
 				if(self.interfaceOrientation == UIInterfaceOrientationPortrait){
-					RequireActivityMarker = [[[UISwitch alloc] initWithFrame:CGRectMake(200.0,10.0,40.0,45.0)] autorelease];
+					RequireActivityMarker = [[UISwitch alloc] initWithFrame:CGRectMake(200.0,10.0,40.0,45.0)];
 				}
 				else {
-					RequireActivityMarker = [[[UISwitch alloc] initWithFrame:CGRectMake(350.0,10.0,40.0,45.0)] autorelease];
+					RequireActivityMarker = [[UISwitch alloc] initWithFrame:CGRectMake(350.0,10.0,40.0,45.0)];
 				}
 
 				
@@ -640,16 +634,18 @@ static NSString *kViewKey = @"viewKey";
 				
 				
 				}
+            }
 				break;
 				
 			case 1:
+            {
 				
 					if (self.interfaceOrientation == UIInterfaceOrientationPortrait) {
-						Authorize =[[[UISwitch alloc] initWithFrame:CGRectMake(200.0, 10.0, 40.0, 45.0)]autorelease];
+						Authorize =[[UISwitch alloc] initWithFrame:CGRectMake(200.0, 10.0, 40.0, 45.0)];
 					}
 					else{
 						
-						Authorize =[[[UISwitch alloc] initWithFrame:CGRectMake(350.0, 10.0, 40.0, 45.0)]autorelease];
+						Authorize =[[UISwitch alloc] initWithFrame:CGRectMake(350.0, 10.0, 40.0, 45.0)];
 					}
 				
 				Authorize.tag = 3;
@@ -667,7 +663,7 @@ static NSString *kViewKey = @"viewKey";
 					Authorize.on = YES;
 					[cell.contentView addSubview:Authorize];
 				}
-
+            }
 				break;
 				
 				
@@ -918,14 +914,12 @@ static NSString *kViewKey = @"viewKey";
 		SelectAllocatedMarks *AllocatedMarks_view = [[SelectAllocatedMarks alloc] initWithNibName:nil bundle:nil];
 		AllocatedMarks_view.QItem_ForEdit = self.QItem_ForEdit;
 		[self.navigationController pushViewController:AllocatedMarks_view animated:YES];
-		[AllocatedMarks_view release];
 	}
 	else if(indexPath.row == 1) {
 		
 		SelectDifficulty *Difficulty_view = [[SelectDifficulty alloc]initWithNibName:nil bundle:nil];
 		Difficulty_view.QItem_ForEdit =  self.QItem_ForEdit;
 		[self.navigationController pushViewController:Difficulty_view animated:YES];
-		[Difficulty_view release];
 	}
 
 	
@@ -959,26 +953,6 @@ static NSString *kViewKey = @"viewKey";
 }
 
 
-- (void)dealloc {
-	[QuestionTemplate release];
-	[SelectedTopic release];
-	[QItem_ForEdit release];
-	[SFileNameValue release];
-	[DisplayTable release];
-	[DisplayedIndexPath release];
-	[RequireActivityMarker release];
-	[Authorize release];
-	[Answer1 release];
-	[Answer2 release];
-	[Answer3 release];
-	[Answer4 release];
-	[Answer5 release];
-	[AnswerControls release];
-	[AnswerObjects release];
-	[fetchedResultsController release];
-	[managedObjectContext release];
-    [super dealloc];
-}
 
 
 @end

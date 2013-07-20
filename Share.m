@@ -34,7 +34,6 @@
     NSString *HeaderLocation = [[NSBundle mainBundle] pathForResource:@"header_bar" ofType:@"png"];
     UIImage *HeaderBackImage = [[UIImage alloc] initWithContentsOfFile:HeaderLocation];
     [self.navigationController.navigationBar setBackgroundImage:HeaderBackImage forBarMetrics:UIBarMetricsDefault];
-    [HeaderBackImage release];
     
     NSError *error;
     // Report to  analytics
@@ -121,7 +120,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier]autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     if (indexPath.section == 0 ){
         
@@ -137,9 +136,6 @@
         HeaderImageView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
         [headerView addSubview:HeaderImageView];
         [cell addSubview:headerView];
-        [headerView release];
-        [HeaderImage release];
-        [HeaderImageView release];
 
         
         
@@ -156,9 +152,6 @@
         sharedividerView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
         [shareView addSubview: sharedividerView];
         [cell addSubview:shareView];
-        [shareView release];
-        [sharedividerImage release];
-        [sharedividerView release];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         
@@ -217,9 +210,6 @@
         NotdividerView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
         [NotView addSubview: NotdividerView];
         [cell addSubview:NotView];
-        [NotView release];
-        [NotdividerImage release];
-        [NotdividerView release];
         
 
                 
@@ -292,7 +282,6 @@
         
         [SendMailcontroller setMessageBody:[NSString stringWithFormat:@"Checkout the FREE LearnersCloud Maths App loaded with thousands of test questions and answers.To download this App for iPad<a href=http://itunes.apple.com/us/app/gcse-maths-questions./id461348306?ls=1&mt=8> click here</a>. For iPhone<a href=http://itunes.apple.com/us/app/gcse-maths-questions/id457831288?ls=1&mt=8>  click here</a>. Or search LearnersCloud in your device’s App store. Don’t forget to come and see us for loads more: www.Learnerscloud.com"] isHTML:YES];
         [self presentModalViewController:SendMailcontroller animated:YES];
-        [SendMailcontroller release];
 		
 	}
 	
@@ -304,7 +293,6 @@
 		
 		
 		[Alert show];
-		[Alert release];
 		
 	}
     
@@ -510,9 +498,7 @@
                     
                     
                     break;
-                    
-                default:
-                    break;
+              
             }
             [self dismissModalViewControllerAnimated:YES];
         };
@@ -521,7 +507,6 @@
          [activityIndicator stopAnimating];
        
 	    [self presentModalViewController:tweetSheet animated:YES]; 
-        [tweetSheet release];
     }
     else
     {
@@ -533,7 +518,6 @@
                                   cancelButtonTitle:@"OK"                                                   
                                   otherButtonTitles:nil];
         [alertView show];
-        [alertView release];
     }
     
 }
@@ -550,7 +534,6 @@
         
         [self.view addSubview:activityIndicator];
         [activityIndicator startAnimating];
-        [activityIndicator release];
         
     }
 	

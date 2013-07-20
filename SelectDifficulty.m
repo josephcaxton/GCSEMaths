@@ -42,7 +42,6 @@
 		UIBarButtonItem *Back = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(Back:)];
 		self.navigationItem.leftBarButtonItem = Back;
 		self.navigationItem.title = @"Difficulty";
-		[Back release];
 	}
 	
 
@@ -97,7 +96,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
 	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
@@ -119,21 +118,21 @@
 			}
 			
 			break;
-//		case 2:
-//			
-//			cell.textLabel.text = @"Foundation & Higher";
-//			if ([appDelegate.Difficulty  isEqualToString: @"Foundation & Higher" ]) {
-//				
-//				cell.accessoryType = UITableViewCellAccessoryCheckmark;
-//			}
-//			else {
-//				
-//				cell.accessoryType =UITableViewCellAccessoryNone;
-//				
-//			}
-//			
-//			
-//			break;
+		case 2:
+			
+			cell.textLabel.text = @"Foundation & Higher";
+			if ([appDelegate.Difficulty  isEqualToString: @"Foundation & Higher" ]) {
+				
+				cell.accessoryType = UITableViewCellAccessoryCheckmark;
+			}
+			else {
+				
+				cell.accessoryType =UITableViewCellAccessoryNone;
+				
+			}
+			
+			
+			break;
 		case 1:
 			
 			cell.textLabel.text = @"Higher";
@@ -235,7 +234,7 @@
 		}
 		else if ([appDelegate.Difficulty isEqualToString:@"Foundation & Higher"]){
             
-        QItem_ForEdit.Difficulty = [NSNumber numberWithInt:2];
+        QItem_ForEdit.Difficulty = [NSNumber numberWithInt:0];
 			
 		}
 		else{
@@ -271,11 +270,6 @@
 }
 
 
-- (void)dealloc {
-	[QItem_ForEdit release];
-    [super dealloc];
-	
-}
 
 
 @end

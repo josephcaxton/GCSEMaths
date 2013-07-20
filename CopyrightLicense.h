@@ -15,7 +15,7 @@
 	UIWebView *WebBox;
 }
 
-@property (nonatomic, retain) UIWebView *WebBox;
+@property (nonatomic, strong) UIWebView *WebBox;
 -(void)loadDocument:(NSString*)documentName inView:(UIWebView*)webView;
 
 @end

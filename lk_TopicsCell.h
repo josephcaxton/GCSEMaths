@@ -20,7 +20,7 @@
 
 }
 
-@property (nonatomic, retain) Topics *OneTopic;
-@property (nonatomic, retain) UILabel *lblDescription;
+@property (nonatomic, strong) Topics *OneTopic;
+@property (nonatomic, strong) UILabel *lblDescription;
 
 @end

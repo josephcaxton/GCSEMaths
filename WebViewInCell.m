@@ -30,7 +30,6 @@ static UIWebView *WebBox = nil;
 		[self.contentView addSubview:WebBox];
        
 		WebBox.delegate = nil;
-		[WebBox	 release];
 		
 		
 	}
@@ -40,8 +39,7 @@ static UIWebView *WebBox = nil;
 - (void)setHTMLText:(NSString *)HtmlValue {
 	
 	if (HtmlValue != HTMLText) {
-		[HTMLText release];
-		HTMLText = [HtmlValue retain];
+		HTMLText = HtmlValue;
 		
 		
 	} 
@@ -66,10 +64,6 @@ static UIWebView *WebBox = nil;
 	WebBox = nil;
 }
 
-- (void)dealloc {
-	[HTMLText release];
-    [super dealloc];
-}
 
 
 @end

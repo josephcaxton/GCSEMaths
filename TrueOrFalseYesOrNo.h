@@ -48,35 +48,37 @@
 	UIButton *Continue;
 
 }
-@property (nonatomic, retain) lk_QuestionTemplate *QuestionTemplate;
-@property (nonatomic, retain) Topics  *SelectedTopic;
+@property (nonatomic, strong) lk_QuestionTemplate *QuestionTemplate;
+@property (nonatomic, strong) Topics  *SelectedTopic;
 
 //@property (nonatomic, retain) UIWebView *QuestionHeaderBox;
-@property (nonatomic, retain) NSArray *fileList;
-@property (nonatomic, retain)  UITableView *FileListTable;
+@property (nonatomic, strong) NSArray *fileList;
+@property (nonatomic, strong)  UITableView *FileListTable;
 
 
-@property (nonatomic, retain) NSString *DirLocation;
-@property (nonatomic, retain) NSString *SFileName;
+@property (nonatomic, strong) NSString *DirLocation;
+@property (nonatomic, strong) NSString *SFileName;
 
 
 
-@property (nonatomic, retain) NSString *SFileName_Edit;
-@property (nonatomic, retain) QuestionItems	*QItem_Edit;
-@property (nonatomic, retain) QuestionItems	*QItem_View;
+@property (nonatomic, strong) NSString *SFileName_Edit;
+@property (nonatomic, strong) QuestionItems	*QItem_Edit;
+@property (nonatomic, strong) QuestionItems	*QItem_View;
 
-@property (nonatomic, retain) NSMutableArray *AnswerObjects;
-@property (nonatomic, retain) NSArray *AnswerControls;
+@property (nonatomic, strong) NSMutableArray *AnswerObjects;
+@property (nonatomic, strong) NSArray *AnswerControls;
 
-@property (nonatomic, retain) UILabel		*True;
-@property (nonatomic, retain) UILabel		*False;
+@property (nonatomic, strong) UILabel		*True;
+@property (nonatomic, strong) UILabel		*False;
 @property (nonatomic, assign) BOOL ShowAnswer;
 @property (nonatomic, assign) BOOL RemoveContinueButton;
-@property (nonatomic, retain) UIButton *Continue;
+@property (nonatomic, strong) UIButton *Continue;
 
 -(void)loadDocument:(NSString*)documentName inView:(UIWebView*)webView;
 -(IBAction)ContinueToNextQuestion:(id)sender;
 - (void)configureCell:(WebViewInCell *)mycell HTMLStr:(NSString *)value;
 - (void)AdjustScreenToSee:(int)value;
+-(IBAction)StopTest:(id)sender;
+
 
 @end

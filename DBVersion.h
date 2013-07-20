@@ -13,7 +13,7 @@
 {
 }
 
-@property (nonatomic, retain) NSNumber * VersionNumber;
+@property (nonatomic, strong) NSNumber * VersionNumber;
 
 @end
 

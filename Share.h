@@ -23,9 +23,9 @@
     
 }
 
-@property (nonatomic, retain) Facebook *facebook;
-@property (nonatomic, retain) UIButton *logoutFacebook;
-@property (nonatomic, retain)  UIActivityIndicatorView * activityIndicator;
+@property (nonatomic, strong) Facebook *facebook;
+@property (nonatomic, strong) UIButton *logoutFacebook;
+@property (nonatomic, strong)  UIActivityIndicatorView * activityIndicator;
 
 - (void)AddProgress;
 

@@ -156,8 +156,6 @@
                                                        message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         
         [alert show];
-        [message release];
-        [alert release];
         
         [self.navigationController popViewControllerAnimated:YES];
         
@@ -231,11 +229,6 @@
 }
 
 
-- (void)dealloc {
-	
-	[VideoFileName release];
-    [super dealloc];
-}
 
 
 @end

@@ -59,7 +59,6 @@
 		
 		
 		[DataError show];
-		[DataError release];		
 		
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		
@@ -89,7 +88,6 @@
 									message:@"Click on OK and Done to finish editing" delegate:self 
 												  cancelButtonTitle:@"OK" otherButtonTitles:nil];
 			[alert show];
-			[alert release];
 			[DescriptionTextField resignFirstResponder];
 		}
 	
@@ -121,8 +119,6 @@
 										 message delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"OK" otherButtonTitles:nil];
 											
 			[actionSheet showInView:self.tabBarController.view];
-			[message release];
-			[actionSheet release];
 			
 			
 			}
@@ -148,7 +144,6 @@
 			
 			[DataError show];
 			
-			[DataError release];		
 			
 			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 			
@@ -247,7 +242,7 @@
     
    lk_QuestionListsCell *QLcell = (lk_QuestionListsCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (QLcell == nil) {
-        QLcell = [[[lk_QuestionListsCell	alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        QLcell = [[lk_QuestionListsCell	alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
       QLcell.accessoryType = UITableViewCellAccessoryNone;
 	}
     
@@ -296,7 +291,6 @@
 			
 			
 			[DataError show];
-			[DataError release];		
 			
 			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 			
@@ -347,10 +341,6 @@
         aFetchedResultsController.delegate = self;
         self.fetchedResultsController = aFetchedResultsController;
         
-        [aFetchedResultsController release];
-        [fetchRequest release];
-        [sortDescriptor release];
-        [sortDescriptors release];
     }
 	
 	return fetchedResultsController;
@@ -430,13 +420,6 @@
 }
 
 
-- (void)dealloc {
-	[fetchedResultsController release];
-	[managedObjectContext release];
-	[tableHeaderView release];
-	[DescriptionTextField release];
-    [super dealloc];
-}
 
 
 @end

@@ -22,7 +22,6 @@
 												  object:moviePlayerController];  
 	
 	[moviePlayerController.view removeFromSuperview];  
-	[moviePlayerController release]; 
 	
 	[self.navigationController popViewControllerAnimated:YES];
 	
@@ -42,7 +41,6 @@
     UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBackGround_Iphone.png"]];
     [self.view addSubview:backgroundImage];
     [self.view sendSubviewToBack:backgroundImage];
-    [backgroundImage release];
 
 	NSString *filepath   =   [[NSBundle mainBundle] pathForResource:@"ITest U Video" ofType:@"m4v"];  //@"HelpvideoIPhone"
 	NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath]; 
@@ -121,11 +119,6 @@
 }
 
 
-- (void)dealloc {
-	
-	
-    [super dealloc];
-}
 
 
 @end

@@ -13,6 +13,7 @@
 #import "SelectQuestionTemplate.h"
 #import "ClientEngine.h"
 #import "EvaluatorAppDelegate.h"
+#import "SelectNumberofQuestionsViewController.h"
 
 
 @interface Start : UIViewController  <UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate>{  //UIPickerViewDelegate, UIPickerViewDataSource
@@ -31,26 +32,37 @@
 	UIImageView *logoView;
 	UILabel *Copyright;
 	UITextView *WebText;
-	UIButton *StartPractice;
+    UIButton *btnStartTest;
+	UIButton *__unsafe_unretained StartPractice;
     BOOL iPhone5;
+    
+    UIButton *DifficultybtnLock;
+    UIButton *TopicbtnLock;
+    UIButton *TypeofquestionbtnLock;
+
 	
 	
 }
 
-@property (nonatomic, retain) UIView *FirstView;
-@property (nonatomic, retain) UIView *SecondView;
-@property (nonatomic, retain) UITableView *FirstTable;
-@property (nonatomic, retain) UITableView *SecondTable;
-@property (nonatomic, retain) UIPickerView *QuestionPickerView;
+@property (nonatomic, strong) UIView *FirstView;
+@property (nonatomic, strong) UIView *SecondView;
+@property (nonatomic, strong) UITableView *FirstTable;
+@property (nonatomic, strong) UITableView *SecondTable;
+@property (nonatomic, strong) UIPickerView *QuestionPickerView;
 
-@property (nonatomic, retain) CustomPickerDataSource_Num_Questions *CustomDataSource;
-@property (nonatomic, retain) UISwitch *Sound;
-@property (nonatomic, retain) UISwitch *ShowAnswers;
-@property (nonatomic, retain) UIImageView *logoView;
-@property (nonatomic, retain) UILabel *Copyright;
-@property (nonatomic, retain) UITextView *WebText;
-@property (nonatomic, assign) UIButton *StartPractice;
+@property (nonatomic, strong) CustomPickerDataSource_Num_Questions *CustomDataSource;
+@property (nonatomic, strong) UISwitch *Sound;
+@property (nonatomic, strong) UISwitch *ShowAnswers;
+@property (nonatomic, strong) UIImageView *logoView;
+@property (nonatomic, strong) UILabel *Copyright;
+@property (nonatomic, strong) UITextView *WebText;
+@property (nonatomic, unsafe_unretained) UIButton *StartPractice;
 @property (nonatomic, assign) BOOL iPhone5;
+
+@property (nonatomic, strong) UIButton *DifficultybtnLock;
+@property (nonatomic, strong) UIButton *TopicbtnLock;
+@property (nonatomic, strong) UIButton *TypeofquestionbtnLock;
+@property (nonatomic, strong) UIButton *btnStartTest;
 
 -(IBAction)Practice:(id)sender;
 -(IBAction)StartTest:(id)sender;

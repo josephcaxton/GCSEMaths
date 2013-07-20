@@ -57,36 +57,36 @@
 	UIButton *Continue;
 
 }
-@property (nonatomic, retain) lk_QuestionTemplate *QuestionTemplate;
-@property (nonatomic, retain) Topics  *SelectedTopic;
+@property (nonatomic, strong) lk_QuestionTemplate *QuestionTemplate;
+@property (nonatomic, strong) Topics  *SelectedTopic;
 
 //@property (nonatomic, retain) UIWebView *QuestionHeaderBox;
 
 //@property (nonatomic, retain) UILabel *AuthorizeText;
-@property (nonatomic, retain) NSArray *fileList;
-@property (nonatomic, retain)  UITableView *FileListTable;
+@property (nonatomic, strong) NSArray *fileList;
+@property (nonatomic, strong)  UITableView *FileListTable;
 
-@property (nonatomic, retain) NSString *DirLocation;
-@property (nonatomic, retain) NSString *SFileName;
+@property (nonatomic, strong) NSString *DirLocation;
+@property (nonatomic, strong) NSString *SFileName;
 
 //@property (nonatomic, retain) NSString *DirLocation_Edit;
-@property (nonatomic, retain) NSString *SFileName_Edit;
-@property (nonatomic, retain) QuestionItems	*QItem_Edit;
-@property (nonatomic, retain) QuestionItems	*QItem_View;
-@property (nonatomic, retain) NSMutableArray *AnswerObjects;
+@property (nonatomic, strong) NSString *SFileName_Edit;
+@property (nonatomic, strong) QuestionItems	*QItem_Edit;
+@property (nonatomic, strong) QuestionItems	*QItem_View;
+@property (nonatomic, strong) NSMutableArray *AnswerObjects;
 
-@property (nonatomic, retain) UITextField   *Answer1;
-@property (nonatomic, retain) UITextField	*Answer2;
-@property (nonatomic, retain) UITextField	*Answer3;
-@property (nonatomic, retain) UITextField	*Answer4;
-@property (nonatomic, retain) UITextField	*Answer5;
-@property (nonatomic, retain) NSArray *AnswerControls;
+@property (nonatomic, strong) UITextField   *Answer1;
+@property (nonatomic, strong) UITextField	*Answer2;
+@property (nonatomic, strong) UITextField	*Answer3;
+@property (nonatomic, strong) UITextField	*Answer4;
+@property (nonatomic, strong) UITextField	*Answer5;
+@property (nonatomic, strong) NSArray *AnswerControls;
 @property (nonatomic, assign) BOOL ShowAnswer;
 @property (nonatomic, assign) BOOL RemoveContinueButton;
 
 @property (nonatomic, assign) BOOL Specialflag;
 @property (nonatomic, assign) BOOL FromClientAnswer;
-@property (nonatomic, retain) UIButton *Continue;
+@property (nonatomic, strong) UIButton *Continue;
 
 //@property (nonatomic, retain) IBOutlet UIWebView *QuestionItemBox;
 //@property (nonatomic, retain) IBOutlet UISearchBar *Search;
@@ -95,6 +95,6 @@
 -(IBAction)ContinueToNextQuestion:(id)sender;
 - (void)configureCell:(WebViewInCell *)mycell HTMLStr:(NSString *)value;
 - (void)AdjustScreenToSee:(int)value;
-
+-(IBAction)StopTest:(id)sender;
 
 @end

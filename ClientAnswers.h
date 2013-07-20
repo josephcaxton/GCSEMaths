@@ -21,8 +21,8 @@
 	NSMutableArray *PopBox;
 	NSMutableArray *NumberCounter;  // Just for numbering
 }
-@property (nonatomic, retain) NSArray *FullDataArray; 
-@property (nonatomic, retain) NSMutableArray *PopBox;
-@property (nonatomic, retain) NSMutableArray *NumberCounter;
+@property (nonatomic, strong) NSArray *FullDataArray; 
+@property (nonatomic, strong) NSMutableArray *PopBox;
+@property (nonatomic, strong) NSMutableArray *NumberCounter;
 
 @end

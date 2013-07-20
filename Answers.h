@@ -14,11 +14,11 @@
 {
 }
 
-@property (nonatomic, retain) NSString * Reason;
-@property (nonatomic, retain) NSNumber * Correct;
-@property (nonatomic, retain) NSString * AnswerText;
-@property (nonatomic, retain) NSString * PictureAnnotation;
-@property (nonatomic, retain) NSManagedObject * QuestionItem;
+@property (nonatomic, strong) NSString * Reason;
+@property (nonatomic, strong) NSNumber * Correct;
+@property (nonatomic, strong) NSString * AnswerText;
+@property (nonatomic, strong) NSString * PictureAnnotation;
+@property (nonatomic, strong) NSManagedObject * QuestionItem;
 
 @end
 

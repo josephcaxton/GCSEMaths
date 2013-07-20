@@ -14,6 +14,6 @@
 	NSMutableArray *listofItems;
 }
 
-@property (nonatomic, retain) NSMutableArray *listofItems;
+@property (nonatomic, strong) NSMutableArray *listofItems;
 
 @end
