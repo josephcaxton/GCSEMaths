@@ -248,7 +248,7 @@ int ToReviewQuestions = 0;
 	
 		
 	//UnchangedArray  = [fetchedResultsController fetchedObjects];
-	
+	if([PopBox count] == 0){
 	PopBox = [UnchangedArray mutableCopy];
 	NumberCounter = [[NSMutableArray alloc]init];
 	
@@ -273,7 +273,7 @@ int ToReviewQuestions = 0;
 	
 	appDelegate.PossibleScores = [NSNumber numberWithInt:Counter];
 	appDelegate.NumberOfQuestionsDisplayed = [NSNumber numberWithInt:[PopBox count]];
-	
+	}
 	//Start the timer
 	/*if([self.timer isValid]){
 		

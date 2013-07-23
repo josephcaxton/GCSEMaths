@@ -12,7 +12,7 @@
 #import "EvaluatorAppDelegate.h"
 
 
-@interface Buy : UITableViewController <SKProductsRequestDelegate>{
+@interface Buy : UITableViewController <SKProductsRequestDelegate,UIGestureRecognizerDelegate,UIAlertViewDelegate,UITextFieldDelegate>{
 
 	
 	NSArray *ProductFromIstore;
@@ -21,6 +21,7 @@
 	NSArray *SortedDisplayProducts;
 	CustomStoreObserver *observer;
     UIButton *Restore;
+    UITextField *pass;
 }
 
 @property (nonatomic, strong) NSArray *ProductFromIstore;
@@ -29,6 +30,7 @@
 @property (nonatomic, strong) NSArray *SortedDisplayProducts;
 @property (nonatomic, strong) CustomStoreObserver *observer;
 @property (nonatomic, strong) UIButton *Restore;
+@property (nonatomic, retain) UITextField *pass;
 
 - (void)AddProgress;
 - (BOOL)isDataSourceAvailable;
