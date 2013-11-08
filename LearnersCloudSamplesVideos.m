@@ -159,7 +159,7 @@
     NSString *cellValue = [[NSString alloc] initWithFormat:@"%@",[listofItems objectAtIndex:indexPath.row]];
 	NSString *PicLocation = [[NSString alloc] initWithFormat:@"%@",[ImageNames objectAtIndex:indexPath.row]];
     
-        UILabel *Title = [[UILabel alloc] initWithFrame:CGRectMake(80.0,0.0,240,50)];
+        UILabel *Title = [[UILabel alloc] initWithFrame:CGRectMake(100.0,0.0,240,50)];
         Title.text = cellValue;
         [cell.contentView addSubview:Title];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -195,7 +195,7 @@
         UIImage *LCImage = [[UIImage alloc] initWithContentsOfFile:LCImageLocation];
         
         
-        LCButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        LCButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [LCButton setImage:LCImage forState:UIControlStateNormal];
         LCButton.frame = CGRectMake(35, 200, 250, 50);
         [LCButton addTarget:self action:@selector(WebsitebuttonPressed) forControlEvents:UIControlEventTouchUpInside];
@@ -228,7 +228,7 @@
         {
 			VideoPlayer *VP1 = [[VideoPlayer alloc] initWithNibName:nil bundle:nil];
 			VP1.VideoFileName =@"Maths";
-			VP1.hidesBottomBarWhenPushed = YES;
+			//VP1.hidesBottomBarWhenPushed = YES;
 			[self.navigationController pushViewController:VP1 animated:NO];
         }
 			break;
@@ -237,7 +237,7 @@
         {
 			VideoPlayer *VP2 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
 			VP2.VideoFileName =@"English";
-			VP2.hidesBottomBarWhenPushed = YES;
+			//VP2.hidesBottomBarWhenPushed = YES;
 			[self.navigationController pushViewController:VP2 animated:YES];
         }
 			break;
@@ -247,7 +247,7 @@
 			
 			VideoPlayer *VP3 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
 			VP3.VideoFileName =@"Physics";
-			VP3.hidesBottomBarWhenPushed = YES;
+			//VP3.hidesBottomBarWhenPushed = YES;
 			[self.navigationController pushViewController:VP3 animated:YES];
         }
 			
@@ -258,7 +258,7 @@
         {
 			VideoPlayer *VP4 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
 			VP4.VideoFileName =@"Chemistry";
-			VP4.hidesBottomBarWhenPushed = YES;
+			//VP4.hidesBottomBarWhenPushed = YES;
 			[self.navigationController pushViewController:VP4 animated:YES];
 			
         }
@@ -269,7 +269,7 @@
         {
 			VideoPlayer *VP5 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
 			VP5.VideoFileName =@"Biology";
-			VP5.hidesBottomBarWhenPushed = YES;
+			//VP5.hidesBottomBarWhenPushed = YES;
 			[self.navigationController pushViewController:VP5 animated:YES];
 			
         }

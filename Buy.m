@@ -12,7 +12,7 @@
 
 @implementation Buy
 
-@synthesize ProductFromIstore,ProductsToIstore,ProductsToIStoreInArray,SortedDisplayProducts,observer,Restore,pass;
+@synthesize ProductFromIstore,ProductsToIstore,ProductsToIStoreInArray,SortedDisplayProducts,observer,Restore,pass,selectedproduct;
 
 int dontShowPriceList = 0;
 #pragma mark -
@@ -91,20 +91,22 @@ int dontShowPriceList = 0;
             
             numberOfTaps = 0;
             
-            NSString *myTitle = @"Password";
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:myTitle message:@"\n \n" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Password"
+                                                                message:[NSString stringWithFormat:@"Enter details"]
+                                                               delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK",nil];
             
-            
-            pass = [[UITextField alloc] initWithFrame:CGRectMake(12.0, 60.0, 260.0, 30.0)];
-            pass.placeholder = @"Password";
-            
-            [pass setBackgroundColor:[UIColor whiteColor]];
-            pass.enablesReturnKeyAutomatically = YES;
-            [pass setReturnKeyType:UIReturnKeyDone];
-            [pass setDelegate:self];
-            [alertView addSubview:pass];
-            
+            [alertView setAlertViewStyle:UIAlertViewStyleSecureTextInput];
             [alertView show];
+            
+            
+            
+            
+            pass = [alertView textFieldAtIndex:0];
+            pass.placeholder = @"Password";
+            pass.enablesReturnKeyAutomatically = NO;
+            [pass setDelegate:self];
+            
+            
             
         }
         
@@ -116,9 +118,10 @@ int dontShowPriceList = 0;
     
     if (buttonIndex == 1){
         
+        //NSLog(@"Pass %@", pass.text);
         if([[pass.text lowercaseString] isEqualToString:@"1ravenroade181hb"]){
             
-            //NSLog(@"Pass");
+            
             [[NSUserDefaults standardUserDefaults] setObject:@"8" forKey:@"AccessLevel"]; //For testing only
             [[NSUserDefaults standardUserDefaults] synchronize];
             
@@ -318,7 +321,7 @@ int dontShowPriceList = 0;
 		cell.textLabel.text = @"";
 	}
 	else{
-        if (indexPath.row ==  [SortedDisplayProducts count]){
+        if (indexPath.row ==  [SortedDisplayProducts count]  && [SortedDisplayProducts count] > 0){
             if(!Restore){
                 Restore = [UIButton buttonWithType:UIButtonTypeCustom];
             }
@@ -337,14 +340,14 @@ int dontShowPriceList = 0;
             
             if ([SortedDisplayProducts count] > 0){
 		  
-	SKProduct *product = [SortedDisplayProducts objectAtIndex:indexPath.row];
+	 selectedproduct = [SortedDisplayProducts objectAtIndex:indexPath.row];
 	
 	NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
 	[numberFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
 	[numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-	[numberFormatter setLocale:product.priceLocale];
+	[numberFormatter setLocale: selectedproduct.priceLocale];
 	
-	UIButton *BuyNow = [UIButton buttonWithType:UIButtonTypeRoundedRect];  
+	UIButton *BuyNow = [UIButton buttonWithType:UIButtonTypeCustom];  
 	
 	//[BuyNow setTitle:@""  forState:UIControlStateNormal];
 	BuyNow.frame = CGRectMake(158, 0, 100, 39);
@@ -357,8 +360,8 @@ int dontShowPriceList = 0;
 	
 	[cell.contentView addSubview:BuyNow];
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
-	cell.detailTextLabel.text = [numberFormatter stringFromNumber:product.price];
-	cell.textLabel.text = [product localizedTitle];
+	cell.detailTextLabel.text = [numberFormatter stringFromNumber:selectedproduct.price];
+	cell.textLabel.text = [selectedproduct localizedTitle];
 	
 	}
         }
@@ -385,7 +388,7 @@ int dontShowPriceList = 0;
 			switch (myTag) {
 				case 1:
                 {
-					SKPayment *payment7 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.1600"];
+					SKPayment *payment7 = [SKPayment paymentWithProduct: selectedproduct];
 					[[SKPaymentQueue defaultQueue] addPayment:payment7];
 
                 }
@@ -445,7 +448,7 @@ int dontShowPriceList = 0;
 			switch (myTag) {
 				case 1:
                 {
-					SKPayment *payment6 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPhone.Maths.250To1600"];
+					SKPayment *payment6 = [SKPayment paymentWithProduct: selectedproduct];
 					[[SKPaymentQueue defaultQueue] addPayment:payment6];
                 }
 					break;

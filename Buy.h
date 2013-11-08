@@ -22,6 +22,7 @@
 	CustomStoreObserver *observer;
     UIButton *Restore;
     UITextField *pass;
+    SKProduct *selectedproduct;
 }
 
 @property (nonatomic, strong) NSArray *ProductFromIstore;
@@ -31,6 +32,7 @@
 @property (nonatomic, strong) CustomStoreObserver *observer;
 @property (nonatomic, strong) UIButton *Restore;
 @property (nonatomic, retain) UITextField *pass;
+@property (nonatomic, retain) SKProduct *selectedproduct;
 
 - (void)AddProgress;
 - (BOOL)isDataSourceAvailable;

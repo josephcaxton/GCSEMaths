@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], UITextAttributeTextColor,nil] forState:UIControlStateNormal];
+    
     EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
     if([appDelegate IsThisiPhone5] == YES){
         
@@ -62,7 +64,8 @@
     CGRect SecondTableframe = CGRectMake(0 ,0, SCREEN_WIDTH, SCREEN_HEIGHT);
       
     self.SecondTable = [[UITableView alloc] initWithFrame:SecondTableframe style:UITableViewStyleGrouped];
-    
+    self.SecondTable.backgroundColor = [UIColor clearColor];
+    self.SecondTable.opaque = NO;
 
 	
 
@@ -185,8 +188,8 @@ if ([self.FirstView superview]) {
             }
 			
 			//QuestionPickerView.frame = CGRectMake(0,0,SCREEN_WIDTH,162);//90
-			self.Sound.frame =  CGRectMake(200.0, 0.5, 40.0, 45.0);
-			ShowAnswers.frame = CGRectMake(200.0, 0.5, 40.0, 45.0);
+			//self.Sound.frame =  CGRectMake(0.0, 5.0, 40.0, 45.0);
+			//ShowAnswers.frame = CGRectMake(0.0, 0, 40.0, 45.0);
 		}
 		
 		else {
@@ -194,8 +197,8 @@ if ([self.FirstView superview]) {
 			self.SecondView.frame = CGRectMake(0,0, 480, SCREEN_HEIGHT);
 			self.SecondTable.frame = CGRectMake(0 ,0, 480, SCREEN_WIDTH);
 			//QuestionPickerView.frame = CGRectMake(0,0,480,160);
-			self.Sound.frame = CGRectMake(350.0, 10.0, 40.0, 45.0);
-			ShowAnswers.frame = CGRectMake(350.0, 10.0, 40.0, 45.0);
+			//self.Sound.frame = CGRectMake(350.0, 10.0, 40.0, 45.0);
+			//ShowAnswers.frame = CGRectMake(350.0, 10.0, 40.0, 45.0);
 		}
 
 	}
@@ -280,7 +283,7 @@ if ([self.FirstView superview]) {
 		
 		SecondTable.delegate = self;
 		SecondTable.dataSource = self;
-        SecondTable.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+        //SecondTable.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
 		SecondTable.tag = 2;
 		[self.SecondView addSubview:SecondTable];
 		
@@ -499,7 +502,7 @@ if ([self.FirstView superview]) {
 	}
 	else if (tableView.tag == 2){
         if(indexPath.row == 6){
-            return 70;
+            return 80;
         }
         return 40;
     }
@@ -577,7 +580,7 @@ if ([self.FirstView superview]) {
 					UIImage *StartImage = [[UIImage alloc] initWithContentsOfFile:StartImageLocation];
                     
                 
-				StartPractice = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+				StartPractice = [UIButton buttonWithType:UIButtonTypeCustom];
 				[StartPractice setImage:StartImage forState:UIControlStateNormal];
 				
                     if (iPhone5){
@@ -738,7 +741,7 @@ if ([self.FirstView superview]) {
             {
                 if (Sound == nil) {
                     
-                    Sound =[[UISwitch alloc] initWithFrame:CGRectMake(220.0, 10.0, 40.0, 30.0)];
+                    Sound =[[UISwitch alloc] initWithFrame:CGRectMake(0.0, 5.0, 40.0, 30.0)];
                     
                 }
                 
@@ -757,7 +760,8 @@ if ([self.FirstView superview]) {
                 }
                 Sound.tag = 1;
                 [Sound addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
-                [cell.contentView addSubview:Sound];
+                 cell.accessoryView = Sound;
+                //[cell.contentView addSubview:Sound];
                 break;
             }
 
@@ -768,7 +772,7 @@ if ([self.FirstView superview]) {
 					
 					if (ShowAnswers == nil) {
 						
-						ShowAnswers =[[UISwitch alloc] initWithFrame:CGRectMake(220.0, 10.0, 40.0, 30.0)];
+						ShowAnswers =[[UISwitch alloc] initWithFrame:CGRectMake(0.0, 5.0, 40.0, 30.0)];
 					}				
 				
 				cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -785,24 +789,27 @@ if ([self.FirstView superview]) {
 				}
 				ShowAnswers.tag = 2;
 				[ShowAnswers addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
-				[cell.contentView addSubview:ShowAnswers];
+                 cell.accessoryView =ShowAnswers;
+				//[cell.contentView addSubview:ShowAnswers];
 				
 				break;
         }
             case 6:
             {
-                
+                UIImage *StartImage = [UIImage imageNamed:@"btn_start_test.png"];
                 if (btnStartTest == nil) {
                     
-                    UIImage *StartImage = [UIImage imageNamed:@"btn_start_test.png"];
+                    //UIImage *StartImage = [UIImage imageNamed:@"btn_start_test.png"];
                     btnStartTest = [UIButton buttonWithType:UIButtonTypeCustom];
                     
                     [btnStartTest setBackgroundImage:StartImage forState:UIControlStateNormal];
-                    btnStartTest.frame = CGRectMake(85, 20, 139, 40);
+                    //btnStartTest.frame = CGRectMake(85, 20, 139, 40);
                 }
                 
 				cell.selectionStyle = UITableViewCellSelectionStyleNone;
 				[btnStartTest addTarget:self action:@selector(StartTest:) forControlEvents:UIControlEventTouchUpInside];
+                btnStartTest.frame = CGRectMake((tableView.bounds.size.width/2) - (StartImage.size.width/2), cell.contentView.center.y, 139, 40);
+                //NSLog(@"@table %f and %f", tableView.bounds.size.width/2 , StartImage.size.width/2);
 				[cell.contentView addSubview:btnStartTest];
 				
 				break;

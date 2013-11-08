@@ -424,26 +424,26 @@ int Version = 0;
 		NSString *QTDescription = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:1]];
 		NSString *TopicName = [[NSString alloc] initWithFormat:@"%@", [arr objectAtIndex:3]];
 		NSString *Autorize = [[NSString alloc] initWithFormat:@"%@", [arr objectAtIndex:5]];
-		NSString *DateAutorized = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:7]];
+		//NSString *DateAutorized = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:7]];
 		NSString *AllocatedMark = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:9]];
 		NSString *Difficulty = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:11]];
 		NSString *Question = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:13]];
 		NSString *RequireActivityMarker = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:15]];
 		NSString *Answer1Text = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:17]];
 		NSString *Answer1Correct = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:19]];
-		NSString *Answer1Reason = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:21]];
+		//NSString *Answer1Reason = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:21]];
 		NSString *Answer2Text = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:23]];
 		NSString *Answer2Correct = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:25]];
-		NSString *Answer2Reason = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:27]];
+		//NSString *Answer2Reason = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:27]];
 		NSString *Answer3Text = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:29]];
 		NSString *Answer3Correct = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:31]];
-		NSString *Answer3Reason = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:33]];
+		//NSString *Answer3Reason = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:33]];
 		NSString *Answer4Text = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:35]];
 		NSString *Answer4Correct = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:37]];
-		NSString *Answer4Reason = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:39]];
+		//NSString *Answer4Reason = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:39]];
 		NSString *Answer5Text = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:41]];
 		NSString *Answer5Correct = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:43]];
-		NSString *Answer5Reason = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:45]];
+		//NSString *Answer5Reason = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:45]];
 		NSString *AccessLevel = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:47]];
         NSString *Explanation = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:49]];
 
@@ -662,7 +662,7 @@ int Version = 0;
 	switch (indexPath.row) {
 		case 0:
 			;
-			Topicbutton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+			Topicbutton = [UIButton buttonWithType:UIButtonTypeCustom];
 			[Topicbutton setTitle:@"Topics" forState:UIControlStateNormal];
 			Topicbutton.frame = CGRectMake(0, 0, 300, 40);
 			[Topicbutton addTarget:self action:@selector(StartUpload:) forControlEvents:UIControlEventTouchUpInside];
@@ -672,7 +672,7 @@ int Version = 0;
 			
 		case 1:
 			;
-			QuestionTemplatebutton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+			QuestionTemplatebutton = [UIButton buttonWithType:UIButtonTypeCustom];
 			[QuestionTemplatebutton setTitle:@"QuestionTemplate" forState:UIControlStateNormal];
 			QuestionTemplatebutton.frame = CGRectMake(0, 0, 300, 40);
 			[QuestionTemplatebutton addTarget:self action:@selector(StartUpload:) forControlEvents:UIControlEventTouchUpInside];
@@ -682,7 +682,7 @@ int Version = 0;
 			
 		case 2:
 			;
-			Databutton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+			Databutton = [UIButton buttonWithType:UIButtonTypeCustom];
 			[Databutton setTitle:@"Data" forState:UIControlStateNormal];
 			Databutton.frame = CGRectMake(0, 0, 300, 40);
 			[Databutton addTarget:self action:@selector(StartUpload:) forControlEvents:UIControlEventTouchUpInside];
@@ -691,7 +691,7 @@ int Version = 0;
 			break;
 		case 3:
 			;
-			VersionButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+			VersionButton = [UIButton buttonWithType:UIButtonTypeCustom];
 			[VersionButton setTitle:[NSString stringWithFormat:@"Version: %i",Version] forState:UIControlStateNormal];
 			VersionButton.frame = CGRectMake(0, 0, 300, 40);
 			[VersionButton addTarget:self action:@selector(ChangeVersionNumber:) forControlEvents:UIControlEventTouchUpInside];

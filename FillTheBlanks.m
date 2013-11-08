@@ -31,13 +31,20 @@ static UIWebView *QuestionHeaderBox = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+    //To fix ios7 extending edges
+    if([UIViewController instancesRespondToSelector:@selector(edgesForExtendedLayout)]){
+        
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
+
 	QuestionHeaderBox =[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 300)];
 	QuestionHeaderBox.scalesPageToFit = YES;
 	
 	self.FileListTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 160, SCREEN_WIDTH, SCREEN_HEIGHT - 170) style:UITableViewStyleGrouped];
 	FileListTable.delegate = self;
 	FileListTable.dataSource = self;
-	FileListTable.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+	//FileListTable.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
 	
     [self.FileListTable setBackgroundView:nil];
     NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"back320x450" ofType:@"png"];
@@ -614,7 +621,7 @@ static UIWebView *QuestionHeaderBox = nil;
          NSString *ContinueImageLocation = [[NSBundle mainBundle] pathForResource:@"btn_continue" ofType:@"png"];
          UIImage *ContinueImage = [[UIImage alloc] initWithContentsOfFile:ContinueImageLocation];
 		 
-         Continue = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+         Continue = [UIButton buttonWithType:UIButtonTypeCustom];
         [Continue setImage:ContinueImage forState:UIControlStateNormal];
 		 //[Continue setTitle:@"Continue" forState:UIControlStateNormal];
 		 
@@ -711,7 +718,7 @@ static UIWebView *QuestionHeaderBox = nil;
 			[UIView beginAnimations:nil context:NULL];
 			[UIView setAnimationDuration:0.3];
 			CGRect rect = self.view.frame;
-			rect.origin.y = -150;
+			rect.origin.y = -50;
 			rect.size.height = 690;
 			self.view.frame = rect;
 			[UIView commitAnimations];

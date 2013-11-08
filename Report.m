@@ -27,6 +27,7 @@
     //UINavigationController *nav =self.navigationController;
     //nav.navigationBar.tintColor = [UIColor blackColor];
     
+    
     NSString *HeaderLocation = [[NSBundle mainBundle] pathForResource:@"header_bar" ofType:@"png"];
     UIImage *HeaderBackImage = [[UIImage alloc] initWithContentsOfFile:HeaderLocation];
     [self.navigationController.navigationBar setBackgroundImage:HeaderBackImage forBarMetrics:UIBarMetricsDefault];

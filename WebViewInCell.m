@@ -20,7 +20,7 @@ static UIWebView *WebBox = nil;
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
 		
-       WebBox = [[UIWebView alloc ] initWithFrame:CGRectMake(0,0, 280, 140)];
+       WebBox = [[UIWebView alloc ] initWithFrame:CGRectMake(0,0, 280, 180)];
 		[WebBox	setBackgroundColor:[UIColor clearColor]];
 		[WebBox setOpaque:NO];
         WebBox.dataDetectorTypes = 0; // This will remove the underlines i am experiencing

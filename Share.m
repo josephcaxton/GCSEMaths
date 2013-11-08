@@ -177,7 +177,7 @@
         if ([defaults objectForKey:@"FBAccessTokenKey"] && [defaults objectForKey:@"FBExpirationDateKey"]) {
             
             UIImage* logoutImage = [UIImage imageNamed:@"logout.png"];
-            logoutFacebook = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+            logoutFacebook = [UIButton buttonWithType:UIButtonTypeCustom];
             logoutFacebook.frame = CGRectMake(250, 10, 54, 30);
             [logoutFacebook setBackgroundImage:logoutImage forState:UIControlStateNormal];
             [logoutFacebook addTarget:self action:@selector(logoutButtonClicked:)forControlEvents:UIControlEventTouchUpInside];
