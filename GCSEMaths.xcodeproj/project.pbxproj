@@ -439,7 +439,6 @@
 		7C795A44141B53AC00C6629A /* 451.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953EA141B53A700C6629A /* 451.pdf */; };
 		7C795A45141B53AC00C6629A /* 452.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953EB141B53A700C6629A /* 452.pdf */; };
 		7C795A46141B53AC00C6629A /* 453.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953EC141B53A700C6629A /* 453.pdf */; };
-		7C795A48141B53AC00C6629A /* 455.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953EE141B53A700C6629A /* 455.pdf */; };
 		7C795A49141B53AC00C6629A /* 456.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953EF141B53A700C6629A /* 456.pdf */; };
 		7C795A4A141B53AC00C6629A /* 457.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953F0141B53A700C6629A /* 457.pdf */; };
 		7C795A4B141B53AC00C6629A /* 458.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7953F1141B53A700C6629A /* 458.pdf */; };
@@ -1573,7 +1572,9 @@
 		7CA25ECD182D109300193A4C /* 1462.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CA25ECC182D109300193A4C /* 1462.pdf */; };
 		7CA25ECF182D10A700193A4C /* 1464.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CA25ECE182D10A700193A4C /* 1464.pdf */; };
 		7CA25ED1182D10B700193A4C /* 1470.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CA25ED0182D10B700193A4C /* 1470.pdf */; };
-		7CA25ED3182D10EB00193A4C /* GCSEMaths.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7CA25ED2182D10CC00193A4C /* GCSEMaths.sqlite */; };
+		7CA25EED182D291200193A4C /* 455.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CA25EEC182D291200193A4C /* 455.pdf */; };
+		7CA25EEF182D292B00193A4C /* 1588.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CA25EEE182D292B00193A4C /* 1588.pdf */; };
+		7CA25EF1182D295700193A4C /* GCSEMaths.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7CA25EF0182D294200193A4C /* GCSEMaths.sqlite */; };
 		7CA594E0161D98DD008C8F07 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA594DE161D987A008C8F07 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CADD3D715A70E9000DD4558 /* Share.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CADD3D515A70E7000DD4558 /* Share.m */; };
 		7CADD3D915A70EA300DD4558 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CADD3D815A70EA300DD4558 /* Twitter.framework */; };
@@ -1651,7 +1652,6 @@
 		7CC9983F1770609100A19B86 /* 871.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9983C1770608E00A19B86 /* 871.pdf */; };
 		7CC998401770609100A19B86 /* 872.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9983D1770608F00A19B86 /* 872.pdf */; };
 		7CC99842177060CA00A19B86 /* 999.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC99841177060CA00A19B86 /* 999.pdf */; };
-		7CC998441770610900A19B86 /* 1588.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC998431770610800A19B86 /* 1588.pdf */; };
 		7CC998461770612C00A19B86 /* 1606.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC998451770612B00A19B86 /* 1606.pdf */; };
 		7CC998481770613D00A19B86 /* 1609.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC998471770613D00A19B86 /* 1609.pdf */; };
 		7CC99850177069C100A19B86 /* 1465.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9984F177069C100A19B86 /* 1465.pdf */; };
@@ -2157,7 +2157,6 @@
 		7C7953EA141B53A700C6629A /* 451.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 451.pdf; sourceTree = "<group>"; };
 		7C7953EB141B53A700C6629A /* 452.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 452.pdf; sourceTree = "<group>"; };
 		7C7953EC141B53A700C6629A /* 453.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 453.pdf; sourceTree = "<group>"; };
-		7C7953EE141B53A700C6629A /* 455.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 455.pdf; sourceTree = "<group>"; };
 		7C7953EF141B53A700C6629A /* 456.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 456.pdf; sourceTree = "<group>"; };
 		7C7953F0141B53A700C6629A /* 457.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 457.pdf; sourceTree = "<group>"; };
 		7C7953F1141B53A700C6629A /* 458.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 458.pdf; sourceTree = "<group>"; };
@@ -3291,7 +3290,9 @@
 		7CA25ECC182D109300193A4C /* 1462.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1462.pdf; sourceTree = "<group>"; };
 		7CA25ECE182D10A700193A4C /* 1464.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1464.pdf; sourceTree = "<group>"; };
 		7CA25ED0182D10B700193A4C /* 1470.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1470.pdf; sourceTree = "<group>"; };
-		7CA25ED2182D10CC00193A4C /* GCSEMaths.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEMaths.sqlite; sourceTree = "<group>"; };
+		7CA25EEC182D291200193A4C /* 455.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 455.pdf; sourceTree = "<group>"; };
+		7CA25EEE182D292B00193A4C /* 1588.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1588.pdf; sourceTree = "<group>"; };
+		7CA25EF0182D294200193A4C /* GCSEMaths.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEMaths.sqlite; sourceTree = "<group>"; };
 		7CA594DD161D987A008C8F07 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7CA594DE161D987A008C8F07 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7CADD3D515A70E7000DD4558 /* Share.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Share.m; sourceTree = "<group>"; };
@@ -3476,7 +3477,6 @@
 		7CC9983C1770608E00A19B86 /* 871.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 871.pdf; sourceTree = "<group>"; };
 		7CC9983D1770608F00A19B86 /* 872.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 872.pdf; sourceTree = "<group>"; };
 		7CC99841177060CA00A19B86 /* 999.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 999.pdf; sourceTree = "<group>"; };
-		7CC998431770610800A19B86 /* 1588.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1588.pdf; sourceTree = "<group>"; };
 		7CC998451770612B00A19B86 /* 1606.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1606.pdf; sourceTree = "<group>"; };
 		7CC998471770613D00A19B86 /* 1609.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1609.pdf; sourceTree = "<group>"; };
 		7CC9984F177069C100A19B86 /* 1465.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1465.pdf; sourceTree = "<group>"; };
@@ -4116,7 +4116,7 @@
 				7C7953EB141B53A700C6629A /* 452.pdf */,
 				7C7953EC141B53A700C6629A /* 453.pdf */,
 				7C579F4C150F47B70050DC9E /* 454.pdf */,
-				7C7953EE141B53A700C6629A /* 455.pdf */,
+				7CA25EEC182D291200193A4C /* 455.pdf */,
 				7C7953EF141B53A700C6629A /* 456.pdf */,
 				7C7953F0141B53A700C6629A /* 457.pdf */,
 				7C7953F1141B53A700C6629A /* 458.pdf */,
@@ -5249,7 +5249,7 @@
 				7C8524AA144D9A67005A8956 /* 1585.pdf */,
 				7C795859141B53AB00C6629A /* 1586.pdf */,
 				7C79585A141B53AB00C6629A /* 1587.pdf */,
-				7CC998431770610800A19B86 /* 1588.pdf */,
+				7CA25EEE182D292B00193A4C /* 1588.pdf */,
 				7C79585C141B53AB00C6629A /* 1589.pdf */,
 				7C79585D141B53AB00C6629A /* 1590.pdf */,
 				7C8524AB144D9A67005A8956 /* 1591.pdf */,
@@ -5288,7 +5288,7 @@
 				7C8524C5144D9B1F005A8956 /* 1624.pdf */,
 				7C795880141B53AB00C6629A /* 1625.pdf */,
 				7C795881141B53AB00C6629A /* 1626.pdf */,
-				7CA25ED2182D10CC00193A4C /* GCSEMaths.sqlite */,
+				7CA25EF0182D294200193A4C /* GCSEMaths.sqlite */,
 				7CB9D03913F956990077E0A3 /* AttributionIphone.pdf */,
 				7CB9D03B13F956B10077E0A3 /* Results.xml */,
 				7CB9D03D13F956BE0077E0A3 /* DescriptiveAnswers.xml */,
@@ -5739,7 +5739,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CA25ED3182D10EB00193A4C /* GCSEMaths.sqlite in Resources */,
+				7CA25EF1182D295700193A4C /* GCSEMaths.sqlite in Resources */,
 				7CFC73C313F91EEE00805437 /* InfoPlist.strings in Resources */,
 				7CFC740713F924D600805437 /* ArrowWoodImpact.aiff in Resources */,
 				7CFC740913F924E700805437 /* Cough.aiff in Resources */,
@@ -5847,6 +5847,7 @@
 				7C7958DD141B53AC00C6629A /* 92.pdf in Resources */,
 				7C7958DE141B53AC00C6629A /* 93.pdf in Resources */,
 				7C7958DF141B53AC00C6629A /* 94.pdf in Resources */,
+				7CA25EED182D291200193A4C /* 455.pdf in Resources */,
 				7C7958E0141B53AC00C6629A /* 95.pdf in Resources */,
 				7C7958E1141B53AC00C6629A /* 96.pdf in Resources */,
 				7C7958E2141B53AC00C6629A /* 97.pdf in Resources */,
@@ -6161,7 +6162,6 @@
 				7C795A44141B53AC00C6629A /* 451.pdf in Resources */,
 				7C795A45141B53AC00C6629A /* 452.pdf in Resources */,
 				7C795A46141B53AC00C6629A /* 453.pdf in Resources */,
-				7C795A48141B53AC00C6629A /* 455.pdf in Resources */,
 				7C795A49141B53AC00C6629A /* 456.pdf in Resources */,
 				7C795A4A141B53AC00C6629A /* 457.pdf in Resources */,
 				7C795A4B141B53AC00C6629A /* 458.pdf in Resources */,
@@ -6384,6 +6384,7 @@
 				7C795B5B141B53AC00C6629A /* 730.pdf in Resources */,
 				7C795B5C141B53AC00C6629A /* 731.pdf in Resources */,
 				7C795B5D141B53AC00C6629A /* 732.pdf in Resources */,
+				7CA25EEF182D292B00193A4C /* 1588.pdf in Resources */,
 				7C795B5E141B53AC00C6629A /* 733.pdf in Resources */,
 				7C795B61141B53AC00C6629A /* 736.pdf in Resources */,
 				7C795B62141B53AC00C6629A /* 737.pdf in Resources */,
@@ -7380,7 +7381,6 @@
 				7CC9983F1770609100A19B86 /* 871.pdf in Resources */,
 				7CC998401770609100A19B86 /* 872.pdf in Resources */,
 				7CC99842177060CA00A19B86 /* 999.pdf in Resources */,
-				7CC998441770610900A19B86 /* 1588.pdf in Resources */,
 				7CC998461770612C00A19B86 /* 1606.pdf in Resources */,
 				7CC998481770613D00A19B86 /* 1609.pdf in Resources */,
 				7CC99850177069C100A19B86 /* 1465.pdf in Resources */,
