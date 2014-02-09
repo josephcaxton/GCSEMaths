@@ -1344,7 +1344,6 @@
 		7C795E6C141B53AC00C6629A /* 1515.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795812141B53AB00C6629A /* 1515.pdf */; };
 		7C795E6D141B53AC00C6629A /* 1516.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795813141B53AB00C6629A /* 1516.pdf */; };
 		7C795E6E141B53AC00C6629A /* 1517.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795814141B53AB00C6629A /* 1517.pdf */; };
-		7C795E6F141B53AC00C6629A /* 1518.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795815141B53AB00C6629A /* 1518.pdf */; };
 		7C795E70141B53AC00C6629A /* 1519.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795816141B53AB00C6629A /* 1519.pdf */; };
 		7C795E71141B53AC00C6629A /* 1520.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795817141B53AB00C6629A /* 1520.pdf */; };
 		7C795E72141B53AC00C6629A /* 1521.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C795818141B53AB00C6629A /* 1521.pdf */; };
@@ -1574,7 +1573,6 @@
 		7CA25ED1182D10B700193A4C /* 1470.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CA25ED0182D10B700193A4C /* 1470.pdf */; };
 		7CA25EED182D291200193A4C /* 455.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CA25EEC182D291200193A4C /* 455.pdf */; };
 		7CA25EEF182D292B00193A4C /* 1588.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CA25EEE182D292B00193A4C /* 1588.pdf */; };
-		7CA25EF1182D295700193A4C /* GCSEMaths.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7CA25EF0182D294200193A4C /* GCSEMaths.sqlite */; };
 		7CA594E0161D98DD008C8F07 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA594DE161D987A008C8F07 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CADD3D715A70E9000DD4558 /* Share.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CADD3D515A70E7000DD4558 /* Share.m */; };
 		7CADD3D915A70EA300DD4558 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CADD3D815A70EA300DD4558 /* Twitter.framework */; };
@@ -1723,6 +1721,8 @@
 		7CFC747213F945CB00805437 /* EvaluatorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC747113F945CB00805437 /* EvaluatorAppDelegate.m */; };
 		7CFC747513F945DC00805437 /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC747413F945DC00805437 /* TabBar.m */; };
 		7CFC747813F9460200805437 /* ActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC747713F9460200805437 /* ActivityIndicator.m */; };
+		CD81ED6D18A8404200FC551E /* GCSEMaths.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CD81ED6C18A8401D00FC551E /* GCSEMaths.sqlite */; };
+		CD81ED7018A8408800FC551E /* NumberOfQuestionsToChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = CD81ED6F18A8408800FC551E /* NumberOfQuestionsToChoose.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -3062,7 +3062,6 @@
 		7C795812141B53AB00C6629A /* 1515.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1515.pdf; sourceTree = "<group>"; };
 		7C795813141B53AB00C6629A /* 1516.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1516.pdf; sourceTree = "<group>"; };
 		7C795814141B53AB00C6629A /* 1517.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1517.pdf; sourceTree = "<group>"; };
-		7C795815141B53AB00C6629A /* 1518.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1518.pdf; sourceTree = "<group>"; };
 		7C795816141B53AB00C6629A /* 1519.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1519.pdf; sourceTree = "<group>"; };
 		7C795817141B53AB00C6629A /* 1520.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1520.pdf; sourceTree = "<group>"; };
 		7C795818141B53AB00C6629A /* 1521.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1521.pdf; sourceTree = "<group>"; };
@@ -3292,7 +3291,6 @@
 		7CA25ED0182D10B700193A4C /* 1470.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1470.pdf; sourceTree = "<group>"; };
 		7CA25EEC182D291200193A4C /* 455.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 455.pdf; sourceTree = "<group>"; };
 		7CA25EEE182D292B00193A4C /* 1588.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1588.pdf; sourceTree = "<group>"; };
-		7CA25EF0182D294200193A4C /* GCSEMaths.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEMaths.sqlite; sourceTree = "<group>"; };
 		7CA594DD161D987A008C8F07 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7CA594DE161D987A008C8F07 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7CADD3D515A70E7000DD4558 /* Share.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Share.m; sourceTree = "<group>"; };
@@ -3611,6 +3609,9 @@
 		7CFC747413F945DC00805437 /* TabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBar.m; sourceTree = "<group>"; };
 		7CFC747613F9460200805437 /* ActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicator.h; sourceTree = "<group>"; };
 		7CFC747713F9460200805437 /* ActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicator.m; sourceTree = "<group>"; };
+		CD81ED6C18A8401D00FC551E /* GCSEMaths.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEMaths.sqlite; sourceTree = "<group>"; };
+		CD81ED6E18A8408800FC551E /* NumberOfQuestionsToChoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberOfQuestionsToChoose.h; sourceTree = "<group>"; };
+		CD81ED6F18A8408800FC551E /* NumberOfQuestionsToChoose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberOfQuestionsToChoose.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -5179,7 +5180,6 @@
 				7C795812141B53AB00C6629A /* 1515.pdf */,
 				7C795813141B53AB00C6629A /* 1516.pdf */,
 				7C795814141B53AB00C6629A /* 1517.pdf */,
-				7C795815141B53AB00C6629A /* 1518.pdf */,
 				7C795816141B53AB00C6629A /* 1519.pdf */,
 				7C795817141B53AB00C6629A /* 1520.pdf */,
 				7C795818141B53AB00C6629A /* 1521.pdf */,
@@ -5288,7 +5288,7 @@
 				7C8524C5144D9B1F005A8956 /* 1624.pdf */,
 				7C795880141B53AB00C6629A /* 1625.pdf */,
 				7C795881141B53AB00C6629A /* 1626.pdf */,
-				7CA25EF0182D294200193A4C /* GCSEMaths.sqlite */,
+				CD81ED6C18A8401D00FC551E /* GCSEMaths.sqlite */,
 				7CB9D03913F956990077E0A3 /* AttributionIphone.pdf */,
 				7CB9D03B13F956B10077E0A3 /* Results.xml */,
 				7CB9D03D13F956BE0077E0A3 /* DescriptiveAnswers.xml */,
@@ -5343,6 +5343,8 @@
 				7CB9D06913F958380077E0A3 /* FillTheBlanks.m */,
 				7CB9D06A13F958380077E0A3 /* FillTheBlanks1.h */,
 				7CB9D06B13F958380077E0A3 /* FillTheBlanks1.m */,
+				CD81ED6E18A8408800FC551E /* NumberOfQuestionsToChoose.h */,
+				CD81ED6F18A8408800FC551E /* NumberOfQuestionsToChoose.m */,
 			);
 			name = "Template Views";
 			sourceTree = "<group>";
@@ -5739,7 +5741,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CA25EF1182D295700193A4C /* GCSEMaths.sqlite in Resources */,
+				CD81ED6D18A8404200FC551E /* GCSEMaths.sqlite in Resources */,
 				7CFC73C313F91EEE00805437 /* InfoPlist.strings in Resources */,
 				7CFC740713F924D600805437 /* ArrowWoodImpact.aiff in Resources */,
 				7CFC740913F924E700805437 /* Cough.aiff in Resources */,
@@ -7070,7 +7072,6 @@
 				7C795E6C141B53AC00C6629A /* 1515.pdf in Resources */,
 				7C795E6D141B53AC00C6629A /* 1516.pdf in Resources */,
 				7C795E6E141B53AC00C6629A /* 1517.pdf in Resources */,
-				7C795E6F141B53AC00C6629A /* 1518.pdf in Resources */,
 				7C795E70141B53AC00C6629A /* 1519.pdf in Resources */,
 				7C795E71141B53AC00C6629A /* 1520.pdf in Resources */,
 				7C795E72141B53AC00C6629A /* 1521.pdf in Resources */,
@@ -7442,6 +7443,7 @@
 				7CB9D06013F958150077E0A3 /* DescriptiveType.m in Sources */,
 				7CB9D06113F958150077E0A3 /* DescriptiveType1.m in Sources */,
 				7CB9D06613F958240077E0A3 /* TrueOrFalseYesOrNo.m in Sources */,
+				CD81ED7018A8408800FC551E /* NumberOfQuestionsToChoose.m in Sources */,
 				7CB9D06713F958240077E0A3 /* TrueOrFalseYesOrNo1.m in Sources */,
 				7CB9D06C13F958380077E0A3 /* FillTheBlanks.m in Sources */,
 				7CB9D06D13F958380077E0A3 /* FillTheBlanks1.m in Sources */,
